@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/quiz.css">
+    <link rel="stylesheet" href="assets/css/animaition.css">
+    <title>퀴즈 이펙트02</title>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Quiz</a></h1>
+        <nav>
+            <ul>
+                <li><a href="quizEffect01.html">1</a></li>
+                <li><a href="quizEffect02.html">2</a></li>
+                <li class="active"><a href="quizEffect03.html">3</a></li>
+                <li><a href="quizEffect04.html">4</a></li>
+                <li><a href="quizEffect05.html">5</a></li>
+                <li><a href="quizEffect06.html">6</a></li>
+                <li><a href="quizEffect07.html">7</a></li>
+            </ul>
+            <!-- ul -->
+        </nav>
+        <!-- nav -->
+    </header>
+    <!-- header -->
+    <main id="main">
+        <div class="quiz__wrap">
+            <div class="quiz">
+                <div class="quiz__header">
+                </div>
+                <!-- quiz_header -->
+
+                <div class="quiz__main">
+                    <div class="quiz__question">
+                    </div>
+                    <div class="quiz__choice">
+                        <label for="choice1">
+                            <input type="radio" id="choice1" name="choice" value="1">
+                            <span></span>
+                        </label>
+                        <label for="choice2">
+                            <input type="radio" id="choice2" name="choice" value="2">
+                            <span></span>
+                        </label>
+                        <label for="choice3">
+                            <input type="radio" id="choice3" name="choice" value="3">
+                            <span></span>
+                        </label>
+                        <label for="choice4">
+                            <input type="radio" id="choice4" name="choice" value="4">
+                            <span></span>
+                        </label>
+                    </div>
+                    <div class="quiz__input none">
+                        <input type="text" placeholder="정답을 입력해주세요!">
+                    </div>
+                    <div class="quiz__answer none">
+                    </div>
+                    <div class="quiz__desc none">
+                    </div>
+                </div>
+                <!-- quiz_main -->
+                <div class="quiz__footer">
+                    <button class="quiz__confirm">정답 확인하기</button>
+                </div>
+                <!-- quiz_footer -->
+            </div>
+            <!-- quiz_01 -->
+        </div>
+        <!-- quiz_wrap -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:danziro97@naver.com">danziro97@naver.com</a>
+    </footer>
+    <!-- footer mail -->
+    <script>
+
+        // 선택자
+        const quizWrap = document.querySelector(".quiz__wrap");
+        const quizHeader = quizWrap.querySelector(".quiz__header");
+        const quizQuestion = quizWrap.querySelector(".quiz__question");
+        const quizAnswer = quizWrap.querySelector(".quiz__answer");
+        const quizDesc = quizWrap.querySelector(".quiz__desc");
+        const quizConfirm = quizWrap.querySelector(".quiz__confirm");
+        const quizChoice = quizWrap.querySelectorAll(".quiz__choice span");
+        const quizSelect = quizWrap.querySelectorAll(".quiz__choice input");
+
+
+        // 문제 정보
+        const quizInfo = [
+            {
+                infoDate: "2016년 4회",
+                infoType: "웹디자인기능사",
+                infoNum: "01. ",
+                infoQuestion: "다음 디자인의 기본 요소들로 옳은 것은?",
+                infoChoice: ["선, 색체, 공간, 수량", "점, 선, 면, 질감", "시간, 수량, 구조, 공간", "면, 구조, 공간, 수량"],
+                infoAnswer: "2",
+                infoDesc: "제어장치와 연산장치의 구성 요소를 구분할 수 있어야 합니다."
+            },
+        ]
+
+        // 문제 출력  
+        // innerHtml은 html의 태그도 인식해줌
+        quizHeader.innerHTML = quizInfo[0].infoDate + " " + quizInfo[0].infoType;
+        quizQuestion.innerHTML = quizInfo[0].infoNum + ". " + quizInfo[0].infoQuestion;
+        quizAnswer.innerText = quizInfo[0].infoAnswer;
+        quizDesc.innerText = quizInfo[0].infoDesc;
+
+        for (let i = 0; i < quizChoice.length; i++) {
+            quizChoice[i].innerText = quizInfo[0].infoChoice[i];
+        };
+
+        // 정답 확인
+        // quizConfirm.forEach(function(btn, num){
+        //     btn.addEventListener("click", function(){
+        //         const userAnswer = quizInput[num].value.trim();
+
+        //         if(userAnswer == quizInfo[num].infoAnswer){
+        //             alert("정답입니다.");
+        //             quizAnimation[num].classList.add("like");
+        //         } else {
+        //             alert("틀렸습니다.");
+        //             quizAnimation[num].classList.add("dislike");
+        //         }
+
+        //         quizAnswer[num].style.display = "block";
+        //         quizDesc[num].style.display = "block";
+        //         quizConfirm[num].style.display = "none";
+        //         quizInput[num].style.display = "none";
+        //     });
+        // });
+        // quizConfirm.addEventListener("click", () => {
+        //     for (let i=0; i<quizChoice.length; i++) {
+        //         if (quizSelect[i].checked == true){ // 사용자가 보기 (answer 값에다가 )를 체크한 상태
+        //             if (quizSelect[i].value == quizInfo[0].infoAnswer) { 
+        //                 // 정답
+        //                 return alert(quizSelect[i].value + "정답입니다.");
+        //             } else {
+        //                 //오답
+        //                 return alert(quizSelect[i].value + "틀렸습니다..");
+        //             };
+        //             return 0;
+        //         } else if(quizSelect.checked == false) {// 사용자가 보기 (answer 값에다가 )를 체크하지 않은 상태
+        //             alert("보기를 체크하지 않은 경우");
+        //         } else {
+        //             return alert("보기를 체크하지 않은 경우");
+        //         }
+        //     };
+        // });
+
+        quizConfirm.addEventListener("click", () => {
+            let selectedChoice = null;
+            for(let i=0; i<quizSelect.length; i++){
+                if(quizSelect[i].checked){
+                    selectedChoice = quizSelect[i].value;
+                    break;
+                }
+            }
+            if(selectedChoice !== null){
+                if(selectedChoice == quizInfo[0].infoAnswer){
+                    alert("정답입니다.");
+                    quizDesc.classList.remove("none");
+                } else {
+                    //오답 
+                    alert("오답입니다.");
+                    quizAnswer.classList.remove("none");
+                    quizDesc.classList.remove("none");
+                }
+            } else {
+                alert("보기를 선택하세요.");
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>

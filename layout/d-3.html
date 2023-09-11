@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인기능사 레이아웃 D-3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #warp {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #aside {
+            width: 200px;
+            height: 850px;
+            background-color: #b166ee;;
+        }
+        #aside .logo {
+            width: 100%;
+            height: 100px;
+            background-color: #dabeeb;
+        }
+        #aside .nav {
+            width: 100%;
+            height: 750px;
+            background-color: #a991b8;
+        }
+        #main {
+            width: calc(100% - 200px);
+        }
+        #slider {
+            width: 100%;
+            height: 400px;
+            background-color: #8b4eb4;
+            position: relative;
+        }
+        #slider .link {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100px;
+            height: 300px;
+            background-color: #b18fb1;
+        }
+        #banner {
+            width: 100%;
+            height: 200px;
+            background-color: #aa81bd;
+        }
+        #contents {
+            width: 100%;
+            height: 250px;
+            background-color: #aa8ab6;
+        }
+        #footer {
+            width: 100%;
+            display: flex;
+        }
+        #footer .footer1 {
+            width: 20%;
+            height: 120px;
+            background-color: #b79eb9;
+        }
+        #footer .footer2 {
+            width: 80%;
+        }
+        #footer .footer2 .footer2-1 {
+            width: 100%;
+            height: 60px;
+            background-color: #9d7da1;
+        }
+        #footer .footer2 .footer2-2 {
+            width: 100%;
+            height: 60px;
+            background-color: #765a79;
+        }
+    </style>
+</head>
+<div id="warp">
+    <aisde id="aside">
+        <h1 class="logo"></h1>
+        <nav class="nav"></nav>
+    </aisde>
+    <main id="main">
+        <article id="slider">
+            <div class="link"></div>
+        </article>
+        <!-- //slider -->
+
+        <article id="banner">
+        </article>
+        <!-- //banner -->
+        
+        <section id="contents">
+        </section>
+        <!-- //contents -->
+
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <div class="footer1"></div>
+        <div class="footer2">
+            <div class="footer2-1"></div>
+            <div class="footer2-2"></div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+</div>
+<!-- //wrap -->
+</body>
+</html>

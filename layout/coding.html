@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #EEEBE9;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #D5CCC9;
+        }
+        #nav1 {
+            width: 100%;
+            height: 100px;
+            background-color: #9D8980;
+        }
+        #main {
+            width: 100%;
+            background-color: #74574A;   
+        }
+        #aside {
+            width: 100%;
+            height: 100px;
+            background-color: #74574A;
+        }
+        #contents {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;             
+        }
+        #article1 {
+            width: 100%;
+            height: 200px;
+            background-color: #684D43;
+        }
+        #article2 {
+            width: 50%;
+            height: 480px;
+            background-color: #594139;
+        }
+        #article3 {
+            width: 50%;
+            height: 480px;
+            background-color: #4A352F;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #3E2723;
+        }
+
+        @media (max-width: 1290px) {
+            #wrap {
+                width: 90%;
+            }
+            #aside {
+                width: 30%;
+                height: 780px;
+            }
+            #contents {
+                width: 70%;
+                height: 780px;
+            }
+            #article1 {
+                width: 70%;
+                height: 390px;
+            }
+            #article2 {
+                width: 35%;
+                height: 390px;
+            }
+            #article3 {
+                width: 35%;
+                height: 390px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav1"></nav>
+        <main id="main">
+            <aside id="aside">a</aside>
+            <section id="contents">
+                <article id="article1">a1</article>
+                <article id="article2">a2</article>
+                <article id="article3">a3</article>
+            </section>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

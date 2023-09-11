@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+            width: 100%;
+            border-top: 1px solid #dcdcdc;
+            border-spacing: 0;
+        }
+        table td {
+            border-top: 1px solid #dcdcdc;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 01. for()
+        // 02. forEach()
+        // 03. for of()
+        // 04. for in()
+        // 05. map()
+        // 06. filter()
+        // 07. 1~100까지 합
+        // 08. 구구단
+        // 09. 테이블 만들기
+        
+        // 01. 선언적 함수
+        // 02. 익명 함수
+        // 03. 매개변수 함수
+        // 04. 리턴값 함수
+        // 05. 매개변수 + 리턴값 함수
+        // 06. 화살표 함수(선언적 함수)
+        // 07. 화살표 함수(익명 함수)
+        // 08. 화살표 함수(매개변수 함수)
+        // 09. 화살표 함수(리턴값 함수)
+        // 10. 화살표 함수(익명함수 + 매개변수 + 리턴값)
+        // 10-2. 화살표 함수(익명함수 + 매개변수 + 리턴값 + 괄호 생략)
+        // 10-3. 화살표 함수(익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략)
+        // 10-4. 화살표 함수(선언적함수 + 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략)
+    </script>
+    <script>
+        // 50칸 테이블(5/10) (1-50)
+        {
+            let table = "<table class='table'>";
+            let num = 1;
+            
+            for(let i=1; i<=10; i++){
+                table +="<tr>";
+
+                for(let j=1; j<=5; j++){
+                    table += "<td>" + num + "</td>";
+                    num++;
+                }
+
+                table +="</tr>";
+            }
+
+            table += "</table>";
+            
+            document.write(table);
+        }
+
+        {
+            let table = "<table class='table'>";
+            let num = 1;
+
+            for(let i=1; i<=10; i++){
+                table +="<tr>";
+
+                for(let j=1; j<=5; j++){
+                    if (num % 2 === 0) { // 짝수인 경우에만 출력
+                        table += "<td>" + num + "</td>";
+                    }
+                    num++;
+                }
+
+                table +="</tr>";
+            }
+
+            table += "</table>";
+
+            document.write(table);
+        }
+        
+    </script>
+</body>
+</html>

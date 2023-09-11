@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/quiz1.css">
+  <link rel="stylesheet" href="assets/css/animaition.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <main id="main">
+    <div class="quiz__wrap">
+      <div class="quiz">
+        <div class="quiz__header">
+          <span class="quiz__date"></span>
+          <span class="quiz__type"></span>
+        </div>
+        <!-- quiz_header -->
+
+        <div class="quiz_main">
+          <div class="quiz__question">
+            <em></em>
+            <span></span>
+          </div>
+          <div class="quiz__animation">
+            <div class="wrapper">
+              <div class="card-container">
+                <div class="dog">
+                  <div class="head">
+                    <div class="ears"></div>
+                    <div class="face"></div>
+                    <div class="eyes">
+                      <div class="teardrop"></div>
+                    </div>
+                    <div class="nose"></div>
+                    <div class="mouth">
+                      <div class="tongue"></div>
+                    </div>
+                    <div class="chin"></div>
+                  </div>
+                  <div class="body">
+                    <div class="tail"></div>
+                    <div class="legs"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="quiz__input">
+            <input type="text" placeholder="정답을 입력해주세요!">
+          </div>
+          <div class="quiz__answer">
+          </div>
+          <div class="quiz__desc">
+          </div>
+        </div>
+        <!-- quiz_main -->
+
+        <div class="quiz__footer">
+          <button class="quiz__confirm">정답 확인하기</button>
+        </div>
+
+      </div>
+      <!-- quiz -->
+    </div>
+    <!-- quiz_wrap -->
+  </main>
+  <!-- //main -->
+</body>
+<script>
+
+
+  // 요소 선택
+
+  // 요소의 HTML 문자열 가져오기
+
+
+
+for(let i=0; i<100; i++){
+  const QW = document.getElementsByClassName(".quiz__wrap")[0];
+  const newDiv = document.createElement("div");
+  QW.appendChild(newDiv);
+}
+console.log(QW);
+
+</script>
+
+</html>

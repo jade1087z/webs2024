@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://webfontworld.github.io/goodchoice/Jalnan.css" rel="stylesheet">
+    <title>레이아웃01</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: #000;
+            font-family: 'Jalnan';
+            font-weight: 400;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        #wrap {
+            display: flex;
+        }
+        #nav {
+            width: 300px;
+            padding: 20px;
+        }
+        #nav ul li a {
+            border: 1px solid brown;
+            display: block;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+        #nav ul li a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+        #nav .webd {
+            margin-top: 50px;
+        }
+        #nav .webd li {
+            width: 55px;
+            display: inline-block;
+            text-align: center;
+        }
+        #main {
+            width: 100%;
+            min-height: 100vh;
+        }
+        #main iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <nav id="nav">
+            <ul>
+                <li><a href="layout01.html">레이아웃01</a></li>
+                <li><a href="layout02.html">레이아웃02</a></li>
+                <li><a href="layout03.html">레이아웃03</a></li>
+                <li><a href="layout04.html">레이아웃04</a></li>
+                <li><a href="layout05.html">레이아웃05</a></li>
+            </ul>
+            <ul class="webd">
+                <li><a href="webd01.html">A-1</a></li>
+                <li><a href="webd02.html">A-2</a></li>
+                <li><a href="webd03.html">A-3</a></li>
+                <li><a href="webd04.html">A-4</a></li>
+                <li><a href="webd05.html">B-1</a></li>
+                <li><a href="webd06.html">B-2</a></li>
+                <li><a href="webd07.html">B-3</a></li>
+                <li><a href="webd08.html">B-4</a></li>
+                <li><a href="webd09.html">C-1</a></li>
+                <li><a href="webd10.html">C-2</a></li>
+                <li><a href="webd11.html">C-3</a></li>
+                <li><a href="webd12.html">C-4</a></li>
+                <li><a href="webd13.html">D-1</a></li>
+                <li><a href="webd14.html">D-2</a></li>
+                <li><a href="webd15.html">D-3</a></li>
+                <li><a href="webd16.html">D-4</a></li>
+            </ul>
+        </nav>
+        <main id="main">
+            <iframe src="webd09.html" frameborder="0"></iframe>
+        </main>
+        
+        <script>
+            document.querySelectorAll("#nav ul li").forEach((li) => {
+                li.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    const href = li.querySelector("a").getAttribute("href");
+                    document.querySelector("#main iframe").src = href;
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>

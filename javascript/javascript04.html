@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/css/default.min.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" >
+    <title>자바스크립트 데이터 제어하기</title>
+</head>
+<body>
+     <div id="wrap">
+        <header id="header">
+            <h1><a href="index.html">javascript</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="javascript01.html">데이터 저장하기</a></li>
+                    <li><a href="javascript02.html">데이터 불러오기</a></li>
+                    <li><a href="javascript03.html">데이터 실행하기</a></li>
+                    <li class="active"><a href="javascript04.html">데이터 제어하기</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header -->
+
+        <main id="main">
+            <div class="main_menu">
+                <ul>
+                    <li><a href="#">01. if()문</a></li>
+                    <li><a href="#">02. 다중 if()문</a></li>
+                    <li><a href="#">03. 중첩 if()문</a></li>
+                    <li><a href="#">04. if()문 생략</a></li>
+                    <li><a href="#">05. switch()문</a></li>
+                    <li><a href="#">06. while()문</a></li>
+                    <li><a href="#">07. do while문</a></li>
+                    <li><a href="#">08. for()문</a></li>
+                    <li><a href="#">09. break문</a></li>
+                    <li><a href="#">10. continue문</a></li>
+                    
+                </ul>
+            </div>
+            <!-- main_menu -->
+            <div class="main_sample">
+                <div id="sample01" class="sample">
+                    <h3>01. if()문 정리</h3>
+                    <p>자바스크립트에서 if 문은 조건을 검사하는 조건문입니다.</p>
+<pre><code class="language-js">{
+    // true의 조건 : true,문자열, 1, [], {}
+    // false의 조건 : false, 0, null, undefind "(빈문자열)"
+    
+    if("조건식"){
+        document.write("실행되었습니다.(true)");
+    } else{
+        document.write("실행되었습니다.(false)");
+    }
+}
+</code></pre>
+                    <p class="desc">if 문은 조건을 검사하고 조건에 따라 참(true) 또는 거짓(false)에 맞춰 특정 코드 블록을 실행합니다.</p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+                <!-- //sample01 -->
+
+                <div id="sample02" class="sample">
+                    <h3>02. 다중if()문 정리</h3>
+                    <p>if()문을 사용할 때 참(true) 또는 거짓(false)외의 조건을 설정할 때 사용합니다.</p>
+<pre><code class="language-js">{
+    const num = 100;
+    
+    if(num == 90) {
+        document.write("실행되었습니다.(num = 90)");
+    } else if(num == 95){
+        document.write("실행되었습니다.(num = 95)");
+    } else if(num == 100){
+        document.write("실행되었습니다.(num = 100)");
+    } else if(num == 105){
+        document.write("실행되었습니다.(num = 105)");
+    } else {
+        document.write("실행되었습니다.");
+    }
+}
+</code></pre>
+                    <p class="desc">else if()를 통해 참, 거짓 외의 조건을 설정합니다.</p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+                <!-- //sample02 -->
+
+                <div id="sample03" class="sample">
+                    <h3>03. 중첩if()문 정리</h3>
+                    <p>자바스크립트(JavaScript)는 .</p>
+<pre><code class="language-js">{
+    const num1 = 100;
+    if(num1 == 100) {
+        document.write("실행되었습니다.1");
+        if(num1 == 100){
+            document.write("실행되었습니다.2");
+            if(num1 == 100){
+            document.write("실행되었습니다.3");
+            }   
+        }
+    } else {
+        document.write("실행되었습니다.4");
+    }
+}
+</code></pre>
+                    <p class="desc"></p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+                <!-- //sample03 -->
+
+                <div id="sample04" class="sample">
+                    <h3>04. if()문 생략 + 삼항 정리</h3>
+                    <p>자바스크립트(JavaScript)는 .</p>
+<pre><code class="language-js">{
+    const num2 = 10
+    if(num2) {
+        document.write("실행되었습니다.1(true)");
+    }
+    if(num2) document.write("실행완료1. true");
+    if(num2) {
+        document.write("실행되었습니다.3(true)");
+    } else {
+        document.write("실행되었습니다.3(false)");
+    
+    //삼항 연산자
+    (num2 ==100 ) ? document.write("true") : document.write("false");
+            }
+</code></pre>
+                    <p class="desc"></p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+                <!-- //sample04 -->
+
+                <div id="sample05" class="sample">
+                    <h3>05. switch문 정리</h3>
+                    <p>자바스크립트(JavaScript)는 .</p>
+<pre><code class="language-js">{
+    const num = 100;
+    
+    switch(num){
+        case 90:
+            document.write("실행되었습니다.(90)");
+            break;
+        case 95:
+            document.write("실행되었습니다.(95)");
+            break;
+        case 100:
+            document.write("실행되었습니다(100)");
+            break;
+        case 105:
+            document.write("실행되었습니다(105)");
+            break;
+        default:
+            document.write("실행되었습니다.");                
+    }
+}
+</code></pre>
+                    <p class="desc"></p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+                <!-- //sample05 -->
+
+                <div id="sample06" class="sample">
+                    <h3>06. 자료형 정리</h3>
+                    <p>자바스크립트(JavaScript)는 .</p>
+<pre><code class="language-js">{
+    //1~10
+    for(let i=0; i<10; i++){
+        document.write(i+1);
+    }
+    let num=1;
+    while(num=10){
+        document.write(num);
+        num++;
+    }
+}
+</code></pre>
+                    <p class="desc"></p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+                <!-- //sample06 -->
+
+                <div id="sample07" class="sample">
+                    <h3>07. dowhile 정리</h3>
+                    <p>자바스크립트(JavaScript)는 .</p>
+<pre><code class="language-js">{
+    let n = 1;
+    do{
+        document.write(n);
+        n++;
+    }while(n &lt;=10);
+}
+</code></pre>
+                    <p class="desc"></p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+                <!-- //sample07 -->
+
+                <div id="sample08" class="sample">
+                    <h3>08. 자료형 정리</h3>
+                    <p>자바스크립트(JavaScript)는 .</p>
+<pre><code class="language-js">{
+    document.write("<br> 1.for  ");
+    for(let i=1; i<=10; i++){
+        document.write(i);
+    }
+
+    // const num = [10,20,30,40,50,60,70,80,90];
+    // document.write("<br> 2. for array ");
+    // for(let i=0; i < num.length; i++){
+    //     document.write(num[i]);
+    // }
+    // document.write("<br> 3. forEach ");
+    // num.forEach(function(el){
+    //     document.write(el);
+    // });
+    // document.write("<br> 3. forEach");
+    // num.forEach((el)=>{
+    //     document.write(el);
+    // })
+    // document.write("<br> 3. forEach");
+    // num.forEach(el=>{
+    //     document.write(el);
+    // })
+    // document.write("<br> 4. for of");
+    // for(let element of num){
+    //     document.write(element); // num의 element 값을 받아옴
+    // }
+    // document.write("<br> 5. for in");
+    // for(let element in num){
+    //     document.write(num[element]);
+    //     document.write(element);            
+}
+</code></pre>
+                    <p class="desc"></p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+                <!-- //sample08 -->
+
+                <div id="sample09" class="sample">
+                    <h3>09. 자료형 정리</h3>
+                    <p>자바스크립트(JavaScript)는 .</p>
+<pre><code class="language-js">{   
+    document.write("<br>");
+    for(let i=1; i<=10; i++){
+        if(i == 5) break; 
+        document.write(i+" ");
+    }
+}
+</code></pre>
+                    <p class="desc"></p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+                <!-- //sample09 -->
+
+                <div id="sample10" class="sample">
+                    <h3>10. 자료형 정리</h3>
+                    <p>자바스크립트(JavaScript)는 .</p>
+<pre><code class="language-js">{
+    document.write("<br>");
+    for(let i=1; i<=10; i++){
+        if(i == 5) continue;  // 건너뜀 
+        document.write(i+" ");
+    }
+}
+</code></pre>
+                    <p class="desc"></p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+                <!-- //sample10 -->
+
+        </main>
+        <!-- //main -->
+        
+        <footer id="footer">
+            <a href="mailto:danziro97@naver.com">danziro97@naver.com</a>
+        </footer>
+        <script src="../assets/js/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>  
+        <!-- //footer -->
+        <script>
+            // 01. if()문
+            {
+                // true의 조건 : true,문자열, 1, [], {}
+                // false의 조건 : false, 0, null, undefind "(빈문자열)"
+                
+                if("조건식"){
+                    document.write("실행되었습니다.(true)");
+                } else{
+                    document.write("실행되었습니다.(false)");
+                }
+            }
+            // 02. 다중if()문
+            {
+                const num = 100;
+                
+                if(num == 90) {
+                    document.write("실행되었습니다.(num = 90)");
+                } else if(num == 95){
+                    document.write("실행되었습니다.(num = 95)");
+                } else if(num == 100){
+                    document.write("실행되었습니다.(num = 100)");
+                } else if(num == 105){
+                    document.write("실행되었습니다.(num = 105)");
+                } else {
+                    document.write("실행되었습니다.");
+                }
+            }
+            // 03. 중첩if()문
+            {
+                const num1 = 100;
+                if(num1 == 100) {
+                    document.write("실행되었습니다.1");
+                    if(num1 == 100){
+                        document.write("실행되었습니다.2");
+                        if(num1 == 100){
+                        document.write("실행되었습니다.3");
+                        }   
+                    }
+                } else {
+                    document.write("실행되었습니다.4");
+                }
+            }
+            // 04. if문 생략 + 삼항
+            {
+                const num2 = 100;
+
+                if(num2) {
+                    document.write("실행되었습니다.1(true)");
+                }
+                if(num2) document.write("실행완료1. true");
+
+                if(num2) {
+                    document.write("실행되었습니다.3(true)");
+                } else {
+                    document.write("실행되었습니다.3(false)");
+                }
+
+                //삼항 연산자
+                (num2 ==100 ) ? document.write("true") : document.write("false");
+            }
+            // 05. switch문
+            {
+                const num = 100;
+                
+                switch(num){
+                    case 90:
+                        document.write("실행되었습니다.(90)");
+                        break;
+                    case 95:
+                        document.write("실행되었습니다.(95)");
+                        break;
+                    case 100:
+                        document.write("실행되었습니다(100)");
+                        break;
+                    case 105:
+                        document.write("실행되었습니다(105)");
+                        break;
+                    default:
+                        document.write("실행되었습니다.");                
+                }
+            }
+            // 06. while문
+            {
+                //1~10
+                for(let i=0; i<10; i++){
+                    document.write(i+1);
+                }
+                let num=1;
+                while(num<=10){
+                    document.write(num);
+                    num++;
+                }
+            }
+            //07. do while문
+            {
+                let n = 1;
+                do{
+                    document.write(n);
+                    n++;
+                }while(n<=10);
+            }
+            // 08 for()
+            {
+                document.write("<br> 1.for  ");
+                for(let i=1; i<=10; i++){
+                    document.write(i);
+                }
+
+                // const num = [10,20,30,40,50,60,70,80,90];
+                // document.write("<br> 2. for array ");
+                // for(let i=0; i < num.length; i++){
+                //     document.write(num[i]);
+                // }
+                // document.write("<br> 3. forEach ");
+                // num.forEach(function(el){
+                //     document.write(el);
+                // });
+                // document.write("<br> 3. forEach");
+                // num.forEach((el)=>{
+                //     document.write(el);
+                // })
+                // document.write("<br> 3. forEach");
+                // num.forEach(el=>{
+                //     document.write(el);
+                // })
+                // document.write("<br> 4. for of");
+                // for(let element of num){
+                //     document.write(element); // num의 element 값을 받아옴
+                // }
+                // document.write("<br> 5. for in");
+                // for(let element in num){
+                //     document.write(num[element]);
+                //     document.write(element);            
+            }
+            // 09. break 
+            {   
+                document.write("<br>");
+                for(let i=1; i<=10; i++){
+                    if(i == 5) break; 
+                    document.write(i+" ");
+                }
+            }
+            // 10. continue 
+            {
+                document.write("<br>");
+                for(let i=1; i<=10; i++){
+                    if(i == 5) continue;  // 건너뜀 
+                    document.write(i+" ");
+                }
+            }
+        </script>
+     </div>
+</body>
+</html>

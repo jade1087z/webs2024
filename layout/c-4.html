@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인기능사 레이아웃 C-4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 1000px;
+            display: flex;
+        }
+        #asied {
+            width: 20%;
+            height: 650px;
+            background-color: #e4a7a7;
+        }
+        #asied h1 {
+            width: 100%;
+            height: 100px;
+            background-color: #d49c9c;
+        }
+        #asied nav {
+            width: 100%;
+            height: 550px;
+            background-color: #e78b8b;
+        }
+        #main {
+            width: 80%;
+        }
+        #slider {
+            width: 100%;
+            height: 350px;
+            background-color: #ad7f7f;
+        }
+        #contents {
+            width: 100%;
+            display: flex;
+        }
+        #contents .content1 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #facdcd;
+        }
+        #contents .content2 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #fcb0b0;
+        }
+        #contents .content3 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #f88e8e;
+        }
+        #footer {
+            width: 100%;
+            display: flex;
+        }
+        #footer .footer1 {
+            width: 20%;
+            height: 100px;
+            background-color: #e0baba;
+        }
+        #footer .footer2 {
+            width: 60%;
+            height: 100px;
+            background-color: #ce8e8e;
+        }
+        #footer .footer3 {
+            width: 20%;
+            height: 100px;
+            background-color: #cca5a5;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="asied">
+            <h1></h1>
+            <nav></nav>
+        </aside>
+        <!-- //aside -->
+
+        <main id="main">
+            <article id="slider">
+            </article>
+            <!-- //slider -->
+
+            <section id="contents">
+                <article class="content1"></article>
+                <article class="content2"></article>
+                <article class="content3"></article>
+            </section>
+            <!-- //contents -->
+            <footer id="footer">
+                <footer class="footer1"></footer>
+                <footer class="footer2"></footer>
+                <footer class="footer3"></footer>
+            </footer>
+            <!-- //footer -->
+        </main>
+        <!-- //main -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

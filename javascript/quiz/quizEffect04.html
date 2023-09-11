@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/quiz.css">
+    <link rel="stylesheet" href="assets/css/animaition.css">
+    <style>
+        .quiz__score {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            width: 70px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: #412e91;
+            color: #fff;
+            text-align: center;
+            line-height: 50px; 
+            /* 글자를 중앙에 오게 하는 값은 없음
+                line-height를 높이와 똑같이 주게 되면 중간처럼 보이게 할 수 있음 
+                단 한 줄일 때 가능 
+            */
+        }
+    </style>
+    <title>퀴즈 이펙트02</title>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Quiz</a></h1>
+        <nav>
+            <ul>
+                <li><a href="quizEffect01.html">1</a></li>
+                <li><a href="quizEffect02.html">2</a></li>
+                <li><a href="quizEffect03.html">3</a></li>
+                <li class="active"><a href="quizEffect04.html">4</a></li>
+                <li><a href="quizEffect05.html">5</a></li>
+                <li><a href="quizEffect06.html">6</a></li>
+                <li><a href="quizEffect07.html">7</a></li>
+            </ul>
+            <!-- ul -->
+        </nav>
+        <!-- nav -->
+    </header>
+    <!-- header -->
+    <main id="main">
+        <div class="quiz__wrap">
+        </div>
+        <!-- quiz_wrap -->
+        <div class="quiz__score"></div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:danziro97@naver.com">danziro97@naver.com</a>
+    </footer>
+    <!-- footer mail -->
+    <script>
+        // 선택자
+        const quizWrap = document.querySelector(".quiz__wrap");
+        const quizScore = document.querySelector(".quiz__score");
+        let totalScore = 0;
+
+        // 문제 정보
+        const quizInfo = [
+            {
+                infoDate: "2016년 4회",
+                infoType: "정보처리 기능사",
+                infoQuestion: "이항(binary) 연산에 해당하는 것은?",
+                infoChoice: {
+                    1: "COMPLEMENT",
+                    2: "점, 선, 면, 질감",
+                    3: "시간, 수량, 구조, 공간",
+                    4: "면, 구조, 공간, 수량"
+                },
+                infoAnswer: "2",
+                infoDesc: "단항연산 : ROTATE, SHIFT, MOVE, NOT(COMPLEMENT)"
+            },
+            {
+                infoDate: "2006년 4회",
+                infoType: "웹디자인기능사",
+                infoQuestion: "프로그램이 컴퓨터의 기종에 관계없이 수행될 수 있는 성질을 의미하는 것은?",
+                infoChoice: {
+                    1: "가용성",
+                    2: "신뢰성",
+                    3: "호환성",
+                    4: "안전성"
+                },
+                infoAnswer: "3",
+                infoDesc: "컴퓨터의 기종에 관계없이 수행될 수 있는 성질을 의미하는 것은 호환성입니다."
+            },
+            {
+                infoDate: "20년 4월",
+                infoType: "정보처리기능사",
+                infoQuestion: "빛을 이용하여 정보를 전송하는 전송 매체는?",
+                infoChoice: {
+                    1: "휴대폰",
+                    2: "전봇대",
+                    3: "광 케이블",
+                    4: "컴퓨터"
+                },
+                infoAnswer: "3",
+                infoDesc: "빛을 이용한 전송 매체는 광 케이블",
+            },
+            {
+                infoDate: "22년 6월",
+                infoType: "정보처리기능사",
+                infoQuestion: "논리회로, 가산기, 누산기, 감산기와 관계있는 장치는?",
+                infoChoice: {
+                    1: "입/출력장치",
+                    2: "제어장치",
+                    3: "연산장치",
+                    4: "기억장치"
+                },
+                infoAnswer: "3",
+                infoDesc: "제어장치는 IR,PC,부호기,명령어,번지 해독기가 해당됨",
+            },
+            {
+                infoDate: "18년 상시",
+                infoType: "정보처리기능사",
+                infoQuestion: "연산의 중심이 되는 레지서트너는?",
+                infoChoice: {
+                    1: "General Register",
+                    2: "Address Register",
+                    3: "Accumulator",
+                    4: "Flip Flop"
+                },
+                infoAnswer: "3",
+                infoDesc: "연산의 결과를 일시적으로 저장하고 연산의 중심이 되는 레지스터는 누산기(Accumulator)이다.",
+            },
+            {
+                infoDate: "22년 3월",
+                infoType: "정보처리기능사",
+                infoQuestion: "인스트럭션 레지스터, 부호기, 번지 해독기, 제어 계수기 등관 관계있는 장치는?",
+                infoChoice: {
+                    1: "입력장치",
+                    2: "제어장치",
+                    3: "연산장치",
+                    4: "기억장치"
+                },
+                infoAnswer: "2",
+                infoDesc: "명령 레지스터(IR), 부호기, 번지해독기, 프로그램 카운터(pc)는 제어장치에 해당합니다. ",
+            },
+            {
+                infoDate: "18년 상시",
+                infoType: "정보처리기능사",
+                infoQuestion: "CPU에 해당하지 않는 것은?",
+                infoChoice: {
+                    1: "연산장치",
+                    2: "기억장치",
+                    3: "제어장치",
+                    4: "입력장치"
+                },
+                infoAnswer: "4",
+                infoDesc: "중앙처리장치의 구성 요소 3가지! 제어장치, 연산장치, 기억장치(레지스터)를 기억하도록",
+            },
+            {
+                infoDate: "19년 상시",
+                infoType: "정보처리기능사",
+                infoQuestion: "클럭 펄스에 의해서 기억 내용을 한 자리씩 이동하는 레지스터는?",
+                infoChoice: {
+                    1: "시프트 레지스터",
+                    2: "누산기",
+                    3: "B 레지스터",
+                    4: "D 레지스터"
+                },
+                infoAnswer: "1",
+                infoDesc: "Shift는 이동하다, 옮기다라는 뜻으로 시프트 레지스터는 1Bit씩 자리를 이동시킬 때 사용됨.",
+            },
+            {
+                infoDate: "22년 3월",
+                infoType: "정보처리기능사",
+                infoQuestion: "RISC(Reduced Instruction Set Computer)의 설명으로 옳은 것은?",
+                infoChoice: {
+                    1: "많은 수의 명령어",
+                    2: "다양한 주소지정방식",
+                    3: "단일 사이클의 명령어 실행",
+                    4: "가변 길이의 명령어 형식"
+                },
+                infoAnswer: "3",
+                infoDesc: "1,2,4번은 CISC에 대한 설명입니다.",
+            },
+            {
+                infoDate: "21년 10월",
+                infoType: "정보처리기능사",
+                infoQuestion: "CPU의 정보처리 속도 단위 중 초당 100만 개의 연산을 수행하는 단위는?",
+                infoChoice: {
+                    1: "MHZ",
+                    2: "KIPS",
+                    3: "MIPS",
+                    4: "LIPS"
+                },
+                infoAnswer: "3",
+                infoDesc: "LIPS는 초당 1개, KIPS는 초당 1,000개, MIPS는 초당 1,000,000개의 연산을 수행하는 것을 의미합니다.",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+            {
+                infoDate: "",
+                infoType: "정보처리기능사",
+                infoQuestion: "",
+                infoChoice: {
+                    1: "",
+                    2: "",
+                    3: "",
+                    4: ""
+                },
+                infoAnswer: "",
+                infoDesc: "",
+            },
+
+            
+
+
+        ]
+
+
+        // 문제 출력 
+        const updateQuiz = () => {
+            const quizArray = [];
+
+            quizInfo.forEach((quiz, index) => {
+                quizArray.push(`<div class="quiz">
+        <div class="quiz__header">${quiz.infoDate} ${quiz.infoType}</div>
+        <div class="quiz__main">
+            <div class="quiz__question">${index + 1}. ${quiz.infoQuestion}
+            </div>
+            <div class="quiz__choice">
+                <label for="choice1-${index}">
+                    <input type="radio" id="choice1-${index}" name="choice${index}" value="1">
+                    <span>${quiz.infoChoice[1]}</span>
+                </label>
+                <label for="choice2-${index}">
+                    <input type="radio" id="choice2-${index}" name="choice${index}" value="2">
+                    <span>${quiz.infoChoice[2]}</span>
+                </label>
+                <label for="choice3-${index}">
+                    <input type="radio" id="choice3-${index}" name="choice${index}" value="3">
+                    <span>${quiz.infoChoice[3]}</span>
+                </label>
+                <label for="choice4-${index}">
+                    <input type="radio" id="choice4-${index}" name="choice${index}" value="4">
+                    <span>${quiz.infoChoice[4]}</span>
+                </label>
+            </div>
+            <div class="quiz__input none">
+                <input type="text" placeholder="정답을 입력해주세요!">
+            </div>
+            <div class="quiz__answer">${quiz.infoAnswer}</div>
+            <div class="quiz__desc none">${quiz.infoDesc}</div>
+        </div>
+        <div class="quiz__footer">
+            <button class="quiz__confirm" data-index="${index}">정답 확인하기</button>
+        </div>
+        </div>`);
+            });
+            quizWrap.innerHTML = quizArray.join(" ");
+        }
+        updateQuiz();
+
+        // 정답 확인
+        const answerQuiz = (index) => {
+            const quizChoices = document.querySelectorAll(`.quiz__choice input[name="choice${index}"]:checked`); // quiz_choice에서 checked속성을 가진 inputbox의 값을 받아온다.
+            const answerElement = quizWrap.querySelectorAll(".quiz__answer")[index]; // quiz_answer의 값을 받아옴 
+            const descElement = quizWrap.querySelectorAll(".quiz__desc")[index]; // quiz_desc의 값을 받아옴 
+            const quizElement = quizWrap.querySelectorAll(".quiz")[index]; // quiz의 값을 가져옴 퀴즈의 정답처리를 위해 사용됨 
+            if (quizChoices.length > 0) { // checked된 값임 0보다 클 떄 -> 체크된 값이 있다면 실행됨 
+                const userAnswer = quizChoices[0].value; //체크된 모든 속성을 불러옴 [0]값을 주므로써 가장 처음 선택된 것만 값을 전달받음 
+                
+                if (userAnswer === quizInfo[index].infoAnswer) {
+                    answerElement.textContent = "정답입니다!";
+                    quizElement.classList.add("good");
+                    totalScore++;
+                    quizScore.innerHTML = totalScore;
+                } else {
+                    answerElement.textContent = "오답입니다!";
+                    quizElement.classList.add("bad");
+                    descElement.classList.remove("none");
+                }
+            }
+        }
+
+        // 페이지가 로드된 후 실행 --> javascript가 html css보다 먼저 로딩되는 것을 방지함 
+        // 세팅 완료 후 updateQuiz가 실행됨으로 html에 문서가 복사됨 
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            updateQuiz();
+
+            const confirmButtons = document.querySelectorAll(".quiz__confirm");
+            confirmButtons.forEach((button, index) => { // button이 element값, 
+                button.addEventListener("click", () => { 
+                    answerQuiz(index); //confirmButtons의 index값을 answerQuiz의 매개변수로 전달함 --> 전달된 index값으로 박스의 위치를 지정함 
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

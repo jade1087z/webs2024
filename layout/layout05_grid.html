@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            height: 100px;
+            background-color: #EEEBE9;
+        }
+        #nav {
+            height: 100px;
+            background-color: #B9AAA5;
+        }
+        #main {
+            height: 780px;
+            background-color: #886F65;
+        }
+        #footer {
+            height: 100px;
+            background-color: #4E342E;
+        }
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            background-color: rgba(0,0,0,0.2);
+        }
+        .contents {
+            display: grid;
+            grid-template-areas: 
+                "c1 c1"
+                "c2 c2"
+                "c3 c4"
+            ;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 100px 200px 480px;
+        }
+        .c1 {
+            background-color: #74574A;
+            grid-area: c1;
+        }
+        .c2 {
+            background-color: #684D43;
+            grid-area: c2;
+        }
+        .c3 {
+            background-color: #594139;
+            grid-area: c3;
+        }
+        .c4 {
+            background-color: #4A352F;
+            grid-area: c4;
+        }
+        @media (max-width: 1220px){
+            .container {
+                width: 90%;
+            }
+            .contents {
+            grid-template-areas: 
+                "c1 c2 c2"
+                "c1 c3 c4"
+            ;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px){
+            .container {
+                width: 100%;
+            }
+            .contents {
+            grid-template-areas: 
+                "c1 c2"
+                "c1 c3"
+                "c1 c4"
+            ;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 260px 260px 260px;
+            }
+        }
+        @media (max-width: 600px){
+            .container {
+                width: 100%;
+            }
+            .contents {
+            grid-template-areas: 
+                "c1"
+                "c2"
+                "c3"
+                "c4"
+            ;
+            grid-template-columns: 100%;
+            grid-template-rows: 150px 210px 210px 210px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container"></div>
+        </header>
+        <nav id="nav"><div class="container"></div></nav>
+        <main id="main">
+            <div class="container contents">
+                <article class="c1"></article>
+                <article class="c2"></article>
+                <article class="c3"></article>
+                <article class="c4"></article>
+            </div>
+        </main>
+        <footer id="footer"><div class="container"></div></footer>
+    </div>
+</body>
+</html>
