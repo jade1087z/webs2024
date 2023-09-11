@@ -51,7 +51,7 @@
         <div class="quiz__wrap">
         </div>
         <!-- quiz_wrap -->
-        <div class="quiz__score"></div>
+        <div class="quiz__score">0</div>
     </main>
     <!-- //main -->
 
@@ -62,7 +62,7 @@
     <script>
         // 선택자
         const quizWrap = document.querySelector(".quiz__wrap");
-        const quizScore = document.querySelector(".quiz__socre");
+        const quizScore = document.querySelector(".quiz__score");
         let totalScore = 0;
 
         // 문제 정보
@@ -1411,7 +1411,7 @@
             <div class="quiz__input none">
                 <input type="text" placeholder="정답을 입력해주세요!">
             </div>
-            <div class="quiz__answer">${quiz.infoAnswer}</div>
+            <div class="quiz__answer none">${quiz.infoAnswer}</div>
             <div class="quiz__desc none">${quiz.infoDesc}</div>
         </div>
         <div class="quiz__footer">
