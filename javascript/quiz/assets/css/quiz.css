@@ -353,6 +353,7 @@ a {
     content: "🤣 설명: ";
 }
 .quiz__footer {}
+.quiz__next,
 .quiz__confirm {
     background-color: #280949;
     color: #fff;
@@ -365,13 +366,13 @@ a {
     border: 1px dashed transparent;
     border-radius: 3px;
 }
+.quiz__next:hover,
 .quiz__confirm:hover {
     border: 1px dashed #412E91;
     background-color: transparent;
     color: #412E91;
     cursor: pointer;
 }
-
 /*footer*/
 #footer {
     text-align: center;

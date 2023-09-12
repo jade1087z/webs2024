@@ -107,3 +107,21 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     font-size: 16px;
 }
+
+/* list style none */
+ul, ol, li {
+    list-style: none;
+}
+/* font style normal */
+em, address {
+    font-style: normal;
+}
+
+/* 이미지 대체(IR) 효과 */
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-align: -9999;
+}
