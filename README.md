@@ -7,7 +7,8 @@ https://jade1087z.github.io/webs2024/
  https://jade1087z.github.io/webs2024/javascript/index.html
 
 ## 레이아웃
-여러가지 유형별 레이아웃을 공부합니다.https://jade1087z.github.io/webs2024/layout/index.html
+여러가지 유형별 레이아웃을 공부합니다.
+https://jade1087z.github.io/webs2024/layout/index.html
 
 ## sql
 데이터베이스 MySQL를 공부합니다.
