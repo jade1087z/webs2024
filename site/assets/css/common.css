@@ -6,7 +6,7 @@
 #skip a {
     background-color: #000;
     color: #fff;
-    padding: 20px;
+    padding: 20px 30px;
     position: absolute;
     left: 0;
     top: -80px;
@@ -14,4 +14,11 @@
 #skip a:active,
 #skip a:focus {
     top: 0;
+}
+
+/* 가운데 영역 재활용 */
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
 }
