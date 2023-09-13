@@ -36,6 +36,16 @@
                     <li><a href="#sample08">08. 화살표 함수 : 매개변수 함수</a></li>
                     <li><a href="#sample09">09. 화살표 함수 : 리턴 함수</a></li>
                     <li><a href="#sample10">10. 화살표 함수 : 매개변수 + 리턴 함수</a></li>
+                    <li><a href="#sample11">11. 함수 유형 : 함수와 매개변수를 이용한 형태</a></li>
+                    <li><a href="#sample12">12. 함수 유형 : 함수와 변수를 이용한 형태</a></li>
+                    <li><a href="#sample13">13. 함수 유형 : 함수와 배열을 이용한 형태</a></li>
+                    <li><a href="#sample14">14. 함수 유형 : 함수와 객체를 이용한 형태</a></li>
+                    <li><a href="#sample15">15. 함수 유형 : 함수와 객체 및 배열을 이용한 형태</a></li>
+                    <li><a href="#sample16">16. 함수 유형 : 객체안에 함수를 이용한 형태</a></li>
+                    <li><a href="#sample17">17. 함수 유형 : 객체 생성자 함수</a></li>
+                    <li><a href="#sample18">18. 함수 유형 : 프로토타입 함수</a></li>
+                    <li><a href="#sample19">19. 함수 유형 : 객체 리터럴 함수</a></li>
+                    <li><a href="#sample20">20. 클래스</a></li>
 
                 </ul>
             </div> 
@@ -298,6 +308,300 @@
                 </div>
                 <!-- //sample10 -->
 
+                <div id="sample11" class="sample">
+                    <h3>11. 함수 유형 : 함수와 매개변수를 이용한 형태 </h3>
+                    <p>자바스크립트(JavaScript)에서 함수는 프로그램 내에서 재사용 가능한 코드 블록을 나타내는 중요한 개념입니다.</p>
+<pre><code class="language-js">{
+    function func (num, str) {
+        console.log(`${num}. ${str}`);
+    }
+    func(11, "함수가 실행되었습니다.");
+}
+</code></pre>
+                    <p class="desc">전달 받은 변수값을, 리터럴을 활용해 간편하게 출력할 수 있다.</p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                11. 함수가 실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample11 -->
+
+                <div id="sample12" class="sample">
+                    <h3>12. 함수 : 변수를 이용한 함수 형태 </h3>
+                    <p>자바스크립트(JavaScript)에서 함수는 프로그램 내에서 재사용 가능한 코드 블록을 나타내는 중요한 개념입니다.</p>
+<pre><code class="language-js">{
+    const num = 12;
+    const str = "함수가 실행되었습니다."
+    
+    function func(num, str) {
+        console.log(num + ", " + str);
+        console.log(`${num}. ${str}`);
+    }
+    func(num, str);
+}
+</code></pre>
+                    <p class="desc">함수 밖에서 선언한 변수를 전달 받아 출력할 수 있다.</p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                12. 함수가 실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample12 -->
+
+                <div id="sample13" class="sample">
+                    <h3>13. 함수 유형 : 함수와 배열을 이용한 형태</h3>
+                    <p>자바스크립트(JavaScript)에서 함수는 프로그램 내에서 재사용 가능한 코드 블록을 나타내는 중요한 개념입니다.</p>
+<pre><code class="language-js">{
+    const num = [13, 14];
+    const str = ["함수가 실행되었습니다."];
+
+    function func(num, str){
+        console.log(num, str);
+    }
+    func(`${num[0]}. ${str[0]}`);
+    func(`${num[1]}. ${str[0]}`);
+}
+</code></pre>
+                    <p class="desc">배열에 선언된 값을 함수의 매개변수로 전달해 출력할 수 있다.</p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                13. 함수가 실행되었습니다. <br>
+                                14. 함수가 실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample13 -->
+
+                <div id="sample14" class="sample">
+                    <h3>14. 함수 유형 : 함수와 객체를 이용한 형태</h3>
+                    <p>자바스크립트(JavaScript)에서 함수는 프로그램 내에서 재사용 가능한 코드 블록을 나타내는 중요한 개념입니다.</p>
+<pre><code class="language-js">{
+    const info = {
+        num : 15,
+        str : "함수가 실행"
+    }
+    function func(num, str){
+        console.log(`${num}. ${str}`);
+    }
+    func(info.num, info.str);
+}
+</code></pre>
+                    <p class="desc">객체에 선언된 값을 함수의 매개변수로 전달해 출력할 수 있다.</p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                15. 함수가 실행되었습니다. <br>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample14 -->
+
+                <div id="sample15" class="sample">
+                    <h3>15. 함수 유형 : 함수와 객체 및 배열을 이용한 형태</h3>
+                    <p>자바스크립트(JavaScript)에서 함수는 프로그램 내에서 재사용 가능한 코드 블록을 나타내는 중요한 개념입니다.</p>
+<pre><code class="language-js">{
+    const info = [
+        {num: 16, str: "함수가 실행되었습니다."},
+        {num: 17, str: "함수가 실행되었습니다."},
+    ]
+    function func(num, str){
+        console.log(`${num}, ${str}`);
+    }
+    func(info[0].num, info[0].str);
+    func(info[1].num, info[1].str);
+}
+</code></pre>
+                    <p class="desc"> 배열 안의 객체를 매개변수로 전달해 함수로 실행할 수 있다.</p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                16. 함수가 실행되었습니다. <br>
+                                17. 함수가 실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample15 -->
+
+                <div id="sample16" class="sample">
+                    <h3>16. 함수 유형 : 객체안에 함수를 이용한 형태</h3>
+                    <p>자바스크립트(JavaScript)에서 함수는 프로그램 내에서 재사용 가능한 코드 블록을 나타내는 중요한 개념입니다.</p>
+<pre><code class="language-js">{
+    const info = {
+        num:18,
+        str:"함수가 실행되었습니다.",
+        result: () => console.log(`${info.num}.${info.str}`)            
+    }
+    info.result();
+}
+</code></pre>
+                    <p class="desc">객체 안에 변수와 함수를 선언하고 객체 안에 선언된 변수를 매개변수로 전달해 사용할 수 있다.</p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                18. 함수가 실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample16 -->
+
+                <div id="sample17" class="sample">
+                    <h3>17. 함수 유형 : 객체 생성자 함수</h3>
+                    <p>자바스크립트(JavaScript)에서 함수는 프로그램 내에서 재사용 가능한 코드 블록을 나타내는 중요한 개념입니다.</p>
+<pre><code class="language-js">{
+    function Func(num, str){
+        this.num = num;
+        this.str = str;
+        this.result = () => {
+            console.log(`${this.num}. ${this.str}`);
+        }
+    }
+    // 인스턴스를 생성
+    const info = new Func(19, "함수가 실행되었습니다.");
+    
+    // 재활용
+    const info2 = new Func(20, "함수가 실행되었습니다.");
+
+    // 호출
+    info.result();
+    info2.result();
+}
+</code></pre>
+                    <p class="desc">객체 생성자 함수는, 비슷한 유형의 변수를 객체 내에서 지속적으로 선언하는 번거로움을 해소한다. <br> 
+                    객체 생성자 함수를 사용할 때는 함수의 첫 문자를 대문자로 사용해주고, 인스턴스를 생성해 사용한다. <br>
+                    이 때, 전달받는 변수는 this.을 통해 지정하고 사용한다. <br>
+                    인스턴스만 새로 만들면 재활용하는데 용이하다.
+                    </p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                19. 함수가 실행되었습니다.<br>
+                                20. 함수가 실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample17 -->
+
+                <div id="sample18" class="sample">
+                    <h3>18. 함수 유형 : 프로토타입 함수</h3>
+                    <p>자바스크립트(JavaScript)에서 함수는 프로그램 내에서 재사용 가능한 코드 블록을 나타내는 중요한 개념입니다.</p>
+<pre><code class="language-js">{
+    function Func(num, str){
+        this.num = num;
+        this.str = str;
+    }
+    Func.prototype.result = function(){
+        console.log(`${this.num}. ${this.str}`);
+    }
+
+    const info = new Func(21, "함수가 실행되었습니다.");
+    const info2 = new Func(22, "함수가 실행되었습니다.");
+
+    info.result();
+    info2.result();
+}
+</code></pre>
+                    <p class="desc">객체 생성자 함수의 단점은 함수 안에 다른 정의된 함수, 객체 등이 사용되지 않는 경우에도, 메모리를 잡아먹는다는 점이다. <br>
+                    따라서 객체 생성자 함수 밖에 함수를 선언하고, 생성자 함수의 이름과, prototype임을 선언해 사용한다. <br> 그러나 가독성이 떨어진다는 단점이 있다. 
+                    </p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                21. 함수가 실행되었습니다.<br>
+                                22. 함수가 실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample18 -->
+
+                <div id="sample19" class="sample">
+                    <h3>19. 함수 유형 : 객체 리터럴 함수</h3>
+                    <p>자바스크립트(JavaScript)에서 함수는 프로그램 내에서 재사용 가능한 코드 블록을 나타내는 중요한 개념입니다.</p>
+<pre><code class="language-js">{
+    function Func(num, str){
+        this.num = num;
+        this.str = str;
+    }
+    Func.prototype = {
+        result : function(){
+            console.log(`${this.num}. ${this.str}`);
+        }
+    }
+    const info = new Func(23, "함수가 실행되었습니다. ");
+    const info2 = new Func(24, "함수가 실행되었습니다. ");
+    info.result();
+    info2.result();
+
+}
+</code></pre>
+                    <p class="desc">프로토타입의 함수 형태의 단점인 가독성이 떨어진다는 단점을 해결하기 위해 설계되었다. <br>
+                    프로토타입 함수를 객체의 형태로 설계해 함수들을 나열해 사용한다.
+                    </p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                22. 함수가 실행되었습니다.<br>
+                                23. 함수가 실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample19 -->
+
+                <div id="sample20" class="sample">
+                    <h3>20. 화살표 함수 : 매개변수와 리턴값이 있는 함수 </h3>
+                    <p>자바스크립트(JavaScript)에서 함수는 프로그램 내에서 재사용 가능한 코드 블록을 나타내는 중요한 개념입니다.</p>
+<pre><code class="language-js">{
+    func1 = (x) => { return x; }
+    console.log(func(100));
+
+    //생략1 
+    const func2 = x => { return x; }
+    console.log(func(100));
+
+    //생략 2 
+    const func3 = x => return x;
+    console.log(func(100));
+    
+    //생략 3
+    func3 = x => return x;
+    console.log(func(100));
+}
+</code></pre>
+                    <p class="desc">매개변수와 리턴값을 같이 사용하는 함수는 자바스크립트 내에서 가장 많이 사용되는 형태입니다.</p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                100
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample20 -->
+
+             
             </div> <!-- main-sample -->
         </main>
         <!-- //main -->
@@ -312,86 +616,122 @@
      <script src="../assets/js/highlight.min.js"></script>
      <script>hljs.highlightAll();</script>
      <script>
-    // 01. 선언적 함수
+    
+    //11. 함수 유형 : 함수와 매개변수를 이용한 형태
     {
-        function func(){
-            console.log("실행되었습니다.");
+        function func (num, str) {
+            console.log(`${num}. ${str}`);
         }
-        func();
+        func(12, "함수가 실행되었습니다.");
     }
-    // 02. 익명 함수
+    //12. 함수와 변수
     {
-        const func = function(){
-            console.log("실행되었습니다.");
+        const num = 11;
+        const str = "함수가 실행되었습니다."
+        
+        function func(num, str) {
+            console.log(num + ", " + str);
+            console.log(`${num}. ${str}`);
         }
-        func();
+        func(num, str);
     }
-    // 03. 매개변수 
+    //13. 함수 유형 : 함수와 배열을 이용한 형태
     {
-        function func(str){
-            console.log(str);
+        const num = [13, 14];
+        const str = ["함수가 실행되었습니다."];
+
+        function func(num, str){
+            console.log(num, str);
         }
-        func("실행되었습니다.");
+        func(`${num[0]}. ${str[0]}`);
+        func(`${num[1]}. ${str[0]}`);
     }
-    // 04. 리턴
+    //14. 함수 유형 : 함수와 객체를 이용한 형태                    
     {
-        function func(){
-            return "실행되었습니다.";
+        const info = {
+            num : 15,
+            str : "함수가 실행"
         }
-        console.log(func());
-    }
-    // 05. 매개변수 + 리턴값 함수
-    {
-        function func(str){
-            return str;
+        function func(num, str){
+            console.log(`${num}. ${str}`);
         }
-        console.log(func("실행되었습니다."));
+        func(info.num, info.str);
     }
-    // 06. 화살표 함수 : 선언적 함수
+    //15. 함수 유형 : 함수와 객체 및 배열을 이용한 형태
     {
-        func = () => {
-            console.log("실행되었습니다.");
+        const info = [
+            {num: 16, str: "함수가 실행되었습니다."},
+            {num: 17, str: "함수가 실행되었습니다."},
+        ]
+        function func(num, str){
+            console.log(`${num}, ${str}`);
         }
-        func();
+        func(info[0].num, info[0].str);
+        func(info[1].num, info[1].str);
     }
-    // 07. 화살표함수 : 익명 함수
+    //16. 함수 유형 : 객체안에 함수를 이용한 형태
     {
-        const func = () => {
-            console.log("실행되었습니다.");
+        const info = {
+            num:18,
+            str:"함수가 실행되었습니다.",
+            result: () => console.log(`${info.num}.${info.str}`)            
         }
-        func();
+        info.result();
     }
-    // 08. 화살표함수 : 매개변수 
+    //17. 함수 유형 : 객체 생성자 함수
     {
-        func = (str) => {
-            console.log(str);
+        function Func(num, str){
+            this.num = num;
+            this.str = str;
+            this.result = () => {
+                console.log(`${this.num}. ${this.str}`);
+            }
         }
-        func("실행되었습니다.");
+        // 인스턴스를 생성
+        const info = new Func(19, "함수가 실행되었습니다.");
+        
+        // 재활용
+        const info2 = new Func(20, "함수가 실행되었습니다.");
+
+        // 호출
+        info.result();
+        info2.result();
     }
-    // 09. 화살표함수 : 리턴
+    //18. 함수 유형 : 프로토타입 함수
     {
-        func = () => {
-            return "실행되었습니다.";
+        function Func(num, str){
+            this.num = num;
+            this.str = str;
         }
-        console.log(func());
-    }
-    // 10. 화살표함수 : 매개변수 + 리턴값 함수
-    {
-        func1 = (str) => {
-            return str;
+        Func.prototype.result = function(){
+            console.log(`${this.num}. ${this.str}`);
         }
 
-        const func2 = (str) => {
-            return str;
-        }
+        const info = new Func(21, "함수가 실행되었습니다.");
+        const info2 = new Func(22, "함수가 실행되었습니다.");
 
-        const func3 = str => str;
-
-        // 선언 (가독성 x )
-        func4 = str => str;
-
-        console.log(func4("실행1되었습니다."));
+        info.result();
+        info2.result();
     }
+    //19. 함수 유형 : 객체 리터럴 함수
+    {
+        function Func(num, str){
+            this.num = num;
+            this.str = str;
+        }
+        Func.prototype = {
+            result : function(){
+                console.log(`${this.num}. ${this.str}`);
+            }
+        }
+        const info = new Func(23, "함수가 실행되었습니다. ");
+        const info2 = new Func(24, "함수가 실행되었습니다. ");
+        info.result();
+        info2.result();
+
+    }
+    //19. 클래스
+
     </script>
 </body>
 </html>

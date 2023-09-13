@@ -199,6 +199,45 @@ li {
         padding: 5px 10px;
         font-size: 14px;
     }
+    .main_sample {
+        padding: 20px;
+    }
+    .main_sample h3 {
+        font-size: 20px;
+    }
+    .main_sample p {
+        font-size: 14px;
+    }
+    .main_sample .desc {
+        font-size: 14px;
+        padding: 8px 5px 8px 10px;
+    }
+    .main_sample .sample .result {
+        font-size: 14px;
+    }
+    .main_menu {
+        padding: 20px;
+        font-size: 14px;
+    }
+    .main_desc {
+        padding: 14px;
+    }
+    pre code.hljs {
+        font-size: 14px;
+    }
+    
+}
+/* @media (max-width: 800px){
+    #header {
+        padding: 20px;
+    }
+    #header h1 {
+        padding: 20px;
+    }
+    #header nav ul li a {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
     .main__menu {
         padding: 20px;
         font-size: 14px;
@@ -226,4 +265,4 @@ li {
     pre code.hljs {
         font-size: 14px;
     }
-}
+} */
