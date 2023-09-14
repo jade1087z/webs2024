@@ -237,7 +237,7 @@ a {
     margin-bottom: 20px;
     font-size: 24px;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.2;
 }
 .quiz__question em {
     font-size: 24px;
@@ -526,9 +526,15 @@ a {
     text-underline-position: under;
 }
 @media (max-width: 600px){
-    #header h1 {
+    #header {
+        flex-direction: column;
+    }
+    #header h1 a {
         padding: 15px;
-
+    }
+    #header nav {
+        padding-right: 0;
+        margin-bottom: 20px;
     }
     #header nav li a {
         width: 30px;
@@ -566,5 +572,21 @@ a {
     }
     .quiz__answer {
         padding: 14px;
+    }
+
+    .quiz__question span {
+        font-size: 20px;
+    }
+    .quiz__input input {
+        padding: 14px;
+    }
+    .quiz__answer {
+        padding: 14px;
+    }
+    .quiz__desc {
+        padding: 14px;
+    }
+    .quiz__choice label span {
+        padding: 13px;
     }
 }
