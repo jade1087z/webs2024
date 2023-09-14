@@ -137,8 +137,8 @@
             // 정답 확인 버튼
             quizConfirm.addEventListener("click", () => {
                 checkAnswer();
-                quizConfirm.classList.add("none");
-                quizNext.classList.remove("none");
+                // quizConfirm.classList.add("none");
+                // quizNext.classList.remove("none");
             });
 
             quizNext.addEventListener("click", () =>{
@@ -157,7 +157,10 @@
         // 정답이 맞는지 체크하기
         const checkAnswer = () => {
             const selectedChoice = quizWrap.querySelectorAll("input[name='choice']:checked");
-            
+            // 정답 확인 버튼 
+            const quizConfirm = quizWrap.querySelector(".quiz__confirm");
+            const quizNext = quizWrap.querySelector(".quiz__next");
+            // 
             const correctAnswer = quizInfo[curretIndex].infoAnswer;
             const quizElement = quizWrap.querySelector(".quiz");
             const descElement = quizWrap.querySelector(".quiz__desc");
@@ -167,9 +170,11 @@
                 const userAnswer = selectedChoice[0].value;
                 if(userAnswer === correctAnswer){
                     quizElement.classList.add("good");
+                    
                 } else {
                     quizElement.classList.add("bad");
                     answerElement.classList.remove("none");
+                    quizConfirm.classList.
                 }
                 descElement.classList.remove("none");
                 } else {

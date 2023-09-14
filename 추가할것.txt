@@ -1,0 +1,1 @@
+push, pop, join, trim 매서드 정리할 것 
