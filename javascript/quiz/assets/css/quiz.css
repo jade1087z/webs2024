@@ -236,39 +236,35 @@ a {
 .quiz__question {
     margin-bottom: 20px;
     font-size: 24px;
-    font-style: normal;
+    font-weight: 400;
     line-height: 1.5;
-    font-weight: 300;
 }
 .quiz__question em {
+    font-size: 24px;
     font-style: normal;
+    font-weight: 400;
 }
-.quiz__question span{
+.quiz__question span {
+    font-size: 24px;
     line-height: 1.5;
     font-weight: 300;
 }
 .quiz__choice {
     margin-bottom: 20px;
 }
+.quiz__img {
+    margin-bottom: 10px;
+}
+.quiz__img img {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+
 .quiz__choice label {
     display: block;
     width: 100%;
-    
 }
-.quiz__choice label:hover {
-    /* border-color: #412E91;
-    color: #412E91;
-    box-shadow: 1px 1px 5px #3c2f7389;; */
-}
-
-/* 라디오 체크는 브라우저 마다 모양의 차이가 있다.
-   따라서 
-   input 체크박스를 없애고 가상의 요소를 만들어준다. 
-   단, 가상의 요소를 만들 때 
-   display none을 하게되면 
-   보이스 리더기에 잡히지 않는다.
-   크기를 0으로 만들어 눈에만 보이지 않게 한다.
-*/
 .quiz__choice label input {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -278,48 +274,122 @@ a {
     overflow: hidden;
 }
 .quiz__choice label span {
+    position: relative;
     display: flex;
     align-items: center;
     border: 1px solid #eee;
     padding: 17px;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
     border-radius: 3px;
     font-size: 16px;
-    line-height: 1.5;
-    cursor: pointer;
     font-weight: 400;
+    line-height: 1.4;
+    cursor: pointer;
 }
 .quiz__choice label span:hover {
     border-color: #412E91;
-    color: #412E91;
-    box-shadow: 1px 1px 5px #3c2f7389;;
+    color: #493B7E;
+    box-shadow: 1px 1px 5px #73689C;
 }
 .quiz__choice label span::before {
-    content: "";
-    /* position: absolute;
-    left: 0;
-    top: 0;    영역이 사라짐 반응형에서 문제가 생김 ---> display flex를 활용
-    */
+    content: '';
     width: 24px;
     height: 24px;
     border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: inset 0 0 0 4px #412E91;
     margin-right: 15px;
-    box-shadow: inset 0 0 0 6px #412e91; /* 그림자를 안 쪽으로, x, y, 블러, 길이*/
-    flex-shrink: 0; /* flex-wrap의 성질을 가지고 있음 */
     transition: all 0.3s;
 }
-.quiz__choice label input:checked + span::before{ 
-    box-shadow: inset 0 0 0 9px #412e91;
+.quiz__choice label input:checked + span::before {
+    box-shadow: inset 0 0 0 9px #412E91;;
 }
 .quiz__choice label input:checked + span {
-    border-color: #412e91;
-    color: #412041;
+    border-color: #412E91;
+    color: #493B7E;
+    box-shadow: 1px 1px 5px #D4D2DB;
+    background-color: hsla(250, 23%, 95%, 0.527);
+}
+.quiz__choice .choice {
+    border: 1px solid #eee;
+    padding: 17px 55px 17px 17px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 1.4;
+    transition: border-color 0.3s, background-color 0.3s;
+    border-radius: 3px;
+    color: #666;
+}
+.quiz__choice .choice:hover {
+    border-color: #412E91;
+    background-color: #f6f4ff;
+    cursor: pointer;
+}
+/*.quiz__choice .choice:nth-child(1)::before {
+    content:'1. ';
+}
+.quiz__choice .choice:nth-child(2)::before {
+    content: '2. ';
+}
+.quiz__choice .choice:nth-child(3)::before {
+    content: '3. ';
+}
+.quiz__choice .choice:nth-child(4)::before {
+    content: '4. ';
+} */
+.quiz__choice .choice.correct {
+    position: relative;
+    border-color: #412E91;
+    background-color: #e9e4ff60;
+    color: #412E91;
+}
+.quiz__choice .choice.correct::after {
+    content: ' ';
+    width: 20px;
+    height: 20px;
+    border: 6px solid #412E91;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.quiz__choice .choice.incorrect {
+    position: relative;
+    border-color: #9A0606;
     box-shadow: 1px 1px 5px #422e9160;
     background-color: #e9e4ff60;
+    color: #412E91;
+}
+.quiz__choice .choice.incorrect::before {
+    content: ' ';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 6px;
+    background-color: #9A0606;
+    border-radius: 5px;
+    transform: rotate(45deg);
+    margin-top: -3px;
+}
+.quiz__choice .choice.incorrect::after {
+    content: ' ';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 6px;
+    background-color: #9A0606;
+    border-radius: 4px;
+    transform: rotate(-45deg);
+    margin-top: -3px;
 }
 .quiz__animation {
-    border: 1px dashed #b8b8b8;
-    margin-bottom: 15px;
+    border: 1px solid #BDB5E4;
+    margin-bottom: 10px;
 }
 .quiz__input {
     margin-bottom: 10px;
@@ -327,35 +397,33 @@ a {
 .quiz__input input {
     width: 100%;
     padding: 20px;
-    border: 1px solid #b8a8ff;
+    border: 1px solid #B8A8FF;
     border-radius: 3px;
 }
-.quiz__answer::before {
-    content: "🤣 정답: ";
-}
 .quiz__answer {
-    background-color: #ede9ff;
-    border: 1px solid #7c7697;
+    background-color: #EDE9FF;
+    border: 1px solid #B8A8FF;
     padding: 20px;
     margin-bottom: 10px;
     line-height: 1.5;
-    text-align: center;
     color: #666;
 }
+.quiz__answer::before {
+    content: " 😊정답 : ";
+}
 .quiz__desc {
-    border: 1px solid #eaeaea;
+    border: 1px solid #EAEAEA;
     padding: 20px;
     margin-bottom: 10px;
     line-height: 1.5;
     color: #666;
 }
 .quiz__desc::before {
-    content: "🤣 설명: ";
+    content: "😊설명: ";
 }
 .quiz__footer {}
-.quiz__next,
 .quiz__confirm {
-    background-color: #280949;
+    background-color: #412E91;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -363,16 +431,85 @@ a {
     border: 0;
     width: 100%;
     transition: all 0.3s;
-    border: 1px dashed transparent;
+    border: 1PX dashed transparent;
     border-radius: 3px;
 }
-.quiz__next:hover,
 .quiz__confirm:hover {
     border: 1px dashed #412E91;
     background-color: transparent;
     color: #412E91;
     cursor: pointer;
 }
+.quiz__next {
+    width: 100%;
+    border: 1px dashed #412E91;
+    padding: 15px 20px;
+    background-color: #fff;
+    cursor: pointer;
+    color: #412E91;
+    transition: all 0.3s;
+}
+.quiz__next:hover {
+    background-color: #EEECF8;
+}
+.quiz__indicator {
+    border-color: #F5F2FF;
+    padding: 20px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.quiz__indicator span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #412E91;
+    box-shadow: 1px 1px #412E91;
+}
+.quiz__indicator span.correct {
+    background-color: #412E91;
+    position: relative;
+}
+.quiz__indicator span.correct::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: 4px solid #fff;
+    position: absolute;
+    border-radius: 50%;
+    left: 4px;
+    top: 2px;
+}
+.quiz__indicator span.incorrect {
+    position: relative;
+}
+.quiz__indicator span.incorrect::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 7px;
+    width: 14px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #412E91;
+    transform: rotate(-45deg);
+}
+.quiz__indicator span.incorrect::after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 7px;
+    width: 14px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #412E91;
+    transform: rotate(45deg);
+}
+
+/* 9-14 추가 부분 */
+
+
+
+
 /*footer*/
 #footer {
     text-align: center;

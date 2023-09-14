@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/quiz.css">
+    <link rel="stylesheet" href="assets/css/animaition.css">
+
+    <title>퀴즈 이펙트06</title>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Quiz</a></h1>
+        <nav>
+            <ul>
+                <li><a href="quizEffect01.html">1</a></li>
+                <li><a href="quizEffect02.html">2</a></li>
+                <li><a href="quizEffect03.html">3</a></li>
+                <li><a href="quizEffect04.html">4</a></li>
+                <li><a href="quizEffect05.html">5</a></li>
+                <li class="active"><a href="quizEffect06.html">6</a></li>
+                <li><a href="quizEffect07.html">7</a></li>
+            </ul>
+            <!-- ul -->
+        </nav>
+        <!-- nav -->
+    </header>
+    <!-- header -->
+    <main id="main">
+        <div class="quiz__wrap">
+            <div class="quiz">
+                <div class="quiz__header"></div>
+                <div class="quiz__main">
+                    <div class="quiz__question"></div>
+                   
+                    <div class="quiz__choice">
+                        <div id="choice1" class="choice"></div>
+                        <div id="choice2" class="choice"></div>
+                        <div id="choice3" class="choice"></div>
+                        <div id="choice4" class="choice"> </div>
+                    </div>
+                    <div class="quiz__answer "></div>
+                    <div class="quiz__desc "></div>
+                </div>
+                <!-- //quiz.main -->
+                <div class="quiz__footer">
+                    <div class="quiz__indicator">
+                        
+                    </div>
+                    <button class="quiz__next">다음 문제</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:danziro97@naver.com">danziro97@naver.com</a>
+    </footer>
+    <!-- footer mail -->
+
+    <script>
+        //
+        const quizWrap = document.querySelector(".quiz__wrap"); 
+
+        // 문제 데이터
+        const quizInfo = [
+            {
+                question: "",
+                desc: ""
+            }
+        ];
+
+        // 문제 가져오기
+        const fetchQuiz = () => {
+            fetch("https://jade1087z.github.io/webs2024/json//gineungsaJC2011_05.json")
+                .then(res => res.json())
+                .then(items => {
+                    console.log(items[0].question);
+                    quizInfo[0].question = [items[0].question];
+                    quizInfo[0].desc = [items[0].desc];
+                    console.log(quizInfo);
+                    
+                    // html 로딩이 완료된 이후 js를 실행시킨다. 이후 updateQuiz()가 실행되어야 한다 따라서 QUIZINFO 이후 실행되도록 한다.
+                    updateQuiz();
+                })
+                .catch((error) => console.log(error));
+
+        }
+
+
+        // 문제 출력
+        const updateQuiz = () => {
+            let quizWrapTag = `
+                <div class="quiz">
+                    <div class="quiz__header">정보처리 기능사</div>  
+                    <div class="quiz__main">
+                        <div class="quiz__question">
+                            ${quizInfo[0].question}
+                        </div>
+                        
+                        <div class="quiz__answer none"></div>
+                        <div class="quiz__desc">${quizInfo[0].desc}</div>
+                    </div>
+                    <div class="quiz__footer">
+                        <button class="quiz__confirm">정답 확인하기</button>
+                        <button class="quiz__next none">다음 문제</button>
+                    </div>
+                </div>`
+            ;
+            quizWrap.innerHTML = quizWrapTag;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            fetchQuiz();
+        })
+    </script>
+</body>
+
+</html>
