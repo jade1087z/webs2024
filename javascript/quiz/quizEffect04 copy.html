@@ -91,10 +91,8 @@
         ];
 
 
-        // 문제 출력
-        const updateQuiz = () => {
+        const updateQuiz = () =>{
             const quizArray = [];
-
             quizInfo.forEach((quiz, index) => {
                 quizArray.push(`<div class="quiz">
                     <div class="quiz__header"> ${quiz.infoDate} ${quiz.infoType}
@@ -135,49 +133,42 @@
                         <button class="quiz__confirm" data-index="${index}">정답 확인하기</button>
                     </div>
                     <!-- quiz_footer -->
-            </div>`);   
+            </div>`);  
             });
             quizWrap.innerHTML = quizArray.join(" ");
         };
 
-        // 정답 확인
-        const answerQuiz = (index) => {
-            const quizChoices = quizWrap.querySelectorAll(`.quiz__choice input[name=choice-${index}]:checked`);
-            const quizElement = quizWrap.querySelectorAll(".quiz")[index];
-            const answerElement = quizWrap.querySelectorAll(".quiz__answer")[index];
-            const descElement = quizWrap.querySelectorAll(".quiz__desc")[index];
-            const confirmElement = quizWrap.querySelectorAll(".quiz__confirm")[index];
-            
-            if(quizChoices.length > 0) {
-                const userAnswer = quizChoices[0].value;
-                if(userAnswer === quizInfo[index].infoAnswer){
-                quizElement.classList.add("good");
-            } else {
-                quizElement.classList.add("bad");
-                answerElement.classList.remove("none");
-                descElement.classList.remove("none");
-                confirmElement.classList.add("none");
-            }
-                return;
-            }
+        //정답 체크 메서드 만들기
 
+        const checkAnswer = (index) => {
+            const userAnswer = quizWrap.querySelectorAll(`.quiz__choice [name=choice-${index}]:checked`);
 
-            
+            if(userAnswer.length > 0){
+                const realAnswer = userAnswer[0].value;
+                if(realAnswer == quizInfo[index].infoAnswer){
+                    alert("정답");
+                } else {
+                    alert("땡");
+                }
+            }
         }
 
 
-        // 페이지가 로드된 후 실행
-        document.addEventListener("DOMContentLoaded", () => {
-            updateQuiz(); // 해당 함수가 실행 된 이후에 -> quiz_confirm 선택자를 로드시켜야됨 
 
-            const quizQonfirm = document.querySelectorAll(".quiz__confirm");
-            quizQonfirm.forEach((button, index) => {
-                button.addEventListener("click", () => {
-                    answerQuiz(index);
+            // pageLoad
+        document.addEventListener("DOMContentLoaded", () => {
+            updateQuiz();
+
+            const quizConfirm = quizWrap.querySelectorAll(".quiz__confirm");
+            // 선택자를 지정하고 버튼을 누르는 이벤트 만들것
+            quizConfirm.forEach((btn, index) => {
+                btn.addEventListener("click", () => {
+                    checkAnswer(index);
+
                 });
             });
-
-        })
+        });
+    
 
 
     </script>
