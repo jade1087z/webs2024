@@ -246,8 +246,9 @@ a {
 }
 .quiz__question span {
     font-size: 24px;
-    line-height: 1.5;
+    line-height: 1.4;
     font-weight: 300;
+    display: inline-block;
 }
 .quiz__choice {
     margin-bottom: 20px;
