@@ -9,53 +9,8 @@
     
 </body>
 <script>
-    const aaa = [10,20,30,40,50,60,70,80,90];
-    
-    let num = 0;
-
-    for(let i=0; i<aaa.length; i++){
-        num += aaa[i];
-    }
-    console.log(aaa.length);
-    console.log(num);
-    
-    num=0;
-    
-    aaa.forEach(el => {
-        num += el;
-        console.log(el);
-    });
-    console.log(num);
-    
-    num = 0;
-    for(let el of aaa){
-        num += el;
-    }
-    console.log("of"+num);
-
-    num = 0;
-    for(let el in aaa){
-        num += aaa[el];
-    }
-    
-    console.log("in" +num);
-
-    num=0;
-    
-    aaa.map(el => {
-        num += el;
-        console.log(el);
-    });
-    console.log("map"+num);
-
-    num=0;
-    
-    aaa.filter(el => {
-        num += el;
-        console.log(el);
-    });
-    
-    console.log("filter"+num);
-
+   let str = " hel ";
+   let trimS = str.trim();
+   document.write(trimS);
 </script>
 </html>

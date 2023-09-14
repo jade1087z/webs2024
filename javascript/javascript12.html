@@ -78,6 +78,7 @@
                     <a href="quiz/quizEffect02.html">확인하기</a>
                 </div>
                 <!-- desc02 -->
+
                 <div class="desc03">
                     <h2>03. 퀴즈 이펙트 : 객관식 : 정답 선택하기 유형(1문제)</h2>
                     <p>객관식을 선택하면 정답을 알려줍니다.</p>
@@ -91,6 +92,34 @@
                     <a href="quiz/quizEffect03.html">확인하기</a>
                 </div>
                 <!-- desc03 -->
+
+                <!-- 
+                    1. for(let i=0; i<quizChoice.length; i++){
+                        quizChoice[i].innerText = quizInfo[0].infoChoice[i];
+                    }
+                        문제 정보를 퀴즈초이스의 갯수 만큼 추가 해준다.
+
+                    2. quizConfirm.addEventListener("click", () => {
+                        let selectedChoice = null;
+                        for(let i=0; i<quizSelect.length; i++){   
+                            >> 인풋박스의 갯수만큼 반복문을 돌려 체크된 항목이 있는지 찾는다.
+                            if(quizSelect[i].checked){ 체크된 항목이 있다면~~
+                                selectedChoice = quizSelect[i].value;
+                                break; 
+                                 체크된 항목의 벨류값을 받아온다. ex:) 1, 2 
+                            }
+                        }
+                        if(selectedChoice == quizInfo[0].infoAnswer){
+                            지정한 벨류값이 퀴즈인포 객체의 인포앤서와 값이 같다면
+                            정답
+                        } else {
+                            값이 다르면
+                            오답
+                        }
+                    })
+
+
+                 -->
 
                 <div class="desc04">
                     <h2>04. 퀴즈 이펙트 : 객관식 : 정답 선택하기 유형(3문제)</h2>

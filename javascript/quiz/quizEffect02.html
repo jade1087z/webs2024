@@ -194,6 +194,7 @@
         <a href="mailto:danziro97@naver.com">danziro97@naver.com</a>
     </footer>
     <!-- footer mail -->
+
     <script>
         const quizWrap = document.querySelector(".quiz__wrap");
         const quizDate = quizWrap.querySelectorAll(".quiz__date");
@@ -251,6 +252,9 @@
         //     quizDesc[i].style.display = "none";
         // }
 
+
+        // 퀴즈인포의 배열의 길이만큼 정보를 반복적으로 출력한다.
+
         quizInfo.forEach((el, i) => {
             quizDate[i].textContent = quizInfo[i].infoDate;
             quizType[i].textContent = quizInfo[i].infoType;
@@ -266,7 +270,7 @@
 
         
         
-
+        // 버튼 이벤트 + 조건문 반복적으로 
         quizConfirm.forEach(function(btn, num){
             btn.addEventListener("click", function(){
                 const userAnswer = quizInput[num].value;

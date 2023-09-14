@@ -180,8 +180,8 @@
     .slider__dot {
         position: absolute;
         bottom: 40px;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 45%;
+        transform: translateX(0);
     }
 }
 @media (max-width: 600px){
@@ -199,10 +199,15 @@
     .slider__inner > .slider {
         background-size: 340px;
     }
+    .slider__dot {
+        position: absolute;
+        bottom: 40px;
+        left: 40%;
+        transform: translateX(0);
+    }
 }
 
 /* ___________________________________intro ___________________________________ */
-
 .intro__inner {
     padding: 100px 0;
     overflow: hidden;
@@ -211,7 +216,6 @@
     display: flex;
     justify-content: space-between;
 }
-
 .intro__img {
     width: 60%;
     position: relative;
@@ -232,7 +236,6 @@
 .intro__img .img2 img {
     width: 600px;
 }
-
 .intro__img .img3 {
     position: absolute;
     top: -10%;
@@ -244,6 +247,7 @@
 }
 .intro__text {
     width: 33%;
+    width: 415px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -264,4 +268,59 @@
 .intro__text p {
     font-size: 18px;
     line-height: 1.5;
+}
+
+@media (max-width: 1200px){
+    .intro__inner .container {
+        flex-direction: column-reverse;
+    }
+    .intro__inner {
+        padding-bottom: 0;
+    }
+    .intro__img {
+        width: 100%;
+    }
+    .intro__img .img3 {
+        position: relative;
+        text-align: center;
+        top: 5px;
+    }
+    .intro__text {
+        z-index: 1000;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media (max-width: 800px){
+    .intro__inner {
+        padding-top: 80px;
+    }
+    .intro__text {
+        padding-top: 0;
+    }
+    .intro__text h3 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    .intro__text p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 400px){
+    .intro__text h3 {
+        font-size: 34px;
+    }
+    .iotro__text p {
+        font-size: 14px;
+    }
+    .intro__img .img1 img {
+        display: none;
+    }
+    .intro__img .img2 img {
+        width: 100%;
+    }
+    .intro__img .img3 img {
+        width: 100%;
+    }
 }

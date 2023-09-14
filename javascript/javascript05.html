@@ -76,19 +76,75 @@
                 </ul>
             </div>
             <!-- main_menu -->
+
             <div class="main_sample">
-                <div id="sample30" class="sample">
-                    <h3>30. string.trim()</h3>
-                    <p>자바스크립트(JavaScript)는 동적 타입 언어이기 때문에 자료형을 정의하지 않습니다.</p>
+                
+<!-- sample 01 start -->
+
+                <div id="sample27" class="sample">
+                    <h3>27. string.prototype.toLowerCase()</h3>
+                    <p>자바스크립트(JavaScript)의 toLowerCase()메서드는 문자열을 소문자로 반환할 때 사용되는 메서드입니다.</p>
 <pre><code class="language-js">{
-   
+    let str = "HELLO, WORLD!";
+    let lowerStr = str.toLowerCase();
+    console.log(lowerStr);
 }
 </code></pre>
-                    <p class="desc"></p>
+                    <p class="desc"> 기존의 문자열을 변경하지 않고 새로운 문자열을 반환한다. 대문자로 입력된 문자열을 소문자로 통일하여 데이터를 처리할 때 유용하다. 
+                    </p>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
+                                hello, world!
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample27 -->
+
+                <div id="sample28" class="sample">
+                    <h3>28. string.prototype.toUpperCase()</h3>
+                    <p>자바스크립트(JavaScript)의 toUpperCase()메서드는 문자열을 대문자로 반환할 때 사용되는 메서드입니다.</p>
+<pre><code class="language-js">{
+    let str = "Hello, World!";
+    let upperStr = str.toUpperCase();
+    console.log(upperStr); 
+}
+</code></pre>
+                    <p class="desc"> 기존의 문자열을 변경하지 않고 새로운 문자열을 반환한다. 소문자로 입력된 문자열을 대문자로 통일하여 데이터를 처리할 때 유용하다.
+                    </p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                HELLO, WORLD!
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample28 -->
+
+
+                <div id="sample30" class="sample">
+                    <h3>30. string.trim()</h3>
+                    <p>자바스크립트(JavaScript)의 trim() 메서드는 문자열을 다룰 때 매우 유용한 메서드 중 하나입니다.</p>
+<pre><code class="language-js">{
+   let str = "   hello.js";
+   let trimStr = str.trim();
+   console.log(str);
+   console.log(trimStr);
+}
+</code></pre>
+                    <p class="desc">trim() 메서드는 기존의 문자열에 영향을 주지 않고, 문자열의 앞,뒤 공백을 제거하고 새로운 문자열을 반환한다. <br> 
+                    공백의 영향을 받지 않고 순수한 텍스트 데이터를 받아오거나 비교할 때 유용하다. 단 문자 사이의 여백을 제거할 수는 없다. 
+                    </p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                &#160;&#160;&#160;hello.js   <br>
+                                hello.js
                             </div>
                         </details>
                     </div>
