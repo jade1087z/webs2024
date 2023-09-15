@@ -13,6 +13,8 @@ body, div,dl, dt, dd, ul, ol, li, h1, h2, h3, h5, pre, code, fieldset, form, leg
 /* font */
 body, button, input, select, table, textarea {
     font-family: "nanumSquareNeo", "Malgun Gothic", "맑은 고딕", Arial, Helvetica, sans-serif ;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 /* link reset */
@@ -34,6 +36,11 @@ ul, ol, li {
 /* font style normal */
 em, address {
     font-style: normal;
+}
+/* 이미지 최적화 */
+img {
+    width: 100%;
+    vertical-align: top;
 }
 
 /* 이미지 대체(IR) 효과 */
