@@ -170,6 +170,7 @@ a {
 }
 .quiz__wrap > .quiz {
     width: 500px;
+    min-width: 350px;
     min-height: 400px;
     background-color: #fff;
     padding: 30px;
