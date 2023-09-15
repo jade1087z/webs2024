@@ -353,6 +353,7 @@
 .use__img {
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 .use__img > div {
     position: relative;
