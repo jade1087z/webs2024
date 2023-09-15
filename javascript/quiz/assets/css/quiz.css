@@ -88,10 +88,11 @@
     font-size: 16px;
 }
 body {
-    background-image: url(../img/unspl-min.jpg);
+    background-image: url(../img/quiz1.jpg);
     height: 100%;
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
+    background-repeat: no-repeat;
     
     position: relative;
 }
@@ -533,6 +534,7 @@ a {
     }
     #header h1 a {
         padding: 15px;
+        color: #181515c7;
     }
     #header nav {
         padding-right: 0;
@@ -542,6 +544,7 @@ a {
         width: 30px;
         height: 30px;
         padding: 7px;
+        color: #181515c7;
     }
     .quiz__wrap {
         padding: 0 6px;
