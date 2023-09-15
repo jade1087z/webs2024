@@ -133,20 +133,36 @@
 
                 <div class="bs-docs-section">
                     <h3 id="intro4" class="page-header">데이터베이스</h3>
-                    <h4 id="intro4-1" class="pgge-header">데이터베이스 보기</h4>
+                    <h4 id="intro4-1" class="page-header">데이터베이스 보기</h4>
                     <div class=bs-callout bs-callout-info>SHOW databases;</div>
-                    <h4 id="intro4-2" class="pgge-header">데이터베이스 만들기</h4>
+                    <h4 id="intro4-2" class="page-header">데이터베이스 만들기</h4>
                     <div class=bs-callout bs-callout-info>CREATE database 데이터베이스 이름;</div>
-                    <h4 id="intro4-3" class="pgge-header">데이터베이스 사용</h4>
+                    <h4 id="intro4-3" class="page-header">데이터베이스 사용</h4>
                     <div class=bs-callout bs-callout-info>USE database 데이터베이스 이름 ;</div>
-                    <h4 id="intro4-4" class="pgge-header">데이터베이스 삭제</h4>
+                    <h4 id="intro4-4" class="page-header">데이터베이스 삭제</h4>
                     <div class=bs-callout bs-callout-info>DROP database 데이터베이스 이름;</div>
                 </div> 
                 <!-- intro4 -->
 
                 <div class="bs-docs-section">
                     <h3 id="intro5" class="page-header">테이블</h3>
-                    <h4 id="intro5-1" class="pgge-header">테이블 전체 보기</h4>
+                    <h4 id="intro5-1" class="page-header">테이블 만들기</h4>
+                    <div class=bs-callout bs-callout-info>CREATE table 테이블 이름;</div>
+<pre><code class="language-js">{
+    create table members(
+        memberID int(10) unsigned auto_increment,
+        youEmail varchar(40) NOT NULL,
+        youName varchar(10) NOT NULL,
+        youPass varchar(20) NOT NULL,
+        youBirth int(10) NOT NULL,
+        youAge int(5) NOT NULL,
+        regTime int(30) NOT NULL,
+        PRIMARY KEY(memberID)
+    ) 
+    charset=utf8;
+}
+</pre></code>
+                    <h4 id="intro5-1" class="page-header">테이블 전체 보기</h4>
                     <div class=bs-callout bs-callout-info>SHOW tables;</div>
 <pre><code class="language-js">{
     SHOW TABLES;
@@ -158,7 +174,7 @@
 1 row in set (0.00 sec)
 
 }
-                    <h4 id="intro5-1" class="pgge-header">테이블 보기</h4>
+                    <h4 id="intro5-1" class="page-header">테이블 보기</h4>
                     <div class=bs-callout bs-callout-info>desc 테이블 이름;</div>
 </code></pre>
 <pre><code class="language-js">{
@@ -177,7 +193,7 @@ mysql> desc members;
 }
 </code></pre>
 
-                    <h4 id="intro5-2" class="pgge-header">테이블 만들기</h4>
+                    <h4 id="intro5-2" class="page-header">테이블 만들기</h4>
                     <div class=bs-callout bs-callout-info>CREATE table 테이블 이름</div>
 <pre><code class="language-js">{
     create table members(
@@ -191,24 +207,24 @@ mysql> desc members;
     ) charset=utf8;
 }
 </code></pre>
-                    <h4 id="intro5-3" class="pgge-header">테이블 사용</h4>
-                    <h4 id="intro5-4" class="pgge-header">테이블 삭제</h4>
+                    <h4 id="intro5-3" class="page-header">테이블 사용</h4>
+                    <h4 id="intro5-4" class="page-header">테이블 삭제</h4>
                     <div class=bs-callout bs-callout-info>DROP 테이블 이름</div>
-                    <h4 id="intro5-5" class="pgge-header">테이블 초기화</h4>
+                    <h4 id="intro5-5" class="page-header">테이블 초기화</h4>
                     <div class=bs-callout bs-callout-info>TRUNCATE 테이블 이름</div>
                 </div> 
                 <!-- intro5 -->
                 
                 <div class="bs-docs-section">
                     <h3 id="intro6" class="page-header">테이블 데이터</h3>
-                    <h4 id="intro6-1" class="pgge-header">테이블 입력하기</h4>
+                    <h4 id="intro6-1" class="page-header">테이블 입력하기</h4>
                     <div class=bs-callout bs-callout-info>INSERT INTO 테이블 이름</div>
                     
 <pre><code class="language-js">{
     INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("imdoob@naver.com", "임종한", "3125", "19", "091312");
 }
 </code></pre>
-                    <h4 id="intro6-2" class="pgge-header">테이블 불러오기</h4>
+                    <h4 id="intro6-2" class="page-header">테이블 불러오기</h4>
                     <div class=bs-callout bs-callout-info>SELECT 필드명 FROM 테이블명</div>
                     <h5>모든 필드명 불러오기</h5>
 <pre><code class="language-js">SELECT*FROM 테이블명</code></pre>
@@ -248,16 +264,16 @@ mysql> desc members;
                     <h5>나이가 30인 회원 제외하고 모든 회원 데이터 불러오기</h5>
 <pre><code class="language-js">SELECT*FROM members WHERE youAge &gt;> 30; </code></pre>
 
-                    <h4 id="intro6-3" class="pgge-header">테이블 수정하기</h4>
-                    <h4 id="intro6-4" class="pgge-header">테이블 삭제하기</h4>
+                    <h4 id="intro6-3" class="page-header">테이블 수정하기</h4>
+                    <h4 id="intro6-4" class="page-header">테이블 삭제하기</h4>
                 </div> 
                 <!-- intro6 -->
              
                 <div class="bs-docs-section">
                     <h3 id="intro7" class="page-header">테이블 수정</h3>
-                    <h4 id="intro7-1" class="pgge-header">필드 추가하기</h4>
-                    <h4 id="intro7-2" class="pgge-header">필드 수정하기</h4>
-                    <h4 id="intro7-4" class="pgge-header">필드 삭제하기</h4>
+                    <h4 id="intro7-1" class="page-header">필드 추가하기</h4>
+                    <h4 id="intro7-2" class="page-header">필드 수정하기</h4>
+                    <h4 id="intro7-4" class="page-header">필드 삭제하기</h4>
                 </div> 
                 <!-- intro7 -->
 
