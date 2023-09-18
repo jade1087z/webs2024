@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="webstoryboy">
     <meta name="description" content="임종한/ doob">
-    <meta name="keywords"
-        content="임종한/ doob">
+    <meta name="keywords" content="임종한/ doob">
     <title>임종한/ doob</title>
 
     <!-- Bootstrap core CSS -->
@@ -86,15 +85,15 @@
 
     <div class="container bs-docs-container">
         <div class="row">
-            <div class="col-md-9">    
-                <h2 class="page-header">MySQL</h2> 
-                
+            <div class="col-md-9">
+                <h2 class="page-header">MySQL</h2>
+
                 <div class="bs-docs-section">
                     <h3 id="intro1" class="page-header">MySQL</h3>
                     <p class="lead">MySQL은 오픈 소스 관계형 데이터베이스 관리 시스템(RDBMS)입니다.</p>
                     <p>
                         MySQL은 다중 사용자, 다중 스레드 RDBMS로서, 데이터의 안정성과 보안성을 제공합니다.
-                        MySQL은 대부분의 운영 체제에서 작동하며, 웹 애플리케이션 개발, 데이터 분석, 빅 데이터, 클라우드 기반 애플리케이션 등에 많이 사용됩니다.  
+                        MySQL은 대부분의 운영 체제에서 작동하며, 웹 애플리케이션 개발, 데이터 분석, 빅 데이터, 클라우드 기반 애플리케이션 등에 많이 사용됩니다.
                     </p>
                     <p>
                         MySQL은 SQL(Structured Query Language)을 사용하여 데이터를 관리합니다.
@@ -109,26 +108,27 @@
                         MySQL은 PHP 스크립트 언어와 상호 연동이 잘 되면서 오픈소스로 개발된 무료 프로그램입니다.
                         그래서 홈페이지나 쇼핑몰(워드프레스,Cafe24, 그누보드, 제로보드 등)에 가장 일반적으로 웹 개발에 멀리 사용하고 있습니다.
                     </p>
-                </div> 
+                </div>
                 <div class="bs-docs-section">
                     <h3 id="intro2" class="page-header">MySQL 설치</h3>
                     MAMP란 웹 사이트를 개발할 때 쓰이는 기술 스택인 MacOS, Apache, MySQL, PHP의 약어이자 솔루션 스택입니다.
-                    <a href="https://www.mamp.info/en/downloads/" target="_blank">https://www.mamp.info/en/downloads/</a>
-                </div> 
+                    <a href="https://www.mamp.info/en/downloads/"
+                        target="_blank">https://www.mamp.info/en/downloads/</a>
+                </div>
                 <!-- intro2 -->
-    
+
                 <div class="bs-docs-section">
                     <h3 id="intro3" class="page-header">MySQL 실행</h3>
                     <div class="bs-callout bs-callout-into">
                         윈도우 : cd C:\MAMP\bin\mysql\bin<br>
                         로그인 : .\mysql -uroot -proot
                     </div>
-<pre><code class="language-js">{
+                    <pre><code class="language-js">{
     윈도우 : cd C:\MAMP\bin\mysql\bin<br>
     로그인 : .\mysql -uroot -proot
 }
 </code></pre>
-                </div> 
+                </div>
                 <!-- intro3 -->
 
                 <div class="bs-docs-section">
@@ -141,14 +141,14 @@
                     <div class=bs-callout bs-callout-info>USE database 데이터베이스 이름 ;</div>
                     <h4 id="intro4-4" class="page-header">데이터베이스 삭제</h4>
                     <div class=bs-callout bs-callout-info>DROP database 데이터베이스 이름;</div>
-                </div> 
+                </div>
                 <!-- intro4 -->
 
                 <div class="bs-docs-section">
                     <h3 id="intro5" class="page-header">테이블</h3>
                     <h4 id="intro5-1" class="page-header">테이블 만들기</h4>
                     <div class=bs-callout bs-callout-info>CREATE table 테이블 이름;</div>
-<pre><code class="language-js">{
+                    <pre><code class="language-js">{
     create table members(
         memberID int(10) unsigned auto_increment,
         youEmail varchar(40) NOT NULL,
@@ -164,7 +164,7 @@
 </pre></code>
                     <h4 id="intro5-1" class="page-header">테이블 전체 보기</h4>
                     <div class=bs-callout bs-callout-info>SHOW tables;</div>
-<pre><code class="language-js">{
+                    <pre><code class="language-js">{
     SHOW TABLES;
 +---------------+
 | Tables_in_aaa |
@@ -177,7 +177,7 @@
                     <h4 id="intro5-1" class="page-header">테이블 보기</h4>
                     <div class=bs-callout bs-callout-info>desc 테이블 이름;</div>
 </code></pre>
-<pre><code class="language-js">{
+                    <pre><code class="language-js">{
 mysql> desc members;
 +----------+------------------+------+-----+---------+----------------+
 | Field    | Type             | Null | Key | Default | Extra          |
@@ -195,7 +195,7 @@ mysql> desc members;
 
                     <h4 id="intro5-2" class="page-header">테이블 만들기</h4>
                     <div class=bs-callout bs-callout-info>CREATE table 테이블 이름</div>
-<pre><code class="language-js">{
+                    <pre><code class="language-js">{
     create table members(
         memberID int(10) unsigned auto_increment,
         youEmail varchar(40) NOT NULL,
@@ -212,16 +212,37 @@ mysql> desc members;
                     <div class=bs-callout bs-callout-info>DROP 테이블 이름</div>
                     <h4 id="intro5-5" class="page-header">테이블 초기화</h4>
                     <div class=bs-callout bs-callout-info>TRUNCATE 테이블 이름</div>
-                </div> 
+                </div>
                 <!-- intro5 -->
-                
+
                 <div class="bs-docs-section">
                     <h3 id="intro6" class="page-header">테이블 데이터</h3>
                     <h4 id="intro6-1" class="page-header">테이블 입력하기</h4>
                     <div class=bs-callout bs-callout-info>INSERT INTO 테이블 이름</div>
-                    
-<pre><code class="language-js">{
+
+                    <pre><code class="language-js">{
     INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("imdoob@naver.com", "임종한", "3125", "19", "091312");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("webstoryboy@naver.com", "황상연", "9876", "10", "20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("lee.jiyoung492@gmail.com", "이지영",   "0106", "27", "20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("capitaljs10@gmail.com", "윤지성", "9876",  "10", "20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("wolves941110@gmail.com", "강서현",     "0000", "30", "20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("jeongsaeyeong@gmail.com", "정새영",    "1234", "21", "20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("chfhrdk@gmail.com", "권초록", "1234",  "28", "20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("hongjihyeon1004@gmail.com", "홍지현",  "1111", "40", "20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("tmddnrla1@naver.com", "김승우", "7768",    "29", "20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("dbwls9038@naver.com", "정유진", "8151",    "27", "20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("answlsgh95@gmail.com", "문진호", "9999",   "23","20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("adorabelness1215@naver.com", "이혜민",     "0624", "28", "20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("duddls6552@naver.com", "문영인", "1234",   "23", "20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("audgns722@naver.com", "이명훈", "1212",    "30", "20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("elese0821@naver.com", "이원영", "0821",    "27", "20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("kmdojs@gmail.com", "오종석", "1234",   "32", "20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("imdoob@naver.com", "임종한", "3125",   "19", "20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("rlanrider@gmail.com", "김우주", "1234",    "20", "20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("yunyoungsik91@gmail.com", "윤영식",    "12345", "32", "20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("97.eugene.s@gmail.com", "서유진", "9876",  "26", "20239012");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("jhyjhy968@gmail.com", "정해연", "1234",    "27", "20230913");
+    INSERT INTO members(youEmail, youName, youPass, youAge, regTime) VALUES("hee031812@gmail.com", "김희진", "9099",    "29", "20230913");
 }
 </code></pre>
                     <h4 id="intro6-2" class="page-header">테이블 불러오기</h4>
@@ -244,7 +265,7 @@ mysql> desc members;
                     <h5>멤버 아이디가 1번인 모든 회원 데이터 불러오기</h5>
 <pre><code class="language-js">SELECT*FROM memberID WHERE memberID=1; </code></pre>
 
-                    
+
                     <div class="bs-callout bs-call-info">
                         SELECT*FROM memberID WHERE memberID=10;
                     </div>
@@ -261,31 +282,62 @@ mysql> desc members;
                     <div class="bs-callout bs-call-info">
                         SELECT*FROM members WHERE youAge &gt;> 30;
                     </div>
+
                     <h5>나이가 30인 회원 제외하고 모든 회원 데이터 불러오기</h5>
 <pre><code class="language-js">SELECT*FROM members WHERE youAge &gt;> 30; </code></pre>
 
+                    <h5>멤버 아이디가 5~10 사이의 회원 데이터 불러오기</h5>
+<pre><code class="language-js">SELECT*FROM members WHERE memberID > 5 AND MEMBERID &gt; 10; </code></pre>
+
+                    <h5>나이가 30~40 사이인 회원 데이터 불러오기</h5>
+<pre><code class="language-js">SELECT*FROM members WHERE youAge BETWEEN 30 AND 40; </code></pre>
+                    
+                    <h5>나이가 30~40 사이가 아닌 회원 데이터 불러오기</h5>
+<pre><code class="language-js">SELECT*FROM members WHERE youAge NOT BETWEEN 30 AND 40; </code></pre>
+
+                    <h5>MEMBERID가 1, 5, 10, 15번인 회원 데이터 불러오기</h5>
+<pre><code class="language-js">SELECT*FROM members WHERE memberID IN(1,5,10,15); </code></pre>
+
+                    <h5>이름 없는 데이터 불러오기</h5>
+<pre><code class="language-js">SELECT * FROM members WHERE youName IS NULL; </code></pre>
+
+                    <h5>이름 있는 데이터 불러오기</h5>
+<pre><code class="language-js">SELECT * FROM members WHERE youName IS NOT NULL; </code></pre>
+
+                    <h5>이름 중에 "연"텍스트가 포함된 데이터 불러오기</h5>
+<pre><code class="language-js">SELECT * FROM members WHERE youName LIKE '%연%'; </code></pre>
+                    <h5>이름 중에 "연"텍스트로 시작하는 데이터 불러오기</h5>
+<pre><code class="language-js">SELECT * FROM members WHERE youName LIKE '연%'; </code></pre>
+                    <h5>이름 중에 "연"텍스트로 끝나는 데이터 불러오기</h5>
+<pre><code class="language-js">SELECT * FROM members WHERE youName LIKE '%연'; </code></pre>
+
+                    <h5>나이가 25 이상이고 아이디가 2 또는 9인 멤버 데이터 불러오기</h5>
+<pre><code class="language-js">SELECT * FROM members WHERE youAge >= 25 AND memberID IN(2, 9); </code></pre>
+<pre><code class="language-js">SELECT * FROM members WHERE (memberID = 2 OR memberID = 9) AND youAge >= 25; </code></pre>
+
+
                     <h4 id="intro6-3" class="page-header">테이블 수정하기</h4>
                     <h4 id="intro6-4" class="page-header">테이블 삭제하기</h4>
-                </div> 
+                </div>
                 <!-- intro6 -->
-             
+
                 <div class="bs-docs-section">
                     <h3 id="intro7" class="page-header">테이블 수정</h3>
                     <h4 id="intro7-1" class="page-header">필드 추가하기</h4>
                     <h4 id="intro7-2" class="page-header">필드 수정하기</h4>
                     <h4 id="intro7-4" class="page-header">필드 삭제하기</h4>
-                </div> 
+                </div>
                 <!-- intro7 -->
 
                 <div class="bs-docs-section">
                     <h3 id="intro8" class="page-header">테이블 합치기</h3>
-                </div> 
+                </div>
                 <!-- intro7 -->
-               
-            </div> 
-             <!-- //col-md-9 -->
-            
-            <div class="col-md-3">       
+
+            </div>
+            <!-- //col-md-9 -->
+
+            <div class="col-md-3">
                 <div class="bs-sidebar hidden-print affix-top" role="complementary">
                     <ul class="nav bs-sidenav">
                         <li class="active"><a href="#intro1">MYSQL</a></li>
@@ -326,7 +378,7 @@ mysql> desc members;
                         <li><a href="#intro9">집계 함수</a></li>
                     </ul>
                 </div>
-            </div> 
+            </div>
             <!-- //col-md-3 -->
         </div>
         <!-- row -->

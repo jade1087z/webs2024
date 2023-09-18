@@ -30,3 +30,5 @@ to upper, to low, push, pop, join, trim 매서드 정리할 것 +
         -> 16의 10진수 
 
     -> 보수에 대한 개념 
+
+    수정할 부분 QUIZ OX BEFORE

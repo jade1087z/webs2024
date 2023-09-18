@@ -510,7 +510,26 @@ a {
 
 /* 9-14 추가 부분 */
 
+.quiz__check {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #412E91;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    border: 1px dashed transparent;
+}
 
+.quiz__check:hover {
+    background-color: #e1d9ff;
+    border: 1px dashed #412e91;
+    color: #412E91;
+}
 
 
 /*footer*/
