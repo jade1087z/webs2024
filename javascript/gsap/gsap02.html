@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>GSAP Scroll Effect02</title>
+    <style>
+        @font-face {
+            font-family: 'nanumSquareNeo';
+            src: url('./NanumSquareNeo.ttf') format('truetype');
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        body {
+            color: #fff;
+            background-color: #111;
+        }
+        /* reset end */
+
+        #parallax__title {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            z-index: 10000;
+        }
+        #parallax__title h1 {
+            font-size: 30px;
+            border-bottom: 1px dashed #fff;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            font-weight: 400;
+            display: inline-block;
+        }
+        #parallax__title p {
+            font-size: 16px;
+        }
+        #parallax__title ul {
+            margin-top: 10px;
+        }
+        #parallax__title li {
+            display: inline;
+        }
+        #parallax__title li a {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px dashed #fff;
+            line-height: 20px;
+            font-style: 12px;
+            display: inline-block;
+            text-align: center;
+        }
+        #parallax__title li.active a {
+            background-color: #fff;
+            color: #111;
+        }
+/* header end */
+
+        /* main start */
+        #parallax__cont {
+            overflow: hidden;
+        }
+        .parallax__item {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .parallax__item:nth-child(2n) {
+            background-color: #222;
+        }
+        .parallax__item__num {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            font-size: 5vw;
+            line-height: 1;
+        }
+
+        .parallax__item__img {
+            width: 10vw;
+            height: 10vw;
+            margin: 1vw;
+            background-color: #fff;
+            background-size: cover;
+            background-position: center;
+        }
+        #section01 > .parallax__item__img {
+            background-image: url(img/images01-min.png);
+        }
+        #section02 > .parallax__item__img {
+            background-image: url(img/images02-min.png);
+        }
+        #section03 > .parallax__item__img {
+            background-image: url(img/images03-min.png);
+        }
+        #section04 > .parallax__item__img {
+            background-image: url(img/images04-min.png);
+        }
+        #section05 >  .parallax__item__img {
+            background-image: url(img/images05-min.png);
+        }
+        #section06 >  .parallax__item__img {
+            background-image: url(img/images06-min.png);
+        }
+        #section07 >  .parallax__item__img {
+            background-image: url(img/images06-min.png);
+        }
+        #section08 >  .parallax__item__img {
+            background-image: url(img/images08-min.png);
+        }
+        #section09 > .parallax__item__img {
+            background-image: url(img/images09-min.png);
+        }
+        .parallax__item__img.active {
+            filter: hue-rotate(100deg);
+        }
+
+        /* option */
+        #section03 .parallax__item__img {
+            width: 150px;
+            height: 150px;
+            border-radius: 150px;
+        }
+        #section06 .parallax__item__text,
+        #section05{
+            font-size: 5vw;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: inline-block;
+            text-align: center;
+        }  
+        #section07 .parallax__item__text {
+            font-size: 5vw;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #111;
+            padding: 30px;
+            width: 100%;
+            text-align: center;
+        }     
+        #section08 {
+            display: flex;
+            flex-direction: column;
+        }
+        #section08 > .parallax__item__text {
+            font-size: 2vw;
+            line-height: 1.5;
+            text-transform: uppercase;
+        }
+        #section08 > .parallax__item__img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        #section09 > .parallax__item__img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+    </style> 
+</head>
+<body>
+    <header id="parallax__title">
+        <h1>GSAP parallax Effect02</h1>
+        <p>GSAP scrollTrigger - Pin 애니메이션 기본 효과</p>
+        <ul>
+            <li><a href="gsap01.html">1</a></li>
+            <li class="active"><a href="gsap02.html">2</a></li>
+            <li><a href="gsap03.html">3</a></li>
+            <li><a href="gsap04.html">4</a></li>
+            <li><a href="gsap05.html">5</a></li>
+            <li><a href="gsap06.html">6</a></li>
+            <li><a href="gsap07.html">7</a></li>
+            <li><a href="gsap08.html">8</a></li>
+            <li><a href="gsap09.html">9</a></li>
+            <li><a href="gsap10.html">10</a></li>
+            <li><a href="gsap11.html">11</a></li>
+            <li><a href="gsap12.html">12</a></li>
+            <li><a href="gsap13.html">13</a></li>
+            <li><a href="gsap14.html">14</a></li>
+            <li><a href="gsap15.html">15</a></li>
+        </ul>
+    </header>
+    <main id="parallax__cont">
+        <section id="section01" class="parallax__item">
+            <span class="parallax__item__num">01</span>
+            <div class="parallax__item__img"></div>
+        </section>
+        <!-- //section 01 -->
+        
+        <section id="section02" class="parallax__item">
+            <span class="parallax__item__num">02</span>
+            <div class="parallax__item__img i1"></div>
+        </section>
+        <!-- //section 02 -->
+
+   
+        <section id="section03" class="parallax__item">
+            <span class="parallax__item__num">03</span>
+            <div class="parallax__item__img"></div>
+            <div class="parallax__item__img"></div>
+            <div class="parallax__item__img"></div>
+            <div class="parallax__item__img"></div>
+            <div class="parallax__item__img"></div>
+            <div class="parallax__item__img"></div>
+        </section>
+        <!-- //section 03 -->
+        
+        <section id="section04" class="parallax__item">
+            <span class="parallax__item__num">04</span>
+            <div class="parallax__item__img i3"></div>
+        </section>
+        <!-- //section 04 -->
+
+    
+        <section id="section05" class="parallax__item">
+            <span class="parallax__item__num">05</span>
+            <div class="parallax__item__text t1">section05</div>
+            <div class="parallax__item__text t2">section05</div>
+            <div class="parallax__item__text t3">section05</div>
+            <div class="parallax__item__text t4">section05</div>
+        </section>
+        <!-- //section 05 -->
+        
+        <section id="section06" class="parallax__item">
+            <span class="parallax__item__num">06</span>
+            <div class="parallax__item__text">section6</div>
+        </section>
+        <!-- //section 06 -->
+
+    
+        <section id="section07" class="parallax__item">
+            <span class="parallax__item__num">07</span>
+            <div class="parallax__item__text t1">코딩이란</div>
+            <div class="parallax__item__text t2">프로그래밍 코드를</div>
+            <div class="parallax__item__text t3">어디간에</div>
+            <div class="parallax__item__text t4">적는 것을 말한다.</div>
+            <div class="parallax__item__text t5">코딩은</div>
+            <div class="parallax__item__text t6">누구나</div>
+            <div class="parallax__item__text t7">할 수 있다.</div>
+        </section>
+        <!-- //section 07 -->
+        
+        <section id="section08" class="parallax__item">
+            <span class="parallax__item__num">08</span>
+            <div class="parallax__item__text t1">section08</div>
+            <div class="parallax__item__text t2">section08</div>
+            <div class="parallax__item__text t3">section08</div>
+            <div class="parallax__item__img"></div>
+        </section>
+        <!-- //section 08 -->
+
+        <section id="section09" class="parallax__item">
+            <span class="parallax__item__num">09</span>
+            <div class="parallax__item__img"></div>
+        </section>
+        <!-- //section 09 -->
+        
+        
+    </main>
+
+    <!-- gsap source가 있어야됨 -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+       
+    // 01. 이미지 애니메이션 주기
+    // 함수 실행이 끝난 이후 순차적으로 다른 함수가 발동할 수 있도록 해야함 
+    const ani1 = gsap.timeline();
+    ani1.to("#section01 .parallax__item__img", {rotation: 720, scale:0, borderRadius: 200}) 
+        .to("#section01 .parallax__item__img", {rotation: 0, scale:1, borderRadius: 20})
+        .to("#section01 .parallax__item__img", {x:500}) 
+        .to("#section01 .parallax__item__img", {x: -500})
+
+    ScrollTrigger.create({
+        animation: ani1,
+        trigger: "#section01",
+        start: "top top",
+        end: "+=2000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+        markers: true
+    })
+
+    // 02. 이미지를 순차적으로 나오기
+    const ani2 = gsap.timeline();
+    ani2.from("#section02 .i1", {y: -200, autoAlpha:0, borderRadius: 200})
+        .from("#section02 .i2", {y: -200, autoAlpha:0, borderRadius: 200})
+        .from("#section02 .i3", {y: -200, autoAlpha:0, borderRadius: 200})
+
+    ScrollTrigger.create({
+    animation: ani2,
+    trigger: "#section02",
+    start: "top top",
+    end: "+=2000",
+    scrub: true,
+    pin: true,
+    anticipatePin: 1,
+    markers: true
+    })
+
+    // 03: 이미지를 랜덤으로 나오기
+    const ani3 = gsap.timeline();
+    ani3.from("#section03 .parallax__item__img", {
+        autoAlpha: 0,
+        y: -100,
+        easy: "back.out(4)",
+        // stagger: 0.1
+        stagger: {
+            amount: 1, 
+            from: "random"
+        }
+    });
+
+    ScrollTrigger.create({
+        animation: ani3,
+        trigger: "#section03",
+        start: "top top",
+        end: "+=3000",
+        pin: true,
+        scrub: true
+    });
+
+    // 04: 이미지 축소하기
+    const ani4 = gsap.timeline();
+    ani4.from("#section04 .parallax__item__img", {
+        autoAlpha: 0,
+        scale: 2,
+        width: "100vw",
+        height: "100vh"
+    })
+    
+    ScrollTrigger.create({
+        animation: ani4,
+        trigger: "#section04",
+        start: "top top",
+        end: "+=3000",
+        pin: true,
+        scrub: true
+    })
+
+    // 05: text 효과 
+    // const ani5 = gsap.timeline();
+    // ani5.to("#section05 .t1", {x: 300})
+    //     .to("#section05 .t2", {x: -300})
+    //     .to("#section05 .t3", {x: 300})
+    //     .to("#section05 .t4", {x: -300})
+
+    // ScrollTrigger.create({
+    //     animation: ani5,
+    //     trigger: "#section05",
+    //     start: "top top",
+    //     end: "-1",
+    //     pin: true,
+    //     scrub: true        
+    // })
+
+    // 05: text effect
+    const ani5 = gsap.timeline();
+    ani5.to("#section05 .t1", {xPercent: 300}, "text")
+        .to("#section05 .t2", {xPercent: -300}, "text")
+        .to("#section05 .t3", {xPercent: 300}, "text")
+        .to("#section05 .t4", {xPercent: -300}, "text")
+
+    ScrollTrigger.create({
+        animation: ani5,
+        trigger: "#section05",
+        start: "top top",
+        end: "+=3000",
+        scrub: true,
+        pin: true
+    })
+
+    // 06: text 확대
+    const ani6 = gsap.timeline();
+    ani6.to("#section06 .parallax__item__text", {scale: 60, duration: 2})
+    ani6.to("#section06 .parallax__item__text", {autoAlpha:0})
+        
+    ScrollTrigger.create({
+        animation: ani6,
+        trigger: "#section06",
+        start: "top top",
+        end: "+=3000",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1
+    })
+
+    // 07: text
+    const ani7 = gsap.timeline();
+    ani7.from("#section07 .t1", {autoAlpha: 0, duration: 1, y: 50}, "+=1")
+    ani7.from("#section07 .t2", {autoAlpha: 0, duration: 1, y: 50}, "+=1")
+    ani7.from("#section07 .t3", {autoAlpha: 0, duration: 1, y: 50}, "+=1")
+    ani7.from("#section07 .t4", {autoAlpha: 0, duration: 1, y: 50}, "+=1")
+    ani7.from("#section07 .t5", {autoAlpha: 0, duration: 1, y: 50}, "+=1")
+    ani7.from("#section07 .t6", {autoAlpha: 0, duration: 1, y: 50}, "+=1")
+    ani7.from("#section07 .t7", {autoAlpha: 0, duration: 1, y: 50}, "+=1")
+
+    ScrollTrigger.create({
+        animation:ani7,
+        trigger: "#section07",
+        start: "top top",
+        end: "+=6000",
+        scrub: true,
+        pin: true
+    })
+
+    // 08: text 밖에서 안으로
+    const ani8 = gsap.timeline();
+    ani8.from("#section08 .t1", {x: innerWidth * 1})
+        .from("#section08 .t2", {x: innerWidth * -1}) // 반대쪽에서 나옴
+        .from("#section08 .t3", {x: innerWidth * 1})
+        .from("#section08 .parallax__item__img", {x: innerWidth * 1, rotation: 360, scale: 5.5})
+
+    ScrollTrigger.create({
+        animation:ani8,
+        trigger: "#section08",
+        start: "top top",
+        end: "+=2000",
+        scrub: true,
+        pin: true
+    })
+
+    // 09: 이미지 확대
+    const ani9 = gsap.timeline();
+    ani9.to("#section09 .parallax__item__img", {width: "1000px", height: "1000px"})
+        .to("#section09 .parallax__item__img", {autoAlpha: 0})
+
+    ScrollTrigger.create({
+        animation: ani9,
+        trigger: "#section09",
+        start: "top top",
+        end: "+=2000",
+        scrub: true,
+        pin: true
+    })
+</script>
+</body>
+</html>
