@@ -6,6 +6,7 @@
 }
 pre code.hljs {
     margin-bottom: 0 !important;
+    font-family: 'GmarketSans';
 }
 body {
     width: 100%;
@@ -220,6 +221,7 @@ a {
 }
 .modal__box .title .tabs > div.active {
     background-color: #1f224a;
+    height: 100%;
 }
 .modal__box .title .tabs > div em {
     font-style: normal;
@@ -234,7 +236,9 @@ a {
 }
 .modal__box .cont {
     background-color: #282936;
-    height: 100%;
+    height: auto;
+    max-height: 80vh;
+    overflow: auto;
     overflow-y: auto;
     box-sizing: border-box;
     border-bottom-left-radius: 0.5rem;
@@ -242,6 +246,7 @@ a {
 }
 .modal__box .cont > div {
     display: none;
+    
 }
 .modal__box .cont > div.active {
     display: block;
