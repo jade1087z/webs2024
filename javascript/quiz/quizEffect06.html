@@ -126,13 +126,26 @@
 
         // 정답 확인
         quizCheck.addEventListener("click", () => {
+            quizInfo.forEach((quiz, number) => {
+                const selectedAnswer = document.querySelector(`input[name="choice-${number}"]:checked`);
+                 
 
-            const correct = quizWrap.querySelectorAll(`.quiz__choice input[name=choice]:checked`);
-            const userAnswer = correct.value;
-            const correctAnswer = quizInfo[0].infoAnswer;
-            console.log(correct);
-            console.log(userAnswer);
-            console.log(correctAnswer);
+                if(selectedAnswer) {
+                    const userAnswer = "";
+                    userAnswer.innerHTML = selectedAnswer.span${quiz.infoChoice};
+                    // 현재 문제의 정답을 가져옵니다.
+                    const correctAnswer = quiz.infoAnswer;
+                    console.log(correctAnswer);
+                    console.log(userAnswer);
+                    
+                }
+            })
+            // const correct = quizWrap.querySelectorAll(`.quiz__choice input[name=choice]:checked`);
+            // const userAnswer = correct.value;
+            // const correctAnswer = quizInfo[0].infoAnswer;
+            // console.log(correct);
+            // console.log(userAnswer);
+            // console.log(correctAnswer);
             
         })
 
