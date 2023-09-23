@@ -2,6 +2,7 @@
 /* border-box 초기화 */
 *, *:after, *:before {
     box-sizing: border-box;
+    
 }
 
 /* 여백 초기화 */
@@ -12,7 +13,7 @@ body, div,dl, dt, dd, ul, ol, li, h1, h2, h3, h5, pre, code, fieldset, form, leg
 
 /* font */
 body, button, input, select, table, textarea {
-    font-family: "nanumSquareNeo", "Malgun Gothic", "맑은 고딕", Arial, Helvetica, sans-serif ;
+    font-family: "Nanum Myeongjo","nanumSquareNeo", "Malgun Gothic", "맑은 고딕", Arial, Helvetica, sans-serif ;
     font-size: 16px;
     line-height: 1.5;
 }
