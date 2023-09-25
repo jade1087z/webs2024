@@ -40,7 +40,7 @@
             <div class="name">
                 <div class="name_input">
                     <h1>당신의 이름은?</h1>
-                    <input type="text" id="nameInput" name="userName" placeholder="황상연">
+                    <input class="userName" type="text" id="nameInput" name="userName" placeholder="황상연" />
                     <span>입력하신 정보는 본 퀴즈 이외의 용도로 사용하지 않습니다.</span>
                     <button class="btn"><a href="#">확인</a></button>
                 </div>
@@ -48,10 +48,32 @@
         </div>
     </main>
 
-    <script>
+<script>
+
+    const quizWrap = document.querySelector(".quiz_wrap");
+    const ageChoice = quizWrap.querySelectorAll(".age_choice input");
+    const btnConfirm = quizWrap.querySelector(".name_input .btn");
+    const btnName = quizWrap.querySelector(".name_input .userName");
+
+    
+    btnConfirm.addEventListener("click", () => {
+        const selectedChoice = quizWrap.querySelectorAll("input[name='choice']:checked");
+        const userName = btnName.value;
+        
+        if(selectedChoice.length > 0 && userName != "") {
+            const userAge = selectedChoice[0].value;
+            window.location.href = "team_quiz01.html";
+        } else if (selectedChoice.length === 0) {
+            alert("나이를 체크해주세요");
+        } else if (userName == ""){
+            alert("이름을 입력해주세요");
+        }
+    });
+
+    
 
         
-    </script>
+</script>
 </body>
 
 </html>
