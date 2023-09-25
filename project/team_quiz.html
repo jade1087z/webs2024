@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈페이지</title>
+    <link rel="stylesheet" href="assets/css/quiz.css"/>
+
+    <style>
+        
+
+    </style>
+</head>
+
+<body>
+    <main id="main">
+        <div class="quiz_wrap">
+            <div class="age">
+                <div class="age_choice">
+                    <h1>당신의 나이대는?</h1>
+                    <label for="choice">
+                        <input type="radio" id="choice1" name="choice" value="1">
+                        <span>10대</span>
+                    </label>
+                    <label for="choice">
+                        <input type="radio" id="choice2" name="choice" value="2">
+                        <span>20대</span>
+                    </label>
+                    <label for="choice">
+                        <input type="radio" id="choice3" name="choice" value="3">
+                        <span>30대</span>
+                    </label>
+                    <label for="choice">
+                        <input type="radio" id="choice4" name="choice" value="4">
+                        <span>40대</span>
+                    </label>
+                </div>
+            </div>
+            <div class="name">
+                <div class="name_input">
+                    <h1>당신의 이름은?</h1>
+                    <input type="text" id="nameInput" name="userName" placeholder="황상연">
+                    <span>입력하신 정보는 본 퀴즈 이외의 용도로 사용하지 않습니다.</span>
+                    <button class="btn"><a href="team_quiz01.html">확인</a></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<script>
+
+    const quizWrap = document.querySelector(".quiz_wrap");
+    const inputData = quizWrap.querySelectorAll(".age_choice");
+    
+    document.addEventListener("DOMContentLoaded", () => {
+       
+    });
+</script>
+</body>
+
+</html>

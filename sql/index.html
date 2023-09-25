@@ -391,9 +391,21 @@ mysql> desc members;
                     <h5>패스워드 필드 다음 영역에 핸드폰 필드 추가하기</h5>
 <pre><code class="language-js">ALTER TABLE members ADD youPhone varchar(20) NOT NULL AFTER youAge;</code></pre>
 
+<!-- 추가 -->
 
                     <h4 id="intro7-2" class="page-header">필드 수정하기</h4>
+                    <div class="bs-callout bs-callout-info">
+                        ALTER TABLE [테이블명] MODIFY [수정할 필드명]
+                    </div>
+                    <h5>핸드폰 필드 수정하기</h5>
+<pre><code class="language-js">ALTER TABLE members MODIFY youPhone int(20) NOT NULL;</code></pre>
+
+<!-- 수정 -->
+
                     <h4 id="intro7-4" class="page-header">필드 삭제하기</h4>
+                    <div class="bs-callout bs-callout-info">
+                        ALTER TABLE [테이블명] DROP [삭제할 필드명]
+                    </div>
                     <h5>핸드폰 필드 삭체하기</h5>
 <pre><code class="language-js">ALTER TABLE members DROP youPhone;</code></pre>
 
