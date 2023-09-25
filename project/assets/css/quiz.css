@@ -4,48 +4,41 @@
     font-style: normal;
     src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjo.eot');
     src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjo.eot?#iefix') format('embedded-opentype'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjo.woff2') format('woff2'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjo.woff') format('woff'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjo.ttf') format("truetype");
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjo.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjo.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjo.ttf') format("truetype");
     font-display: swap;
-}
-
+} 
 @font-face {
     font-family: 'NanumMyeongjo';
     font-weight: 700;
     font-style: normal;
     src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjoBold.eot');
     src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjoBold.eot?#iefix') format('embedded-opentype'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjoBold.woff2') format('woff2'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjoBold.woff') format('woff'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjoBold.ttf') format("truetype");
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjoBold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjoBold.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjoBold.ttf') format("truetype");
     font-display: swap;
-}
-
+} 
 @font-face {
     font-family: 'NanumMyeongjo';
     font-weight: 800;
     font-style: normal;
     src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjoExtraBold.eot');
     src: url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjoExtraBold.eot?#iefix') format('embedded-opentype'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjoExtraBold.woff2') format('woff2'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjoExtraBold.woff') format('woff'),
-        url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjoExtraBold.ttf') format("truetype");
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjoExtraBold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjoExtraBold.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NanumMyeongjo/NanumMyeongjoExtraBold.ttf') format("truetype");
     font-display: swap;
-}
-
+} 
 * {
     font-family: 'NanumMyeongjo';
+    
 }
-
-a {
-    text-decoration: none;
-    font-size: 20px;
-    color: #8a8a8a;
-    font-family: 'NanumMyeongjo';
-    font-weight: bold;
+h1 {
+    font-size: 30px;
+    line-height: 50px;
 }
-
 body {
     width: 100%;
     height: 100vh;
@@ -55,24 +48,27 @@ body {
     background-repeat: no-repeat;
     margin: 0 auto;
     padding: 0;
+    
 }
-
 #main {
-    height: 800px;
-    max-width: 750px;
-    max-height: 800px;
-    background-image: url("../img/bgi.jpg");
     margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    padding: 50px 50px 0 0;
+    background-color: rgba(66, 66, 66, 0.136);
 }
-
 #main .quiz_wrap {
+    background-image: url("../img/bgi.jpg");
     color: #000000;
     text-align: center;
     width: 750px;
     height: 800px;
     margin: 0 auto;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 0px #a2a2a2;
+    background-color: rgba(66, 66, 66, 0.136);
+    
 }
-
 .age_choice {
     flex-direction: column;
     display: flex;
@@ -80,16 +76,13 @@ body {
     align-content: center;
     margin: 0 auto;
 }
-
 .age_choice h1 {
     font-size: 32px;
-    padding-top: 50px;
+    padding-top: 30px;
 }
-
 .age_choice label {
-    padding: 0 0 20px 0;
-}
 
+}
 .age_choice label span {
     width: 690px;
     position: relative;
@@ -97,8 +90,9 @@ body {
     background-color: #d9d9d9;
     box-shadow: 1px 1px 0px #a2a2a2;
     color: #4a4a4a;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 15.5px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     font-size: 29px;
@@ -107,7 +101,6 @@ body {
     transition: all 0.3s;
     cursor: pointer;
 }
-
 .age_choice label input {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -116,30 +109,25 @@ body {
     margin: -1px;
     overflow: hidden;
 }
-
 .age_choice label span:hover {
     color: rgb(67, 67, 67);
     background-color: #b6b6b6;
 }
-
-.age_choice label input:checked+span::before {
+.age_choice label input:checked + span::before {
     box-shadow: inset 0 0 0 9px #9f9f9f;
 }
-
-.age_choice label input:checked+span {
+.age_choice label input:checked + span {
     border-color: #9f9f9f;
     color: rgb(0, 0, 0);
     box-shadow: 1px 1px 0px #505050;
     background-color: #9f9f9f;
 }
-
 .name_input {
     flex-direction: column;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
 }
-
 .name_input input {
     width: 674px;
     height: 18px;
@@ -153,12 +141,10 @@ body {
     font-size: 29px;
     cursor: pointer;
 }
-
 .name_input span {
     padding: 10px;
     color: #8a8a8a;
 }
-
 .name_input .btn {
     border-radius: 10px;
     cursor: pointer;
@@ -180,6 +166,7 @@ body {
     margin: 0;
     border: none;
     text-align: center;
+    text-decoration: none;
 }
 
 .name_input a:hover {
@@ -196,9 +183,9 @@ body {
 #line_main {
     width: 100%;
     height: 100vh;
-    padding: 100px 100px 0 0;
+    padding: 50px 50px 0 0;
+    background-color: rgba(66, 66, 66, 0.136);
 }
-
 .quiz_wrap {
     height: 800px;
     max-width: 750px;
@@ -206,56 +193,62 @@ body {
     background-image: url("../img/bgi.jpg");
     margin: 0 auto;
     box-sizing: border-box;
+    box-shadow: 1px 1px 0px #a2a2a2;
+    
 }
-
 .quiz01_header {
-    padding: 70px;
+    padding: 50px;
     width: 100%;
     height: 490px;
     box-sizing: border-box;
     position: relative;
+    
 }
-
+.quiz_num {
+    width: 60px;
+    height: 29px;
+    line-height: 31px;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+    border: 1px solid #d9d9d9;
+    background-color: #d9d9d9;
+    color: #4a4a4a;
+}
 .quiz01_header img {
     position: absolute;
-    top: 240px;
-    left: 230px;
+    top: 250px;
+    left: 189px;
 }
-
 .quiz01_header img {
     width: 377px;
-    height: 295px;
+    height: 250px;
 }
-
 .quiz01_choice {
     display: grid;
-    grid-template-areas:
-        "choice1 choice2"
-        "choice3 choice4";
-    gap: 40px;
-    /* 각 요소 사이의 간격 설정 */
-    margin: auto;
-    /* 가운데 정렬 */
-    padding: 10px;
-    /* 선택사항: input 요소를 감싸는 배경의 안쪽 간격 설정 */
+    grid-template-areas: 
+    "choice1 choice2"
+    "choice3 choice4";
+    gap: 20px; /* 각 요소 사이의 간격 설정 */
+    margin: 50px auto 50px auto;  /* 가운데 정렬 */
+    padding: 20px; /* 선택사항: input 요소를 감싸는 배경의 안쪽 간격 설정 */
 }
-
-.quiz01_choice label {
+.quiz01_choice label span {
     width: 100%;
     display: flex;
     border: 1px solid #d9d9d9;
     background-color: #d9d9d9;
     box-shadow: 1px 1px 0px #a2a2a2;
     color: #4a4a4a;
-    border-radius: 8px;
+    border-radius: 5px;
     justify-content: center;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.4;
     transition: all 0.3s;
     cursor: pointer;
+    padding: 18px 0 18px 0;
 }
-
 .quiz01_choice label input {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -264,3 +257,17 @@ body {
     margin: -1px;
     overflow: hidden;
 }
+.quiz01_choice label:hover {
+    color: rgb(67, 67, 67);
+    background-color: #b6b6b6;
+}
+.quiz01_choice label input:checked + span::before {
+    box-shadow: inset 0 0 0 9px #9f9f9f;
+}
+.quiz01_choice label input:checked + span {
+    border-color: #9f9f9f;
+    color: rgb(0, 0, 0);
+    box-shadow: 1px 1px 0px #505050;
+    background-color: #9f9f9f;
+}
+

@@ -1,0 +1,89 @@
+body {
+    background-image: url(../img/bgi.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.quiz__wrap {
+
+    margin: 0 auto;
+    padding: 0;
+    background-image: url(../img/QRbg.png);
+    width: 750px;
+    height: 800px;
+    position: relative;
+}
+.quiztitle {
+    font-family: "NanumMyeongjo";
+    text-align: center;
+    font-size: 50px;
+    position: absolute;
+    top: -15px;
+    width: 100%;
+}
+.quiz__header1 {
+    display: inline-block;
+    font-family: "NanumMyeongjo";
+    font-size: 27px;
+    position: absolute;
+    top: 115px;
+    left: 170px;
+
+}
+.name,
+.youname {
+    display: inline-block;
+    margin: 5px;
+}
+
+.quiz__header2{
+    display: inline-block;
+    font-family: "NanumMyeongjo";
+    font-size: 27px;
+    position: absolute;
+    top: 108px;
+    right: 205px;
+}
+.age,
+.youage {
+    display: inline-block;
+    margin: 12px;
+}
+.quiz__main {
+    font-family: "NanumMyeongjo";
+    display: flex;
+    position: absolute;
+    top: 200px;
+}
+.quiz__main .grade{
+    margin: 20px 30px;
+}
+.quiz__main .grade .en {
+    font-size: 250px;
+    color: #B24238;
+    margin-bottom: 50px;
+}
+.quiz__main .grade .num {
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+.overlay-container {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+.overlay-text {
+    position: absolute;
+    top: 46%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+
+}
+.quiz__main .desc {
+    font-size: 20px;
+    line-height: 2;
+    margin-top: 50px;
+}

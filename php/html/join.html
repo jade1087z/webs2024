@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="gray">
+    <div id="skip">
+        <a href="header">헤어 영역 바로가기</a>
+        <a href="main">콘텐츠 영역 바로가기</a>
+        <a href="footer">푸터 영역 바로가기</a>
+    </div>
+
+    <header id="header" role="banner">
+        <div class="header__inner container">
+            <div class="left">
+                <a href="/">
+                    <span class="blind">메인으로</span>
+                </a>
+            </div>
+<!-- left -->
+
+            <div class="logo">
+                <a href="#">Developer Blog</a>
+            </div>
+<!-- logo -->
+            <div class="right">
+                <ul>
+                    <li><a href="join.html">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+<!-- //header__inner -->
+
+        <nav class="nav__inner">
+            <ul>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">게시판</a></li>
+                <li><a href="#">블로그</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- //header -->
+
+    <main id="main" role="main">
+        <div class="intro__inner bmStyle container">
+            <div class="intro__img">
+                <img srcset="assets/img/Rectangle@1.jpg, assets/img/Rectangle@2.jpg, assets/img/Rectangle@3.jpg" alt="">
+            </div>
+            <div class="intro__text">
+                회원가입을 해주시면 다양한 정보를 자유롭게 볼 수 있습니다.
+            </div>
+        </div>
+        <section class="join__inner container">
+            <h2>회원가입</h2>
+            <div class="join__form">
+                <form action="#" name="#" method="post">
+                    <fieldset >
+                        <legend class="blind">회원가입 영역</legend>
+                        <div>
+                            <label for="youEmail" class="required">이메일</label>
+                            <input type="email" id="youEmail" name="youEmail" placeholder="이메일을 적어주세요!" required="" class="input__style">
+                        </div>
+                        <div>
+                            <label for="youName" class="required">이름</label>
+                            <input type="text" id="youName" name="youName" placeholder="이름을 적어주세요!" required="" class="input__style">
+                        </div>
+                        <div>
+                            <label for="youPass" class="required">비밀번호</label>
+                            <input type="password" id="youPass" name="youPass" placeholder="비밀번호 적어주세요!" required="" class="input__style">
+                        </div>
+                        
+                        <div>
+                            <label for="youPassC" class="required">비밀번호 확인</label>
+                            <input type="password" id="youPassC" name="youPassC" placeholder="비밀번호를 한번 더 적어주세요!" required="" class="input__style">
+                        </div>
+                        <div>
+                            <label for="youPhone" class="required">연락처</label>
+                            <input type="text" id="youPhone" name="youPhone" placeholder="연락처를 적어주세요!" required="" class="input__style">
+                        </div>
+                        <button type="submit" class="btn__style mt100">회원가입 완료</button>
+                    </fieldset>
+                </form>
+            </div>
+            
+            
+        </section>
+    </main>
+<!-- //main -->
+
+    <footer id="footer" rloe="contentinfo">
+        <div class="footer__inner container btStyle">
+            <div>Copyright 2023 imdoob</div>
+            <div>blog by webs</div>
+        </div>
+    </footer>
+<!-- //footer -->
+</body>
+</html>

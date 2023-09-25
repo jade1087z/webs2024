@@ -1,0 +1,86 @@
+body {
+    background-image: url(../img/bgi.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.quiz__wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.quiz__wrap > .quiz {
+    margin: 0 auto;
+    background-image: url(../img/QRbg.png);
+    width: 750px;
+    height: 800px;
+    position: relative;
+}
+.quiztitle {
+    font-family: "NanumMyeongjo";
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+}
+.quiz__header1 {
+    display: flex;
+    font-family: "NanumMyeongjo";
+    font-size: 27px;
+    margin-right: 100px;
+}
+.quiz__header1 .youname {
+    display: inline-block;
+    text-align: center;
+}
+.quiz__header2 {
+    display: flex;
+    font-family: "NanumMyeongjo";
+    font-size: 27px;
+}
+.quiz__header2 .youage {
+    display: inline-block;
+    text-align: center;
+}
+.name,
+.age {
+    font-family: "NanumMyeongjo";
+    font-size: 27px;
+}
+.quiz__main {
+    font-family: "NanumMyeongjo";
+    display: flex;
+    justify-content: center; /* grade와 desc 사이의 공간을 최대화 */
+    align-items: center; /* 수직 가운데 정렬 */
+}
+.quiz__main .grade {
+    margin-right: 100px
+}
+.quiz__main .grade .en {
+    font-size: 300px;
+    color: #B24238;
+}
+.quiz__main .grade .num {
+    font-size: 64px;
+}
+
+
+.overlay-container {
+    position: relative;
+    display: inline-block;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+.quiz__main .desc {
+    font-size: 36px;
+    line-height: 2;
+    margin-top: 200px;
+}
