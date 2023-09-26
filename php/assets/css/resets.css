@@ -1,0 +1,85 @@
+/* border-box 초기화 */
+*, *:after, *:before {
+    box-sizing: border-box;
+    
+}
+
+/* 여백 초기화 */
+body, div,dl, dt, dd, ul, ol, li, h1, h2, h3, h5, pre, code, fieldset, form, legend, p, blockquote, th, tr, td, input, select, button, figure, figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+/* font */
+body, button, input, select, table, textarea {
+    font-family: "Nanum Myeongjo","nanumSquareNeo", "Malgun Gothic", "맑은 고딕", Arial, Helvetica, sans-serif ;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* link reset */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* title reset */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+/* list style none */
+ul, ol, li {
+    list-style: none;
+}
+/* font style normal */
+em, address {
+    font-style: normal;
+}
+/* 이미지 최적화 */
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+/* 이미지 대체(IR) 효과 */
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-align: -9999;
+}
+/* 테이블 초기화 */
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+body, button, input, select, table, textarea {
+    font-family: var(--main-nanum), var(--main-gmark), 'AppleSDGothicNeo-Regular', 'Malgun Gothic', '맑은 고딕', 'dotum', '돋움' ;
+}
+input, fieldset {
+    border: none;
+}
+/* 클리어픽스 */
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: block;
+    line-height: 0;
+}
+.clearfix::after {
+    clear: both;
+}
+
+/* 블라인드 효과 */
+.blind {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
