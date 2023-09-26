@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.cookie = "myVariable=myValue; expires=Thu, 01 Jan 2099 00:00:00 UTC; path=/;";
+
+        // 데이터 불러오기
+        function getCookie(name) {
+            var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+            if (match) return match[2];
+        }
+        
+        var myValue = getCookie('myVariable');
+    </script>
+</body>
+</html>

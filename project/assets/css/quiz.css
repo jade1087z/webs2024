@@ -145,10 +145,12 @@ body {
     padding: 10px;
     color: #8a8a8a;
 }
+
+/* 수정 */
 .name_input .btn {
-    border-radius: 10px;
-    cursor: pointer;
-    padding: 0;
+    width: 726px;
+    padding: 26px;
+    line-height: 4px;
 }
 
 .name_input a {
