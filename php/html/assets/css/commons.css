@@ -47,6 +47,18 @@
     word-break: keep-all;
     font-weight: 300;
 }
+.intro__btn {
+    margin-top: 40px;
+}
+
+.intro__btn a {
+    font-size: 1.2rem;
+    padding: 0.6em 4em;
+    margin: 0.4em;
+    border-radius: 40px;
+    background-color: var(--black);
+    color: var(--white);
+}
 
 @media (max-width: 800px) {
     .intro__img {
