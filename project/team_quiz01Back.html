@@ -163,25 +163,10 @@
                         updateQuiz(currentIndex);
                     } else if(currentIndex => quizInfo.length) {
                         alert("모든 문제를 풀었습니다.");
+                        console.log(totalScore);
+                        window.location.href = "grade.html";
+
                         
-                        // 한번 더 변수에 저장해서 가져와야 함 
-                        const userScore = totalScore;
-
-
-                        const urlParams = new URLSearchParams(window.location.search);
-                        const score = urlParams.set('userScore', userScore);
-                        // age와 name 매개변수 값을 추출합니다.
-                        const age = urlParams.get('age');
-                        const name = urlParams.get('name');
-
-                        // 데이터를 활용하여 필요한 작업을 수행합니다.
-                        console.log(`나이대: ${age}`);
-                        console.log(`이름: ${name}`);
-
-                        // 세 번째 페이지로 이동하면서 URL 매개변수를 그대로 전달합니다.
-                        const thirdPageUrl = `grade.html?age=${age}&name=${name}&userScore=${userScore}`;
-                        window.location.href = thirdPageUrl;
-
                     };
                 });
             });
