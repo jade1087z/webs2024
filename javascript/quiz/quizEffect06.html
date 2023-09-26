@@ -10,7 +10,7 @@
     <title>퀴즈 이펙트06</title>
 </head>
 
-<body>
+<body class="fixed">
     <header id="header">
         <h1><a href="../index.html">Quiz</a></h1>
         <nav>
@@ -47,7 +47,7 @@
         const quizCheck = document.querySelector(".quiz__check");
 
         // 변수 설정
-        let currentIndex = 0; 
+        let quizScore = 0; 
         let quizInfo = [];
 
         // 문제 가져오기
@@ -60,32 +60,30 @@
                             infoDate: "2011년 5회",
                             infoType: item.subject,
                             infoQuestion: item.question,
-                            desc: item.desc,      
+                            infoDesc: item.desc,
                             infoAnswer: item.correct_answer,
-                        };
+                        }
+                        // 보기 가져오기 -> 보기 배열을 만들어 값을 저장합니다. 
+                        const choices = [...item.incorrect_answers, item.correct_answer];
 
-                        //보기 가져오기
-                        const choices = [item.correct_answer, ...item.incorrect_answers];
-
-                        // 보기 랜덤 섞기
-                        
+                        // 랜덤 섞기
                         for (let i = choices.length - 1; i > 0; i--) {
                             const j = Math.floor(Math.random() * (i + 1));
                             [choices[i], choices[j]] = [choices[j], choices[i]]; // Swap elements at i and j
                         }
-
                         formattedQuiz.infoChoice = choices;
-
                         return formattedQuiz;
                     });
-                        updateQuiz();
+
+                    console.log(quizInfo);
+                    updateQuiz();
                 });
+                
         }
 
-        // 문제 출력 
+        // 문제 출력
         const updateQuiz = () => {
             const quizArray = [];
-
             quizInfo.forEach((quiz, number) => {
                 quizArray.push(`<div class="quiz">
                     <div class="quiz__header">${quiz.infoDate} ${quiz.infoType}</div>
@@ -95,19 +93,19 @@
                         </div>
                         <div class="quiz__choice">
                             <label for="choice1-${number}">
-                                <input type="radio" id="choice1-${number}" name="choice-${number}" value="1">
+                                <input type="radio" id="choice1-${number}" name="choice-${number}" value="${quiz.infoChoice[0]}">
                                 <span>${quiz.infoChoice[0]}</span>
                             </label>
                             <label for="choice2-${number}">
-                                <input type="radio" id="choice2-${number}" name="choice-${number}" value="2">
+                                <input type="radio" id="choice2-${number}" name="choice-${number}" value="${quiz.infoChoice[1]}">
                                 <span>${quiz.infoChoice[1]}</span>
                             </label>
                             <label for="choice3-${number}">
-                                <input type="radio" id="choice3-${number}" name="choice-${number}" value="3">
+                                <input type="radio" id="choice3-${number}" name="choice-${number}" value="${quiz.infoChoice[2]}">
                                 <span>${quiz.infoChoice[2]}</span>
                             </label>
                             <label for="choice4-${number}">
-                                <input type="radio" id="choice4-${number}" name="choice-${number}" value="4">
+                                <input type="radio" id="choice4-${number}" name="choice-${number}" value="${quiz.infoChoice[3]}">
                                 <span>${quiz.infoChoice[3]}</span>
                             </label>
                         </div>
@@ -115,7 +113,7 @@
                             <input type="text" placeholder="정답을 입력해주세요!">
                         </div>
                         <div class="quiz__answer none">${quiz.infoAnswer}</div>
-                        <div class="quiz__desc none">${quiz.desc}</div>
+                        <div class="quiz__desc none">${quiz.infoDesc}</div>
                     </div>
                     
             </div>`);
@@ -123,37 +121,73 @@
             quizWrap.innerHTML = quizArray.join(" ");
         }
 
-
         // 정답 확인
         quizCheck.addEventListener("click", () => {
-            quizInfo.forEach((quiz, number) => {
-                const selectedAnswer = document.querySelector(`input[name="choice-${number}"]:checked`);
+            const quizElements = document.querySelectorAll(".quiz");
+
+            // 각각의 퀴즈에 대한 정답을 체크한다
+            quizElements.forEach((quizElement, index) => { 
+
+                const selectedChoice = quizElement.querySelector(`input[name="choice-${index}"]:checked`); // 체크한 정답만 가져옴
+                const quizAnswer = quizElement.querySelector(".quiz__answer"); 
+                const quizDesc = quizElement.querySelector(".quiz__desc"); 
+
+                if(selectedChoice) { // 없으면 값이 0이다. 0 = false
+                    const userAnswer = selectedChoice.value;
+                    const correctAnswer = quizAnswer.textContent;
+
+                    if(userAnswer === correctAnswer) {
+                        console.log("정답");
+                        quizElement.classList.add("good");
+                        quizDesc.classList.remove("none");
+                        quizScore++;
+                    } else {
+                        console.log("오답");
+                        quizElement.classList.add("bad");
+                        quizDesc.classList.remove("none");
+                        quizAnswer.classList.remove("none");
+                    }
+                };
+            });
+            
+            alert("총 맞춘 갯수는 :" + quizScore);
+        });
+
+
+        
+
+        
+
+        // // 정답 확인
+        // quizCheck.addEventListener("click", () => {
+        //     quizInfo.forEach((quiz, number) => {
+        //         const selectedAnswer = document.querySelector(`input[name="choice-${number}"]:checked`);
                  
 
-                if(selectedAnswer) {
-                    const userAnswer = "";
-                    userAnswer.innerHTML = selectedAnswer.span${quiz.infoChoice};
-                    // 현재 문제의 정답을 가져옵니다.
-                    const correctAnswer = quiz.infoAnswer;
-                    console.log(correctAnswer);
-                    console.log(userAnswer);
+        //         if(selectedAnswer) {
+        //             const userAnswer = "";
+        //             userAnswer.innerHTML = selectedAnswer.span${quiz.infoChoice};
+        //             // 현재 문제의 정답을 가져옵니다.
+        //             const correctAnswer = quiz.infoAnswer;
+        //             console.log(correctAnswer);
+        //             console.log(userAnswer);
                     
-                }
-            })
-            // const correct = quizWrap.querySelectorAll(`.quiz__choice input[name=choice]:checked`);
-            // const userAnswer = correct.value;
-            // const correctAnswer = quizInfo[0].infoAnswer;
-            // console.log(correct);
-            // console.log(userAnswer);
-            // console.log(correctAnswer);
+        //         }
+        //     })
+        //     // const correct = quizWrap.querySelectorAll(`.quiz__choice input[name=choice]:checked`);
+        //     // const userAnswer = correct.value;
+        //     // const correctAnswer = quizInfo[0].infoAnswer;
+        //     // console.log(correct);
+        //     // console.log(userAnswer);
+        //     // console.log(correctAnswer);
             
-        })
+        // })
 
         
         
 
 
-        
+        // 페이지 로드 후 실행
         document.addEventListener("DOMContentLoaded", () => {
             fetchQuiz();
         })
