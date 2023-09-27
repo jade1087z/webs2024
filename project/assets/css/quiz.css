@@ -273,3 +273,70 @@ body {
     background-color: #9f9f9f;
 }
 
+@media (max-width:800px) {
+    #main .quiz_wrap {
+        width: 90%;
+        height: 90vh;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    .age_choice h1 {
+        
+    }
+    .age_choice label span {
+        width: 70vw;
+        font-size: 22px;
+    }
+    .name_input span {
+        width: 67vw;
+        font-size: 12px;
+        align-items: center;
+    }
+    .name_input input {
+        width: 67vw;
+        font-size: 22px;
+        align-items: center;
+    }
+    .name_input .btn {
+        width: 77.5vw;
+        align-items: center;
+    }
+}
+@media (max-width:745px) {
+    #line_main .quiz_wrap {
+        width: 90%;
+        height: 90vh;
+    }
+    .quiz01_header > h1 {
+        font-size: 22px ;
+        line-height: 40px;
+        word-wrap: break-word;
+    }
+    .quiz01_header label span {
+        width: 70vw;
+        font-size: 22px;
+    }
+    .quiz01_header img {
+        margin: 50px 0 0 85px;
+        width: 50vw;
+    }
+}
+
+@media (max-width:540px){
+    .quiz01_header {
+        padding: 30px;
+    }
+    .quiz01_header img {
+        width: 70vw;
+        margin: 60px 0 0 10px;
+    }
+    .quiz01_header > h1 {
+        font-size: 22px;
+        line-height: 40px;
+        word-wrap: break-word;
+    }
+    .quiz01_choice {
+        margin: 0 auto;
+    }
+}

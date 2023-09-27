@@ -70,6 +70,10 @@ li {
     padding: 40px;
     border-bottom: 1px dashed #dcdcdc;
 }
+.main_menu h3 {
+    margin: 15px 0;
+    font-weight: 400;
+}
 .main_menu ul {
     margin-bottom: 10px;
 }

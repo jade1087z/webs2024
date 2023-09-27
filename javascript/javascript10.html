@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../assets/css/default.min.css" rel="stylesheet">
     <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" >
+    <link href="css/style.css" rel="stylesheet">
     <title>자바스크립트 이벤트 객체</title>
 </head>
+
 <body>
-     <div id="wrap">
+    <div id="wrap">
         <header id="header">
             <h1><a href="index.html">javascript</a></h1>
             <nav>
@@ -39,27 +41,96 @@
 
         <main id="main">
             <div class="main_menu">
+                <h3>이벤트</h3>
                 <ul>
-                         
+                    <li><a href="#s01">01. 이벤트 메서드 : <strong>addEventListener("click")</strong>: 클릭했을 때</a></li>
+                    <li><a href="#s02">02. 이벤트 메서드 : <strong>addEventListener("dblclick")</strong>: 더블 클릭했을 때</a></li>
+                    <li><a href="#s03">03. 이벤트 메서드 : <strong>addEventListener("lode")</strong>: 문서 로딩이 끝났을 때</a></li>
+                    <li><a href="#s04">04. 이벤트 메서드 : <strong>addEventListener("error")</strong>: 문서가 정확히 로딩되지 않았을 때</a></li>
+                    <li><a href="#s05">05. 이벤트 메서드 : <strong>addEventListener("scroll")</strong>: 스크롤했을 때</a></li>
+                    <li><a href="#s06">06. 이벤트 메서드 : <strong>addEventListener("resize")</strong>: 브라우저 사이즈 변경 됐을 때</a></li>
+                    <li><a href="#s07">07. 이벤트 메서드 : <strong>addEventListener("selectstart")</strong>: 텍스트 선택을 시작했을 때</a></li>
+                </ul>
+
+                <h3>마우스 포인터</h3>
+                <ul>
+                    <li><a href="#s08">01. 이벤트 메서드 : <strong>addEventListener("mousedown")</strong>: 마우스 버튼을 클릭했을 때</a></li>
+                    <li><a href="#s09">02. 이벤트 메서드 : <strong>addEventListener("mouseup")</strong>: 마우스 버튼을 떼는 경우</a></li>
+                    <li><a href="#s10">03. 이벤트 메서드 : <strong>addEventListener("mousemove")</strong>: 마우스를 움직이는 경우</a></li>
+                    <li><a href="#s11">04. 이벤트 메서드 : <strong>addEventListener("mouseenter")</strong>: 요소 위에 포인터 요소 위치가 있을 때</a></li>
+                    <li><a href="#s12">05. 이벤트 메서드 : <strong>addEventListener("mouseleave")</strong>: 요소 위에 포인터 요소 위치가 벗어났을 때</a></li>
+                    <li><a href="#s13">06. 이벤트 메서드 : <strong>addEventListener("mouseover")</strong>: 요소 위에 포인터 요소 위치가 있을 때</a></li>
+                    <li><a href="#s14">07. 이벤트 메서드 : <strong>addEventListener("mouseout")</strong>: 요소 위에 포인터 요소 위치가 벗어났을 때</a></li>
+                </ul>
+
+                <h3>폼</h3>
+                <ul>
+                    <li><a href="#s15">01. 이벤트 메서드 : <strong>addEventListener("blur")</strong>: 폼 요소에 포커스를 잃었을 때</a></li>
+                    <li><a href="#s16">02. 이벤트 메서드 : <strong>addEventListener("change")</strong>: 목록이나 체크 상태 등이 변경되었을 때</a></li>
+                    <li><a href="#s17">03. 이벤트 메서드 : <strong>addEventListener("focus")</strong>: 폼 요소에 포커스를 놓았을 때</a></li>
+                    <li><a href="#s18">04. 이벤트 메서드 : <strong>addEventListener("reset")</strong>: 폼이 리셋되었을 때</a></li>
+                    <li><a href="#s19">05. 이벤트 메서드 : <strong>addEventListener("submit")</strong>: 폼에 있는 버튼을 클릭했을 때</a></li>
+                </ul>
+                <h3>드래그</h3>
+                <ul>
+                    <li><a href="#s20">01. 이벤트 메서드 : <strong>addEventListener("drag")</strong>: 드래그 중인 경우</a></li>
+                    <li><a href="#s21">02. 이벤트 메서드 : <strong>addEventListener("dragstart")</strong>: 드래그를 시작 했을 때</a></li>
+                    <li><a href="#s22">03. 이벤트 메서드 : <strong>addEventListener("dragend")</strong>: 드래그 끝났을 때</a></li>
+                    <li><a href="#s23">04. 이벤트 메서드 : <strong>addEventListener("dragenter")</strong>: 요소의 위치에 드래그 했을 때</a></li>
+                    <li><a href="#s24">05. 이벤트 메서드 : <strong>addEventListener("dragover")</strong>: 요소의 위치 위에 있을 때</a></li>
+                    <li><a href="#s25">06. 이벤트 메서드 : <strong>addEventListener("dragleave")</strong>: 요소의 위치 위에서 벗어 났을 때</a></li>
+                    <li><a href="#s26">07. 이벤트 메서드 : <strong>addEventListener("drop")</strong>: 요소의 위치에 드롭 했을 때</a></li>
+                </ul>
+                <h3>키보드</h3>
+                <ul>
+                    <li><a href="#s27">01. 이벤트 메서드 : <strong>addEventListener("keydown")</strong>: 키 눌렀을 때(한번만 실행)</a></li>
+                    <li><a href="#s28">02. 이벤트 메서드 : <strong>addEventListener("keypress")</strong>: 키 눌렀을 때(누르고 있으면 계속 실행)</a></li>
+                    <li><a href="#s29">03. 이벤트 메서드 : <strong>addEventListener("keyup")</strong>: 키 누르고 뗐을 때</a></li>
+
+                </ul>
+                <h3>터치</h3>
+                <ul>
+                    <li><a href="#s30">01. 이벤트 메서드 : <strong>addEventListener("touchstart")</strong>: 터치가 시작 됐을 때</a></li>
+                    <li><a href="#s31">02. 이벤트 메서드 : <strong>addEventListener("touchmove")</strong>: 터치가 움직이고 있을 때</a></li>
+                    <li><a href="#s32">03. 이벤트 메서드 : <strong>addEventListener("touchend")</strong>: 터치가 끝났을 때</a></li>
+                </ul>
+
+                <h3>마우스 좌표값</h3>
+                <ul>
+                    <li><a href="#s33">01. 이벤트 속성 : <strong>clientX</strong> : X좌표 값 : 브라우저 기준</a></li>
+                    <li><a href="#s34">02. 이벤트 속성 : <strong>clientY</strong> : Y좌표 값 : 브라우저 기준</a></li>
+                    <li><a href="#s35">03. 이벤트 속성 : <strong>offsetX</strong> : X좌표 값 : 요소 기준</a></li>
+                    <li><a href="#s36">04. 이벤트 속성 : <strong>offsetY</strong> : Y좌표 값 : 요소 기준</a></li>
+                    <li><a href="#s37">05. 이벤트 속성 : <strong>pageX</strong> : X좌표 값 : 페이지 기준</a></li>
+                    <li><a href="#s38">06. 이벤트 속성 : <strong>pageY</strong> : Y좌표 값 : 페이지 기준</a></li>
+                    <li><a href="#s39">07. 이벤트 속성 : <strong>screenX</strong> : X좌표 값 : 디바이스 기준</a></li>
+                    <li><a href="#s40">08. 이벤트 속성 : <strong>screenY</strong> : Y좌표 값 : 디바이스 기준</a></li>
+                </ul>
+
+                <h3>이벤트 동작 해지</h3>
+                <ul>
+                    <li><a href="#s41">01. 이벤트 메서드 : <strong>preventDefault()</strong>: 이벤트 작동 해지</a></li>
+                    <li><a href="#s42">02. 이벤트 메서드 : <strong>dispatchDefault()</strong>: 이벤트 작동 해지</a></li>
                 </ul>
             </div>
             <!-- main_menu -->
             <div class="main_sample">
-                
+
 
             </div>
             <!-- //main_sample -->
         </main>
         <!-- //main -->
-        
+
         <footer id="footer">
             <a href="mailto:danziro97@naver.com">danziro97@naver.com</a>
         </footer>
         <!-- //footer -->
-     </div>
-     
-     <!-- script -->
-     <script src="../assets/js/highlight.min.js"></script>
-     <script>hljs.highlightAll();</script>  
+    </div>
+
+    <!-- script -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
+
 </html>
