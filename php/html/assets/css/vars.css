@@ -3,6 +3,7 @@
     --main-gmark: "GmarketSans";
 
     --primary-color: #eee;
+
     --black: #000;
     --white: #fff;
 
@@ -10,8 +11,8 @@
     --black200: #555;
     --black300: #777;
     --black400: #999;
-    
-    font-size: 16px;
+
+    --font_size: 16px;
     line-height: 1.5;
     font-weight: 400;
 }
@@ -20,4 +21,5 @@
     :root {
         font-size: 14px;
     }
+    
 }

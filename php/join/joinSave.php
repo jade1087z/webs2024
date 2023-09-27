@@ -43,18 +43,20 @@
     $check_mail = preg_match("/^[a-z0-9_+.-]+@([a-z0-9-]+\.)+[a-z0-9]{2,4}$/", $youEmail);
     if($check_mail == false) {
         mgs("이메일 형식이 잘못되었습니다. 다시 한번 확인해주세요");
+        exit;
     }
 
     // 2. 이름
     $check_name = preg_match("/^[가-힣]{9,15}$/", $youName);
     if($check_name == false){
         msg("이름은 한글만 가능합니다. 또는 3~5글자만 가능합니다.");
-        exit;
+        exit;   
     }
 
     // 3. 비밀번호 유효성 검사
     if($youPass !== $youPassC) {
         msg("비밀번호가 일치하지 않습니다. 다시 한 번 확인해주세요!");
+        exit;
     }
 
     // 4. 휴대폰 번호 유효성 검사
@@ -88,10 +90,11 @@
     if($result) {
         $count = $result -> num_rows;
 
-        if($count) {
+        if($count == 0) {
             $isPhoneCheck = true;
         } else {
             msg("이미 회원가입이 되어 있습니다. phone");
+            
         }
     } else {
         msg("에러 발생1: 관리자에게 문의하세요");
@@ -112,7 +115,8 @@
         if($result) {
             msg("회원가입을 축하합니다.! 로그인을 해주세요");
         } else {
-            msg("에러 발생");
+            msg("에러 발생3");
+            exit;
         }
 
     } else {

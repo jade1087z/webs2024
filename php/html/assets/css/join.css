@@ -1,26 +1,24 @@
-.join__inner {
+.join_inner {
     padding: 80px 0;
 }
-.join__inner h2 {
+.join_inner h2 {
     font-size: 30px;
     text-align: center;
 }
-.join__form {
+.join_form {
     padding: 10% 20%;
 }
-
-.join__form div {
-    margin-bottom: 3em; 
-    /* 부모박스 기준 : em */
+.join_form div {
+    margin-bottom: 3em;
 }
-
-.join__form div label {
+.join_form div label {
     display: block;
     font-size: 1.2rem;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
 }
+
 @media (max-width: 800px) {
-    .join__form {
+    .join_form {
         padding: 5% 20px;
     }
 }

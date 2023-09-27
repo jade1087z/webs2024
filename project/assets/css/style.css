@@ -50,6 +50,36 @@ body {
     font-weight: 800;
 }
 
+@media (max-width: 850px) {
+    #wrap {
+        width: 90vw;
+    }
+    #header {
+        width: 90%;
+        position: relative;
+    }
+    .test_name {
+        position: absolute;
+        width: 80vw;
+        left: 50px;
+        font-size: 40px;
+        bottom: 10px;
+    }
+}
+@media (max-width: 460px) {
+    #header {
+        width: 90%;
+        position: relative;
+    }
+    .test_name {
+        position: absolute;
+        width: 80vw;
+        left: 50px;
+        font-size: 30px;
+        bottom: 10px;
+    }
+}
+
 /* end header */
 
 /* main start */
@@ -125,4 +155,52 @@ body {
 .ah_ha {
     position: absolute;
     bottom: -40px;
+}
+
+@media (max-width: 850px) {
+    .text {
+        width: 320px;
+        height: 60px;
+        margin-top: 130px;
+        margin-left: 70px;
+    }
+    .text_box {
+        margin-top: 150px;
+        margin-left: 70px; 
+        padding-top: 10px;
+        padding-left: 20px;
+    }
+    .text span {
+        font-size: 25px;
+    }
+    .start_btn {
+        margin-left: 70px;
+        margin-top: 150px;
+    }
+}
+@media (max-width: 600px) {
+    .text {
+        width: 320px;
+        height: 60px;
+        margin-top: 130px;
+        margin-left: 70px;
+    }
+    .text_box {
+        margin-top: 150px;
+        margin-left: 45px; 
+    }
+    .start_btn {
+        margin-left: 35px;
+        margin-top: 55px;
+    }
+}
+@media (max-width: 390px) {
+    .text_box {
+        margin-top: 150px;
+        margin-left: 10px; 
+    }
+    .start_btn {
+        margin-left: 35px;
+        margin-top: 55px;
+    }
 }

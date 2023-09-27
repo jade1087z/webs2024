@@ -9,3 +9,5 @@
 /* 섹션별 설정  */
 @import "header.css";
 @import "join.css";
+@import "admin.css";
+@import "login.css";

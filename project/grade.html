@@ -27,11 +27,11 @@
                 <div class="quiz__main">
                     <div class="grade">
                         <div class="en">A+</div>
-                        <div class="num">종합점수 : <span class="total"></span></div>
-                        <a href="#1페이지" class="overlay-container">
+                        <div class="num">종합점수 : <span class="total"></span></div> 
+                        <div class="overlay-container">
                             <img src="assets/img/start 1.png" alt="">
-                            <div class="overlay-text">다시풀기</div>
-                        </a>   
+                            <a href="index.html" class="overlay-text">다시 풀기</a>
+                        </div>
                     </div>
                     <div class="desc">
                         툭 치기만 해도<br>
@@ -103,7 +103,7 @@ const result = gradeEnd[gradeIndex];
 const gradeEndTag = `
     <div class="quiz">
         <p class="quiztitle">
-            MZ언어 능력고사
+           <em>MZ</em>언어 능력고사
         </p>
         <div class="quiz__header1">
             <div class="name">성명</div>
@@ -117,10 +117,10 @@ const gradeEndTag = `
             <div class="grade">
                 <div class="en">${gradeEnd[gradeIndex].gradeEn}</div>
                 <div class="num">종합점수 : <span class="total"></span></div>
-                <a href="#1페이지" class="overlay-container">
-                    <img src="assets/img/start 1.png" alt="">
-                    <div class="overlay-text"><a href="index.html">다시풀기</a></div>
-                </a>   
+                    <div class="overlay-container">
+                            <img src="assets/img/start 1.png" alt="">
+                            <a href="index.html" class="overlay-text">다시 풀기</a>
+                    </div>   
             </div>
             <div class="desc">${gradeEnd[gradeIndex].graDesc}</div>
         </div>
