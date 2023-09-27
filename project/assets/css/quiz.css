@@ -127,55 +127,42 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+    align-items: center;
 }
 .name_input input {
     width: 674px;
-    height: 18px;
+    height: 23px;
     line-height: 8px;
     transition: all 0.3s;
     border-radius: 10px;
-    padding: 26px;
+    padding: 23px;
     text-align: center;
     background-color: #d9d9d9;
-    color: #9f9f9f;
+    color: #000000;
     font-size: 29px;
     cursor: pointer;
 }
 .name_input span {
     padding: 10px;
+    line-height: 10px;
     color: #8a8a8a;
 }
-
-/* 수정 */
 .name_input .btn {
-    width: 726px;
-    padding: 26px;
-    line-height: 4px;
-}
-
-.name_input a {
-    font-size: 20px;
-    color: #8a8a8a;
-    /*a 태그의 범위 넓히기
-    버튼위에서 손가락 모양으로 바로 전환되도록*/
-    display: inline-block;
-    max-height: 100%;
-    max-width: 100%;
-    width: 730px;
-    height: 75px;
-    line-height: 75px;
     padding: 0;
     margin: 0;
-    border: none;
-    text-align: center;
-    text-decoration: none;
+    width: 97%;
+    height: 75px;
+    max-height: 100%;
+    max-width: 100%;
+    border: 1px solid #d9d9d9;
+    background-color: #d9d9d9;
+    box-shadow: 1px 1px 0px #a2a2a2;
+    color: #4a4a4a;
+    border-radius: 5px;
+    font-size: 27px;
+    cursor: pointer;
 }
-
-.name_input a:hover {
-    color: black;
-
-}
-
+​
 .name_input .btn:hover {
     color: #000000;
     background-color: #9f9f9f;
