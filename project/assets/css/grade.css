@@ -83,9 +83,9 @@ a {
     font-size: 50px;
     margin-bottom: 50px;
 }
-.overlay-container {
+/* .overlay-container {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
     text-decoration: none;
 }
 .overlay-container a {
@@ -97,14 +97,42 @@ a {
 }
 .overlay-container a:hover {
     color: #f70000fb;
+} */
+
+.overlay-container {
+    position: relative;
+    display: inline-flex;
+    margin-left: 0;
+}
+.overlay-container img {
+    width: 150px;
+}
+.overlay-container a {
+    position: absolute;
+    left: 45px;
+    top: 17px;
+    font-size: 18px;
+    font-weight: 800;
+}
+.overlay-container .btn__right a {
+    left: 190px;
 }
 
-.quiz__main .desc {
-    font-size: 20px;
-    line-height: 2;
+.overlay-container a:hover {
+    color: #f70000fb;
+}
+
+
+.desc {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 600;
     margin-top: 50px;
+    margin-left: -30px;
 }
-
+.desc2 {
+    margin-top: 10px;
+}
 /* 화면이 800px 이하일 때 */
 @media (max-width: 800px) {
     .quiz__wrap {
