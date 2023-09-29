@@ -1,0 +1,33 @@
+body {
+    background-image: url(../img/bgi.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.quiz__wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.quiz__wrap > .quiz {
+    margin: 0 auto;
+    background-image: url(../img/Qbg.png);
+    width: 757px;
+    height: 728px;
+}
+
+
+.quiz__choice {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2개의 열로 나눔 */
+    gap: 80px; /* 각 요소 사이의 간격 설정 */
+    position: absolute;
+    bottom: 0;
+    left: 0; /* 왼쪽에 붙이기 */
+    right: 0; /* 오른쪽에 붙이기 */
+    margin: auto; /* 가운데 정렬 */
+    padding: 10px; /* 선택사항: input 요소를 감싸는 배경의 안쪽 간격 설정 */
+    max-width: 757px; /* .quiz__wrap > .quiz의 최대 너비로 설정 */
+}

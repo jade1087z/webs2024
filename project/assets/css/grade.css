@@ -1,0 +1,217 @@
+body {
+    background-image: url(../img/bgi.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    font-family: "NanumMyeongjo";
+}
+.quiz__wrap {
+    margin: 0 auto;
+    padding: 0;
+    background-image: url(../img/QRbg.png);
+    width: 100%;
+    max-width: 750px;
+    height: 800px;
+    position: relative;
+}
+.quiztitle {
+    font-family: "NanumMyeongjo";
+    text-align: center;
+    font-size: 50px;
+    position: absolute;
+    top: -15px;
+    width: 100%;
+}
+
+.quiztitle em {
+    color: #8e2223;
+    font-style: normal;
+    font-weight: 800;
+}
+.quiz__header1 {
+    display: inline-block;
+    font-family: "NanumMyeongjo";
+    font-size: 27px;
+    position: absolute;
+    top: 115px;
+    left: 170px;
+}
+.name,
+.youname {
+    display: inline-block;
+    margin: 5px;
+    margin-top: 6px;
+}
+
+.quiz__header2{
+    display: inline-block;
+    font-family: "NanumMyeongjo";
+    font-size: 27px;
+    position: absolute;
+    top: 108px;
+    right: 205px;
+}
+.age,
+.youage {
+    display: inline-block;
+    margin: 12px;
+    margin-top: 13px;
+}
+.youage {
+    margin-left: 15px;
+}
+.quiz__main {
+    font-family: "NanumMyeongjo";
+    display: flex;
+    position: absolute;
+    top: 200px;
+}
+.quiz__main .grade{
+    margin: 20px 30px;
+}
+.quiz__main .grade .en {
+    font-size: 250px;
+    color: #B24238;
+    margin-bottom: 50px;
+}
+.quiz__main .grade .num {
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+.overlay-container {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+.overlay-container a {
+    position: absolute;
+    top: 25px;
+    left: 65px;
+    font-size: 22px;
+    font-weight: 800;
+}
+.overlay-container a:hover {
+    color: #f70000fb;
+}
+
+.quiz__main .desc {
+    font-size: 20px;
+    line-height: 2;
+    margin-top: 50px;
+}
+
+/* 화면이 800px 이하일 때 */
+@media (max-width: 800px) {
+    .quiz__wrap {
+        width: 90vw;
+        height: 800px; 
+        background-image: url(../img/bgi.jpg);
+    }
+    .quiz {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+    .quiz__header {
+        width: 100%;
+        height: 200px;
+        border-bottom: 3px solid #000;
+        position: relative;
+    }
+    .quiz__header::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px; 
+        width: 100%;
+        height: 3px;
+        background-color: #000;
+        z-index: 10;
+    }
+    .quiz__header1 {
+        top: 115px;
+        left: 10px;
+    }
+ 
+    .quiz__header2{
+        top: 108px;
+        right: 10px;
+    }
+    .age,
+    .youage {
+        display: inline-block;
+        margin: 12px;
+    }
+    .quiz__main {
+       max-width: 100%;
+       max-height: 100%;
+    }
+
+    .quiz__main .grade {
+        margin: 20px 0; /* 상단, 하단 여백 조절 */
+    }
+
+    .quiz__main .grade .en {
+        font-size: 150px; /* 폰트 크기 줄이기 */
+        margin-bottom: 20px; /* 하단 여백 조절 */
+    }
+
+    .quiz__main .grade .num {
+        font-size: 30px; /* 폰트 크기 줄이기 */
+        margin-bottom: 20px; /* 하단 여백 조절 */
+    }
+
+    .overlay-text {
+        font-size: 18px; /* 폰트 크기 줄이기 */
+    }
+
+    .quiz__main .desc {
+        word-wrap: break-word;
+        margin-left: 20px;
+        font-size: 16px; /* 폰트 크기 줄이기 */
+        margin-top: 20px; /* 상단 여백 조절 */
+        padding: 10px;
+        border-left: 3px solid #000;
+    }
+}
+@media (max-width: 600px){
+    .quiztitle {
+        text-align: center;
+        font-size: 45px;
+        top: -5px;
+    }
+    .quiz__main {
+        display: block;
+    }
+
+    .quiz__main .grade .en {
+        text-align: center;
+        font-size: 100px; /* 폰트 크기 줄이기 */
+        margin-bottom: 20px; /* 하단 여백 조절 */
+    }
+
+    .quiz__main .grade .num {
+        text-align: center;
+        font-size: 20px; /* 폰트 크기 줄이기 */
+        margin-bottom: 20px; /* 하단 여백 조절 */
+    }
+    .grade {
+        text-align: center;
+    }
+    .quiz__main .desc {
+        margin-left: 80px; 
+    }
+}
+
+@media (max-width: 400px) {
+    .quiztitle {
+        font-size: 34px;
+    }
+}

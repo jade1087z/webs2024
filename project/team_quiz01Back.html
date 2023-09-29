@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팀 퀴즈 프로젝트 Q.01</title>
+    <link rel="stylesheet" href="assets/css/quiz.css" />
+
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <main id="line_main">
+        <div class="quiz_wrap">
+            <!-- <div class="quiz01">
+                <div class="quiz01_header">
+                    <div class="quiz_num"> 1/10</div>
+                    <div class="question">
+                        <h1>Q1. 다음 중 'OO논쟁' 시리즈에 해당되는 것이 아닌 것은?</h1>
+                        <div class="img">
+                            <img src="assets/img/quiz01.jpg" alt="퀴즈01이미지">
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz01_choice">
+                    <label for="choice1">
+                        <input type="radio" id="choice1" name="choice" value="1">
+                        <span></span>
+                    </label>
+                    <label for="choice2">
+                        <input type="radio" id="choice2" name="choice" value="2">
+                        <span></span>
+                    </label>
+                    <label for="choice3">
+                        <input type="radio" id="choice3" name="choice" value="3">
+                        <span></span>
+                    </label>
+                    <label for="choice4">
+                        <input type="radio" id="choice4" name="choice" value="4">
+                        <span></span>
+                    </label>
+                </div>
+            </div> -->
+        </div>
+    </main>
+
+    <script>
+        const quizWrap = document.querySelector(".quiz_wrap");
+
+        const quizInfo = [
+            {
+                question: "인터뷰에서 중꺾마(중요한 것은 꺾이지 않는 마음)를 처음으로 말 한 사람은?",
+                choice: ["축구선수 박지성", "롤 데프트 선수", "롤 페이커 선수", "김연아"],
+                answer: "2"
+            },
+            {
+                question: "다음 중 '더글로리' 관련 유행어가 아닌 것은?",
+                choice: ["멋지다 연진아", "넌 모르잖아? 알록달록한 세상", "무슨 악취 같은거 안나니?", "나 지금 되게 신나"],
+                answer: "3"
+            },
+            {
+                question: "다음 중 뉴진스와 관련있는 신조어가 아닌 것은?",
+                choice: ["대퓨님", "꾸에엑", "디토합니다.", "엄마엄마가"],
+                answer: "2"
+            },
+            {
+                question: "부장님이 내 보고서를 보며 퀄리티가 이게 뭐냐고 화를 낸다. 맥락에 맞는 신조어로 답을 해볼까?",
+                choice: ["하지만 빨랐죠?", "우내할", "안익었는데진짜", "밈첩하다"],
+                answer: "1"
+            },
+            {
+                question: "위 가수의 수 많은 별명들 사이에서의 진짜 활동명은?",
+                choice: ["카더가든", "메이트리", "가터벨트", "킨더조이"],
+                answer: "1"
+            },
+            {
+                question: "'내일 봬요 누나' (내봬누)가 나온 연애 프로그램은?",
+                choice: ["나는솔로", "솔로지옥 시즌2", "환승연애 시즌2", "하트시그널 시즌3"],
+                answer: "3"
+            },
+            {
+                question: "신조어 '쿠쿠루삥뽕'을 사용할 수 있는 상황은?",
+                choice: ["친구가 연인과 이별한 상황", "연인을 그윽하게 바라보는 상황", "맛있는 음식이 눈앞에 있는 상황", "친구와 내기에서 이긴 상황"],
+                answer: "4"
+            },
+
+            {
+                question: "다음 중 '당모치'의 뜻으로 올바른 것은?",
+                choice: ["당연히 모짜렐라 치즈가 최고", "당면이랑 모짜렐라 치즈 추가", "당근은 모두 치워버려", "당연히 모든 치킨은 옳다"],
+                answer: "4"
+            },
+            {
+                question: "다음 중 'OO논쟁' 시리즈에 해당되는 것이 아닌 것은?",
+                choice: ["블루투스논쟁", "에어팟 논쟁", "소주 논쟁", "새우 논쟁"],
+                answer: "2"
+            },
+            {
+                question: "<보기> 중 신조어의 뜻 풀이가 올바르지 않은 것을 모두 고르시오.",
+                choice: ["ㄱ, ㄹ", "ㄴ", "ㄴ, ㄷ", "ㄱ, ㄷ, ㄹ"],
+                answer: "1"
+            }
+        ];
+
+        let currentIndex = 0;
+        let totalScore = 0;
+
+        const updateQuiz = (index) => {
+            let quizWrapTag = `<div class="quiz01">
+                <div class="quiz01_header">
+                    <div class="quiz_num"> ${index + 1}/10</div>
+                    <div class="question">
+                        <h1>Q${index + 1}. ${quizInfo[index].question}</h1>
+                        <div class="img">
+                            <img src="assets/img/quiz${index+1}.jpg" alt="퀴즈01이미지">
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz01_choice">
+                    <label for="choice1-${quizInfo[index].choice[0]}">
+                        <input type="radio" id="choice1-${quizInfo[index].choice[0]}" name="choice" value="1">
+                        <span>${quizInfo[index].choice[0]}</span>
+                    </label>
+                    <label for="choice2-${quizInfo[index].choice[1]}">
+                        <input type="radio" id="choice2-${quizInfo[index].choice[1]}" name="choice" value="2">
+                        <span>${quizInfo[index].choice[1]}</span>
+                    </label>
+                    <label for="choice3-${quizInfo[index].choice[2]}">
+                        <input type="radio" id="choice3-${quizInfo[index].choice[2]}" name="choice" value="3">
+                        <span>${quizInfo[index].choice[2]}</span>
+                    </label>
+                    <label for="choice4-${quizInfo[index].choice[3]}">
+                        <input type="radio" id="choice4-${quizInfo[index].choice[3]}" name="choice" value="4">
+                        <span>${quizInfo[index].choice[3]}</span>
+                    </label>
+                </div>
+            </div>`;
+            quizWrap.innerHTML = quizWrapTag;
+            
+            // 인풋 값이 네 개이기 때문에 각 버튼마다 클릭이벤트를 적용시켜주어야 한다.
+            // 버튼눌러서 정답 확인
+            const buttons = quizWrap.querySelectorAll(".quiz01_choice input");
+            buttons.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    const selectedChoice = quizWrap.querySelectorAll("input[name='choice']:checked");
+
+                    if (selectedChoice.length > 0) {
+                        const userAnswer = selectedChoice[0].value;
+                        
+                        if(userAnswer == quizInfo[index].answer){
+                            alert("정답");
+                            totalScore += 10;
+                        } else {
+                            alert("오답");
+                        };
+                    };
+                    // 다음 문제 넘어가기 
+                    currentIndex++;
+                    if(currentIndex < quizInfo.length){
+                        updateQuiz(currentIndex);
+                    } else if(currentIndex => quizInfo.length) {
+                        alert("모든 문제를 풀었습니다.");
+                        console.log(totalScore);
+                        window.location.href = "grade.html";
+
+                        
+                    };
+                });
+            });
+            
+        };
+            // 데이터 받아오기
+            // 그리고 등급 페이지 보내기
+         
+            
+
+        document.addEventListener("DOMContentLoaded", () => {
+            updateQuiz(currentIndex);   
+            
+        });
+    </script>
+</body>
+
+</html>

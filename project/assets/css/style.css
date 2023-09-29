@@ -1,0 +1,206 @@
+* {
+    font-family: "Nanum Myeongjo";
+}
+body {
+    height: 100%;
+    
+    background-image: url(../img/bgi.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeaty;
+}
+#wrap {
+    width: 800px;
+    height: 100vh;
+    margin: 0px auto;
+    background-image: url(../img/bg04.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* header start */
+#header {
+    width: 100%;
+    height: 200px;
+    padding-left: 100px;
+    padding-top: 50px;   
+}
+.logo {    
+    width: 161.1px;
+    height: 70px;
+    background-color: #000;
+    color: #ccc;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 70px;
+    font-size: 32px;
+    font-weight: 800;
+}
+.test_name {
+    font-size: 60px;
+    color: #000;
+    position: relative;
+}
+.test_name span {
+    letter-spacing: 6px;
+}
+.test_name em {
+    color: #8e2223;
+    font-weight: 800;
+}
+
+@media (max-width: 850px) {
+    #wrap {
+        width: 90vw;
+    }
+    #header {
+        width: 90%;
+        position: relative;
+    }
+    .test_name {
+        position: absolute;
+        width: 80vw;
+        left: 50px;
+        font-size: 40px;
+        bottom: 10px;
+    }
+}
+@media (max-width: 460px) {
+    #header {
+        width: 90%;
+        position: relative;
+    }
+    .test_name {
+        position: absolute;
+        width: 80vw;
+        left: 50px;
+        font-size: 30px;
+        bottom: 10px;
+    }
+}
+
+/* end header */
+
+/* main start */
+#main {
+    width: 100%;
+    height: 700px;
+    display: flex;
+}
+#left {
+    width: 50%;
+}
+.text_box {
+    width: 300px;
+    height: 60px;
+    background-color: #d0d8e7;
+    color: #878E98;
+    font-size: 24px;
+    margin-top: 150px;
+    margin-left: 70px; 
+    padding-top: 10px;
+    padding-left: 20px;
+    transform: rotate(-334.68deg);
+    position: relative;
+}
+.text_box::before {
+    content: '';
+    position: absolute;
+    top: 99%; /* 꼬리를 말풍선 아래에 위치시킵니다. */
+    left: 11%;
+    border-top: 14px solid #d0d8e7;
+    border-left: 8px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 0px solid transparent;
+}
+.text {
+    width: 320px;
+    height: 60px;
+    margin-top: 130px;
+    margin-left: 150px;
+    transform: rotate(-6.5deg);
+}
+.text span {
+   font-size: 36px;
+   color: #878E98;
+}
+.start_btn {
+    margin-left: 110px;
+    margin-top: 150px;
+}
+.start_btn img {
+    width: 200px;
+    height: 60px;      
+/* hover를 주려면 여기다가 주어야할것 같음 */
+}
+.start_btn a {
+    position: relative;
+}    
+.start_btn a::before {
+    content: "시작하기";
+    position: absolute;
+    left: 76px;
+    top: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "NanumMyeongjo";
+}
+
+/* LEFT END */
+#right {
+    width: 50%;
+    position: relative;
+}
+.ah_ha {
+    position: absolute;
+    bottom: -40px;
+}
+
+@media (max-width: 850px) {
+    .text {
+        width: 320px;
+        height: 60px;
+        margin-top: 130px;
+        margin-left: 70px;
+    }
+    .text_box {
+        margin-top: 150px;
+        margin-left: 70px; 
+        padding-top: 10px;
+        padding-left: 20px;
+    }
+    .text span {
+        font-size: 25px;
+    }
+    .start_btn {
+        margin-left: 70px;
+        margin-top: 150px;
+    }
+}
+@media (max-width: 600px) {
+    .text {
+        width: 320px;
+        height: 60px;
+        margin-top: 130px;
+        margin-left: 70px;
+    }
+    .text_box {
+        margin-top: 150px;
+        margin-left: 45px; 
+    }
+    .start_btn {
+        margin-left: 35px;
+        margin-top: 55px;
+    }
+}
+@media (max-width: 390px) {
+    .text_box {
+        margin-top: 150px;
+        margin-left: 10px; 
+    }
+    .start_btn {
+        margin-left: 35px;
+        margin-top: 55px;
+    }
+}

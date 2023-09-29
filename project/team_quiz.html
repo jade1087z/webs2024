@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈페이지</title>
+    <link rel="stylesheet" href="assets/css/quiz.css" />
+
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <main id="main">
+        <div class="quiz_wrap">
+            <form id="myForm">
+                <div class="age">
+                    <div class="age_choice">
+                        <h1>당신의 나이대는?</h1>
+                        <label for="choice1">
+                            <input type="radio" id="choice1" name="choice" value="10">
+                            <span>10대</span>
+                        </label>
+                        <label for="choice2">
+                            <input type="radio" id="choice2" name="choice" value="20">
+                            <span>20대</span>
+                        </label>
+                        <label for="choice3">
+                            <input type="radio" id="choice3" name="choice" value="30">
+                            <span>30대</span>
+                        </label>
+                        <label for="choice4">
+                            <input type="radio" id="choice4" name="choice" value="40">
+                            <span>40대</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="name">
+                    <div class="name_input">
+                        <h1>당신의 이름은?</h1>
+                        <input class="userName" type="text" id="nameInput" name="userName" placeholder="황상연"></input>
+                        <span>입력하신 정보는 본 퀴즈 이외의 용도로 사용하지 않습니다.</span>
+                        <input class="btn" type="submit" value="확인"></input>
+                        <!-- btn 안에 a 태그 삭제 -->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+<!-- 
+<script>
+
+    const quizWrap = document.querySelector(".quiz_wrap");
+    const ageChoice = quizWrap.querySelectorAll(".age_choice input");
+    const btnConfirm = quizWrap.querySelector(".name_input .btn");
+    const btnName = quizWrap.querySelector(".name_input .userName");
+
+    
+
+        // 1. 서브밋 동작을 막음
+        // 2. 서브밋을 통해 들어오는 데이터를 받아옴
+        // 3. 저장된 데이터를 원하는 html 위치에 뿌려줌 
+    // 인풋 데이터 저장
+    document.getElementById('myForm').addEventListener('submit', function (e) {
+        e.preventDefault(); // 기본 submit 동작을 막음
+       
+        const selectedAge = document.querySelectorAll('input[name="choice"]:checked');
+        const userAge = selectedAge[0].value;
+
+        // 이름 입력 값 가져오기
+        const userName = document.getElementById('nameInput').value;
+
+
+    
+        // 데이터를 URL 매개변수에 추가하여 새 URL 생성
+        const urlParams = new URLSearchParams();
+        urlParams.set('age', userAge);
+        urlParams.set('name', userName);
+
+        // 새 URL 생성
+        const newUrl = `grade.html?${urlParams.toString()}`;
+        window.location.href = newUrl;
+
+        
+        console.log(userAge);
+        console.log(userName);
+        console.log(urlParams);
+        console.log(newUrl);
+        //window.location.href = newUrl;
+
+        // 페이지 이동
+    });
+
+  
+    // // 버튼 이벤트 
+    // btnConfirm.addEventListener("click", () => {
+    //     const selectedChoice = quizWrap.querySelectorAll("input[name='choice']:checked");
+    //     const userName = btnName.value;
+        
+    //     if(selectedChoice.length > 0 && userName != "") {
+    //         const userAge = selectedChoice[0].value;
+    //         window.location.href = "team_quiz01.html";
+    //     } else if (selectedChoice.length === 0) {
+    //         alert("나이를 체크해주세요");
+    //     } else if (userName == ""){
+    //         alert("이름을 입력해주세요");
+    //     }
+        
+    // });
+    
+</script> -->
+
+<script>
+
+    const quizWrap = document.querySelector(".quiz_wrap");
+    const ageChoice = quizWrap.querySelectorAll(".age_choice input");
+    const btnConfirm = quizWrap.querySelector(".name_input .btn");
+    const btnName = quizWrap.querySelector(".name_input .userName");
+
+    
+
+        // 1. 서브밋 동작을 막음
+        // 2. 서브밋을 통해 들어오는 데이터를 받아옴
+        // 3. 저장된 데이터를 원하는 html 위치에 뿌려줌 
+    // 인풋 데이터 저장
+    document.getElementById('myForm').addEventListener('submit', function (e) {
+        e.preventDefault(); // 기본 submit 동작을 막음
+       
+        const selectedAge = document.querySelectorAll('input[name="choice"]:checked');
+        // 이름 입력 값 가져오기
+        const userName = document.getElementById('nameInput').value;
+
+        // 새 URL 생성
+        
+        
+        if(selectedAge.length > 0 && userName != "") {
+            const userAge = selectedAge[0].value;
+            
+            // 데이터를 URL 매개변수에 추가하여 새 URL 생성
+            const urlParams = new URLSearchParams();
+            urlParams.set('age', userAge);
+            urlParams.set('name', userName);
+            const newUrl = `team_quiz01.html?${urlParams.toString()}`;
+            window.location.href = newUrl;
+
+
+        } else if (selectedAge.length === 0) {
+            alert("나이를 체크해주세요");
+        } else if (userName == ""){
+            alert("이름을 입력해주세요");
+        }
+        
+
+        // 페이지 이동
+    });   
+    
+</script>
+
+</body>
+
+</html>

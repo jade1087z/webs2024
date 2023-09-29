@@ -315,17 +315,100 @@ mysql> desc members;
 <pre><code class="language-js">SELECT * FROM members WHERE youAge >= 25 AND memberID IN(2, 9); </code></pre>
 <pre><code class="language-js">SELECT * FROM members WHERE (memberID = 2 OR memberID = 9) AND youAge >= 25; </code></pre>
 
+                    <h5>이메일이 gmail인 회원 데이터 불러오기</h5>
+<pre><code class="language-js">select * from members where youEmail like '%gmail%'; </code></pre>
+                    
+
+                    <h5>회원 데이터를 5개만 불러오기</h5>
+<pre><code class="language-js">SELECT * FROM members LIMIT 5;
+    <!-- 게시판 만들때 페이지당 데이터를 5개만 보여주거나 할 떄 사용 -->
+</code></pre>
+
+                    <h5>회원 데이터를 5개만 불러오기</h5>
+<pre><code class="language-js">SELECT * FROM members LIMIT 5, 5;</code></pre>
+
+
+                    <h5>회원 이메일을 기준으로 10개만 불러오기</h5>
+<pre><code class="language-js">SELECT youEmail FROM members LIMIT 10;</code></pre>
+
+                    <h5>회원 나이만 불러오는데 중복된 값을 제거하고 불러오기</h5>
+<pre><code class="language-js">SELECT DISTINCT youAge FROM members</code></pre>
+
+                    <h5>이름 갯수 불러오기</h5>
+<pre><code class="language-js">SELECT count(youName) FROM members</code></pre>
+
+                    <h5>이름 불러오기 (오름차순)</h5>
+<pre><code class="language-js">SELECT youName FROM members ORDER BY youName ASC;</code></pre>
+
+                    <h5>이름 불러오기 (내림차순)</h5>
+<pre><code class="language-js">SELECT youName FROM members ORDER BY youName DESC;</code></pre>
+
 
                     <h4 id="intro6-3" class="page-header">테이블 수정하기</h4>
+                    <div class="bs-callout bs-callout-info">
+                        UPDATE 테이블명 SET
+                    </div>
+
+                    <h5>모든 회원데이터의 비밀번호를 1234로 변경하기</h5>
+<pre><code class="language-js">UPDATE member SET youPass = "1234";</code></pre>
+
+                    <h5>15번 아이디의 비밀번호를 1111로 변경하기</h5>
+<pre><code class="language-js">UPDATE member SET youPass = "1111" WHERE memberID = 15;</code></pre>
+
+                    <h5>아이디가 5~10번인 회원 비밀번호를 7777로 수정하기</h5>
+<pre><code class="language-js">UPDATE members SET youPass = "7777" WHERE memberID BETWEEN 5 AND 10;</code></pre>
+
+
                     <h4 id="intro6-4" class="page-header">테이블 삭제하기</h4>
-                </div>
+                    <div class="bs-callout bs-callout-info">
+                        DELELTE FROM 테이블명
+                    </div>
+
+                    <h5>아이디가 5번인 회원 데이터 삭제하기</h5>
+<pre><code class="language-js">DELETE FORM members where memberID = 5;</code></pre>
+
+                    <h5>비밀번호가 1111인 회원 데이터 삭제하기</h5>
+<pre><code class="language-js">DELETE FORM members where youPass = "1111";</code></pre>
+
+                    <h5>memberID를 기준으로 5번째 멤버까지 회원 데이터 삭제하기</h5>
+<pre><code class="language-js">DELETE FORM members ORDER BY memberID LIMIT 5";</code></pre>
+
+                    <h5>memberID를 기준으로 16, 18, 20 멤버 삭제</h5>
+<pre><code class="language-js">DELETE FORM members WHERE MEMBERID IN(16, 18, 20);</code></pre>
+
+                
                 <!-- intro6 -->
 
                 <div class="bs-docs-section">
                     <h3 id="intro7" class="page-header">테이블 수정</h3>
                     <h4 id="intro7-1" class="page-header">필드 추가하기</h4>
+                    <div class="bs-callout bs-callout-info">
+                        ALTER TABLE 테이블명 ADD [추가할 필드명] AFTER [추가할 위치 필드명]
+                    </div>
+                    <h5>핸드폰 필드 추가하기</h5>
+<pre><code class="language-js">ALTER TABLE members ADD youPhone varchar(20) NOT NULL;</code></pre>
+
+                    <h5>패스워드 필드 다음 영역에 핸드폰 필드 추가하기</h5>
+<pre><code class="language-js">ALTER TABLE members ADD youPhone varchar(20) NOT NULL AFTER youAge;</code></pre>
+
+<!-- 추가 -->
+
                     <h4 id="intro7-2" class="page-header">필드 수정하기</h4>
+                    <div class="bs-callout bs-callout-info">
+                        ALTER TABLE [테이블명] MODIFY [수정할 필드명]
+                    </div>
+                    <h5>핸드폰 필드 수정하기</h5>
+<pre><code class="language-js">ALTER TABLE members MODIFY youPhone int(20) NOT NULL;</code></pre>
+
+<!-- 수정 -->
+
                     <h4 id="intro7-4" class="page-header">필드 삭제하기</h4>
+                    <div class="bs-callout bs-callout-info">
+                        ALTER TABLE [테이블명] DROP [삭제할 필드명]
+                    </div>
+                    <h5>핸드폰 필드 삭체하기</h5>
+<pre><code class="language-js">ALTER TABLE members DROP youPhone;</code></pre>
+
                 </div>
                 <!-- intro7 -->
 

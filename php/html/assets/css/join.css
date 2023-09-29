@@ -1,0 +1,24 @@
+.join_inner {
+    padding: 80px 0;
+}
+.join_inner h2 {
+    font-size: 30px;
+    text-align: center;
+}
+.join_form {
+    padding: 10% 20%;
+}
+.join_form div {
+    margin-bottom: 3em;
+}
+.join_form div label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 800px) {
+    .join_form {
+        padding: 5% 20px;
+    }
+}

@@ -1,0 +1,102 @@
+.header_inner {
+    border-bottom: 3px solid var(--black);
+    position: relative;
+    
+}
+.header_inner::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--black);
+    position: absolute;
+    left: 0;
+    top: 49%;
+    z-index: 1;
+}
+.header_inner .left {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    z-index: 10;
+}
+.header_inner .left a {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid var(--black);
+    border-radius: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 0L7.34708 4.1459H11.7063L8.17963 6.7082L9.52671 10.8541L6 8.2918L2.47329 10.8541L3.82037 6.7082L0.293661 4.1459H4.65292L6 0Z' fill='black'/%3E%3C/svg%3E");
+    background-position: center;
+    background-color: var(--primary-color);
+    transition: transform 1s;
+    
+}
+.header_inner .left a:hover {
+    transform: rotate(400deg);
+}
+.header_inner .logo {
+    text-align: center;
+}
+.header_inner .logo a {
+    font-size: 1.25rem;
+    font-weight: 900;
+    font-family: var(--main-gmark);
+    background-color: var(--primary-color);
+    padding: 1rem;
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+}
+.header_inner .right {
+    position: absolute;
+    right: 0;
+    top: 18px;
+    z-index: 10;
+}
+.header_inner .right li {
+    display: inline-block;
+}
+.header_inner .right li a {
+    font-size: 0.9rem;
+    border: 1px solid var(--black);
+    padding: 4px 12px;
+    border-radius: 30px;
+    background-color: var(--primary-color);
+}
+.header_inner .right li a:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+.nav_inner {
+    position: absolute;
+    left: 50%;
+    top: 52px;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+}
+.nav_inner li {
+    display: inline-block;
+}
+.nav_inner li a {
+    background-color: var(--primary-color);
+    padding: 2px 4px;
+    border: 1px solid var(--black);
+}
+.nav_inner li a:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+@media (max-width: 800px) {
+    .nav_inner {
+        top: 45px;
+    }
+    .header_inner .left {
+        display: none;
+    }
+    .header_inner .right {
+        display: none;
+    }
+}
