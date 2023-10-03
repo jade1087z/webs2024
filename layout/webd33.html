@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://webfontworld.github.io/bccard/Paybooc.css" rel="stylesheet">
+    <title>T1</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-weight: 800;
+        font-family: "Paybooc";
+        color: #000;
+    }
+    #wrap {
+        width: 1280px;
+        margin: 0 auto;
+    }
+    #header {
+        width: 100%;
+        display: flex;
+    }
+    .logo {
+        width: 20%;
+        height: 200px;
+        background-color: #efefef;
+    }
+    .nav {
+        width: 80%;
+        height: 200px;
+        background-color: #e3e3e3;
+    }
+    #slider {
+        width: 100%;
+        height: 300px;
+        background-color: #d9d9d9;
+    }
+    #main {
+        width: 100%;
+        display: flex;
+    }
+    #contents1 {
+        width: 33.3333%;
+        height: 200px;
+        background-color: #d1d1d1;
+    }
+    #contents2 {
+        width: 33.3333%;
+        height: 200px;
+        background-color: #c7c7c7;
+    }
+    #contents3 {
+        width: 33.3333%;
+        height: 200px;
+        background-color: #bcbcbc;
+    }
+    #footer {
+        display: flex;
+        width: 100%;
+    }
+    .footer1 {
+        width: 20%;
+        height: 100px;
+        background-color: #b1b1b1;
+    }
+    .footer2 {
+        width: 80%;
+        height: 100px;
+        background-color: #a3a3a3;
+    }
+    .footer3 {
+        width: 20%;
+        height: 100px;
+        background-color: #9d9d9d;
+    }
+    .tab-menu {
+        padding: 20px;
+    }
+    .tab-btn ul {
+        display: flex;
+    }
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: #6b6b6b;
+        display: block;
+    }
+    .tab-cont >div {
+        padding: 10px;
+        background-color: #b0b0b0;
+        line-height: 1.6;
+    }
+    .active {
+        display: block;
+    }
+    .none {
+        display: none;
+    }
+</style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo"></div>
+            <div class="nav"></div>
+        </header>
+        <section id="slider"></section>
+        <main id="main">
+            <section id="contents1">
+                <div class="tab-menu">
+                    <div class="tab-btn">
+                        <ul>
+                            <li><a href="#" class="tab1">탭메뉴1</a></li>
+                            <li><a href="#" class="tab2">탭메뉴2</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-cont">
+                        <div>
+                            탭메뉴1 <br>
+                            탭메뉴1 <br>
+                            탭메뉴1 <br>
+                            탭메뉴1 <br>
+                        </div>
+                        <div>
+                            탭메뉴2 <br>
+                            탭메뉴2 <br>
+                            탭메뉴2 <br>
+                            탭메뉴2 <br>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contents2"></section>
+            <section id="contents3"></section>
+        </main>
+        <footer id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </footer>
+    </div>
+    <script>
+        const tabButton = document.querySelectorAll(".tab-btn > ul > li");
+        const tabCont = document.querySelectorAll(".tab-cont > div");  
+        
+        tabCont.forEach(el => el.style.display = "none");                           // 모든 콘텐르를 숨김
+        tabCont[0].style.display = "block";
+        
+        tabButton.forEach((tab, index) => {
+            tab.addEventListener("click", () => {
+                tabButton.forEach(tab => tab.classList.remove("active")); 
+                tab.classList.add("active");
+                tabCont.forEach(cont => cont.style.display = "none");
+                tabCont[index].style.display = "block";
+            })
+        })
+    </script>
+</body>
+</html>
+
+
