@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/quiz.css">
     <link rel="stylesheet" href="assets/css/animaition.css">
-
-    <title>퀴즈 이펙트06</title>
+    <title>퀴즈 이펙트07</title>
 </head>
 
 <body class="fixed">
@@ -20,8 +19,8 @@
                 <li><a href="quizEffect03.html">3</a></li>
                 <li><a href="quizEffect04.html">4</a></li>
                 <li><a href="quizEffect05.html">5</a></li>
-                <li class="active"><a href="quizEffect06.html">6</a></li>
-                <li><a href="quizEffect07.html">7</a></li>
+                <li><a href="quizEffect06.html">6</a></li>
+                <li class="active"><a href="quizEffect07.html">7</a></li>
                 <li><a href="quizEffect08.html">8</a></li>
             </ul>
             <!-- ul -->
@@ -30,7 +29,7 @@
     </header>
     <!-- header -->
     <main id="main">
-        <div class="cbt__box">
+        <div class="cbt__box none">
             <h2>기능사 시험</h2>
             <select id="cbtSelect1">
                 <option value="json/gineungsaJC2005_02.json">정보처리기능사 2005년 2회</option>
@@ -81,7 +80,6 @@
                 <option value="json/gineungsaWD2015_05.json">웹디자인기능사 2015년 5회</option>
                 <option value="json/gineungsaWD2016_01.json">웹디자인기능사 2016년 1회</option>
                 <option value="json/gineungsaWD2016_04.json">웹디자인기능사 2016년 4회</option>
-                
             </select>
             <p> 당신의 이름은 <input type="text">입니다. <br/>
                 <em>정보처리기능사 2006년 2회 </em>문제를 선택했습니다.<br />
@@ -95,55 +93,215 @@
             <div class="cbt__header">
                 <h1 class="cbt__title">2020년 1회 정보처리기사 기출문제</h1>
                 <div class="cbt__info">
-                    <div class="time">남은 시간 <span>60분 00초</span></div>
-                    <div class="submit">답안지 제출하기</div>
+                    <div class="cbt__time">남은 시간 <span>60분 00초</span></div>
                 </div>
             </div>
-
 <!-- cbt header   -->
+
             <div class="cbt__conts">
                 <div class="cbt__quiz">
-                    <div class="cbt">
+                    <!-- <div class="cbt">
                         <div class="cbt__question">1. GoF(Gang Of Four)의 디자인 패턴에서 행위 턴에서 행위 패턴에 속하는 것인?</div>
                         <div class="cbt__choices">
-                            <input type=radto id="chocie1">
+                            <input type=radio id="chocie1">
                             <label for="chocie1"><span class="choice1">Visitor</span></label>
-                            <input type=radto id="chocie1">
+                            <input type=radio id="chocie1">
                             <label for="chocie2"><span class="choice2">Builder</span></label>
-                            <input type=radto id="chocie1">
+                            <input type=radio id="chocie1">
                             <label for="chocie3"><span class="choice3">Prototype</span></label>
-                            <input type=radto id="chocie1">
-                            <label for="chocie4"><span class="choice3">Bridge-   </span></label>
+                            <input type=radio id="chocie1">
+                            <label for="chocie4"><span class="choice4">Bridge-   </span></label>
                         </div>
-                        <div class="cbt__desc"></div>
-                    </div>
+                        <div class="cbt__desc">hello</div>
+                    </div> -->
+                    
+                
+                                     
                 </div>
             </div>
 <!-- cbt conts -->
-            <div class="cbt__aside"></div>
+            <div class="cbt__aside">
                 <div class="cbt__name">
                     수험자 : 웹쓰
                 </div>
-                <div class="cbt__omr"></div>
+                <div class="cbt__submit">답안지 제출하기</div>
+                <div class="cbt__omr">
+                    <!-- <div class="omr">
+                        <strong>1</strong>
+                        <input type="radio" name="omr1" id="omr1">
+                        <label for="omr1">
+                            <span class="label-inner">1</span>
+                        </label>
+                        <input type="radio" name="omr2" id="omr2">
+                        <label for="omr2">
+                            <span class="label-inner">2</span>
+                        </label>
+                        <input type="radio" name="omr3" id="omr3">
+                        <label for="omr3">
+                            <span class="label-inner">3</span>
+                        </label>
+                        <input type="radio" name="omr4" id="omr4">
+                        <label for="omr4">
+                            <span class="label-inner">4</span>
+                        </label>
+                    </div> -->
+                    
+                </div>
+            </div>
         </div>
     </main>
     <!-- //main -->
 
-    <footer id="footer">
+    <!-- <footer id="footer">
         <a href="mailto:danziro97@naver.com">danziro97@naver.com</a>
-    </footer>
+    </footer> -->
     <!-- footer mail -->
 
     <script>
         // 선택자
         const cbtBox = document.querySelector(".cbt__box"); 
         const cbtBoxStart = document.querySelector(".cbt__box_start");
-
-        cbtBoxStart.addEventListener("click", () => {
-            cbtBox.style.display="none";
-        })
+        const cbtWrap = document.querySelector(".cbt__wrap"); 
+        const quizCheck = document.querySelector(".quiz__check");
 
         // 변수 설정
+        let quizInfo = []; // 퀴즈 정보 
+        let quizScore = 0;  // 퀴즈 점수
+        let quizCorrect = 0; // 퀴즈 맞은 갯수
+
+        // 문제 가져오기
+        const fetchQuiz = () => {
+            fetch("https://jade1087z.github.io/webs2024/json//gineungsaJC2011_05.json")
+                .then(res => res.json())
+                .then(items => {
+                    console.log(items);       
+                    quizInfo = items.map((item, index) => {
+                        const formattedQuiz = {
+                            infoDate: "2011년 5회",
+                        }
+
+                        return formattedQuiz;
+                    });        
+                    // quizInfo = items.map((item, index) => {
+                    //     // 보기 가져오기 -> 보기 배열을 만들어 값을 저장합니다. 
+                    //     const choices = [...item.incorrect_answers, item.correct_answer];
+
+                    //     // 랜덤 섞기
+                    //     for (let i = choices.length - 1; i > 0; i--) {
+                    //         const j = Math.floor(Math.random() * (i + 1));
+                    //         [choices[i], choices[j]] = [choices[j], choices[i]]; // Swap elements at i and j
+                    //     }
+                    //     formattedQuiz.infoChoice = choices;
+                    //     return formattedQuiz;
+                    // });
+
+                    // console.log(quizInfo);
+                   updateQuiz();
+                });
+                
+        }
+
+        //문제 출력
+        const updateQuiz = () => {
+            const quizArray = [];
+            quizInfo.forEach((quiz, number) => {
+                quizArray.push(`<div class="cbt__wrap">
+            <div class="cbt__header">
+                <h1 class="cbt__title">${quizInfo[0].infoDate}</h1>
+                <div class="cbt__info">
+                    <div class="cbt__time">남은 시간 <span>60분 00초</span></div>
+                </div>
+            </div>
+
+            <div class="cbt__conts">
+                <div class="cbt__quiz">
+                     <div class="cbt">
+                        <div class="cbt__question"></div>
+                        <div class="cbt__choices">
+                            <input type=radio id="chocie1">
+                            <label for="chocie1"><span class="choice1"></span></label>
+                            <input type=radio id="chocie1">
+                            <label for="chocie2"><span class="choice2"></span></label>
+                            <input type=radio id="chocie1">
+                            <label for="chocie3"><span class="choice3"></span></label>
+                            <input type=radio id="chocie1">
+                            <label for="chocie4"><span class="choice4"></span></label>
+                        </div>
+                        <div class="cbt__desc">hello</div>
+                    </div>              
+                </div>
+            </div>
+
+            <div class="cbt__aside">
+                <div class="cbt__name">
+                    수험자 : 웹쓰
+                </div>
+                <div class="cbt__submit">답안지 제출하기</div>
+                <div class="cbt__omr">
+                   <div class="omr">
+                        <strong>1</strong>
+                        <input type="radio" name="omr1" id="omr1">
+                        <label for="omr1">
+                            <span class="label-inner">1</span>
+                        </label>
+                        <input type="radio" name="omr2" id="omr2">
+                        <label for="omr2">
+                            <span class="label-inner">2</span>
+                        </label>
+                        <input type="radio" name="omr3" id="omr3">
+                        <label for="omr3">
+                            <span class="label-inner">3</span>
+                        </label>
+                        <input type="radio" name="omr4" id="omr4">
+                        <label for="omr4">
+                            <span class="label-inner">4</span>
+                        </label>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>`);
+            });
+            cbtWrap.innerHTML = quizArray;
+        }
+
+        // 정답 확인
+        // quizCheck.addEventListener("click", () => {
+        //     const quizElements = document.querySelectorAll(".quiz");
+
+        //     // 각각의 퀴즈에 대한 정답을 체크한다
+        //     quizElements.forEach((quizElement, index) => { 
+
+        //         const selectedChoice = quizElement.querySelector(`input[name="choice-${index}"]:checked`); // 체크한 정답만 가져옴
+        //         const quizAnswer = quizElement.querySelector(".quiz__answer"); 
+        //         const quizDesc = quizElement.querySelector(".quiz__desc"); 
+
+        //         if(selectedChoice) { // 없으면 값이 0이다. 0 = false
+        //             const userAnswer = selectedChoice.value;
+        //             const correctAnswer = quizAnswer.textContent;
+
+        //             if(userAnswer === correctAnswer) {
+        //                 console.log("정답");
+        //                 quizElement.classList.add("good");
+        //                 quizDesc.classList.remove("none");
+        //                 quizScore++;
+        //             } else {
+        //                 console.log("오답");
+        //                 quizElement.classList.add("bad");
+        //                 quizDesc.classList.remove("none");
+        //                 quizAnswer.classList.remove("none");
+        //             }
+        //         };
+        //     });
+            
+        //     alert("총 맞춘 갯수는 :" + quizScore);
+        // });
+
+                
+        // 페이지 로드 후 실행
+        document.addEventListener("DOMContentLoaded", () => {
+            fetchQuiz();
+        })
 
     </script>
 
