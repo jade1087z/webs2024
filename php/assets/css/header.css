@@ -1,3 +1,6 @@
+#header {
+    position: relative;
+}
 .header__inner {
     border-bottom: 3px solid var(--black);
     position: relative;

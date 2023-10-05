@@ -49,6 +49,17 @@
     font-weight: 300;
 }
 
+.intro__img.small {
+    max-width: 200px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.intro__text h2{
+    font-size: 1.6rem;
+    margin-bottom: 1.25rem;
+}
+
 @media (max-width: 800px) {
     .intro_inner {
         padding: 50px;
@@ -124,6 +135,17 @@
     cursor: pointer;
     border-radius: 5px;
 }
+
+.btn__style3 {
+    display: inline-block;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1rem;
+    padding: 0.7rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 /* list-style */
 .list-style li {
     padding-left: 16px;

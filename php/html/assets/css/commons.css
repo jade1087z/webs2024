@@ -48,6 +48,16 @@
     word-break: keep-all;
     font-weight: 300;
 }
+.intro_img.small {
+    max-width: 200px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.intro_text h2{
+    font-size: 1.6rem;
+    margin-bottom: 1.25rem;
+}
 
 @media (max-width: 800px) {
     .intro_inner {
@@ -124,6 +134,15 @@
     cursor: pointer;
     border-radius: 5px;
 }
+.btn__style3 {
+    display: inline-block;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1rem;
+    padding: 0.7rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
 /* list-style */
 .list-style li {
     padding-left: 16px;
@@ -176,3 +195,16 @@
 .mt80 {margin-top: 80px !important;}
 .mt90 {margin-top: 90px !important;}
 .mt100 {margin-top: 100px !important;}
+
+
+.mr0 {margin-right: 0px !important;}
+.mr10 {margin-right: 10px !important;}
+.mr20 {margin-right: 20px !important;}
+.mr30 {margin-right: 30px !important;}
+.mr40 {margin-right: 40px !important;}
+.mr50 {margin-right: 50px !important;}
+.mr60 {margin-right: 60px !important;}
+.mr70 {margin-right: 70px !important;}
+.mr80 {margin-right: 80px !important;}
+.mr90 {margin-right: 90px !important;}
+.mr100 {margin-right: 100px !important;}
