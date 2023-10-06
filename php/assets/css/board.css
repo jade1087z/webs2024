@@ -28,8 +28,9 @@
     background-color: var(--white);
     color: var(--black);
     font-size: 0.8rem;
-    padding: 0.7rem 2rem;
+    padding: 0.45rem 2.2rem;
     border-radius: 5px;
+    
 }
 .board__search .right a {
     display: inline-block;
@@ -101,11 +102,15 @@
     border-top: 2px solid var(--black300);
     border-bottom: 2px solid var(--black300);
 }
-.board__view thead > tr > th {
-    background-color: var(--black400);
-}
 .board__view tr {
     border-bottom: 1px solid var(--black400);
+}
+
+/* .board__view thead > tr > th {
+    background-color: var(--black400);
+} */
+.board__view th {
+    background-color: var(--black400);
 }
 .board__view th,
 .board__viwe td {
@@ -116,8 +121,10 @@
 .board__view td {
     padding-left: 20px;
 }
-
-
+.board__view table tr:last-child td {
+    height: 500px;
+    vertical-align: top;
+}
 
 
 
