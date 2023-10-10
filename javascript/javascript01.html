@@ -74,6 +74,9 @@
                     <li><a href="#sample31">31. 연산자 우선순위 </a></li>
                     <li><a href="#sample32">32. 삼항 연산자 </a></li>
                     <li><a href="#sample33">33. 비트 연산자 </a></li>        
+                    <li><a href="#sample34">34. 파일 : 데이터 교환 (JSON) </a></li>        
+                    <li><a href="#sample34">35. 파일 : 서버 데이터 불러오기 : XMLHttpRequest </a></li>        
+                    <li><a href="#sample34">36. 파일 : 서버 데이터 불러오기 : fetch API </a></li>        
                 </ul>
             </div>
             <!-- main_menu -->
@@ -1194,6 +1197,36 @@
                 </div>
                 <!-- //sample 33 -->
 
+                <div id="sample34" class="sample">
+                    <h3>34. 파일 : 데이터 교환 (JSON)</h3>
+                    <p></p>
+<pre><code class="language-js">{
+    const jsonString = '{"name": "webs", "age": "30"}';
+    const jsonObjsect = JSON.parse(jsonStirng);
+    console.log(jsonObjsect.name);
+
+    const person = {name: "webs", age: 30};
+    const jsonPerson = JSON.stringfy(person);
+    console.log(jsonPerson);
+}
+</code></pre>
+                    <p class="desc">.</p>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                               1 <br>
+                               7 <br>
+                               6 <br>
+                               -6 <br>
+                               10 <br>
+                               2 
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample 33 -->
+
             </div>
             <!-- //main_sample -->
         </main>
@@ -1210,8 +1243,45 @@
     <script>hljs.highlightAll();</script>  
     <script>
     {
-        
+        const jsonString = '{"name": "webs", "age": "30"}';
+    const jsonObjsect = JSON.parse(jsonString);
+    console.log(jsonObjsect.name);
+        console.log(jsonObjsect);
+    const person = {name: "webs", age: 30};
+    const jsonPerson = JSON.stringify.(person);
+    console.log(jsonPerson); 
     }
      </script>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://webstoryboy.github.io/webs2024/json/gineungsaJC2011_05.json", true);
+        
+        xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                        var responseData = xhr.responseText;
+                        var jsonData = JSON.parse(responseData);
+    
+                        console.log(jsonData);
+                } else if (xhr.readyState === 4) {
+                        console.error("데이터 불러오기 오류: " + xhr.status);
+                }
+        };
+        
+        xhr.send();
+    </script>
+    <script>
+        {
+            fetch("https://webstoryboy.github.io/webs2024/json/gineungsaJC2011_05.json")
+                .then(response => {
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+        }
+    </script>
 </body>
 </html>
