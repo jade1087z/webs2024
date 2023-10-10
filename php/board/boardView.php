@@ -30,7 +30,7 @@
         </div>
         <section class="board__inner container">   
             <div class="board__view">
-                <form action="#" name="#" method="post">
+                <!-- <form action="#" name="#" method="post"> -->
                     <fieldset>
                         <legend class="blind">게시글 보기</legend>
                         <table>
@@ -42,7 +42,7 @@
 <?php
     $boardID = $_GET['boardID'];
 
-    $sql = "SELECT b.boardTitle, m.youName, b.regTime, b.boardView, b.boardContents FROM board b JOIN members m ON(b.memberID = m.memberID) WHERE b.boardID = (boardID)";
+    $sql = "SELECT b.boardTitle, m.youName, b.regTime, b.boardView, b.boardContents FROM board b JOIN members m ON(b.memberID = m.memberID) WHERE b.boardID = $boardID";
     $result = $connect -> query($sql);
 
     if($result) {
@@ -57,12 +57,12 @@
                             </tbody>          
                         </table>
                         <div class="board__btns">
-                            <a href="boardModify.php?boardID=<?=$_GET['boardID']?>" class="btn__style3">수정하기</a>
-                            <a href="boardRemove.php?boardID=<?=$_GET['boardID']?>" class="btn__style3" onclick="return confirm('정말 삭제하시겠습니까?')">삭제하기</a>
+                            <a href="boardModify.php?boardID=<?=$_GET['boardID']?>" class="btn__style3 mr10" onclick="return confirm('수정하시겠습니까?')">수정하기</a>
+                            <a href="boardRemove.php?boardID=<?=$_GET['boardID']?>" class="btn__style3 mr10" onclick="return confirm('정말 삭제하시겠습니까?')">삭제하기</a>
                             <a href="board.php" class="btn__style3">목록보기</a>
                         </div>
                     </fieldset>
-                </form>
+                <!-- </form> -->
             </div>
             
         </section>

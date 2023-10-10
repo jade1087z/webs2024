@@ -41,21 +41,19 @@
 
     if($result) { // 보드 아이디를 불러와 해당 테이블의 제목 내용을 보여준다. 
         $info = $result -> fetch_array(MYSQLI_ASSOC);
-        echo $info['boardTitle'];
-        echo $info['boardContents'];
+        
         echo "<div><label for='boardTitle'>제목</label><input type='text' id='boardTitle' name='boardTitle' class='input__style' value='".$info['boardTitle']."'></div>";
         echo "<div><label for='boardContents'>내용</label><textarea id='boardContents' name='boardContents' cols='30' rows=10' class='input__style'>".$info['boardContents']."</textarea></div>";
     }
-
 ?>
-                        <!-- <div class="mt50">
+                      
+                        <div class="mt50">
                             <label for="boardPass">비밀번호</div>
                             <input type="password" id="password" name="boardPass" placeholder="글을 수정하려면 로그인 비밀번호를 입력하세요."></div>
-                        </div> -->
+                        </div>
                         <div class="board__btns">
-                            <button type="submit" class="btn__style3 mr10">목록보기</button>
-                            <button type="submit" class="btn__style3">수정하기</button>
-                            <!-- <a href="boardModifySave.php?boardID=<?=$_GET['boardID']?>" class="btn__style3">수정하기</a> 마진레프트 줄것 -->
+                            <a href="board.php" class="btn__style3 mr10">목록보기</a>
+                            <button type="submit" class="btn__style3" onclick="confirmAndUpdate()">수정하기</button>
                         </div> 
                     </fieldset>
                 </form>

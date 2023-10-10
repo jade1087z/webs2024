@@ -108,8 +108,8 @@
         if($count > 0) {
             for($i=0; $i<$count; $i++){
                 $info = $result -> fetch_array(MYSQLI_ASSOC);
-                echo $info['boardID'];
-                echo "<br>"; 
+                
+                
                 echo "<tr>";
                 echo "<td>".$info['boardID']."</td>";
                 echo "<td><a href='boardView.php?boardID={$info['boardID']}'>".$info['boardTitle']."</a></td>";
