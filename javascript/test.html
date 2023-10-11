@@ -1,26 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.9/index.global.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.9/index.global.min.js'></script>
+    <script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
 
-<body>
-
-</body>
-<script>
-    
-    const arr = [100, 200, 300, 400, 500];
-    const text = arr.push(600);
-
-    document.write(arr);
-
-    const arr2 = [100, 200, 300, 400, 500];
-    const text2 = arr2.unshift(600);
-
-    document.write(arr2);
-</script>
-
+    </script>
+  </head>
+  <body>
+    <div id='calendar'></div>
+  </body>
 </html>
