@@ -6,13 +6,19 @@
     <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.9/index.global.min.js'></script>
     <script>
 
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth'
-        });
-        calendar.render();
-      });
+function outerFunction() {
+  let outerVariable = 10;
+
+  function innerFunction() {
+    console.log(outerVariable); // outerVariable은 클로저에 의해 캡처됨
+  }
+  return innerFunction;
+}
+
+const closureFunc = outerFunction(); // innerFunction을 반환
+
+closureFunc(); // outerVariable을 출력
+
 
     </script>
   </head>
