@@ -2,27 +2,20 @@
 <html lang='en'>
   <head>
     <meta charset='utf-8' />
-    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.9/index.global.min.js'></script>
-    <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.9/index.global.min.js'></script>
-    <script>
 
-function outerFunction() {
-  let outerVariable = 10;
 
-  function innerFunction() {
-    console.log(outerVariable); // outerVariable은 클로저에 의해 캡처됨
-  }
-  return innerFunction;
-}
-
-const closureFunc = outerFunction(); // innerFunction을 반환
-
-closureFunc(); // outerVariable을 출력
 
 
     </script>
   </head>
   <body>
-    <div id='calendar'></div>
+
   </body>
+  <script>
+    const numbers = [2, 4, 6, 8, 10];
+
+    const allEven = numbers.every(number => number % 2 === 0);
+
+    console.log(allEven); // 출력: true
+  </script>
 </html>
