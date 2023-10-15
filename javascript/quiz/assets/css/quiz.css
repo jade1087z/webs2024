@@ -873,6 +873,15 @@ a {
     text-align: center;
     cursor: pointer;
 }
+.cbt__again {
+    background-color: #412E91;
+    color: #fff;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    text-align: center;
+    cursor: pointer;
+}
 .cbt__desc {
     border: 1px solid black;
     padding: 10px 20px 10px 38px;

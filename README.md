@@ -16,3 +16,9 @@ https://jade1087z.github.io/webs2024/sql/index.html
 
 ## SITE
 웹표준을 준수한 사이트를 제작합니다.
+
+## 스플라인
+3d max 대체 
+
+## 개발 사이트 참고: 슬생개
+https://dev-coco.tistory.com/111 

@@ -1,0 +1,14 @@
+.members_inner {
+    padding: 80px 0;
+}
+.members_inner table {
+
+}
+.members_inner table th {
+    background-color: var(--black500);
+}
+.members_inner table th,
+.members_inner table td {
+    border-bottom: 1px solid var(--black400);
+    padding: 10px;
+}
