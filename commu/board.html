@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div id="wrap">
+    <div id="wrapper">
         <header id="header" class="shaDow">
             <h1 class="header_logo">
                 <a href="#">
@@ -144,8 +144,8 @@
                       
             </section>
 
-            <div class="board">
-                <div class="board__form">
+            <div class="board roundCorner shaDow">
+                <div class="board__form ">
                     <form action="#" method="post" name="#">
                         <fieldset>
                             <legend class="blind">게시글 작성하기</legend>
@@ -179,27 +179,28 @@
                     </form>
                 </div>
             </div>
-        
+            <aside id="side_wrap">
+                <div class="search_box side_box roundCorner shaDow">
+                    <input type="text" placeholder="취중진담 통합 검색">
+                    <button><i class="fa-solid fa-magnifying-glass"></i><button>
+                </div>
+                <div class="info_box side_box roundCorner shaDow">
+                    <div class="login_info">
+                        <img src="assets/img/img500.jpg" alt="유저 이미지">
+                        <p>홍길동님 어서오세요.</p>
+                        <ul>
+                            <li><a href="#">로그아웃</a></li>
+                            <li><a href="#">마이페이지</a></li>
+                            <li><a href="#">설정</a></li>
+                        </ul>
+                    </div>
+                    <button class="side_btn">새 글쓰기</button>
+                </div>
+            </aside>
             <!-- main_contents end -->
         </main>
 
-        <aside id="side_wrap">
-            <div class="search_box side_box roundCorner shaDow">
-                <input type="text" placeholder="취중진담 통합 검색">
-                <button><i class="fa-solid fa-magnifying-glass"></i><button>
-            </div>
-            <div class="info_box side_box roundCorner shaDow">
-                <div class="login_info">
-                    <img src="assets/img/img500.jpg" alt="유저 이미지">
-                    <p>홍길동님 어서오세요.</p>
-                    <ul>
-                        <li><a href="#">로그아웃</a></li>
-                        <li><a href="#">마이페이지</a></li>
-                        <li><a href="#">설정</a></li>
-                    </ul>
-                </div>
-                <button class="side_btn">새 글쓰기</button>
-            </div>
+        
     </div>  
 </body>
 

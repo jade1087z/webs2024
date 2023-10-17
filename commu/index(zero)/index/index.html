@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>취중진담을 소개합니다.</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gsap_wrapper {
+            max-width: 1600px;
+            width: 98%;
+            margin: 0 auto;
+        }
+
+        .parallax__item {
+            width: 1000px;
+            position: relative;
+            max-width: 70vw;
+            margin: 30vw auto;
+            margin-right: 0;
+            text-align: left;
+            padding-top: 15vw;
+        }
+
+        .parallax__item:nth-child(even) {
+            margin-left: 0;
+            text-align: right;
+        }
+
+        .parallax__item__img {
+            position: absolute;
+            top: -5%;
+            width: 110%;
+            height: 110%;
+            background-image: url(img/images01-min.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: cover;
+            filter: saturate(0%);
+            transition: all 1s;
+        }
+
+        .parallax__item__img:hover {
+            filter: saturate(100%);
+            transform: scale(1.025);
+        }
+
+        #section1 .parallax__item__img {
+            background-image: url(img/1.png);
+        }
+
+        #section2 .parallax__item__img {
+            background-image: url(img/2.png);
+        }
+
+        #section3 .parallax__item__img {
+            background-image: url(img/3.png);
+        }
+
+        #section4 .parallax__item__img {
+            background-image: url(img/4.png);
+        }
+
+        .parallax__item__desc {
+            font-family: 'Pretendard';
+            font-weight: 400;
+            color: #fff;
+            font-size: 2.5vw;
+            line-height: 1;
+            z-index: 100;
+            word-break: keep-all;
+            position: relative;
+            margin-top: 25vw;
+        }
+
+        .parallax__item:nth-child(odd) .parallax__item__img {
+            margin-right: 25vw;
+            right: 0;
+        }
+
+        .parallax__item:nth-child(odd) .parallax__item__desc {
+            margin-top: 10vw;
+            margin-left: -15vw;
+        }
+
+        .parallax__item:nth-child(3) .parallax__item__desc {
+            margin-top: 10vw;
+            margin-left: -20vw;
+        }
+
+        .parallax__item:nth-child(even) .parallax__item__img {
+            margin-left: 25vw;
+        }
+
+        .parallax__item:nth-child(even) .parallax__item__desc {
+            margin-right: -15vw;
+        }
+
+
+        .split1>span {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="logo">
+            <a href="#top">
+                <img src="img/logo_w.svg" alt="logo">
+            </a>
+        </div>
+        <div class="link_btn">
+            <a href="#">노션 <span>바로가기</span></a>
+            <a href="#">사이트 <span>바로가기</span></a>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <section id="top" class="main_font">
+        <h2 class="split">
+            당신의 음주 습관을 매일매일 기록하고 나누세요.
+        </h2>
+    </section>
+
+    <section id="sub" class="main_font2">
+        <p>누구에게도 하지 못한 당신의 <br>
+            <em>나의 속 이야기</em></p>
+        <div class="sub_logo">
+            <div class="logo">
+                <a href="#top">
+                    <img src="img/logo_w.svg" alt="logo">
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="gsap_wrapper">
+        <section id="section1" class="parallax__item">
+            <figure class="parallax__item__imgWrap">
+                <div class="parallax__item__img reveal reaveal_LTR" data-delay="0.8"></div>
+            </figure>
+            <p class="parallax__item__desc split1 ">누군가에겐 사랑이 되고</p>
+        </section>
+        <!-- 1 -->
+        <section id="section2" class="parallax__item">
+            <figure class="parallax__item__imgWrap">
+                <div class="parallax__item__img reveal reveal_RTL" data-delay="0.8"></div>
+            </figure>
+            <p class="parallax__item__desc split1 ">위로가 되고.</p>
+        </section>
+        <!-- 2 -->
+        <section id="section3" class="parallax__item">
+            <figure class="parallax__item__imgWrap">
+                <div class="parallax__item__img reveal reveal_LTR" data-delay="0.8"></div>
+            </figure>
+            <p class="parallax__item__desc split1 ">우정이 되고,</p>
+        </section>
+        <!-- 3 -->
+        <section id="section4" class="parallax__item">
+            <figure class="parallax__item__imgWrap">
+                <div class="parallax__item__img reveal reveal_RTL" data-delay="0.8"></div>
+            </figure>
+            <p class="parallax__item__desc split1 ">인생이 됩니다.</p>
+        </section>
+        <!-- 4 -->
+    </div>
+
+    <div class="introduce">
+        <div class="introduce_our">
+            <h3> WE ARE </h3>
+            <P>우리는 당신의 위로 되고 싶고 격려가 될 것입니다.</P>
+        </div>
+        <div class="introduce_profile">
+            <ul class="profile_img">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                
+            </ul>
+            <ul class="profile_name">
+                <li><a href="#">임종한</a></li>
+                <li><a href="#">문영인</a></li>
+                <li><a href="#">정세영</a></li>
+            </ul>
+        </div>
+        <!-- profile -->
+
+        <div class="link">
+            <div class="link_text">LINK</div>
+            <div class="link_page">
+                <ul>
+                    <li><a href="#">메인 인덱스</a></li>
+                    <li><a href="#">로그인 및 회원가입</a></li>
+                    <li><a href="#">회원 정보 - 마이페이지</a></li>
+                    <li><a href="#">회원 정보 - 내 활동</a></li>
+                    <li><a href="#">회원 정보 - 회원 정보 수정</a></li>
+                    <li><a href="#">게시판 및 커뮤니티</a></li>
+                    <li><a href="#">글 보기 / 글 저장</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">메인 인덱스</a></li>
+                    <li><a href="#">로그인 및 회원가입</a></li>
+                    <li><a href="#">회원 정보 - 마이페이지</a></li>
+                    <li><a href="#">회원 정보 - 내 활동</a></li>
+                    <li><a href="#">회원 정보 - 회원 정보 수정</a></li>
+                    <li><a href="#">게시판 및 커뮤니티</a></li>
+                    <li><a href="#">글 보기 / 글 저장</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">메인 인덱스</a></li>
+                    <li><a href="#">로그인 및 회원가입</a></li>
+                    <li><a href="#">회원 정보 - 마이페이지</a></li>
+                    <li><a href="#">회원 정보 - 내 활동</a></li>
+                    <li><a href="#">회원 정보 - 회원 정보 수정</a></li>
+                    <li><a href="#">게시판 및 커뮤니티</a></li>
+                    <li><a href="#">글 보기 / 글 저장</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- link -->
+            <div class="site_btn"><a href="#">사이트 바로가기</a></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script>
+        const target = gsap.utils.toArray(".split");
+        const target1 = gsap.utils.toArray(".split1");
+        const splitText = new SplitType(target, {
+            type: "char"
+        });
+        const chars = splitText.chars;
+
+        gsap.from(chars, {
+            yPercent: 100,
+            opacity: 0,
+            rotation: 30,
+            duration: 1.3,
+            stagger: 0.031,
+            scrollTrigger: {
+                trigger: target,
+                start: "top center",
+                end: "+=400",
+                onEnter: () => {
+                    // 스크롤 진입 시 애니메이션
+                },
+                onLeave: () => {
+                    // 스크롤 떠날 때 애니메이션
+                    gsap.fromTo(chars, {
+                        opacity: 1
+                    }, {
+                        opacity: 0,
+                        duration: 0.5,
+                        stagger: 0.031
+                    });
+                },
+                onEnterBack: () => {
+                    // 역방향 스크롤 진입 시 애니메이션
+                    gsap.fromTo(chars, {
+                        opacity: 0
+                    }, {
+                        opacity: 1,
+                        duration: 1,
+                        stagger: 0.031
+                    });
+                },
+            }
+        });
+
+        // 이미지의 desc 
+        document.querySelectorAll(".split1").forEach(text => {
+            let theText = text.innerText;
+            let newText = "";
+
+            for (let i = 0; i < text.innerText.length; i++) {
+                newText += "<span aria-hidden='true'>";
+
+                if (text.innerText[i] == " ") {
+                    newText += "&nbsp";
+                } else {
+                    newText += text.innerText[i];
+                }
+
+                newText += "</span>";
+            }
+
+            text.innerHTML = newText;
+            text.setAttribute("aria-label", theText);
+        })
+        gsap.utils.toArray(".split1").forEach(text => {
+            gsap.from(text.querySelectorAll("span"), {
+                yPercent: 100,
+                autoAlpha: 0,
+                duration: 1,
+                ease: "circ.out",
+                stagger: {
+                    amount: 1,
+                    from: "random"
+                },
+                scrollTrigger: {
+                    trigger: text,
+                    start: "top bottom",
+                    end: "+400",
+                    markers: true
+                }
+            }, {})
+        });
+
+
+        // 이미지 스크롤 
+        {
+            const hide = (item) => {
+                gsap.set(item, {
+                    autoAlpha: 0
+                });
+            }
+            const animate = (item) => {
+                let x = 0;
+                let y = 0;
+                let delay = item.dataset.delay;
+
+                if (item.classList.contains("reaveal_LTR")) {
+                    x = -500;
+                } else if (item.classList.contains("reveal_RTL")) {
+                    X = 500;
+                } else if (item.classList.contains("reveal_BTT")) {
+                    y = 300;
+                } else if (item.classList.contains("reveal_TTT")) {
+                    y = -500;
+                } else {
+                    x = 200;
+                }
+
+                gsap.fromTo(item, {
+                    autoAlpha: 0,
+                    x: x,
+                    y: y
+                }, {
+                    autoAlpha: 1,
+                    x: 0,
+                    y: 0,
+                    delay: delay,
+                    duration: 1.25,
+                    overwrite: "auto",
+                    ease: "expo"
+                }) // 전에 있던 위치와 현재 위치를 계산해서 이동
+            }
+
+            gsap.utils.toArray(".reveal").forEach(item => {
+                hide(item);
+
+                ScrollTrigger.create({
+                    trigger: item,
+                    start: "top bottom",
+                    end: "bottom top",
+                    markers: true,
+                    onEnter: () => {
+                        animate(item)
+                    }
+                })
+            });
+        }
+    </script>
+</body>
+
+</html>
