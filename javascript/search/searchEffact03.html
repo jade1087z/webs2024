@@ -16,8 +16,8 @@
         <nav>
             <ul>
                 <li><a href="searchEffect01.html">1</a></li>
-                <li class="active"><a href="searchEffect02.html">2</a></li>
-                <li><a href="searchEffect03.html">3</a></li>
+                <li><a href="searchEffect02.html">2</a></li>
+                <li class="active"><a href="searchEffect03.html">3</a></li>
                 <li><a href="searchEffect04.html">4</a></li>
                 <li><a href="searchEffect05.html">5</a></li>
                 <li><a href="searchEffect06.html">6</a></li>
@@ -48,6 +48,7 @@
             </div>
             <div class="search__info">
                 <div>CSS 속성 갯수 : <span class="num">0</span>개</div>
+                <div class="allBtn">SHOW ME ALL</div>
             </div>
             <div class="search__list">
                 <div class="css">
@@ -194,6 +195,8 @@
         const searchResult = document.querySelector(".num");
         const searchBox = document.querySelector(".search__box input");
         const searchSelect = document.querySelectorAll(".search__select span");
+        const allBtn = document.querySelector(".allBtn");
+        
 
 
 
@@ -217,7 +220,12 @@
             });
 
         });
-    </script>
+        
+        // 전체 보기 버튼 만들기
+        allBtn.addEventListener("click", () => {
+            searchList.classList.remove("hide");
+        })
+</script>
 </body>
 
 </html>

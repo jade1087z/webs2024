@@ -69,6 +69,7 @@ main {
     margin: 80px auto;
     width: 70%;
     max-width: 100%;
+    min-height: 500px;
     border-radius: 20px;
     background-color: #b3a8d3a4;
     border: 5px solid #555;
@@ -79,33 +80,50 @@ main {
 .search__box {
     margin-top: 20px;
     display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-end;
-}
-.searchBox p {
-    margin-top: 10PX;
-}
-.searchBox p em {
-    font-style: normal;
-    text-decoration: underline;
-    text-underline-offset: under;
-}
-.search__box label {
-    margin-top: 20px;
-    font-size: 22px;
-    cursor: pointer;
-}
-.search__box label:hover {
-    color: #fff;
+    flex-direction: row-reverse;
 }
 .input__style {
-    width: 100%;
+    width: 70%;
     min-width: 600px;
     height: 100px;
     padding: 10px 20px;
     border-radius: 10px;
     border: 5px solid #555;
     font-size: 20px;
+}
+.search__box label {
+    height: 100px;
+    padding: 28px 20px;
+    border-radius: 10px;
+    border: 5px solid #555;
+    background-color: #fff;
+    font-size: 20px;
+    font-size: 22px;
+    margin-left: -5px;
+    cursor: pointer;
+}
+.search__box label:hover {
+    color: #fff;
+    background-color: #777;
+}
+.searchBox p {
+    margin-top: 10px;
+}
+.searchBox p em {
+    font-style: normal;
+    text-decoration: underline;
+    text-underline-offset: under;
+}
+.search__box__result {
+    margin-top: 20px;
+    border-top: 3px dashed #555;
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+}
+.search__box__result .desc {
+    color: #999;
+    margin-bottom: 15px;
 }
 .search__info {
     font-size: 18px;
@@ -133,8 +151,24 @@ main {
 
 .search__list {
     margin-top: 20px;
+    padding: 5px 0px;
     border-top: 3px dashed #555;
     width: 100%;
+    text-align: center;
+}
+.search__list span {
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid #10be5ead;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+.search__list span:hover {
+    background-color: #fff;
+    color: #03c75a;
+    transform: scale(0.95);
 }
 .css {
     margin: 20px auto;
@@ -157,8 +191,6 @@ main {
     margin-right: 5px;
 }
 
-
-
 /* footer start */
 footer {
     text-align: center;
@@ -175,7 +207,6 @@ footer {
 }
 
 /* media */
-
 
 @media (max-width: 900px) {
     .search__box {
