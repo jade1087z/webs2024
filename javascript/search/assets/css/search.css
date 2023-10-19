@@ -4,6 +4,11 @@
     box-sizing: border-box;
     font-family: "LOTTERIADDAG";
 }
+.active1 {
+    display: block;
+
+    color: red;
+}
 @font-face {
     font-family: "LOTTERIADDAG";
     src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIADDAG.woff2")
@@ -148,7 +153,27 @@ main {
     color: #fff;
     margin: 0 10px;
 }
-
+.search__star ul {
+    margin-top: 10px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search__star ul li {
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    border: 2px solid #10be5ead;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.search__star ul li:hover {
+    background-color: #fff;
+    color: #03c75a;
+    transform: scale(0.95);
+}
 .search__list {
     margin-top: 20px;
     padding: 5px 0px;
@@ -157,9 +182,9 @@ main {
     text-align: center;
 }
 .search__list span {
+    width: 100%;
     display: inline-block;
-    margin: 10px;
-    padding: 5px;
+    padding: 10px;
     border: 2px solid #10be5ead;
     background-color: #fff;
     border-radius: 10px;
@@ -169,6 +194,18 @@ main {
     background-color: #fff;
     color: #03c75a;
     transform: scale(0.95);
+}
+.search__list ul {
+    margin-top: 15px;
+}
+.search__list li {
+    min-width: 300px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.search__list li em {
+    font-style: normal;
 }
 .css {
     margin: 20px auto;
