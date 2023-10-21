@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>취중진담 게시글-쓰기</title>
- 
+    <title>취중진담-카테고리별 게시글 페이지</title>
+
     <!-- meta -->
     <meta name="author" content="취중진담">
     <meta name="description" content="프론트엔드 개발자 포트폴리오 조별과제 사이트입니다.">
@@ -22,7 +22,9 @@
     <link href="assets/css/fonts.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/css/common.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/boardWrite.css">
+    <link href="assets/css/boardRe.css" rel="stylesheet" />
+
+
     <!-- js -->
     <script src="assets/js/scrollEvent.js"></script>
 </head>
@@ -69,45 +71,87 @@
         </header>
         <!-- header end -->
 
+
         <main id="contents_area">
             <section id="main_contents">
-                <div class="best_list boxStyle roundCorner shaDow ">
+                <div class="best_list boxStyle roundCorner shaDow" style="padding: 0;">
+
                     <div class="board">
-                        <div class="board_form ">
-                            <form action="#" method="post">
-                                <legend class="blind"></legend>
-                                <div class="form_box">
-                                    <div class="board_btn sideBtn">
-                                        <h2>신청하고 싶은 술을 말해주세요.</h2>
+                        <div class="board_form">
+                            <div class="board_search">
+                                <div class="board_select_option">
+                                    <div id="search_component " class="select_compponent ">
+                                        <a href="#" class="select_box" onclick=""><span>게시글내용</span><i class="fa-solid fa-filter"></i></a>
+                                        <ul class="select_list" style="display: none;">
+                                            <li><a href="#">게시글 내용</a></li>
+                                            <li><a href="#">작성자</a></li>
+                                            <li><a href="#">제목만</a></li>
+                                        </ul>
                                     </div>
-                                    <div class="board_text">
-                                        <div class="post">
-                                            <ul class="link inputStyle mb20">
-                                                 <li class="active"><i class="fa-regular fa-image"></i><a href="#">Image</a></li>
-                                                <!--    <li class="active"><i class="fa-regular fa-file-lines"></i><a href="#">Post</a></li>
-                                                <li><i class="fa-solid fa-video"></i><a href="#"> Video</a></li>
-                                                <li><i class="fa-solid fa-link"></i><a href="#">Link</a></li>
-                                                <li><i class="fa-solid fa-location-dot"></i><a href="#">Place</a></li> -->
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div class="search_form">
+                                    <form action="/" method="post" name="" class="board_search_form ">
+                                        <div class="board_search_option">
+                                            <div id="search_input" class="board_search_box ">
+                                                <label for="search" class="none">검색창</label>
+                                                <input type="text" id="search" name="search" placeholder="검색어를 입력해주세요">
+                                                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- 상위 검색창 end  -->
+    
+                            <div class="table_container">
+                                <div class="table_category container">
+                                    <h2>카테고리별 게시판 <em>보기.</em></h2>
+                                </div>
+
+                                <div class="board_table container">
+                                    <div class="board_table_sort">
+                                        <div class="board_key">
+                                            <ul class="sort">
+                                                <li><a href="#">NAME</a></li>
+                                                <li><a href="#">CONTENT</a></li>
+                                                <li><a href="#">DATE</a></li>
+                                                <li><a href="#">VIEW</a></li>
+                                                <li><a href="#">COMENT</a></li>
                                             </ul>
                                         </div>
-                                        <div class="board_title ">
-                                            <label for="boardContents"></label>
-                                            <textarea id="boardContents" name="boardContents" cols="50" rows="1"
-                                                class="board_input_title inputStyle placeholder"
-                                                placeholder="제목을 작성해주세요"></textarea>
+                                        <div class="board_value">
+                                            <ul>
+                                                <li><a href="#">qwerrrr</a>
+                                                </li>
+                                                <li><a href="#">CwwwwwwwwwwwT</a></li>
+                                                <li><a href="#">2023.10.22</a></li>
+                                                <li><a href="#">100</a></li>
+                                                <li><em><a href="#">[100]</a></em></li>
+                                            </ul>
                                         </div>
-                                        <div class="board_content">
-                                            <label for="boardContents"></label>
-                                            <textarea id="boardContents" name="boardContents" cols="50" rows="8"
-                                                class="board_input_contents inputStyle placeholder"
-                                                placeholder="원하는 술을 신청해주세요"></textarea>
-                                        </div>
-                                        <div class="create">
-                                            <button type="submit" class="sideBtn mt50">술 신청하기</button>
-                                        </div>
+                                        
+
+
                                     </div>
                                 </div>
-                            </form>
+
+                                <div class="board_page_option">
+                                    <div class="board_pages">
+                                        <ul class="pages_list">
+                                            <li class="first"><a href="#">&lt;&lt;</a></li>
+                                            <li class="prev"><a href="#">&lt;</a></li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li class="next"><a href="#">></a></li>
+                                            <li class="last"><a href="#">>></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
