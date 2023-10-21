@@ -1,0 +1,242 @@
+{
+    "$schema": "../schema.json",
+    "category": "wine",
+    "krCategory": "와인",
+    "alcList": [
+        {
+            "classification": "Chardonnay",
+            "alcName": "The 7th Generation G7 Chardonnay",
+            "alcDegree": 13.5,
+            "alcMade": "Loncomila Valley",
+            "additional": {
+                "area": "Chile",
+                "krName": "G7 샤도네이",
+                "vintage": 2017,
+                "price": 6900
+            },
+            "review": {
+                "again": 5
+            }
+        },
+        {
+            "classification": "Moscato",
+            "alcName": "BALBI SOPRANI Moscato d'Asti",
+            "alcDegree": 5.5,
+            "alcMade": "",
+            "additional": {
+                "krName": "발비 소프라니 모스까토 다스티",
+                "vintage": 2017,
+                "area": "Italia"
+            },
+            "review": {
+                "again": 5
+            }
+        },
+        {
+            "classification": "Syrah",
+            "alcName": "POWERS Syrah",
+            "alcDegree": -1,
+            "alcMade": "Powers Winery",
+            "additional": {
+                "krName": "파워스 쉬라",
+                "siteLink": "https://www.badgermtnvineyard.com/powers/powers_wines.html",
+                "vintage": 2013,
+                "area": "Columbia Vally, US"
+            },
+            "review": {
+                "again": 5
+            }
+        },
+        {
+            "classification": "Chardonnay",
+            "alcName": "Frontera Chardonnay",
+            "alcDegree": 13,
+            "alcMade": "",
+            "additional": {
+                "area": "Chile",
+                "krName": "프론테라 샤도네이",
+                "vintage": 2016
+            },
+            "review": {
+                "again": 5
+            }
+        },
+        {
+            "classification": "",
+            "alcName": "La Croisade Reserve Caberent Syrah",
+            "alcDegree": -1,
+            "alcMade": "La Croisade",
+            "additional": {
+                "area": "France",
+                "krName": "라 크라사드 카버네 시라",
+                "vintage": 2016
+            },
+            "review": {
+                "again": 5
+            }
+        },
+        {
+            "classification": "Chardonnay",
+            "alcName": "Nottage Hill Chardonnay",
+            "alcDegree": 13.5,
+            "alcMade": "Hardys",
+            "additional": {
+                "vintage": 2016,
+                "area": "Australia",
+                "krName": "놋테이지 힐 샤도네이",
+                "siteLink": "http://www.hardyswines.com/as/wines/range/nottage-hill/nottage-hill-chardonnay/"
+            },
+            "review": {
+                "again": 5
+            }
+        },
+        {
+            "classification": "Chardonnay",
+            "alcName": "Legend of Chile Chardonnay",
+            "alcDegree": 13.5,
+            "alcMade": "",
+            "additional": {
+                "vintage": 2017,
+                "area": "Chile",
+                "krName": "L와인 샤도네이",
+                "siteLink": "http://wine.co.kr/wine/589"
+            },
+            "review": {
+                "again": 0
+            }
+        },
+        {
+            "classification": "Chardonnay",
+            "alcName": "Montgras Estate Chardonnay",
+            "alcDegree": 12.5,
+            "alcMade": "MontGras",
+            "additional": {
+                "area": "Chile",
+                "krName": "몽그라스 에스테이트 샤도네이"
+            },
+            "review": {}
+        },
+        {
+            "classification": "Chardonnay",
+            "alcName": "Santa Rita 120 Reserva Especial Chardonnay",
+            "alcDegree": -1,
+            "alcMade": "",
+            "additional": {
+                "area": "Chile",
+                "vintage": 2016,
+                "krName": "산타리타 120 샤도네이"
+            },
+            "review": {
+                "again": 5
+            }
+        },
+        {
+            "classification": "Merlot",
+            "alcName": "Santa Rita 120 Reserva Especial Merlot",
+            "alcDegree": -1,
+            "alcMade": "",
+            "additional": {
+                "area": "Chile",
+                "vintage": 2016,
+                "krName": "산타리타 120 멜롯"
+            },
+            "review": {
+                "again": 5
+            }
+        },
+        {
+            "classification": "Chardonnay",
+            "alcName": "Montes Reserva Classic Serise Chardonnay",
+            "alcDegree": -1,
+            "alcMade": "",
+            "additional": {
+                "area": "Chile",
+                "vintage": 2016,
+                "krName": "몬테스 클래식 샤도네이"
+            },
+            "review": {
+                "again": 5
+            }
+        },
+        {
+            "classification": "Chardonnay",
+            "alcName": "CAMAS Chardonnay",
+            "alcDegree": -1,
+            "alcMade": "Anne de Joyeuse",
+            "additional": {
+                "krName": "까마스 샤도네이"
+            },
+            "review": {}
+        },
+        {
+            "classification": "Chardonnay",
+            "alcName": "KENDALL-JACKSON Vintner's Reserve Chardonnay",
+            "alcDegree": -1,
+            "alcMade": "",
+            "additional": {
+                "area": "California",
+                "vintage": 2016,
+                "krName": "캔달 잭슨 빈트너스 리저브 샤도네이"
+            },
+            "review": {}
+        },
+        {
+            "classification": "Chardonnay",
+            "alcName": "Vintage Oaks Chardonnay",
+            "alcDegree": -1,
+            "alcMade": "",
+            "additional": {
+                "area": "California",
+                "krName": "빈티지 오크 샤도네이",
+                "vintage": 2016
+            },
+            "review": {}
+        },
+        {
+            "classification": "Chardonnay",
+            "alcName": "Casillero del Diablo Reserva Chardonnay",
+            "alcDegree": -1,
+            "alcMade": "",
+            "additional": {
+                "area": "Chile",
+                "vintage": 2017,
+                "krName": "디아블로 샤도네이",
+                "siteLink": "http://www.casillerodeldiablo.com/vinos/reserva/chardonnay"
+            },
+            "review": {}
+        },
+        {
+            "classification": "Syrah",
+            "alcName": "yellow tail Shiraz",
+            "alcDegree": -1,
+            "alcMade": "",
+            "additional": {
+                "krName": "옐로우 테일 쉬라즈",
+                "area": "Australia"
+            },
+            "review": {}
+        },
+        {
+            "classification": "Syrah",
+            "alcName": "Quayside Shiraz",
+            "alcDegree": -1,
+            "alcMade": "Hardys",
+            "additional": {
+                "vintage": 2016
+            },
+            "review": {}
+        },  
+        {
+            "classification": "Moscato",
+            "alcName": "여포의 꿈 (화이트)",
+            "alcDegree": 12,
+            "alcMade": "여포 와인 농장",
+            "additional": {
+                "siteLink": "http://www.yeo4.net/shop/shopdetail.html?branduid=938514&xcode=005&mcode=001&scode=&type=X&sort=regdate&cur_code=005&GfDT=bm1%2BW18%3D"
+            },
+            "review": {
+                "again": 5
+            }
+        }
+    ]
+}

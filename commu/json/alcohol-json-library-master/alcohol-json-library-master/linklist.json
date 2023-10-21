@@ -1,0 +1,16 @@
+{
+    "matching":
+    [
+        { "en": "beer", "kr": "맥주" },
+        { "en": "cheongju", "kr": "청주" },
+        { "en": "fruit-wine", "kr": "과실주" },
+        { "en": "liqueur", "kr": "리큐르" },
+        { "en": "makgeolli", "kr": "막걸리" },
+        { "en": "sake", "kr": "일본주/사케" },
+        { "en": "soju", "kr": "소주" },
+        { "en": "whisky", "kr": "위스키" },
+        { "en": "wine", "kr": "와인" },
+        { "en": "yakju", "kr": "약주" }
+    ],
+    "link": "https://raw.githubusercontent.com/Merseong/alcohol-json-library/master/json/"
+}

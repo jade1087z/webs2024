@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const soju = [{
+                img: "",
+                name: "처음처럼 순",
+                alcohol: "16",
+                price: "1,950",
+                company: "롯데주류",
+                desc: ""
+            },
+            {
+                img: "",
+                name: "처음처럼",
+                alcohol: "16.5",
+                price: "1,950",
+                company: "롯데주류",
+                desc: ""
+            },
+            {
+                img: "",
+                name: "처음처럼 빨간맛",
+                alcohol: "20",
+                price: "1,950",
+                company: "롯데주류",
+                desc: ""
+            },
+            {
+                img: "",
+                name: "순한리 처음처럼",
+                alcohol: "14",
+                price: "1,950",
+                company: "롯데주류",
+                desc: ""
+            },
+            {
+                img: "",
+                name: "참이슬",
+                alcohol: "16.5",
+                price: "1,950",
+                company: "하이트진로",
+                desc: ""
+            },
+            {
+                img: "",
+                name: "참이슬 빨간맛",
+                alcohol: "20.1",
+                price: "1,950",
+                company: "하이트진로",
+                desc: ""
+            },
+            {
+                img: "",
+                name: "진로이즈백",
+                alcohol: "16",
+                price: "1,800",
+                company: "하이트진로",
+                desc: ""
+            },
+            {
+                img: "",
+                name: "일품진로1924",
+                alcohol: "25",
+                price: "15,000",
+                company: "하이트진로",
+                desc: ""
+            },
+            {
+                img: "",
+                name: "일품진로1924 헤리티지",
+                alcohol: "30",
+                price: "130,000",
+                company: "하이트진로",
+                desc: ""
+            },
+            {
+                img: "",
+                name: "일품진로 22년",
+                alcohol: "31",
+                price: "400,000",
+                company: "하이트진로",
+                desc: ""
+            },
+            {
+                img: "",
+                name: "일품진로 오크43",
+                alcohol: "43",
+                price: "200,000 (예상가)",
+                company: "하이트진로",
+                desc: ""
+            },
+            {
+                img: "",
+                name: "화요 25",
+                alcohol: "25",
+                price: "11,900",
+                company: "광주요",
+                desc: ""
+            },
+            {
+                img: "",
+                name: "화요 41",
+                alcohol: "41",
+                price: "23,900",
+                company: "광주요",
+                desc: ""
+            },
+            {
+                img: "",
+                name: "화요 53",
+                alcohol: "53",
+                price: "44,900",
+                company: "광주요",
+                desc: ""
+            },
+        ]
+
+        const beer = [{
+                img: "",
+                name: "클라우드 오리지널",
+                alcohol: "5",
+                price: "1,900",
+                company: "롯데주류",
+                desc: "국산 맥주 중 홉과 맥아 향이 확실하게 느껴지는 몇 안되는 맥주다."
+            },
+            {
+                img: "",
+                name: "카스 프레쉬",
+                alcohol: "4.5",
+                price: "2,800",
+                company: "OB맥주",
+                desc: "특별하거나 풍부한 향 없이시원하게 즐길 수 있는 라거 스타일"
+            },
+            {
+                img: "",
+                name: "카프리",
+                alcohol: "4.2",
+                price: "2,100",
+                company: "OB맥주",
+                desc: "맛이 좀 톡 쏘는 맛을 유난히 강조한 맥주이다."
+            },
+            {
+                img: "",
+                name: "하이트",
+                alcohol: "4.5",
+                price: "1,810",
+                company: "하이트진로",
+                desc: "맛이 좀 이상하다."
+            },
+            {
+                img: "",
+                name: "필라이트",
+                alcohol: " 4.5",
+                price: "1,600",
+                company: "하이트진로",
+                desc: "아로마 홉을 사용했기 때문인지 발포주 치고는 홉향도 다른 맥주보다 낫다는 평가도 있긴 하다."
+            },
+            {
+                img: "",
+                name: "테라",
+                alcohol: "4.6",
+                price: "1,360",
+                company: "하이트진로",
+                desc: "맛 자체는 강하지 않지만, 그 대신 탄산이 강한 것을 강점으로 내세우는 맥주."
+            },
+
+            {
+                img: "",
+                name: "망고링고",
+                alcohol: "2.5",
+                price: "1,480",
+                company: "하이트진로",
+                desc: "맥주가 베이스라 파인애플맛 대만맥주를 모티브로 한 제품으로 추정한다."
+            },
+            {
+                img: "",
+                name: "기린 이치방 시보리",
+                alcohol: "5",
+                price: "4,500",
+                company: "기린맥주 주식회사",
+                desc: "부드러운 편이며, 시트러스 같은 홉향이 뒷맛으로 남는다."
+            },
+            {
+                img: "",
+                name: "아사히 수퍼드라이",
+                alcohol: "5",
+                price: "4,500",
+                company: "아사히맥주 주식회사",
+                desc: "원료인 맥아 사용량을 줄이고 옥수수를 사용한 맥주"
+            },
+            {
+                img: "",
+                name: "아사히 수퍼드라이 드라이블랙 ",
+                alcohol: "5",
+                price: "4,500",
+                company: "아사히맥주 주식회사",
+                desc: "'루비빛 갈색 라거로 볶은 낟알, 커피와 건조 과일의 환상적인 아로마, 중간 단맛이 충만하고 커피와 감초맛이 동반된다. "
+            },
+            {
+                img: "",
+                name: "아사히 수퍼드라이 나마죠키",
+                alcohol: "5",
+                price: "4,500",
+                company: "아사히맥주 주식회사",
+                desc: "생맥주의 청량감을 살린 제품이다."
+            },
+            {
+                img: "",
+                name: "산토리 프리미엄 몰츠",
+                alcohol: "5.5",
+                price: "4,500",
+                company: "산토리 홀딩스 주식회사",
+                desc: ""
+            },
+            {
+                img: "",
+                name: "삿포로",
+                alcohol: "5",
+                price: "4,500",
+                company: "삿포로 맥주 주식회사",
+                desc: "무난할 것도 같지만 버번위스키 느낌의 옥수수향과 맛을 느낄 수 있는 조금 특별한 맥주인 것 같다. "
+            },
+            {
+                img: "",
+                name: "에비스",
+                alcohol: "5",
+                price: "4,500",
+                company: "삿포로 맥주 주식회사",
+                desc: "똑같이 100% 맥아로 만드는 다른 맥주들과 비교해도 단 맛이 강한 게 특징"
+            },
+            // {
+            //     img: "",
+            //     name: "",
+            //     alcohol: "",
+            //     price: "",
+            //     company: "",
+            //     desc: ""
+            // },
+            // {
+            //     img: "",
+            //     name: "",
+            //     alcohol: "",
+            //     price: "",
+            //     company: "",
+            //     desc: ""
+            // },
+            // {
+            //     img: "",
+            //     name: "",
+            //     alcohol: "",
+            //     price: "",
+            //     company: "",
+            //     desc: ""
+            // },
+            // {
+            //     img: "",
+            //     name: "",
+            //     alcohol: "",
+            //     price: "",
+            //     company: "",
+            //     desc: ""
+            // },
+            // {
+            //     img: "",
+            //     name: "",
+            //     alcohol: "",
+            //     price: "",
+            //     company: "",
+            //     desc: ""
+            // },
+            // {
+            //     img: "",
+            //     name: "",
+            //     alcohol: "",
+            //     price: "",
+            //     company: "",
+            //     desc: ""
+            // },
+        ]
+
+        const wisky = [{
+
+        }]
+
+        const mag = [{
+                img: "",
+                name: "금정산성 막걸리",
+                alcohol: "8",
+                price: "3,140",
+                company: "(유)금정산성토산주",
+                desc: "자체 전통 누룩으로 만들기 때문에 산미가 강하다."
+            },
+            {
+                img: "",
+                name: "느린마을 막걸리",
+                alcohol: "6",
+                price: "3,600",
+                company: "배상면주가",
+                desc: "생쌀을 갈아 발효시키는 이른바 '생쌀 발효 법'으로 만드는 막걸리는 언제나 그 풍미와 부드러운 목 넘김을 그대로 느낄 수 있는 특징이 있다."
+            },
+            {
+                img: "",
+                name: "해창 생 막걸리",
+                alcohol: "6",
+                price: "3,000",
+                company: "해창주조장",
+                desc: "최대한 기교를 빼고 재료의 고유한 맛과 향을 낸다."
+            },
+            {
+                img: "",
+                name: "해창 생 막걸리",
+                alcohol: "9",
+                price: "6,000",
+                company: "해창주조장",
+                desc: "최대한 기교를 빼고 재료의 고유한 맛과 향을 낸다."
+            },
+            {
+                img: "",
+                name: "해창 생 막걸리",
+                alcohol: "12",
+                price: "10,000 ",
+                company: "해창주조장",
+                desc: "최대한 기교를 빼고 재료의 고유한 맛과 향을 낸다."
+            },
+            {
+                img: "",
+                name: "이동 쌀 막걸리",
+                alcohol: "6",
+                price: "1,600 ",
+                company: "이동주조",
+                desc: "이동막걸리는 천연탄산만을 고집하여 합성 첨가물을 넣지 않아 그 빛깔이 말고 고우며 깊은 맛이 좋기로 유명하다."
+            },
+            {
+                img: "",
+                name: "지평막걸리",
+                alcohol: "6",
+                price: "2000",
+                company: "지평주조",
+                desc: "우리나라에서 제일 오래된 양조장 중 하나인 지평양조장에서 소맥분으로 빚은 막걸리"
+            },
+            {
+                img: "",
+                name: "복순도가",
+                alcohol: "6.5",
+                price: "12,000",
+                company: "복순도가",
+                desc: "복순도가 손막걸리는 저온으로 장기 숙성된 슬로푸드(slow food)로 방부제나 인공 균이 첨가되어 있지 않아서 중요한 영양분들이 살아 있어 건강에 매우 좋을 뿐 아니라 숙취가 없다."
+            },
+            {
+                img: "",
+                name: "김천 배금도가",
+                alcohol: "12",
+                price: "12,800",
+                company: "배금도가",
+                desc: "향긋하게 피워 오르는 과실미가 매력적이고 달달한 맛이 난다."
+            },
+            
+            {
+                img: "",
+                name: "부여 알밤막걸리",
+                alcohol: "6",
+                price: "1,700",
+                company: "백제원주조",
+                desc: "적은 탄산에 생각보다 달지 않은 맛 알밤 보다는 밤향이 난다."
+            },
+            {
+                img: "",
+                name: "우도땅콩전통주",
+                alcohol: "6",
+                price: "3,150",
+                company: "조은술세종",
+                desc: "땅콩맛이 꽤 진하네요.비율로 따지자면 땅콩 80% 탁주 20%정도로 맛이 느껴진다."
+            },
+            {
+                img: "",
+                name: "수제잣 가평막걸리",
+                alcohol: "6",
+                price: "4,000",
+                company: "우리술",
+                desc: "깔끔하고 부드럽다는 특징을 가지고 있다. "
+            },
+            {
+                img: "",
+                name: "",
+                alcohol: "",
+                price: "",
+                company: "",
+                desc: ""
+            },
+            {
+                img: "",
+                name: "",
+                alcohol: "",
+                price: "",
+                company: "",
+                desc: ""
+            },
+            {
+                img: "",
+                name: "",
+                alcohol: "",
+                price: "",
+                company: "",
+                desc: ""
+            },
+            {
+                img: "",
+                name: "",
+                alcohol: "",
+                price: "",
+                company: "",
+                desc: ""
+            },
+        ]
+        console.log(soju.length);
+        console.log(beer.length);
+
+       
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+{
+  "title":"Alcohol list schema", 
+  "description":"schema about alc list data for each category", 
+  "type":"object", 
+  "properties":
+  {
+    "category":
+    {
+      "description":"large category of alcohol", 
+      "type":"string"
+    }, 
+    "krCategory":
+    {
+      "description":"korean name of category", 
+      "type":"string"
+    }, 
+    "alcList":
+    {
+      "type":"array", 
+      "items":
+      {
+        "title":"Alcohol schema", 
+        "description":"schema about indivisual alcohol", 
+        "properties":
+        {
+          "classification":
+          {
+            "description":"small classification", 
+            "type":"string"
+          }, 
+          "alcName":
+          {
+            "description":"name of alcohol", 
+            "type":"string"
+          }, 
+          "alcDegree":
+          {
+            "description":"alcohol content of alcohol", 
+            "type":"number"
+          }, 
+          "alcMade":
+          {
+            "description":"name of brewery", 
+            "type":"string"
+          }, 
+          "additional":
+          {
+            "description":"additional data for alcohol", 
+            "type":"object", 
+            "properties":
+            {
+              "price":
+              {
+                "description":"price of alcohol when you buy it", 
+                "type":"integer"
+              }, 
+              "image":
+              {
+                "description":"what name of image for this alcohol", 
+                "type":"string", 
+                "pattern":"^../img/"
+              }, 
+              "area":
+              {
+                "description":"a place of production of alcohol", 
+                "type":"string"
+              }, 
+              "krName":
+              {
+                "description":"name of alcohol in Korean", 
+                "type":"string"
+              }, 
+              "year":
+              {
+                "description":"year when alc is bottled", 
+                "type":"integer"
+              }, 
+              "officialTag":
+              {
+                "description":"tags that refered by offical introduction", 
+                "type":"array", 
+                "items": {"type":"string", "pattern":"^#"}
+              },
+              "siteLink":
+              {
+                "description":"website link for this alcohol",
+                "type":"string"
+              },
+              "vintage":
+              {
+                "description":"property to show vintage of wine",
+                "type":"number"
+              }
+            }
+          }, 
+          "review":
+          {
+            "description":"data to save average subjective data", 
+            "type":"object", 
+            "properties":
+            {
+              "score": 
+              {
+                "description":"average score for this",
+                "type":"integer"
+              }, 
+              "taste":
+              {
+                "description":"sweet bitter salty sour hot richness", 
+                "type":"array", 
+                "minItems":6, 
+                "maxItems":6, 
+                "items": {"type":"integer"}
+              }, 
+              "again":
+              {
+                "description":"do you want to drink this alcohol again", 
+                "type":"number",
+                "minimum":0,
+                "maximum":5
+              }, 
+              "userTag":
+              {
+                "description":"tags that users think its proper to show that alcohol", 
+                "type":"array", 
+                "items":
+                {
+                  "type":"string", 
+                  "pattern":"^#"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

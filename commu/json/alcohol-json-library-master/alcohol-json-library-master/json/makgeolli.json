@@ -1,0 +1,308 @@
+{
+    "$schema": "../schema.json",
+    "category":"makgeolli", 
+    "krCategory": "막걸리",
+    "alcList":
+    [
+        {
+            "classification":"생", 
+            "alcName":"복순도가", 
+            "alcDegree":-1,
+            "alcMade":"복순도가", 
+            "additional": {
+                "price":12000,
+                "siteLink": "http://www.boksoon.com/main",
+                "officialTag": ["#전통 방식", "#천연 탄산", "#샴페인과 같은", "#청량감을 주는"],
+                "area": "울산"
+            },
+            "review":{
+                "again":5
+            }
+        }, 
+        {
+            "classification": "생", 
+            "alcName":"금정산성 막걸리", 
+            "alcDegree":-1,
+            "alcMade":"금정산성토산주", 
+            "additional": {
+                "area": "부산",
+                "price":2000,
+                "siteLink": "https://sanmak.kr/bbs/content.php?co_id=sub21",
+                "officialTag": ["#전통 방식", "#자연산 누룩", "#은은한", "#구수한", "#대한민국 민속주 1호"]
+            },
+            "review":{
+                "again":5
+            }       
+        },
+        {
+            "classification":"찹쌀",
+            "alcName":"김천 배금도가",
+            "alcDegree":-1,
+            "alcMade":"배금도가",
+            "additional": {
+                "officialTag": ["#전통누룩", "#청량감", "#감칠맛", "#무첨가제"],
+                "area": "경상북도 김천",
+                "siteLink": "https://smartstore.naver.com/dogar/products/3645168401"
+            },
+            "review":{
+                "again":5
+            }
+        },
+        {
+            "classification":"생",
+            "alcName":"여인 탁주",
+            "alcDegree":-1,
+            "alcMade":"중원당",
+            "additional": {
+                "siteLink": "http://www.xn--v42bo8x7wc.com/goods/view?no=13",
+                "area": "충청북도 충주",
+                "price": 20000
+            },
+            "review":{
+                "again":5
+            }
+        },
+        {
+            "classification":"석탄주",
+            "alcName":"이백 석탄주",
+            "alcDegree":6,
+            "alcMade":"이백양조장",
+            "additional": {},
+            "review":{
+                "again":5
+            }
+        },
+        {
+            "classification":"기타 탁주",
+            "alcName":"고택 찹쌀생주",
+            "alcDegree":13.5,
+            "alcMade":"고택주조",
+            "additional": {
+                "price": 5000,
+                "siteLink": "http://www.8824588.com/info.php",
+                "officialTag": ["#전통 방식", "#찹쌀"]
+            },
+            "review":{
+                "again":5
+            }
+        },
+        {
+            "classification":"밀",
+            "alcName":"기다림25",
+            "alcDegree":8,
+            "alcMade":"기다림",
+            "additional": {
+                "siteLink": "http://gidarim.co.kr/bbs/board.php?bo_table=drink&wr_id=7",
+                "officialTag": ["#숙취 없는", "#과일풍의", "#신맛", "#쌉싸래함", "#드라이한", "#단맛의", "#깔끔한"],
+                "price": 9900
+            },
+            "review":{
+                "again":5
+            }
+        },
+        {
+            "classification":"생",
+            "alcName":"이화백주",
+            "alcDegree":6,
+            "alcMade":"이화백주",
+            "additional": {
+                "price": 12000,
+                "siteLink": "http://ehwaju.com/"
+            },
+            "review":{
+                "again":5
+            }  
+        },
+        {
+            "classification":"생",
+            "alcName":"느린마을 막걸리",
+            "alcDegree":-1,
+            "alcMade":"배상면주가",
+            "additional": {
+                "siteLink": "http://www.slowbrewpub.com/slowbrewpub/slowpub.php",
+                "area": "경기도 포천",
+                "officialTag": ["#아스파탐 無", "#시간의 흐름", "#다양한 맛", "#부드러운 단맛과 목넘김", "#풍성한 과실향", "#산미"]
+            },
+            "review":{
+                "again":5
+            }
+        },
+        {
+            "classification":"생",
+            "alcName":"지평생 쌀막걸리",
+            "alcDegree":5,
+            "alcMade":"지평주조",
+            "additional": {
+                "siteLink": "http://www.jpjujo.com/content.php?pagecode=m21",
+                "officialTag": ["#깔끔함", "#부드러움"],
+                "area": "경기도 양평"
+            },
+            "review":{
+                "again":0
+            }
+        },
+        {
+            "classification":"살균",
+            "alcName":"붉은원숭이",
+            "alcDegree":-1,
+            "alcMade":"술샘",
+            "additional": {
+                "area": "경기도 용인",
+                "siteLink": "http://sulseam.co.kr/goods/view?no=12",
+                "officialTag": ["#붉은색", "#무첨가", "#단맛", "#바디감"]
+            },
+            "review":{
+                "again":0   
+            }
+        },
+        {
+            "classification":"생",
+            "alcName":"술취한원숭이",
+            "alcDegree":10.8,
+            "alcMade":"술샘",
+            "additional": {
+                "area": "경기도 용인",
+                "siteLink": "http://sulseam.co.kr/goods/view?no=2",
+                "officialTag": ["#붉은색", "#무첨가", "#청량감", "#단맛", "#바디감"]
+            },
+            "review":{
+                "again":5   
+            }
+        },
+        {
+            "classification": "기타 탁주",
+            "alcName": "귤로만",
+            "alcDegree": 10,
+            "alcMade": "제주와이너리",
+            "additional": {
+                "area": "제주",
+                "siteLink": "https://smartstore.naver.com/jejuwinery/products/2963760231",
+                "officialTag": ["#제주산 감귤", "#신맛", "#단맛", "#쌉싸름", "#감귤맛"]
+            },
+            "review": {
+                "again": 5
+            }
+        },
+        {
+            "classification": "살균",
+            "alcName": "월매 쌀막걸리",
+            "alcDegree": 6,
+            "alcMade": "서울탁주",
+            "additional": {
+                "siteLink": "http://www.koreawine.co.kr/2011/c1/page3.php"
+            },
+            "review": {
+                "again": 0
+            }
+        },
+        {
+            "classification": "생",
+            "alcName": "부여 알밤 생주",
+            "alcDegree": 6,
+            "alcMade": "백제원주조",
+            "additional": {
+                "area": "충남 부여"
+            },
+            "review": {
+                "again": 5
+            }
+        },
+        {
+            "classification": "살균",
+            "alcName": "우도땅콩전통주",
+            "alcDegree": 6,
+            "alcMade": "조은술세종",
+            "additional": {
+                "area": "충북 청주",
+                "siteLink": "https://www.joeunsulsj.co.kr:5009/sub.php?code=02_prod010101&mode=view&no=35&cate1=&page=1",
+                "officialTag": ["#고소한"]
+            },
+            "review": {}
+        },
+        {
+            "classification": "생",
+            "alcName": "수제잣 가평막걸리",
+            "alcDegree": 6,
+            "alcMade": "우리술",
+            "additional": {
+                "area": "경기 가평"
+            },
+            "review": {}
+        },
+        {
+            "classification": "생",
+            "alcName": "이백 생막걸리",
+            "alcDegree": 16,
+            "alcMade": "이백양조장",
+            "additional": {},
+            "review": {
+                "again": 5
+            }
+        },
+        {
+            "classification": "",
+            "alcName": "검은콩 막걸리",
+            "alcDegree": 6,
+            "alcMade": "대강양조장",
+            "additional":{
+                "siteLink": "http://www.krwine.com/product.html"
+            },
+            "review": {}
+        },
+        {
+            "classification": "",
+            "alcName": "이화주",
+            "alcDegree": 8,
+            "alcMade": "술샘",
+            "additional": {
+                "siteLink": "http://sulseam.co.kr/goods/view?no=1",
+                "officialTag": ["#독특하고", "#이색적인", "#쫀득쫀득한", "#특유의 맛", "#떠먹는"]
+            },
+            "review": {}
+        },
+        {
+            "classification": "생",
+            "alcName": "송명섭 막걸리",
+            "alcDegree": 6,
+            "alcMade": "태인양조장",
+            "additional": {
+                "siteLink": "http://www.xn--og5bv8a5dl6a612a.com/sub03/sub02.php",
+                "officialTag": ["#시큼털털하면서", "#걸쭉한", "#본연의"]
+            },
+            "review": {}
+        },
+        {
+            "classification": "모주",
+            "alcName": "전주 모주",
+            "alcDegree": 1.5,
+            "alcMade": "전주주조",
+            "additional": {
+                "siteLink": "https://jjjujo.co.kr/%EC%A0%9C%ED%92%88%EC%86%8C%EA%B0%9C",
+                "officialTag": ["#웰빙", "#향기롭고", "#달콤하여", "#부담이 없는", "#계피", "#해장술"]
+            },
+            "review": {
+                "again": 5
+            }
+        },
+        {
+            "classification": "생",
+            "alcName": "청명주",
+            "alcDegree": 12,
+            "alcMade": "중원당",
+            "additional": {},
+            "review": {
+                "again": 5
+            }
+        },
+        {
+            "classification": "생",
+            "alcName": "시인의 마을",
+            "alcDegree": 10,
+            "alcMade": "이원양조장",
+            "additional": {
+                "siteLink": "http://www.iwonwine.com/new/bbs/board.php?bo_table=gallery&wr_id=17"
+            },
+            "review": {}
+        }
+    ]
+}

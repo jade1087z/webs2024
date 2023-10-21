@@ -1,0 +1,48 @@
+@font-face {
+    font-family: "nexonLv1";
+    font-weight: 300;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/websfont/nexonLv1/nexonLv1-Light.eot");
+    src: url("https://cdn.jsdelivr.net/gh/websfont/nexonLv1/nexonLv1-Light.eot?#iefix") format("embedded-opentype"),
+         url("https://cdn.jsdelivr.net/gh/websfont/nexonLv1/nexonLv1-Light.woff2") format("woff2"),
+         url("https://cdn.jsdelivr.net/gh/websfont/nexonLv1/nexonLv1-Light.woff") format("woff"),
+         url("https://cdn.jsdelivr.net/gh/websfont/nexonLv1/nexonLv1-Light.ttf") format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: "nexonLv1";
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/websfont/nexonLv1/nexonLv1-Regular.eot");
+    src: url("https://cdn.jsdelivr.net/gh/websfont/nexonLv1/nexonLv1-Regular.eot?#iefix") format("embedded-opentype"),
+         url("https://cdn.jsdelivr.net/gh/websfont/nexonLv1/nexonLv1-Regular.woff2") format("woff2"),
+         url("https://cdn.jsdelivr.net/gh/websfont/nexonLv1/nexonLv1-Regular.woff") format("woff"),
+         url("https://cdn.jsdelivr.net/gh/websfont/nexonLv1/nexonLv1-Regular.ttf") format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: "nexonLv1";
+    font-weight: 700;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/websfont/nexonLv1/nexonLv1-Bold.eot");
+    src: url("https://cdn.jsdelivr.net/gh/websfont/nexonLv1/nexonLv1-Bold.eot?#iefix") format("embedded-opentype"),
+         url("https://cdn.jsdelivr.net/gh/websfont/nexonLv1/nexonLv1-Bold.woff2") format("woff2"),
+         url("https://cdn.jsdelivr.net/gh/websfont/nexonLv1/nexonLv1-Bold.woff") format("woff"),
+         url("https://cdn.jsdelivr.net/gh/websfont/nexonLv1/nexonLv1-Bold.ttf") format("truetype");
+    font-display: swap;
+} 
+.nexonLv1 {
+    font-family: "nexonLv1";
+}
+.nexonLv1300 {
+    font-family: "nexonLv1";
+    font-weight: 300;
+}
+.nexonLv1400 {
+    font-family: "nexonLv1";
+    font-weight: 400;
+}
+.nexonLv1700 {
+    font-family: "nexonLv1";
+    font-weight: 700;
+}

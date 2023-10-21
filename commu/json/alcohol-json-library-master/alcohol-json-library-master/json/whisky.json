@@ -1,0 +1,67 @@
+{
+    "$schema": "../schema.json",
+    "category": "whisky",
+    "krCategory": "위스키",
+    "alcList": [
+        {
+            "classification": "",
+            "alcName": "이백 위스키",
+            "alcDegree": -1,
+            "alcMade": "이백양조장",
+            "additional": {},
+            "review": {
+                "again": 5
+            }
+        },
+        {
+            "classification": "Single Malt",
+            "alcName": "Glenfiddich",
+            "alcDegree": 40,
+            "alcMade": "",
+            "additional": {
+                "year": 18,
+                "krName": "글렌피딕 18"
+            },
+            "review": {
+                "again": 5
+            }
+        },
+        {
+            "classification": "Blended Scotch",
+            "alcName": "Ballantine's",
+            "alcDegree": -1,
+            "alcMade": "George Ballantine & Son",
+            "additional": {
+                "area": "Scotland",
+                "krName": "발렌타인 21",
+                "year": 21
+            },
+            "review": {
+                "again": 5  
+            }
+        },
+        {
+            "classification": "Blended Scotch",
+            "alcName": "Imperial",
+            "alcDegree": -1,
+            "alcMade": "",
+            "additional": {
+                "area": "Scotland",
+                "year": 12,
+                "krName": "임페리얼 12"
+            },
+            "review": {}
+        },
+        {
+            "classification": "Blended Scotch",
+            "alcName": "Johnnie Walker Black Label",
+            "alcDegree": 40,
+            "alcMade": "John Walker & Sons",
+            "additional": {
+                "area": "Scotland",
+                "year": 12,
+                "krName": "블랙라벨 12"
+            }
+        }
+    ]
+}

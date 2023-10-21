@@ -1,0 +1,56 @@
+
+
+
+
+
+/* active effect */
+.active > a {
+    color: #0079D3;
+}
+
+/* input__style */
+.input__style {
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 1% 2% 0 2%;
+    word-break: keep-all;
+    font-weight: 300;
+}
+
+/* btn */
+.board__btns {
+    background-color: var(--btn-green);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    border: none;
+    width: 215px;
+    height: 50px;
+    border-radius: 50px;
+    color: var(--white);
+}
+/* ranking list */
+
+
+/* 마진 간격 */
+.mt0 {margin-top: 0px !important;}
+.mt10 {margin-top: 10px !important;}
+.mt20 {margin-top: 20px !important;}
+.mt30 {margin-top: 30px !important;}
+.mt40 {margin-top: 40px !important;}
+.mt50 {margin-top: 50px !important;}
+.mt60 {margin-top: 60px !important;}
+.mt70 {margin-top: 70px !important;}
+.mt80 {margin-top: 80px !important;}
+.mt90 {margin-top: 90px !important;}
+.mt100 {margin-top: 100px !important;}
+
+.mr0 {margin-right: 0px !important;}
+.mr10 {margin-right: 10px !important;}
+.mr20 {margin-right: 20px !important;}
+.mr30 {margin-right: 30px !important;}
+.mr40 {margin-right: 40px !important;}
+.mr50 {margin-right: 50px !important;}
+.mr60 {margin-right: 60px !important;}
+.mr70 {margin-right: 70px !important;}
+.mr80 {margin-right: 80px !important;}
+.mr90 {margin-right: 90px !important;}
+.mr100 {margin-right: 100px !important;}

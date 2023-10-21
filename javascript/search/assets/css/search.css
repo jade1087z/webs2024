@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "LOTTERIADDAG";
+}
+.active1 {
+    display: block;
+
+    color: red;
+}
+@font-face {
+    font-family: "LOTTERIADDAG";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIADDAG.woff2")
+        format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+#header {
+    /* 이미지 바꾸고 지우기*/
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+}
+#header h1 a {
+    display: inline-block;
+    color: #555;
+    padding: 20px;
+    font-size: 30px;
+}
+#header nav {
+    padding-right: 20px;
+}
+#header nav li {
+    display: inline-block;
+}
+#header nav li a {
+    padding: 10px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    border: 1px solid #b3a8d3a4;
+    text-align: center;
+    box-shadow: 1px 1px 0px #fff;
+    line-height: 1;
+}
+#header nav li a:hover {
+    background-color: #000;
+    color: #eee;
+}
+#header nav li.active a {
+    background-color: #000;
+    color: #eee;
+}
+/*  header end */
+
+main {
+}
+
+.search__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px auto;
+    width: 70%;
+    max-width: 100%;
+    min-height: 500px;
+    border-radius: 20px;
+    background-color: #b3a8d3a4;
+    border: 5px solid #555;
+}
+.search__title {
+    margin-top: 20px;
+}
+.search__box {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.input__style {
+    width: 70%;
+    min-width: 600px;
+    height: 100px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 5px solid #555;
+    font-size: 20px;
+}
+.search__box label {
+    height: 100px;
+    padding: 28px 20px;
+    border-radius: 10px;
+    border: 5px solid #555;
+    background-color: #fff;
+    font-size: 20px;
+    font-size: 22px;
+    margin-left: -5px;
+    cursor: pointer;
+}
+.search__box label:hover {
+    color: #fff;
+    background-color: #777;
+}
+.searchBox p {
+    margin-top: 10px;
+}
+.searchBox p em {
+    font-style: normal;
+    text-decoration: underline;
+    text-underline-offset: under;
+}
+.search__box__result {
+    margin-top: 20px;
+    border-top: 3px dashed #555;
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+}
+.search__box__result .desc {
+    color: #999;
+    margin-bottom: 15px;
+}
+.search__info {
+    font-size: 18px;
+    margin-left: 400px;
+    margin-top: 10px;
+    white-space: pre-line;
+}
+.search__select {
+    margin-top: 30px;
+}
+.search__select span {
+    padding: 10px;
+    margin-left: 10px;
+    border: 2px dashed #555;
+    cursor: pointer;
+}
+.search__select span:hover {
+    color: #fff;
+    background-color: #555;
+}
+.num {
+    color: #fff;
+    margin: 0 10px;
+}
+.search__star ul {
+    margin-top: 10px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search__star ul li {
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    border: 2px solid #10be5ead;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.search__star ul li:hover {
+    background-color: #fff;
+    color: #03c75a;
+    transform: scale(0.95);
+}
+.search__list {
+    margin-top: 20px;
+    padding: 5px 0px;
+    border-top: 3px dashed #555;
+    width: 100%;
+    text-align: center;
+}
+.search__list span {
+    width: 100%;
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #10be5ead;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+.search__list span:hover {
+    background-color: #fff;
+    color: #03c75a;
+    transform: scale(0.95);
+}
+.search__list ul {
+    margin-top: 15px;
+}
+.search__list li {
+    min-width: 300px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.search__list li em {
+    font-style: normal;
+}
+.css {
+    margin: 20px auto;
+    margin-left: 50px;
+}
+.css ul li {
+    color: #333;
+    margin-top: 5px;
+    font-size: 16px;
+    font-family: "GmarketSans";
+}
+.css ul li.show {
+    display: block;
+}
+.css ul li.hide {
+    display: none;
+}
+.css ul li strong {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+/* footer start */
+footer {
+    text-align: center;
+    font-size: 14px;
+}
+#footer a {
+    display: block;
+    color: #555;
+    padding: 40px;
+}
+#footer a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+/* media */
+
+@media (max-width: 900px) {
+    .search__box {
+        width: 30%;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .input__style {
+        min-width: 500px;
+    }
+    .search__info {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 730px) {
+    .search__box {
+        width: 30%;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .input__style {
+        min-width: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .search__box {
+        width: 30%;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .input__style {
+        min-width: 300px;
+    }
+}
