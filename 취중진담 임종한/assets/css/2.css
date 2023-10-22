@@ -87,8 +87,6 @@
 .board_table_sort ul {}
 
 .board_table_sort .board_value li {
-
-    text-align: left;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -103,35 +101,45 @@
     color: #7A7A7A;
     font-weight: bold;
 }
-
+.sort li em a {
+    color: red;
+}
 /*  */
 
 .sort {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
 }
+.sort li {
+    display: block;
+    width: 20%;
+    padding-left: 15px;
+}
+.board_key li:nth-child(4) {
+    padding-left: 30px;
 
-.sort li:nth-child(2) {
-    width: 45%;
+}
+.sort li:nth-child(1) {
+    padding-left: 25px;
 }
 
-.sort li:nth-child(4) {
-    margin-left: 10px;
+.board_value li:nth-child(5) {
+    padding-left: 20px;
 }
 
 .sort li:nth-child(5) {
-    margin-left: -20px;
 }
 
 .board_value ul {
     display: flex;
     padding: 10px 0;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 
 }
 
-.board_value li:nth-child(2) {
+/* .board_value li:nth-child(2) {
     width: 45%;
     max-width: 60%;
     margin-left: -20px;
@@ -139,7 +147,7 @@
 
 .board_value ul li:nth-child(3) {
     margin-left: -40px;
-}
+} */
 
 
 /*  */
@@ -179,6 +187,9 @@
     font-weight: bold;
     border: 1px solid var(--gray);
 }
+/* page end */
+
+/*  */
 
 .board_search {
     margin: 0 auto;
@@ -229,120 +240,63 @@
     display: none;
 }
 
-@media (max-width: 1310px) {
+@media(max-width: 1280px) {
+    .board_search_box input {
+        padding-right: 30px;
+    }
+    
+}
+@media(max-width: 580px) {
+    .board_select_option .select_compponent{
+        width: 100px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+}
+@media(max-width: 490px) {
     .board_select_option {
-        margin-right: 10px;
+        border-right: none;
     }
-
-    .search_form input {
-        padding: 10px 60px 10px 20px;
+    .board_select_option .select_compponent a span{
+        display: none;
     }
-
-    .sort li:nth-child(4) {
-        margin-left: 0px;
+    .board_select_option > i {
+        display: none;
     }
-
-    .sort li:nth-child(5) {
-        margin-left: -20px;
+    .board_select_option .select_compponent a i{
+        display: block;
     }
-
-    .board_value li:nth-child(3) {
+    .board_search {
         margin-left: -10px;
     }
-}
-
-@media (max-width: 930px) {
-
-    .board_value li:nth-child(5),
-    .sort li:nth-child(5) {
-        display: none;
-    }
-
-    .board_value li:nth-child(3) {
-        width: 20%;
-        margin-right: -60px;
-    }
-}
-
-@media (max-width: 580px) {
-    .board_select_option {
-        width: 30%;
-        margin-right: 5px;
-    }
-
-    .board_select_option i {
-        display: none;
-    }
-
-    .board_value li:nth-child(3) {
-        margin-right: -40px;
-    }
-
-    .board_search {
-        width: 100%;
-        border-bottom: 1px solid var(--gray);
-    }
-
-    .search_form {
-        margin-left: 0;
-    }
-
     .search_form input {
-        padding: 10px 250px 10px 80px;
+        width: 100%;
+        min-width: 350px;
+        
+    }
+    .search_input input {
         position: relative;
     }
-
     .board_select_option {
         position: absolute;
         width: 15%;
         height: 40px;
+        left: 13%;
         line-height: 1rem;
         border-right: none;
         border-radius: 10px;
         padding-left: 15px;
         z-index: 1;
     }
-
-    .select_box > span {
-        display: none;
+}
+@media(max-width: 390px) {
+    .search_form {
+        margin-left: 3px;
     }
-    .select_box i {
-        display: inline-block;
-        margin-top: -1px;
-        margin-left: 11px;
-        color: 000;
-    }
-
-    .board_search {
+    .search_form input {
+        min-width: 270px;
         
     }
-}
-@media (max-width: 560px) {
-    .board_select_option {
-        padding-left: 0;
-    }
-    .search_form input {
-        padding-left: 30px;
-    }
-    .search_form button {
-        padding: 12px 15px 12px 0;
-    }
-}
-@media (max-width: 510px) {
-    .board_select_option {
-    }
-    .search_form input {
-        padding-right: 10px;
-    }
-}
-
-
-.sort li:nth-child(2) {
-    width: 45%;
-}
-
-.board_value li:nth-child(2) {
-    width: 45%;
-    max-width: 60%;
-    margin-left: -20px;
 }

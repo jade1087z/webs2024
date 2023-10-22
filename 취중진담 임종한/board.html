@@ -27,7 +27,7 @@
     <link href="assets/css/common.css" rel="stylesheet" />
     <link href="assets/css/index.css" rel="stylesheet" />
     <link href="assets/css/selectOption.css" rel="stylesheet" />
-    <link href="assets/css/board.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/board.css">
 
     <!-- js -->
     <script src="assets/js/scrollEvent.js"></script>
@@ -78,32 +78,12 @@
 
         <main id="contents_area">
             <section id="main_contents">
-                <div class="best_list boxStyle roundCorner shaDow mb50">
-                    <h4>인기 게시글 <span>HOT</span></h4>
-                    
-                    
-                    
-                    
-                    
-                    <div class="board_page_option">
-                        <div class="board_pages">
-                            <ul class="pages_list">
-                                <li class="first"><a href="#">&lt;&lt;</a></li>
-                                <li class="prev"><a href="#">&lt;</a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li class="next"><a href="#">></a></li>
-                                <li class="last"><a href="#">>></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="best_list boxStyle roundCorner shaDow">
 
+
                     <h4>인기 게시글 <span>HOT</span></h4>
+
 
                     <ul class="board_w100">
                         <li>
@@ -129,9 +109,83 @@
                                 </div>
                             </a>
                         </li>
-
+                        <li>
+                            <a href="#">
+                                <div class="board_title">
+                                    <p>술 땡기는 금요일~ 곱창에 소주 땡기네요.</p>
+                                </div>
+                                <div class="board_reaction">
+                                    <p>조회수 <span>999</span></p>
+                                    <p>댓글 <span>25</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="board_title">
+                                    <p>술 땡기는 금요일~ 곱창에 소주 땡기네요.</p>
+                                </div>
+                                <div class="board_reaction">
+                                    <p>조회수 <span>999</span></p>
+                                    <p>댓글 <span>25</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="board_title">
+                                    <p>술 땡기는 금요일~ 곱창에 소주 땡기네요.</p>
+                                </div>
+                                <div class="board_reaction">
+                                    <p>조회수 <span>999</span></p>
+                                    <p>댓글 <span>25</span></p>
+                                </div>
+                            </a>
+                        </li>
                     </ul>
-                </div>
+
+                    <div class="board_page_option">
+                        <div class="board_pages">
+                            <ul class="pages_list">
+                                <li class="first"><a href="#">&lt;&lt;</a></li>
+                                <li class="prev"><a href="#">&lt;</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li class="next"><a href="#">></a></li>
+                                <li class="last"><a href="#">>></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <style>
+                        
+                    </style>
+                    <div class="search_form">
+                        <div class="selectBox2 "><i class="fa-solid fa-angle-down"></i>
+                            <button class="label">게시글</button>
+                            <ul class="optionList">
+                                <li class="optionItem">제목만</li>
+                                <li class="optionItem">작성자</li>
+                                <li class="optionItem">grape</li>
+                                <li class="optionItem">melon</li>
+                            </ul>
+                        </div>
+                        <form action="/" method="post" name="" class="board_search_form ">
+                            <div class="board_search_option">
+                                <div id="search_input" class="board_search_box ">
+
+                                    <label for="search" class="hidden" style="display: none;">검색창</label>
+                                    <input type="text" id="search" name="search" placeholder="검색어를 입력해주세요"
+                                        autocomplete="off" class="im">
+                                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                        </di>
+                    </div>
+
             </section>
             <!-- main_contents end -->
 
