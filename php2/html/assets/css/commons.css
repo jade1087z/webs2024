@@ -18,7 +18,7 @@
 
 /* bg */
 .gray {
-    background-color: var(--primary-color2);
+    background-color: #b3a8d3a4;
 }
 
 /* container */
@@ -27,7 +27,6 @@
     width: 96%;
     margin: 0 auto;
 }
-
 
 /* intro_inner */
 .intro_inner {
@@ -54,7 +53,7 @@
     border-radius: 50px;
 }
 
-.intro_text h2{
+.intro_text h2 {
     font-size: 1.6rem;
     margin-bottom: 1.25rem;
 }
@@ -80,7 +79,7 @@
     position: relative;
 }
 .bmStyle2::after {
-    content: '';
+    content: "";
     width: 100%;
     height: 1px;
     position: absolute;
@@ -89,7 +88,7 @@
     background-color: var(--black500);
 }
 .bmStyle::after {
-    content: '';
+    content: "";
     width: 100%;
     height: 1px;
     position: absolute;
@@ -103,7 +102,7 @@
     position: relative;
 }
 .btStyle::after {
-    content: '';
+    content: "";
     width: 100%;
     height: 1px;
     position: absolute;
@@ -111,7 +110,6 @@
     top: -8px;
     background-color: var(--black);
 }
-
 
 /* input_style */
 .input_style {
@@ -156,13 +154,16 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.check__btn {
+
+}
 /* list-style */
 .list-style li {
     padding-left: 16px;
     position: relative;
 }
 .list-style li::before {
-    content: '';
+    content: "";
     width: 5px;
     height: 5px;
     background-color: var(--black);
@@ -194,9 +195,24 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
+/* scroll */
+.scroll__style::-webkit-scrollbar {
+    width: 10px;
+}
+.scroll__style::-webkit-scrollbar-thumb {
+    background-color: #b3a8d3a4;
+    border-radius: 10px;
+    height: 1%;
+}
+.scroll__style::-webkit-scrollbar-track {
+    background-color: grey;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+}
+
 /* required */
 .required::after {
-    content: ' *';
+    content: " *";
     color: #ff0000;
 }
 
@@ -219,27 +235,104 @@
 }
 
 /* 마진 간격 */
-.mt0 {margin-top: 0px !important;}
-.mt10 {margin-top: 10px !important;}
-.mt20 {margin-top: 20px !important;}
-.mt30 {margin-top: 30px !important;}
-.mt40 {margin-top: 40px !important;}
-.mt50 {margin-top: 50px !important;}
-.mt60 {margin-top: 60px !important;}
-.mt70 {margin-top: 70px !important;}
-.mt80 {margin-top: 80px !important;}
-.mt90 {margin-top: 90px !important;}
-.mt100 {margin-top: 100px !important;}
+.mt0 {
+    margin-top: 0px !important;
+}
+.mt10 {
+    margin-top: 10px !important;
+}
+.mt20 {
+    margin-top: 20px !important;
+}
+.mt30 {
+    margin-top: 30px !important;
+}
+.mt40 {
+    margin-top: 40px !important;
+}
+.mt50 {
+    margin-top: 50px !important;
+}
+.mt60 {
+    margin-top: 60px !important;
+}
+.mt70 {
+    margin-top: 70px !important;
+}
+.mt80 {
+    margin-top: 80px !important;
+}
+.mt90 {
+    margin-top: 90px !important;
+}
+.mt100 {
+    margin-top: 100px !important;
+}
 
+.mr0 {
+    margin-right: 0px !important;
+}
+.mr10 {
+    margin-right: 10px !important;
+}
+.mr20 {
+    margin-right: 20px !important;
+}
+.mr30 {
+    margin-right: 30px !important;
+}
+.mr40 {
+    margin-right: 40px !important;
+}
+.mr50 {
+    margin-right: 50px !important;
+}
+.mr60 {
+    margin-right: 60px !important;
+}
+.mr70 {
+    margin-right: 70px !important;
+}
+.mr80 {
+    margin-right: 80px !important;
+}
+.mr90 {
+    margin-right: 90px !important;
+}
+.mr100 {
+    margin-right: 100px !important;
+}
 
-.mr0 {margin-right: 0px !important;}
-.mr10 {margin-right: 10px !important;}
-.mr20 {margin-right: 20px !important;}
-.mr30 {margin-right: 30px !important;}
-.mr40 {margin-right: 40px !important;}
-.mr50 {margin-right: 50px !important;}
-.mr60 {margin-right: 60px !important;}
-.mr70 {margin-right: 70px !important;}
-.mr80 {margin-right: 80px !important;}
-.mr90 {margin-right: 90px !important;}
-.mr100 {margin-right: 100px !important;}
+.mb0 {
+    margin-bottom: 0px !important;
+}
+.mb10 {
+    margin-bottom: 10px !important;
+}
+.mb20 {
+    margin-bottom: 20px !important;
+}
+.mb30 {
+    margin-bottom: 30px !important;
+}
+.mb40 {
+    margin-bottom: 40px !important;
+}
+.mb50 {
+    margin-bottom: 50px !important;
+}
+.mb60 {
+    margin-bottom: 60px !important;
+}
+.mb70 {
+    margin-bottom: 70px !important;
+}
+.mb80 {
+    margin-bottom: 80px !important;
+}
+.mb90 {
+    margin-bottom: 90px !important;
+}
+.mb100 {
+    margin-bottom: 100px !important;
+}

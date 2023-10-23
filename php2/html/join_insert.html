@@ -45,37 +45,59 @@
     <main id="main" role="main">
         <div class="intro_inner bmStyle container">
             <div class="intro_img">
-                <img srcset="assets/img/intro01.jpg 1x, assets/img/intro01@2x.jpg 2x, assets/img/intro01@3x.jpg 3x" alt="">
+                <img srcset="assets/img/gild.jpg 1x, assets/img/gild@2x.jpg 2x, assets/img/gild@3x.jpg 3x" alt="">
             </div>
             <div class="intro_text">
                 회원가입을 해주시면 다양한 정보를 자유롭게 볼 수 있습니다.
             </div>
         </div>
         <section class="join_inner container">
-            <h2>회원가입</h2>
-            <div class="join_form">
+            <h2>이용약관</h2>
+            <div class="join__index">
+                <ul>
+                    <li>1</li>
+                    <li class="active">2</li>
+                    <li>3</li>
+                </ul>
+            </div>
+            <div class="join__form">
                 <form action="#" name="#" method="post">
                     <fieldset>
                         <legend class="blind">회원가입 영역</legend>
-                        <div>
-                            <label for="youEmail" class="required">이메일</label>
-                            <input type="email" id="youEmail" name="youEmail" placeholder="이메일을 적어주세요!" class="input_style" required>
+                        <!-- 아이디, 비밀번호, 비밀번호 확인, 이메일, 주소, 연락처 -->
+                        <div class="check">
+                            <label for="youID" class="required">아이디</label>
+                            <input type="email" id="youID" name="youID" placeholder="아이디를 적어주세요!" class="input_style check__style" required>
+                            <button class="check__btn btn__style3">아이디 중복 검사</button>
+                            <p>메시지 출력</p>
                         </div>
-                        <div>
-                            <label for="youName" class="required">이름</label>
-                            <input type="text" id="youName" name="youName" placeholder="이름을 적어주세요!" class="input_style" required>
+                        <div class="check">
+                            <label for="youEmail" class="required">이메일</label>
+                            <input type="text" id="youEmail" name="youEmail" placeholder="이메일을 적어주세요!" class="input_style" required>
+                            <button class="check__btn btn__style3">아이디 중복 검사</button>
+                            <p>이메일이 있습니다.</p>
                         </div>
                         <div>
                             <label for="youPass" class="required">비밀번호</label>
-                            <input type="paddword" id="youPass" name="youPass" placeholder="비밀번호를 적어주세요!" class="input_style" required>
+                            <input type="text" id="youPass" name="youPass" placeholder="비밀번호를 적어주세요!" class="input_style" required>
+                            <p>특수문자가 들어가야 합니다.</p>
                         </div>
                         <div>
                             <label for="youPassC" class="required">비밀번호 확인</label>
                             <input type="paddword" id="youPassC" name="youPassC" placeholder="다시 한번 비밀번호를 적어주세요!" class="input_style" required>
+                            <p>비밀번호가 일치하지 않습니다.</p>
+                        </div>
+                        <div class="check2">
+                            <label for="youAdress" class="required">주소</label>
+                            <input type="text" id="youAdress1" name="youAdress" placeholder="우편번호" class="input_style mb10" required>
+                            <button class="check__btn btn__style3">주소 찾기</button>
+                            <input type="text" id="youAdress" name="youAdress" placeholder="주소" class="input_style mb10" required>
+                            <input type="text" id="youAdress" name="youAdress" placeholder="상세주소" class="input_style" required>
                         </div>
                         <div>
                             <label for="youPhone">연락처</label>
                             <input type="text" id="youPhone" name="youPhone" placeholder="연락처를 적어주세요!" class="input_style" required>
+                            <p>연락처는(000-0000-0000) 형식으로 작성해주세요!</p>
                         </div>
                         <button type="submit" class="btn_style mt100">회원가입 완료</button>
                     </fieldset>
