@@ -1,4 +1,20 @@
 <?php
+    include "../connect/connect.php";
+    include "../connect/session.php";
+
+    $youId = mysqli_real_escape_string($connect, $_POST['youId']);
+    $youName = mysqli_real_escape_string($connect, $_POST['youName']);
+    $youEmail = mysqli_real_escape_string($connect, $_POST['youEmail']);
+    $youPass = mysqli_real_escape_string($connect, $_POST['youPass']);
+    $youPhone = mysqli_real_escape_string($connect, $_POST['youPhone']);
+    $youRegTime = time();
+    
+    $sql = "INSERT INTO myMembers(youId, youName, youEmail, youPass, youPhone, youRegTime) VALUES('$youId,$youName,$youEmail,$youPass,$youPhone,$youRegTime')";
+
+    $result = $connect -> query($sql);
+
+    // 데이터 베이스 연결 닫기 
+    mysqli_close($connect);
 ?>
 
 
