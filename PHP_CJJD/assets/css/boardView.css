@@ -7,7 +7,13 @@
 }
 .view_top h5 {
     font-weight: 800;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    
+    white-space: nowrap;
+    /* 텍스트를 한 줄에 표시 */
+    overflow: hidden;
+    /* 넘치는 부분을 숨김 */
+    text-overflow: ellipsis;
 }
 .back_list a {
     font-weight: 300;

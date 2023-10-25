@@ -1,16 +1,10 @@
-<?php
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입 페이지</title>
-    <?php include "../include/head.php" ?>
+    <title>PHP 블로그 만들기</title>
+
     <style>
         #layer {
             position: fixed;
@@ -18,7 +12,6 @@
             z-index: 1;
             -webkit-overflow-scrolling: touch;
         }
-
         #layer img {
             position: absolute;
             right: -3px;
@@ -29,25 +22,24 @@
             cursor: pointer;
         }
     </style>
+
+    <!-- CSS -->
+    <?php include "../include/head.php"?>
 </head>
-
 <body class="gray">
-    <?php include "../include/skip.php" ?>
-    <?php include "../include/header.php" ?>
+    <?php include "../include/skip.php"?>
+    <!-- //skip -->
 
-
-
+    <?php include "../include/header.php"?>
     <!-- //header -->
 
     <main id="main" role="main">
         <div class="intro__inner bmStyle container">
             <div class="intro__img">
-                <img srcset="../assets/img/gold.jpg, ../assets/img/gold@2.jpg, ../assets/img/gold@3.jpg" alt="">
+                <img srcset="../asset/img/intro02@1x.jpg 1x, ../asset/img/intro02@2x.jpg 2x, ../asset/img/intro02@3x.jpg 3x" alt="인트로 이미지">
             </div>
             <div class="intro__text">
-                어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.
-                십입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을
-                유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.
+                회원가입을 해주시면 다양한 정보를 자유롭게 볼 수 있습니다.
             </div>
         </div>
         <section class="join__inner container">
@@ -60,19 +52,14 @@
                 </ul>
             </div>
             <div class="join__insert">
-                <?php
-
-
-                ?>
                 <form action="joinResult.php" name="joinResult" method="post" onsubmit="return joinChecks();">
                     <fieldset>
                         <legend class="blind">회원가입 영역</legend>
                         <div class="join">
-
                             <label for="youId" class="required">아이디</label>
                             <div class="check">
                                 <input type="text" id="youId" name="youId" placeholder="아이디을 적어주세요!" class="input__style">
-                                <div class="btn" onclick="idChecking()">아이디 중복검사</div>
+                                <div class="btn" onclick="idChecking()">아이디 중복 검사</div>
                             </div>
                             <p class="msg" id="youIdComment"></p>
                         </div>
@@ -95,20 +82,20 @@
                         <div class="join">
                             <label for="youPass" class="required">비밀번호</label>
                             <input type="text" id="youPass" name="youPass" placeholder="비밀번호를 적어주세요!" autocomplete="off" class="input__style">
-                            <p class="msg" id="youPassPass"></p>
+                            <p class="msg" id="youPassComment"></p>
                         </div>
 
                         <div class="join">
                             <label for="youPassC" class="required">비밀번호 확인</label>
                             <input type="password" id="youPassC" name="youPassC" placeholder="다시 한번 비밀번호를 적어주세요!" autocomplete="off" class="input__style">
-                            <p class="masg" id="youPassCComment"></p>
+                            <p class="msg" id="youPassCComment"></p>
                         </div>
-
+                    
                         <div class="join">
                             <label for="youAddress1" class="required">주소</label>
                             <div class="check">
                                 <input type="text" id="youAddress1" name="youAddress1" placeholder="우편번호" class="input__style">
-                                <div class="btn" id="addressCheck">주소 찾기</div>
+                                <div class="btn" id='addressCheck'>주소 찾기</div>
                             </div>
                             <label for="youAddress2" class="required blind">주소</label>
                             <input type="text" id="youAddress2" name="youAddress2" placeholder="주소" class="input__style">
@@ -121,102 +108,91 @@
                             <label for="youPhone">연락처</label>
                             <input type="text" id="youPhone" name="youPhone" placeholder="연락처는 공백없이 적어주세요!" class="input__style">
                             <p class="msg" id="youPhoneComment"></p>
-                        </div>
+                        </div> 
 
                         <button type="submit" id="submitBtn" class="btn__style mt100">회원가입 완료</button>
                     </fieldset>
                 </form>
             </div>
         </section>
-
-
     </main>
     <!-- //main -->
 
-
-    <?php include "../include/footer.php" ?>
+    <?php include "../include/footer.php"?>
     <!-- //footer -->
+
     <div id='layer'>
-        <img src="//t1.daumcdn.net/postcode/resource/images/close.png" id="btnCloseLayer" alt="닫기 버튼">
+    <img src="//t1.daumcdn.net/postcode/resource/images/close.png" id="btnCloseLayer" alt="닫기 버튼">
     </div>
-    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script>
         let isIdCheck = false;
         let isEmailCheck = false;
 
-        function idChecking() {
+        function idChecking(){
             let youId = $("#youId").val();
-
-            if (youId == null || youId == '') {
-                $("#youIdComment").text("** 아이디를 입력해주세요!!!");
+            
+            if(youId == null || youId == ''){
+                $("#youIdComment").text("**아이디를 입력해주세요");
             } else {
                 // 아이디 유효성 검사
                 let getYouId = RegExp(/^[a-zA-Z0-9_-]{4,20}$/);
 
-                if (!getYouId.test($("#youId").val())) {
-                    $("#youIdComment").text("아이디는 영어와 숫자를 포함하여 4~20글자 이내로 작성이 가능합니다.");
+                if(!getYouId.test($("#youId").val())){
+                    $("#youIdComment").text("아이디는 영어와 숫자를 포함하여 4~20자 이내로 작성가능합니다.")
                     $("#youId").val('')
                     $("#youId").focus();
                     return false;
                 } else {
-                    $("#youIdComment").text("멋진 아이디입니다.");
+                    $("#youIdComment").text("아이디로 사용이 가능합니다.")
                     $("#youIdComment").addClass("green");
                 }
 
                 $.ajax({
                     type: "POST",
                     url: "joinCheck.php",
-                    data: {
-                        "youId": youId,
-                        "type": "isIdCheck"
-                    },
+                    data: {"youId": youId, "type": "isIdCheck"},
                     dataType: "json",
-                    success: function(data) {
-                        if (data.result == "good") {
+                    success: function(data){
+                        if(data.result == "good"){
                             $("#youIdComment").text("사용 가능한 아이디입니다.");
                             isIdCheck = true;
                         } else {
                             $("#youIdComment").text("이미 존재하는 아이디입니다.");
                             isIdCheck = false;
                         }
-                    },
-                    error: function(xhr, status, error) {
-                        console.log("AJAX 오류: " + error);
-                        // 오류 처리 코드 추가
                     }
-                });
+                })
             }
         }
 
-        function emailChecking() {
+        function emailChecking(){
             let youEmail = $("#youEmail").val();
 
-            if (youEmail == null || youEmail == '') {
-                $("#youEmailComment").text("** 이메일을 입력해주세요!!!");
+            if(youEmail == null || youEmail == ''){
+                $("#youEmailComment").text("**이메일을 입력해주세요");
             } else {
                 // 이메일 유효성 검사
                 let getYouEmail = RegExp(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([\-.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i);
 
-                if (!getYouEmail.test($("#youEmail").val())) {
-                    $("#youEmailComment").text("** 올바른 이메일 주소를 입력해주세요!");
+                if(!getYouEmail.test($("#youEmail").val())){
+                    $("#youEmailComment").text("**올바른 이메일을 입력해주세요")
                     $("#youEmail").val('')
                     $("#youEmail").focus();
                     return false;
                 } else {
-                    $("#youEmailComment").text("올바른 이메일입니다.");
+                    $("#youEmailComment").text("이메일로 사용이 가능합니다.")
                 }
 
                 $.ajax({
                     type: "POST",
                     url: "joinCheck.php",
-                    data: {
-                        "youEmail": youEmail,
-                        "type": "isEmailCheck"
-                    },
+                    data: {"youEmail": youEmail, "type": "isEmailCheck"},
                     dataType: "json",
-                    success: function(data) {
-                        if (data.result == "good") {
+                    success: function(data){
+                        if(data.result == "good"){
                             $("#youEmailComment").text("사용 가능한 이메일입니다.");
                             isEmailCheck = true;
                         } else {
@@ -228,33 +204,32 @@
             }
         }
 
+        function joinChecks(){
 
-        function joinChecks() {
             // 중복 확인이 이루어 졌는지 검사
-            if (!isIdCheck) {
-                //|| !isEmailCheck) {
-                alert("중복 검사를 먼저 진행해주세요!");
+            if(!isIdCheck || !isEmailCheck){
+                alert("중복 검사를 먼저 진행해주세요.");
                 return false;
             }
 
-            // 이름 유효성 검사 
-            if ($("#youName").val() == '') {
-                $("#youNameComment").text("이름을 입력해주세요!");
+            // 이름 유효성 검사
+            if($("#youName").val() == ''){
+                $("#youNameComment").text("이름을 입력해주세요.");
                 $("#youName").focus();
                 return false;
             } else {
                 let getYouName = RegExp(/^[가-힣]{3,5}$/);
 
-                if (!getYouName.test($("#youName").val())) {
-                    $("#youNameComment").text("이름은 한글(3~5글자)만 사용할 수 있습니다.");
+                if(!getYouName.test($("#youName").val())){
+                    $("#youNameComment").text("이름은 한글(3-5자)만 사용가능합니다.");
                     $("#youName").val('');
                     $("#youName").focus();
                     return false;
                 }
             }
-            // 비밀번호 유효성 검사 
-            if ($("#youPass").val() == '') {
-                $("#youPassComment").text("비밀번호를 입력해주세요!");
+                // 비밀번호 유효성 검사
+                if($("#youPass").val() == ''){
+                $("#youPassComment").text("**비밀번호를 입력해주세요");
                 $("#youPass").focus();
                 return false;
             } else {
@@ -263,43 +238,41 @@
                 let getYouPassEng = getYouPass.search(/[a-z]/ig);
                 let getYouPassSpe = getYouPass.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
 
-                if (getYouPass.length < 8 || getYouPass.length > 20) {
+                if(getYouPass.length < 8 || getYouPass.length > 20){
                     $("#youPassComment").text("➟ 8자리 ~ 20자리 이내로 입력해주세요");
                     return false;
-                } else if (getYouPass.search(/\s/) != -1) {
+                } else if (getYouPass.search(/\s/) != -1){
                     $("#youPassComment").text("➟ 비밀번호는 공백없이 입력해주세요!");
                     return false;
-                } else if (getYouPassNum < 0 || getYouPassEng < 0 || getYouPassSpe < 0) {
+                } else if (getYouPassNum < 0 || getYouPassEng < 0 || getYouPassSpe < 0 ){
                     $("#youPassComment").text("➟ 영문, 숫자, 특수문자를 혼합하여 입력해주세요!");
                     return false;
-                }
+                } 
             }
-
-            // 비밀번호 체크에 대한 유효성 
-            // 비밀번호 확인 유효성 검사
-            if ($("#youPassC").val() == '') {
+             // 비밀번호 확인 유효성 검사
+             if($("#youPassC").val() == ''){
                 $("#youPassCComment").text("➟ 확인 비밀번호를 입력해주세요!");
                 $("#youPassC").focus();
                 return false;
             }
 
             // 비밀번호 동일한지 체크
-            if ($("#youPass").val() !== $("#youPassC").val()) {
+            if($("#youPass").val() !== $("#youPassC").val()){
                 $("#youPassCComment").text("➟ 비밀번호가 일치하지 않습니다.");
                 $("#youPass").focus();
                 return false;
-            }
+            } 
             // 연락처 유효성 검사
             let getYouPhone = RegExp(/^[0-9]{10,11}$/); // 10자리 또는 11자리 숫자);
 
-            if (getYouPhone.test($("#youPhone").val())) {
+            if(!getYouPhone.test($("#youPhone").val())){
                 $("#youPhoneComment").text("➟ 휴대폰 번호가 정확하지 않습니다.(하이픈 없이 숫자만 적어주세요!)");
                 $("#youPhone").val('');
                 $("#youPhone").focus();
             }
-
         }
     </script>
+
     <script>
         // 우편번호 찾기 화면을 넣을 element
         const layer = document.querySelector("#layer");
@@ -329,7 +302,7 @@
         function searchBtnClick() {
             new daum.Postcode({
                 theme: themeObj,
-                oncomplete: function(data) {
+                oncomplete: function (data) {
                     // 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
 
                     // 각 주소의 노출 규칙에 따라 주소를 조합한다.
@@ -407,5 +380,4 @@
         }
     </script>
 </body>
-
 </html>

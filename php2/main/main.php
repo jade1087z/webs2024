@@ -28,7 +28,7 @@
     <main id="main" role="main">
         <div class="intro__inner bmStyle container">
             <div class="intro__img">
-                <img srcset="../assets/img/main.jpg, ../assets/img/main@2.jpg, ../assets/img/main@3.jpg" alt="">
+                <img srcset="../assets/img/gold.jpg, ../assets/img/gold@2.jpg, ../assets/img/gold@3.jpg" alt="">
             </div>
             <div class="intro__text">
                 어떤 일이라도 노력하고 즐기면 그 결과는 빛을 바란다고 생각합니다.

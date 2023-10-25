@@ -33,11 +33,31 @@
       <ul>
         <li><a href="connect/connect.php">DB 접속(connect.php)</a></li>
         <li><a href="main/main.php">메인(main.php)</a></li>
-        <li><a href="create/createMember.php">멤버테이블 생성(createMember.php)</a></li>
         <li><a href="join/joinAgree.php">회원가입 : 이용 약관(joinAgree.php)</a></li>
         <li><a href="join/joinInsert.php">회원가입 : 정보 입력(joinMember.php)</a></li>
-        <li><a href="join/joinCheck.php">회원가입 : 정보 체크(joinMember.php)</a></li>
-        <li><a href="join/joinResult.php">회원가입 : 가입 완료(joinMember.php)</a></li>
+        <li><a href="join/joinCheck.php">회원가입 : 정보 체크(joinCheck.php)</a></li>
+        <li><a href="join/joinResult.php">회원가입 : 가입 완료(joinResult.php)</a></li>
+        
+        
+        <li><a href="create/createMember.php">멤버테이블 생성(createMember.php)</a></li>
+        <li><a href="create/createBlog.php">블로그테이블 생성(createblog.php)</a></li>
+
+
+
+        <li><a href="blog/blog.php">블로그 (blog.php)</a></li>
+        <li><a href="blog/blogWrite.php">블로그 (blogWrite.php)</a></li>
+        <li><a href="blog/blogView.php">블로그 (blogView.php)</a></li>
+        <li><a href="blog/blogWrite.php">블로그 (blogWrite.php)</a></li>
+
+        <!--  블로그 인서트 쿼리문 -->
+        <!-- 오류  $sql = "INSERT INTO blog(memberId, blogTitle, blogContents, blogCategory, blogAuthor, blogRegTime, blogView, blogLike, blogImgFile, blogImgSize, blogModTime, blogDelete) VALUES ('$memberId', '$blogTitle', '$blogContents', '$blogCategory', '$blogAuthor', '$blogLike', '$blogRegTime', '$blogView', '$blogLike', '$blogFile')";
+             오류 $sql = "INSERT INTO blog(memberId, blogTitle, blogContents, blogCategory, blogAuthor, blogRegTime, blogView, blogLike, blogImgFile, blogImgSize, blogModTime, blogDelete) VALUES ('$memberId', '$blogTitle', '$blogContents', '$blogCategory', '$blogAuthor', '$blogLike', '$blogRegTime', 'Img_default.jpg', '$blogView', '$blogLike', '$blogFile')";
+        
+             이미지 있는 경우 
+             $sql = "INSERT INTO blog(memberId, blogTitle, blogContents, blogCategory, blogAuthor, blogRegTime, blogView, blogLike, blogImgFile, blogImgSize, blogDelete) VALUES('$memberId', '$blogTitle', '$blogContents', '$blogCategory', '$blogAuthor', '$blogRegTime', '$blogView', '$blogLike', '$blogImgName', '$blogImgSize', '$blogDelete')";
+        
+             이미지 없는 경우 
+            $sql = "INSERT INTO blog(memberId, blogTitle, blogContents, blogCategory, blogAuthor, blogRegTime, blogView, blogLike, blogImgFile, blogImgSize, blogModTime, blogDelete) VALUES ('$memberId', '$blogTitle', '$blogContents', '$blogCategory', '$blogAuthor', '$blogLike', '$blogRegTime', 'Img_default.jpg', '$blogView', '$blogLike', '$blogFile')"; -->
       </ul>
     </div>
   </body>
