@@ -1,3 +1,5 @@
+@import "commentBtn.css";
+
 .view_wrap {
     border-bottom: 1px dashed var(--gray);
 }
@@ -7,8 +9,7 @@
 }
 .view_top h5 {
     font-weight: 800;
-    font-size: 1.2rem;
-    
+    font-size: 1.35rem;
     white-space: nowrap;
     /* 텍스트를 한 줄에 표시 */
     overflow: hidden;
@@ -45,41 +46,10 @@
     margin: 5px 0;
 }
 .user_info {
-    display: flex;
-    min-width: 270px;
-    width: 30%;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-}
-.user_info img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 15px;
+    width: 55%;
 }
 .user_info p {
-    font-size: 1.1rem;
-}
-.user_info ul {
-    display: flex;
-    font-size: 0.85rem;
-    margin-left: 10px;
-}
-.user_info li {
-    padding: 0 10px;
-    color: #555;
-    border-right: 2px solid rgb(219, 219, 219);
-}
-
-.user_info li:first-child {
-    padding-left: 0;
-}
-
-.user_info li:last-child {
-    padding-right: 0;
-    border-right: none;
+    font-size: 1rem;
 }
 
 .user_info p:hover,
@@ -89,20 +59,9 @@
     text-decoration: underline;
     text-underline-position: under ;
 }
+
 /* 로그인하지 않음 */
 
-.not_user p {
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--black);
-}
-
-.not_user p i {
-    font-size: 1.8rem;
-    color: var(--mcolor);
-    
-    margin: 15px 10px 10px 8px;
-}
 
 .board_desc {
     display: flex;
@@ -124,46 +83,73 @@
     margin-bottom: 1.5rem;
 }
 .board_detail em {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 1.5rem;
     line-height: 1.5;
     height: 9rem;
     padding: 1rem 1rem 1rem 1.5rem;
+    font-weight: 600;
     overflow-y: auto;
-    background-color: var(--white100);
-    border: 1px solid var(--gray);
     color: var(--black100);
-    border-radius: 5px;
 }
-.up_down {
-    width: 60%;
 
-    cursor: pointer;
+
+/* 추천 비추 버튼  */
+.comment_summary {
+    border-top: 1px dashed var(--gray);
+}
+.comment_summary ul li {
+    font-weight: 700;
+}
+.comment_summary {
+    padding: 1.2rem 0;
+}
+.comment_summary ul {
+    padding: 0.5rem 1rem;
+}
+.comment_summary ul li {
     font-size: 1.1rem;
-    transition: all 0.2s;
     display: flex;
-    justify-content: space-evenly;
-    margin: 15px auto 0 auto;
+    align-items: center;
+    flex-direction: column-reverse;   
 }
-.up_down span {
-    display: block;
-}
-.up_down i {
+.comment_summary ul li i {
     margin-right: 0.2rem;
 }
-.up_down .good:hover {
-    color: var(--mcolor);
+.comment_summary ul li span {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: .9rem;
+    display: block;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    background-color: #eee;
+    color: var(--black200);
+    cursor: pointer;
+    transition: all 0.4s;
 }
-.good.up {
+
+.comment_summary ul li:hover span {
+    color: var(--white);
+    background-color: var(--mcolor);
+}
+.comment_summary ul li p {
+    color: var(--black100);
+    font-size: .9rem;
+}
+
+.comment_summary ul li:hover i,
+.comment_summary ul li:hover p {
     color: var(--mcolor);
 }
 
-.up_down .bad:hover {
-    color: var(--red);
-}
-.down.bad {
-    color: var(--red);
-}
+
+/* btn js */
+
+/*  버튼 끝  */
+
 
 @media (max-width: 1150px) {
 
@@ -206,5 +192,14 @@
 
 @media (max-width: 650px) {
     /* 회원정보 태그 깨짐 */
-    .user_info {}
+    .view_box {
+        flex-direction: column;
+    }
+    .back_list {
+        margin-top: 5px;
+    }
+    .button-list > button {
+        margin-left: 0;
+        padding: 7px 12px;
+    }
 }

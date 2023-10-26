@@ -38,12 +38,19 @@
                 <h1>CSS 속성 난이도 검색하기</h1>
             </div>
             <div class="search__star">
-                <ul>
+                <!-- <ul>
                     <li>⭐ <span><br>사용 안함</span></li>
                     <li>⭐⭐ <span><br>가끔 사용</span></li>
                     <li>⭐⭐⭐ <span><br>보통 사용</span></li>
                     <li>⭐⭐⭐⭐ <span><br>자주 사용</span></li>
                     <li>⭐⭐⭐⭐⭐<span><br>많이 사용</span></li>
+                </ul> -->
+                <ul>
+                    <li data-star="1" data-desc="사용 안함">⭐</li>
+                    <li data-star="2" data-desc="가끔 안함">⭐⭐</li>
+                    <li data-star="3" data-desc="보통 안함">⭐⭐⭐</li>
+                    <li data-star="4" data-desc="자주 안함">⭐⭐⭐⭐</li>
+                    <li data-star="5" data-desc="필수 안함">⭐⭐⭐⭐⭐</li>
                 </ul>
             </div>
             <div class="search__info">
@@ -462,58 +469,64 @@
 
 
         const searchList = document.querySelector(".search__list ul");
-        const searchResult = document.querySelector(".num");
+        const searchStarItem = document.querySelectorAll(".search__star li");
+        // const searchResult = document.querySelector(".num");
+        const searchCount = document.querySelector(".num");
+
         const searchBox = document.querySelector(".search__box input");
         const searchBtn = document.querySelector(".search__box label");
         const searchSelect = document.querySelectorAll(".search__select span");
         const allBtn = document.querySelectorAll(".allBtn");
         const searchBoxResult = document.querySelector(".search__box__result");
 
-        function listUpdate(list) {
-            // cssProperty.map((css, index) => {
+        // function listUpdate(list) {
 
-            //     const cssStar = `${css.star}`;
+        //     let listItem = "";
 
-            //     // 별을 생성하는 함수
-            //     function generateStars(numStars) {
-            //         let stars = '';
-            //         for (let i = 0; i < numStars; i++) {
-            //             stars += "⭐";
-            //         }
-            //         return stars;
-            //     }
-            //     searchList.innerHTML += `<li><span><em>${css.name} : </em>${css.desc}<i>${generateStars(cssStar)}</i></span></li>`;
-            // })
+        //     for (const data of list) { // cssProperty가 들어와야함 
+        //         const dataStar = `${data.star}`;
 
-            // const cssStar에 객체의 star값의 정수를 저장
-            // 빈문자열을 선언하고 그값에 cssStar만큼의 값을 반복적으로 별을 대입함
-            // 그 값을 반환
-            // 함수를 사용
-            
-            
-            // --> 즉 
-            //  숫자를 넣으면 그 숫자만큼 반복해서 별을 출력함 
+        //         function generateStars(numStar) {
+        //             let stars = '';
+        //             for (let i = 0; i < numStar; i++) {
+        //                 stars += "⭐";
+        //             }
+        //             return stars;
+        //         };
 
-            let listItem = "";
+        //         listItem += `<li><span><em>${data.name} : </em>${data.desc}<i>${generateStars(dataStar)}</i></span></li>`;  내가한거
 
-            for (const data of list) { // cssProperty가 들어와야함 
-                const dataStar = `${data.star}`;
+        //        
 
-                function generateStars(numStar) {
-                    let stars = '';
-                    for (let i = 0; i < numStar; i++) {
-                        stars += "⭐";
-                    }
-                    return stars;
-                };
+        //     };
 
-                listItem += `<li><span><em>${data.name} : </em>${data.desc}<i>${generateStars(dataStar)}</i></span></li>`;
-            };
-
-            searchList.innerHTML = listItem;
-        };
-        listUpdate(cssProperty);
+        //     searchList.innerHTML = listItem;
+        //     searchCount.textContent = list.length;
+        //     // searchList.innerHTML = listItem;
+        // };
+        // listUpdate(cssProperty);
         // 필터 사용해서 해당 값 뽑아보기
+
+        function listUpdate(list) { // 선생님편
+            let listItem = "";
+            for (const data of list) {
+                let listStar = searchStarItem[data.star-1].innerText;
+                console.log(listStar);
+                listItem += `<li><stron>${data.name}</strong> : ${data.desc}<em>${listStar}</em></li>`;
+            }
+            searchList.innerHTML = listItem;
+            searchCount.textContent = list.length;
+        }
+        listUpdate(cssProperty);
+
+        searchStarItem.forEach(star => {
+            star.addEventListener("click", () => {
+                const target = star.dataset.star;
+                // const filterList = cssProperty.filter(data => data.star == target);
+                const filterList = cssProperty.filter(data => data.star >= target);
+                listUpdate(filterList);
+            })
+        })
     </script>
 </body>
 

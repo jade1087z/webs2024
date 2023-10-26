@@ -9,19 +9,16 @@
 
 
 .button-list > button {
-    --background: #275efe;
     --text: #fff;
-    --font-size: 16px;
+    --font-size: 1rem;
     --duration: 0.44s;
-    --move-hover: -4px;
-    --shadow: 0 2px 8px -1px rgba(39, 94, 254, 0.32);
-    --shadow-hover: 0 4px 20px -2px rgba(39, 94, 254, 0.5);
     --font-shadow: var(--font-size);
-    padding: 16px 32px;
+    /* padding: 16px 32px; */
+    padding: 10px 18px;
     font-family: 'Roboto';
     font-weight: 500;
     line-height: var(--font-size);
-    border-radius: 24px;
+    border-radius: 6px;
     display: block;
     outline: none;
     appearance: none;
@@ -29,11 +26,11 @@
     text-decoration: none;
     font-size: var(--font-size);
     letter-spacing: 0.5px;
-    background: var(--background);
+    background: var(--mcolor);
     color: var(--text);
-    box-shadow: var(--shadow);
-    transform: translateY(var(--y)) translateZ(0);
-    transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+    /* box-shadow: var(--shadow); */
+    /* transform: translateY(var(--y)) translateZ(0); */
+    /* transition: transform var(--duration) ease, box-shadow var(--duration) ease; */
 }
 
 .button-list > button div {
@@ -51,12 +48,12 @@
 }
 
 .button-list > button:hover {
-    --y: var(--move-hover);
-    --shadow: var(--shadow-hover);
+    /* --y: var(--move-hover); */
+    /* --shadow: var(--shadow-hover); */
 }
 
 .button-list > button.reverse {
-    --font-shadow: calc(var(--font-size) * -1);
+    /* --font-shadow: calc(var(--font-size) * -1); */
 }
 
 .button-list > button.reverse:hover span {
@@ -106,4 +103,10 @@ body {
 .dribbble img {
     display: block;
     height: 28px;
+}
+
+@media (max-width: 650px) {
+    /* 회원정보 태그 깨짐 */
+    
+   
 }
