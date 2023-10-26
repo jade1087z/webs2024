@@ -1,0 +1,109 @@
+.button-list .dark {
+    --background: #2F3545;
+    --shadow: 0 2px 8px -1px rgba(21, 25, 36, 0.32);
+    --shadow-hover: 0 4px 20px -2px rgba(21, 25, 36, 0.5);
+    cursor: pointer;
+}
+
+
+
+
+.button-list > button {
+    --background: #275efe;
+    --text: #fff;
+    --font-size: 16px;
+    --duration: 0.44s;
+    --move-hover: -4px;
+    --shadow: 0 2px 8px -1px rgba(39, 94, 254, 0.32);
+    --shadow-hover: 0 4px 20px -2px rgba(39, 94, 254, 0.5);
+    --font-shadow: var(--font-size);
+    padding: 16px 32px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    line-height: var(--font-size);
+    border-radius: 24px;
+    display: block;
+    outline: none;
+    appearance: none;
+    border: none;
+    text-decoration: none;
+    font-size: var(--font-size);
+    letter-spacing: 0.5px;
+    background: var(--background);
+    color: var(--text);
+    box-shadow: var(--shadow);
+    transform: translateY(var(--y)) translateZ(0);
+    transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+}
+
+.button-list > button div {
+    display: flex;
+    overflow: hidden;
+    text-shadow: 0 var(--font-shadow) 0 var(--text);
+}
+
+.button-list > button span {
+    display: block;
+    backface-visibility: hidden;
+    font-style: normal;
+    transition: transform var(--duration) ease;
+    transform: translateY(var(--m)) translateZ(0);
+}
+
+.button-list > button:hover {
+    --y: var(--move-hover);
+    --shadow: var(--shadow-hover);
+}
+
+.button-list > button.reverse {
+    --font-shadow: calc(var(--font-size) * -1);
+}
+
+.button-list > button.reverse:hover span {
+    --m: calc(var(--font-size));
+}
+
+/* HTML styles */
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Body styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    font-family: 'Roboto', Arial;
+    justify-content: center;
+    align-items: center;
+    background: #E4ECFA;
+}
+
+.button-list {
+    display: flex;
+}
+
+.button-list button {
+    margin: 0 12px;
+}
+
+.dribbble {
+    position: fixed;
+    display: block;
+    right: 20px;
+    bottom: 20px;
+}
+
+.dribbble img {
+    display: block;
+    height: 28px;
+}
