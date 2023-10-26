@@ -203,22 +203,25 @@
 
         // 랜덤 정렬하기
         document.querySelector(".btn6").addEventListener("click", () => {
-            cssProperty.sort((a, b) => {
-                let x = a.name;
-                let y = b.name;
-                return y.localeCompare(x);
-            });
+            getRandom(cssProperty);
             listUpdate();
         });
 
         // 랜덤 함수 만들기
 
-        const getRandom = (a, b) => { 
-            let x = Math.floor(Math.random() )
-
-
-
+        const getRandom = (cssProperty) => { 
+            for(let i=cssProperty.length-1; i>0; i--){ // 0 부터 i의 최대값
+                let x = Math.floor(Math.random() * (i+1));
+                [cssProperty[i], cssProperty[x]] = [cssProperty[x], cssProperty [i]];
+            }
         }
+
+        
+        console.log(cssProperty);
+        for(let i=5; i>0; i--){
+                let x = Math.floor(Math.random() * (i+1));
+                console.log(x);
+            }
 
     </script> 
 </body>
