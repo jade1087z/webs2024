@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/testcss.css">
+    <style>
+     
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo">
+                <img src="../layout/img/logo.svg" alt="">
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href=""> menu</a>
+                        <ul class="none">
+                            <li> <a href="#">sub1</a></li>
+                            <li> <a href="#">sub1</a></li>
+                            <li> <a href="#">sub1</a></li>
+                            <li> <a href="#">sub1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href=""> menu</a>
+                        <ul class="none">
+                            <li> <a href="#">sub1</a></li>
+                            <li> <a href="#">sub1</a></li>
+                            <li> <a href="#">sub1</a></li>
+                            <li> <a href="#">sub1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href=""> menu</a>
+                        <ul class="none">
+                            <li> <a href="#">sub1</a></li>
+                            <li> <a href="#">sub1</a></li>
+                            <li> <a href="#">sub1</a></li>
+                            <li> <a href="#">sub1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href=""> menu</a>
+                        <ul class="none">
+                            <li> <a href="#">sub1</a></li>
+                            <li> <a href="#">sub1</a></li>
+                            <li> <a href="#">sub1</a></li>
+                            <li> <a href="#">sub1</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+        </header>
+        <article id="slider">
+            <div class="container">
+                <div class="sliderWrap">
+                    <div class="slider s1">
+                        <a href="#">
+                            <img src="img/slider01.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="slider s2">
+                        <a href="#">
+                            <img src="img/slider02.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="slider s3">
+                        <a href="#">
+                            <img src="img/slider03.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+        <main id="contents">
+            <div class="container">
+                <section class="notice">
+                    <h3>산업대학교 새로운 소식</h3>
+                    <ul>
+                        <li class="popup__btn"><a href="#">2023년 신입생 모집</a><span>2023.05.04</span></li>
+                        <li><a href="#">2023년 신입생 모집</a><span>2023.05.04</span></li>
+                        <li><a href="#">2023년 신입생 모집</a><span>2023.05.04</span></li>
+                        <li><a href="#">2023년 신입생 모집</a><span>2023.05.04</span></li>
+                    </ul>
+                </section>
+
+                <section class="gallery">
+                    <h3>우리학교 풍경</h3>
+                    <ul>
+                        <li><a href="#"><img src="img/gallery01.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="img/gallery02.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="img/gallery03.jpg" alt=""></a></li>
+                    </ul>
+                </section>
+                <section class="banner">
+                    <h3>산업대학교<br>2023<br>체육대전</h3>
+                    <a href="#">바로가기</a>
+                </section>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <div class="footer1">
+                <div class="footer1_1">
+                    <ul>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">홈페이지 운영지침</a></li>
+                        <li><a href="#">정보공개</a></li>
+                    </ul>
+                </div>
+                <div class="footer1_2">
+                    15073 경기도 안산시 산기대학로 237 (정왕동) 산업대학교 COPYRIGHT(C) ALL RIGHTS RESERVED.
+                </div>
+            </div>
+            <div class="footer2">
+                <select name="#" id="#">
+                    <option>패밀리 사이트</option>
+                    <option value="">안양 산업대학교</option>
+                    <option value="">안양 산업대학교</option>
+                    <option value="">안양 산업대학교</option>
+                </select>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="../layout/js/query.min.js"></script>
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        let currentIndex = 0;
+        const sliderWrap = document.querySelector(".sliderWrap");
+        const slider = document.querySelectorAll(".slider");
+        let slider1 = sliderWrap.firstElementChild.cloneNode(true);
+        sliderWrap.appendChild(slider1);
+
+        const top = document.querySelectorAll("#nav > ul ");
+        const topUl = document.querySelectorAll("#nav > ul > li > ul ");
+
+
+
+        top.forEach(top => {
+            top.addEventListener("mouseover", () => {
+                console.log("D");
+                topUl.forEach(ul => {
+                    ul.classList.add("on");
+                });
+            })
+            top.addEventListener("mouseout", () => {
+                topUl.forEach(ul => {
+                    ul.classList.remove("on");
+                });
+            })
+        });
+
+        setInterval(() => {
+            // 일정 시간마다 
+            currentIndex++;
+            sliderWrap.classList.add("slide-transition");
+            sliderWrap.style.marginLeft = `${-1200*currentIndex}px`;
+
+            if (currentIndex === slider.length)
+                setTimeout(() => {
+                    
+                    sliderWrap.classList.remove("slide-transition");
+                    sliderWrap.style.marginLeft = "0";
+                    currentIndex = 0;
+                }, 700)
+
+
+        }, 3000)
+
+    })
+</script>
+
+</html>

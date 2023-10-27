@@ -1,10 +1,10 @@
 $(function(){
-    //�대�吏� �щ씪�대뱶
-    let currentIndex =0; //�꾩옱 �대�吏�
+    
+    let currentIndex =0;
     $(".sliderWrap").append($(".slider").first().clone(true));
 
     setInterval(() => {
-        currentIndex++;     //�꾩옱 �대�吏� 1�� 利앷�
+        currentIndex++;     
         $(".sliderWrap").animate({marginLeft: -1200 * currentIndex}, 600);
 
         if(currentIndex == 3) {
@@ -15,7 +15,7 @@ $(function(){
         }
     }, 3000);
 
-    // 硫붾돱
+   
     $(".nav > ul > li").mouseover(function(){
         $(".nav > ul > li > ul").stop().fadeIn(400);
         $("#header .container").addClass("on");
@@ -25,7 +25,6 @@ $(function(){
         $("#header .container").removeClass("on");
     });
 
-    // �앹뾽
     $(".popup__btn").click(function(){
         $(".popup__view").show();
     });

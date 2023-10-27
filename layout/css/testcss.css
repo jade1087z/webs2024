@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    height: 100px;
+}
+
+#slider {
+    width: 100%;
+    height: 300px;
+}
+#slider .container {
+    overflow: hidden;
+}
+#slider .container .sliderWrap {
+    display: flex;
+    width: 400%;
+}
+#slider .container .sliderWrap .slider {
+    position: relative;
+    width: 1200px;
+}
+#slider .container .sliderWrap .slider a {
+    display: block;
+}
+
+#contents {
+    width: 100%;
+}
+#contents .container {
+    display: flex;
+}
+#contents .container .notice {
+    width: 400px;
+    height: 200px;
+    background-color: #d1d1d1;
+    padding: 25px 20px;
+    box-sizing: border-box;
+}
+
+#contents .container .notice h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+#contents .container .notice ul {}
+#contents .container .notice li {
+    display: flex;
+    position: relative;
+    padding-left: 14px;
+    line-height: 1.8;
+}
+#contents .container .notice li:before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: #333;
+    position: absolute;
+    left: 0;
+    top: 11px;
+    border-radius: 50%;
+}
+#contents .container .notice li a {
+    width: 70%;
+    background-color: #c7c7c7;
+}
+#contents .container .notice li a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+#contents .container .notice li span {
+    width: 30%;
+    text-align: right;
+    background-color: #ddd;
+}
+
+#contents .container .gallery {
+    width: 400px;
+    height: 200px;
+    padding: 25px 20px;
+    box-sizing: border-box;
+}
+#contents .container .gallery h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+#contents .container .gallery ul {
+    display: flex;
+    justify-content: space-between;
+}
+#contents .container .gallery li {
+    width: 100px
+}
+#contents .container .gallery li a {}
+
+#contents .container .banner {
+    width: 400px;
+    height: 200px;
+    background: url(../img/banner.jpg);
+    text-align: center;
+}
+#contents .container .banner h3 {
+    padding-top: 40px;
+    font-size: 24px;
+    color: #fff;
+}
+#contents .container .banner a {
+    background-color: orange;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    border-radius: 40px;
+    transition: all 0.3s;
+    margin-top: 3px;
+}
+#contents .container .banner a:hover {
+    border-radius: 0;
+}
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+.footer1 {
+    width: 80%;
+}
+.footer1 .footer1_1 ul {
+ 
+}
+.footer1 .footer1_1 ul li {
+    display: inline;
+    border-right: 1px solid #333;
+}
+.footer1 .footer1_1 ul li a {
+    padding: 18px 10px 16px 0;
+    color: black;
+    display: inline-block;
+}
+.footer1 .footer1_1 ul li a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.footer2 {
+    width: 20%;
+ 
+}
+.footer2 select {
+    margin-top: 34px;
+    width: 100%;
+    height: 30px;
+}
+
+
+.logo {
+    width: 20%;
+}
+
+nav {
+    width: 80%;
+    display: flex;
+    justify-content: right;
+    z-index: 10000;
+}
+
+nav > ul {
+    display: flex;
+    text-align: center;
+    position: relative;
+}
+nav > ul > li {
+    position: relative;
+}
+nav > ul > li > a {
+    display: block;
+    padding: 15px 40px;
+    font-weight: bold;
+} 
+nav > ul > li > a:hover {
+    background-color: #ffe39c;
+}
+nav > ul > li > ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    background-color: #fff;
+}
+nav > ul > li > ul > li > a {
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+}
+nav > ul > li > ul > li > a:hover {
+    background-color: #ffe090;
+    color: #000;
+}
+
+
+
+
+
+
+.on {
+    display: block;
+}
+.slide-transition {
+    transition: margin-left 0.6s;
+}
