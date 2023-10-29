@@ -1,0 +1,29 @@
+body {
+  background-color: #111;
+}
+
+div#container {
+    margin: 0px auto;
+    width: 80%;
+    height: auto;
+}
+
+svg#main {
+    max-width: 100%;
+}
+
+
+/* single styles */
+
+#StartButton {
+  cursor: pointer;
+}
+#volume-knob {
+  cursor: ns-resize;
+}
+#needle-arm {
+  cursor: move;
+}
+#vinyl {
+  cursor: pointer;
+}
