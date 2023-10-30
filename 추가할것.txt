@@ -69,3 +69,4 @@
 메서드 
 4. SETiNTERVAL
 5. CLEARiNTERVAL
+

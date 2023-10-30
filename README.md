@@ -28,3 +28,9 @@ https://circumicons.com/
 
 ## git 기본 명령어 사이트
 https://velog.io/@simchodi/Git-%EC%B4%88%EA%B8%B0%EC%84%B8%ED%8C%85-%EA%B8%B0%EB%B3%B8%EB%AA%85%EB%A0%81%EC%96%B4
+
+## 오늘 할일
+취중진담 데이터베이스 구축하기
+1. board : boardId, boardTitle, boardDesc, boardImage, regTime, boardView, boardLike, 
+2. member : memberId, youId, youName, youPass, youPhone, youEmail, youBirth, regTime, 
+3. comment
