@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>취중진담</title>
-
+    <a href="https://www.flaticon.com/kr/free-icons/" title="심장 아이콘"></a>
     <!-- meta -->
     <meta name="author" content="취중진담">
     <meta name="description" content="프론트엔드 개발자 포트폴리오 조별과제 사이트입니다.">
@@ -93,14 +93,15 @@
                                     <p><em>홍길동님의 </em>게시글 더보기 ></p>
                                 </div>
                             </div>
-                            <div class="back_list"><a href="#view_comment">
-                                    <div class="button-list">
-                                        <button class="delete"><a href="#">삭제하기</a></button>
-                                        <button class="modify"><a href="#">수정하기</a></button>
-                                    </div>
-                                </a>
+                            <div class="view_info">
+                                <div class="info_list">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <div class="view_num">추천수: <em>1</em></div>
+                                    <div class="view_num">조회수: <em>1</em></div>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                     <div class="board_desc">
                         <div class="board_detail">
@@ -112,13 +113,14 @@
                         </div>
                     </div>
                     <div class="comment_summary">
-                        <ul>
-                            <li>
-                                <p><i class="fa-regular fa-thumbs-up"></i> 추천수</p> <span>15</span>
-                            </li>
-                        </ul>
+                        <div class="button_list">
+                            <button class="delete"><a href="#">삭제하기</a></button>
+                            <button class="modify"><a href="#">수정하기</a></button>
+                            <button class="good">추천하기</button>
+                        </div>
                     </div>
                 </div>
+
 
                 <!-- 작성된 후기 없음 -->
                 <!-- <div class="alcohol_review boxStyle roundCorner shaDow">
@@ -277,7 +279,8 @@
                         <li>
                             <a href="#">
                                 <div class="board_title">
-                                    <p>제목이 아주 긴 경우 :: 말줄임표__ 술 땡기는 금요일~ 곱창에 소주 땡기네요.술 땡기는 금요일~ 곱창에 소주 땡기네요.술 땡기는 금요일~
+                                    <p>제목이 아주 긴 경우 :: 말줄임표__ 술 땡기는 금요일~ 곱창에 소주 땡기네요.술 땡기는 금요일~ 곱창에 소주 땡기네요.술 땡기는
+                                        금요일~
                                         곱창에 소주 땡기네요.</p>
                                 </div>
                                 <div class="board_reaction">
@@ -368,5 +371,13 @@
     <!-- wrapper end -->
 
 </body>
+<script>
+    const likeBtn = document.querySelector(".good");
+    const heart = document.querySelector(".info_list i");
+
+    likeBtn.addEventListener("click", () => {
+        heart.classList.add("like");
+    });
+</script>
 
 </html>
