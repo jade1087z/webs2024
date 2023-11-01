@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>취중진담 게시글-쓰기</title>
- 
+
     <!-- meta -->
     <meta name="author" content="취중진담">
     <meta name="description" content="프론트엔드 개발자 포트폴리오 조별과제 사이트입니다.">
@@ -22,11 +22,11 @@
     <link href="../assets/css/fonts.css" rel="stylesheet" />
     <link href="../assets/css/style.css" rel="stylesheet" />
     <link href="../assets/css/common.css" rel="stylesheet" />
-    <link href="../assets/css/boardWrite.css"rel="stylesheet">
     <link href="../assets/css/boardWrite.css" rel="stylesheet">
 
     <!-- js -->
     <script src="../assets/js/scrollEvent.js"></script>
+    <script src="../assets/js/selectOption3.js"></script>
 </head>
 
 <body>
@@ -76,7 +76,7 @@
                 <div class="best_list boxStyle roundCorner shaDow ">
                     <div class="board">
                         <div class="board_form ">
-                            <form action="#" method="post">
+                            <form action="#" method="post" enctype="multipart/form-data">
                                 <legend class="blind"></legend>
                                 <div class="form_box">
                                     <div class="board_btn sideBtn">
@@ -84,13 +84,18 @@
                                     </div>
                                     <div class="board_text">
                                         <div class="post">
-                                            <ul class="link inputStyle mb20">
-                                                 <li class="active"><i class="fa-regular fa-image"></i><a href="#">Image</a></li>
-                                                <!--    <li class="active"><i class="fa-regular fa-file-lines"></i><a href="#">Post</a></li>
-                                                <li><i class="fa-solid fa-video"></i><a href="#"> Video</a></li>
-                                                <li><i class="fa-solid fa-link"></i><a href="#">Link</a></li>
-                                                <li><i class="fa-solid fa-location-dot"></i><a href="#">Place</a></li> -->
-                                            </ul>
+                                            <div class="selectBox3"><i class="fa-solid fa-angle-down"></i>
+                                                <button class="label">술 신청하기</button>
+                                                <ul class="optionList">
+                                                    <li class="optionItem">술 신청하기</li>
+                                                    <li class="optionItem">자유게시판</li>
+                                                    <li class="optionItem">마이 다이어리</li>
+                                                </ul>
+                                            </div>
+                                            <label for="File" class="link">이미지를 업로드 해주세요.!!</label>
+                                            <input type="file" id="File" name="File" style="display: none;"
+                                                accept=".jpg, .jpeg, .png, .gif, .webp" class="link">
+
                                         </div>
                                         <div class="board_title ">
                                             <label for="boardContents"></label>
@@ -105,7 +110,9 @@
                                                 placeholder="원하는 술을 신청해주세요"></textarea>
                                         </div>
                                         <div class="create">
-                                            <button type="submit" class="sideBtn mt50">술 신청하기</button>
+                                            <button type="submit" class="sideBtn mt50">
+                                                <h2>신청하기</h2>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
