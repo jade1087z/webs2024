@@ -1,6 +1,7 @@
-.board_form {}
+.board_form {
+}
 
-.board_form>form {
+.board_form > form {
     width: 100%;
     text-align: center;
     background-color: var(--board-color);
@@ -19,65 +20,30 @@
 /* 술 신청하기 end */
 
 .post {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    width: 95%;
+    display: inline-flex;
+    align-items: center;
+    padding-bottom: 10px;
 }
 
 .board_text .link {
-    width: 95%;
-    display: flex;
-    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    height: 4.6vh;
+    line-height: 45px;
+    padding: 0rem 0.8rem 0rem 0.8rem;
     background-color: #fff;
     border-radius: 5px;
-}
-
-.link {
     cursor: pointer;
-}
-
-.link li {
-    position: relative;
-    /* width: 146px; */
-    width: 200px;
-    padding: 0;
-    border-right: 1px solid var(--gray);
-    word-break: keep-all;
-    transition: all 0.2s;
-}
-
-.link li:hover i,
-.link li:hover a {
-    color: var(--icon-active);
-    transform: scale(0.95);
-}
-
-.link li.active {
-    color: var(--icon-active);
-    font-size: 1.3rem;
-}
-
-.link li i {
-    position: absolute;
-    /* left: 15px;
-    top: 5px; */
-    right: 130px;
-    top: 7px;
-}
-
-.link li a {
-    display: inline-block;
+    margin-left: 2rem;
+    color: var(--gray);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-weight: bold;
-}
-
-.link li:nth-child(1) i,
-.link li:nth-child(4) i,
-.link li:nth-child(5) i {
-    left: 25px;
-}
-
-.board_text div ul li:last-child {
-    border-right: none;
+    /* 폰트 컬러 좀더 진하게 바꾸기  */
 }
 
 /* 포스트 종류 */
@@ -101,11 +67,10 @@
     padding: 0 20px 20px 0;
 }
 
-.create>button {
+.create > button {
     display: block;
     width: 150px;
 }
-
 
 /* board view */
 .form_title {
@@ -199,33 +164,6 @@ table tbody tr td:nth-child(3):hover {
     border: 1px solid var(--gray);
 }
 
-/* 페이지네이션 작업  */
-
-
-
-/* 보드 서치 */
-/* .board_search form {
-}
-.board_search_box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-#search_input {
-    min-width: 240px;
-}
-.board_search_box input {
-    outline: none;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 10px;
-    color: #555;
-}
-
- */
-
-
 .board_search {
     margin: 0 auto;
 }
@@ -267,7 +205,6 @@ table tbody tr td:nth-child(3):hover {
     left: 8rem;
 }
 
-
 .select_compponent a:hover {
     color: #555;
     text-decoration: underline;
@@ -306,13 +243,120 @@ table tbody tr td:nth-child(3):hover {
     top: 23px;
     transform: translateY(-50%);
 }
+/* ********* */
 
+/* 셀렉트 박스시작 */
+.selectBox3 * {
+    box-sizing: border-box;
+}
 
+.selectBox3 {
+    padding: 20px 0;
+    position: relative;
+    width: 250px;
+    height: 45px;
+    border-radius: 6px;
+    border: 2px solid var(--gray);
+    /* background: url('https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png') calc(100% - 7px) center no-repeat; */
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    cursor: pointer;
+    background-color: var(--white);
+}
+.selectBox3 i {
+    font-size: 20px; /* 아이콘 크기 조정 */
+    color: var(--mcolor); /* 아이콘 색상 설정 */
+    position: absolute;
+    right: 4%;
+    bottom: 18%;
+}
+.selectBox3:after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 35px;
+    background: var(--gray);
+}
+
+.selectBox3 .label {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: inherit;
+    height: inherit;
+    border: 0 none;
+    outline: 0 none;
+    padding-left: 20px;
+    background: transparent;
+    cursor: pointer;
+    padding-bottom: 30px;
+}
+
+.selectBox3 .optionList {
+    position: absolute;
+    top: 41px;
+    left: 0;
+    width: 100%;
+    background: white;
+    color: var(--scolor);
+    border: 1px solid var(--gray);
+    outline: none;
+    border-top: none;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.3s ease-in;
+}
+
+.selectBox3.active .optionList {
+    max-height: 500px;
+}
+
+.selectBox3 .optionItem {
+    border-bottom: 1px dashed var(--mcolor);
+    padding: 5px 15px 5px;
+    transition: 0.1s;
+}
+
+.selectBox3 .optionItem:hover {
+    background: var(--mcolor);
+}
+
+.selectBox3 .optionItem:last-child {
+    border-bottom: 0 none;
+}
+
+.selectBox3 .optionList::-webkit-scrollbar {
+    width: 6px;
+}
+
+.selectBox3 .optionList::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.selectBox3 .optionList::-webkit-scrollbar-thumb {
+    background: #303030;
+    border-radius: 45px;
+}
+
+.selectBox3 .optionList::-webkit-scrollbar-thumb:hover {
+    background: #303030;
+}
+
+/* 셀렉트 박스 끝 */
+
+/* 반응형 시작 */
 
 @media (max-width: 1870px) {
     .board_search_option:nth-child(1) {
         margin-left: 160px;
-    } 
+    }
 }
 @media (max-width: 1800px) {
     .select_compponent a i {
@@ -322,11 +366,10 @@ table tbody tr td:nth-child(3):hover {
 @media (max-width: 1800px) {
     .board_search_option:nth-child(1) {
         margin-left: 250px;
-    } 
+    }
     .select_compponent a i {
         left: 6.5rem;
     }
-    
 }
 
 @media (max-width: 1750px) {
@@ -344,17 +387,17 @@ table tbody tr td:nth-child(3):hover {
     }
 }
 
-@media (max-width: 1580px) {  
+@media (max-width: 1580px) {
     .select_compponent a i {
         left: 9rem;
     }
 }
-@media (max-width: 1500px) {  
+@media (max-width: 1500px) {
     .select_compponent a i {
         left: 8rem;
     }
 }
-@media (max-width: 1420px) {  
+@media (max-width: 1420px) {
     .board_search_option:nth-child(1) {
         margin-left: 100px;
     }
@@ -364,16 +407,8 @@ table tbody tr td:nth-child(3):hover {
 }
 
 @media (max-width: 1400px) {
-
     .board_search_option:nth-child(1) {
         margin-left: 80px;
-    }
-    .link li {
-        margin-left: -25px;
-    }
-
-    .link li i {
-        left: 10px;
     }
 
     .select_compponent a i {
@@ -388,21 +423,11 @@ table tbody tr td:nth-child(3):hover {
     .select_compponent {
         margin-right: 0;
     }
-    .link li:nth-child(1) i,
-    .link li:nth-child(4) i,
-    .link li:nth-child(5) i {
-        left: 15px;
-    }
 }
 
 @media (max-width: 1200px) {
     .board_search_option:nth-child(1) {
         margin-left: 35px;
-    }
-    .link li:nth-child(1) i,
-    .link li:nth-child(4) i,
-    .link li:nth-child(5) i {
-        left: 10px;
     }
 }
 
@@ -415,12 +440,6 @@ table tbody tr td:nth-child(3):hover {
 @media (max-width: 1000px) {
     .board_search_option:nth-child(1) {
         margin-left: 10px;
-    }
-}
-
-@media (max-width: 950px) {
-    .link li i {
-        left: 5px;
     }
 }
 
@@ -443,9 +462,20 @@ table tbody tr td:nth-child(3):hover {
         width: 100%;
     }
 
-    .link {
+    .post {
+        flex-direction: column;
+    }
+    .selectBox3 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .selectBox3 i {
+        right: 2%;
+    }
+    .board_text .link {
+        width: 100%;
         height: 40px;
-        margin-bottom: 5px;
+        margin-left: 0;
     }
 
     .board_title {
@@ -464,57 +494,11 @@ table tbody tr td:nth-child(3):hover {
     .create button {
         width: 99%;
     }
-
-    .link li {
-        width: 120px;
-    }
-
-    .link li a {
-        margin-left: -20px;
-    }
-
-    .link li i {
-        font-size: 20px;
-        margin-top: 0px;
-        margin-left: -10px;
-    }
 }
-
-@media (max-width: 490px) {
-    .link li {
-        border: none;
-        display: inline-block;
-    }
-
-    .link li i {
-        margin-left: 9px;
-    }
-
-    .link li i:last-child {
-        margin-left: -125px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .select_list {
     display: none;
 }
-
 
 .none {
     display: none;
