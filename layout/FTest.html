@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ftest.css">
+    <title>Document</title>
+    <script src="js/query.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1 class="logo">
+                <a href="#">Vallery Festival</a>
+            </h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">축제소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">Festival</a></li>
+                            <li><a href="#">행사장 안내</a></li>
+                            <li><a href="#">조직위원회</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">예약안내</a>
+                        <ul class="submenu">
+                            <li><a href="#">Festival</a></li>
+                            <li><a href="#">행사장 안내</a></li>
+                            <li><a href="#">조직위원회</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">아티스트</a>
+                        <ul class="submenu">
+                            <li><a href="#">Festival</a></li>
+                            <li><a href="#">행사장 안내</a></li>
+                            <li><a href="#">조직위원회</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">커뮤니티</a>
+                        <ul class="submenu">
+                            <li><a href="#">Festival</a></li>
+                            <li><a href="#">행사장 안내</a></li>
+                            <li><a href="#">조직위원회</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main id="main">
+            <article id="slider">
+                <div class="sliderWrap">
+                    <div class="slider s1">
+                        <a href="#">
+                            <img src="images/slider4.jpg" alt="vallery festival">
+                        </a>
+                        <div class="text">
+                            <h2>vallery <em>festival</em></h2>
+                            <p>신나는 축제</p>
+                        </div>
+                    </div>
+                    <div class="slider s2">
+                        <a href="#">
+                            <img src="images/slider06.jpg" alt="vallery festival">
+                        </a>
+                        <div class="text">
+                            <h2>vallery <em>festival</em></h2>
+                            <p>신나는 축제</p>
+                        </div>
+                    </div>
+                    <div class="slider s3">
+                        <a href="#">
+                            <img src="images/slider05.jpg" alt="vallery festival">
+                        </a>
+                        <div class="text">
+                            <h2>vallery <em>festival</em></h2>
+                            <p>신나는 축제</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <div class="contents">
+                <article class="notice">
+                    <h3>공지사항</h3>
+                    <ul>
+                        <li><a href="#">주차장 안내1</a></li>
+                        <li><a href="#">주차장 안내2</a></li>
+                        <li><a href="#">주차장 안내3</a></li>
+                        <li><a href="#">주차장 안내4</a></li>
+                        <li><a href="#">주차장 안내5</a></li>
+                    </ul>
+                </article>
+                <!-- notice -->
+
+                <article class="gallery">
+                    <h3>갤러리</h3>
+                    <ul>
+                        <li><a href="#"><img src="images/gallery04.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="images/gallery05.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="images/gallery06.jpg" alt=""></a></li>
+                    </ul>
+                </article>
+
+                <article class="link">
+                    <h3>festival</h3>
+                    <a href="#" class="popup__btn">티켓구매</a>
+                </article>
+            </div>
+
+            <footer id="footer"></footer>
+        </main>
+        <article class="popup__view"></article>
+    </div>
+<script>
+    let currentIndex = 0;
+    $(".sliderWrap").append($(".slider").first().clone(true)); 
+
+    setInterval(() => {
+        currentIndex++;
+        $(".sliderWrap").animate({marginTop: -350 * currentIndex + "px"}, 600);
+        if(currentIndex == 3){
+            setTimeout(() => {
+                $(".sliderWrap").animate({marginTop:0}, 0);
+                currentIndex = 0;       
+            }, 700);
+        }
+    }, 3000);
+
+    $(".nav > ul > li").mouseover(function(){
+        $(this).find(".submenu").stop().slideDown();
+    });
+    $(".nav > ul > li").mouseout(function(){
+        $(this).find(".submenu").stop().slideUp();
+    });
+
+    $(".popup__btn").click(function(){
+        $(".popup__view").show();
+    })
+    $(".popup__close").click(function(){
+        $(".popup__view").hide();
+    })
+
+</script>
+</body>
+</html>
