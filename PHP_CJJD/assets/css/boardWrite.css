@@ -4,7 +4,7 @@
 .board_form > form {
     width: 100%;
     text-align: center;
-    background-color: var(--board-color);
+    background-color: var(--white);
 }
 
 .form_box {
@@ -30,19 +30,20 @@
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
-
     height: 4.6vh;
-    line-height: 45px;
-    padding: 0rem 0.8rem 0rem 0.8rem;
+    line-height: 0;
+    padding: 1.43rem 0.8rem 1.43rem 1rem;
     background-color: #fff;
     border-radius: 5px;
     cursor: pointer;
     margin-left: 2rem;
     color: var(--gray);
+    border: 2px solid var(--gray);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: bold;
+    font-size: 1.1rem;
     /* 폰트 컬러 좀더 진하게 바꾸기  */
 }
 
@@ -52,8 +53,12 @@
     width: 95%;
     margin-bottom: 15px;
     border-radius: 5px;
+    border: 2px solid var(--gray);
 }
-
+.board_input_title::placeholder {
+    font-size: 1.1rem;
+    line-height: 24px;
+}
 .board_input_contents {
     width: 95%;
     height: 400px;
@@ -89,160 +94,6 @@
     font-style: normal;
 }
 
-.board_table {
-    width: 100%;
-    margin: 30px 0;
-}
-
-.board_table tr td:nth-child(2) em {
-    font-size: 0.7rem;
-    color: red;
-}
-
-thead tr th {
-    text-align: center;
-}
-
-tbody tr td:nth-child(2) {
-    text-align: left;
-}
-
-tbody tr td {
-    text-align: center;
-    white-space: nowrap;
-    /* 텍스트를 한 줄에 표시 */
-    overflow: hidden;
-    /* 넘치는 부분을 숨김 */
-    text-overflow: ellipsis;
-    /* '...'을 표시 */
-    max-width: 40px;
-    height: 10px;
-}
-
-table tbody tr td:nth-child(2) a:hover,
-table tbody tr td:nth-child(3):hover {
-    text-decoration: underline;
-    text-underline-position: under;
-}
-
-/* 테이블 디자인 */
-
-/* 보드 페이지네이션 */
-.board_option {
-    border-top: 1px solid var(--gray);
-}
-
-.board_pages {
-    margin: 20px 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.board_pages ul {
-    display: flex;
-    justify-content: space-evenly;
-    width: 50%;
-}
-
-.board_pages ul li a {
-    display: inline-block;
-    padding: 0px 8px;
-}
-
-.board_pages ul li a:hover {
-    text-decoration: underline;
-    text-underline-position: under;
-    text-decoration-color: var(--mcolor);
-    color: var(--mcolorUp);
-    font-weight: bold;
-}
-
-.board_pages ul li.active a {
-    color: var(--mcolor);
-    font-weight: bold;
-    border: 1px solid var(--gray);
-}
-
-.board_search {
-    margin: 0 auto;
-}
-
-.board_search_option {
-    margin-top: 5px;
-    display: flex;
-}
-
-.board_search_option:nth-child(1) {
-    margin-left: 210px;
-}
-
-.component_box {
-    text-align: center;
-    line-height: 2rem;
-}
-
-.select_compponent {
-    width: 20%;
-    height: 40px;
-    line-height: 40px;
-    border: 1px solid var(--gray);
-    text-align: left;
-    margin-right: 20px;
-    padding-left: 10px;
-    position: relative;
-}
-
-.select_compponent a {
-    font-size: 0.9rem;
-    color: #757575;
-}
-
-.select_compponent a i {
-    position: absolute;
-    font-size: 1rem;
-    top: 0.8rem;
-    left: 8rem;
-}
-
-.select_compponent a:hover {
-    color: #555;
-    text-decoration: underline;
-    text-underline-position: under;
-    text-decoration-color: #757575;
-}
-
-.board_search_box {
-    height: 40px;
-    line-height: 2.5rem;
-    border: 1px solid var(--gray);
-    position: relative;
-}
-
-.board_search_box input {
-    outline: none;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 10px;
-    color: #555;
-}
-
-.board_search_box input::placeholder {
-    font-size: 1rem;
-}
-
-.board_search_box button {
-    background-color: transparent;
-    border: none;
-    color: var(--mcolor);
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 12px 15px;
-    position: absolute;
-    right: 0rem;
-    top: 23px;
-    transform: translateY(-50%);
-}
 /* ********* */
 
 /* 셀렉트 박스시작 */
@@ -312,6 +163,7 @@ table tbody tr td:nth-child(3):hover {
     overflow: hidden;
     max-height: 0;
     transition: 0.3s ease-in;
+    z-index: 9999;
 }
 
 .selectBox3.active .optionList {
@@ -325,7 +177,7 @@ table tbody tr td:nth-child(3):hover {
 }
 
 .selectBox3 .optionItem:hover {
-    background: var(--mcolor);
+    background: var(--mcolorUp);
 }
 
 .selectBox3 .optionItem:last-child {
@@ -351,97 +203,20 @@ table tbody tr td:nth-child(3):hover {
 
 /* 셀렉트 박스 끝 */
 
+/* contents_wrap */
+.contents_wrap {
+    margin: 0 auto;
+    width: 95%;
+}
+
+.board_content {
+    height: 50vh;
+}
+
+.ck-editor__editable {
+    height: 30vh;
+}
 /* 반응형 시작 */
-
-@media (max-width: 1870px) {
-    .board_search_option:nth-child(1) {
-        margin-left: 160px;
-    }
-}
-@media (max-width: 1800px) {
-    .select_compponent a i {
-        left: 7rem;
-    }
-}
-@media (max-width: 1800px) {
-    .board_search_option:nth-child(1) {
-        margin-left: 250px;
-    }
-    .select_compponent a i {
-        left: 6.5rem;
-    }
-}
-
-@media (max-width: 1750px) {
-    .board_search_option:nth-child(1) {
-        margin-left: 160px;
-    }
-    .select_compponent a i {
-        left: 6.5rem;
-    }
-}
-@media (max-width: 1650px) {
-    .select_compponent a i {
-        top: 15px;
-        left: 10rem;
-    }
-}
-
-@media (max-width: 1580px) {
-    .select_compponent a i {
-        left: 9rem;
-    }
-}
-@media (max-width: 1500px) {
-    .select_compponent a i {
-        left: 8rem;
-    }
-}
-@media (max-width: 1420px) {
-    .board_search_option:nth-child(1) {
-        margin-left: 100px;
-    }
-    .select_compponent a i {
-        left: 7rem;
-    }
-}
-
-@media (max-width: 1400px) {
-    .board_search_option:nth-child(1) {
-        margin-left: 80px;
-    }
-
-    .select_compponent a i {
-        display: none;
-    }
-}
-
-@media (max-width: 1300px) {
-    .board_search_option:nth-child(1) {
-        margin-left: 110px;
-    }
-    .select_compponent {
-        margin-right: 0;
-    }
-}
-
-@media (max-width: 1200px) {
-    .board_search_option:nth-child(1) {
-        margin-left: 35px;
-    }
-}
-
-@media (max-width: 1150px) {
-    .board_search_option:nth-child(1) {
-        margin-left: 150px;
-    }
-}
-
-@media (max-width: 1000px) {
-    .board_search_option:nth-child(1) {
-        margin-left: 10px;
-    }
-}
 
 @media (max-width: 560px) {
     .form_box {
@@ -454,7 +229,7 @@ table tbody tr td:nth-child(3):hover {
     .board_btn {
         align-items: center;
         width: 95%;
-        margin: 20px 0 5px 0;
+        margin: 20px 0 10px 0;
     }
 
     .board_text {
@@ -488,18 +263,10 @@ table tbody tr td:nth-child(3):hover {
 
     .create {
         margin-left: 10px;
-        margin-top: -50px;
+        margin-top: -40px;
     }
 
     .create button {
-        width: 99%;
+        width: 100%;
     }
-}
-
-.select_list {
-    display: none;
-}
-
-.none {
-    display: none;
 }
