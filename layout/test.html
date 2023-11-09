@@ -1,36 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style6.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    img {
+      width: 100%;
+      vertical-align: top;
+    }
+
+    #wrap {
+      width: 1000px;
+      display: flex;
+    }
+
+    #aside {
+      width: 200px;
+      height: 650px;
+      text-align: center;
+      background-color: #ebe1ff;
+    }
+
+    .logo {
+      width: 200px;
+      height: 100px;
+      text-align: center;
+      padding-top: 30px;
+
+    }
+
+    .nav {
+      width: 200px;
+      height: 550px;
+    }
+
+    .nav>ul>li {
+      width: 100%;
+      position: relative;
+      display: inline-block;
+    }
+
+    .nav>ul>li>a {
+      width: 100%;
+      font-size: 20px;
+      display: block;
+      line-height: 50px;
+      background-color: #58339e;
+      color: #fff;
+      box-sizing: border-box;
+    }
+
+    .nav>ul>li>a:hover {}
+
+    .submenu {
+      position: absolute;
+      left: 100%;
+      top: 0%;
+      width: 100%;
+      z-index: 1;
+      display: none;
+    }
+
+    .submenu>li {
+      width: 100%;
+      display: inline-block;
+      background-color: #fff;
+    }
+
+    .submenu>li>a {
+      display: inline-block;
+      font-weight: bold;
+      box-sizing: border-box;
+      padding: 10px;
+      width: 100%;
+    }
+
+    .submenu>li>a:hover {
+      background-color: #58339e;
+      color: #fff;
+    }
+
+    #main {
+      width: 800px;
+      height: 650px;
+    }
+
+    #slider {
+      width: 800px;
+      height: 350px;
+      overflow: hidden;
+    }
+
+    .sliderWrap {}
+
+    .slider {
+      position: relative;
+      height: 350px;
+    }
+
+    .slider__text {
+      position: absolute;
+      z-index: 1000;
+      bottom: 5%;
+      right: 3%;
+      width: 300px;
+      height: 150px;
+      background-color: black;
+      opacity: 0.7;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .slider__text h3 {
+      text-align: center;
+
+      color: #fff;
+    }
+
+    .slider__text h3 em {
+      color: red;
+      font-style: normal;
+    }
+
+    .slider__text p {
+      color: white;
+      text-align: center;
+    }
+
+    #contents {
+      width: 100%;
+      display: flex;
+    }
+
+    .notice {
+      background-color: #f9ddff;
+      width: 300px;
+      height: 200px;
+      padding: 20px 20px;
+      box-sizing: border-box;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .notice h3 {
+      margin-bottom: 10px;
+    }
+
+    .notice ul {}
+
+    .notice ul li {
+      position: relative;
+      margin-bottom: 10px;
+      font-size: 14px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .notice ul li a {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .notice ul li:hover {
+      text-decoration: underline;
+    }
+
+    .notice ul li::before {
+      position: absolute;
+      content: '';
+      width: 5px;
+      height: 5px;
+      background-color: #000;
+      top: 37%;
+      left: -4%;
+    }
+
+    .gallery {
+      width: 300px;
+      height: 200px;
+      background-color: #e0bfff;
+      box-sizing: border-box;
+
+    }
+
+    .gallery h3 {
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .gallery__img {
+      display: flex;
+      box-sizing: border-box;
+      justify-content: space-evenly;
+    }
+
+    .gallery__img li {
+      width: 80px;
+    }
+
+    .banner {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-image: url("images/banner.jpg");
+    }
+
+    .banner h3 {
+      color: #fff;
+      text-align: center;
+    }
+
+    .popup_btn {
+      background-color: #2e0972;
+      padding: 10px 15px;
+      border-radius: 50px;
+      color: #fff;
+      text-align: center;
+    }
+
+    #footer {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      background-color: #bb90c9;
+      align-items: center;
+    }
+
+    .footer1 {
+      width: 20%;
+      text-align: center;
+      color: white;
+      font-size: 20px;
+    }
+
+    .footer2 {
+      width: 60%;
+      text-align: center;
+    }
+
+    .footer3 {
+      width: 20%;
+    }
+
+    .footer3 select {
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <aside id="aside">
+      <h1 class="logo">해운대 빛축제</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">축제소개</a>
+            <ul class="submenu">
+              <li><a href="#">페스티벌 소개</a></li>
+              <li><a href="#">행사장 안내</a></li>
+              <li><a href="#">조직위원회 소개</a></li>
+            </ul>
+          </li>
+          <li><a href="#">예약 안내</a>
+            <ul class="submenu">
+              <li><a href="#">sub</a></li>
+              <li><a href="#">sub</a></li>
+              <li><a href="#">sub</a></li>
+            </ul>
+          </li>
+          <li><a href="#">아티스트</a>
+            <ul class="submenu">
+              <li><a href="#">sub</a></li>
+              <li><a href="#">sub</a></li>
+              <li><a href="#">sub</a></li>
+            </ul>
+          </li>
+          <li><a href="#">커뮤니티</a>
+            <ul class="submenu">
+              <li><a href="#">sub</a></li>
+              <li><a href="#">sub</a></li>
+              <li><a href="#">sub</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main id="main">
+      <article id="slider">
+        <div class="sliderWrap">
+          <div class="slider s1">
+            <img src="images/slider4.jpg" alt="">
+            <div class="slider__text">
+              <h3>해운대 <em>빛축제</em></h3>
+              <p>신나는 축제 같이 놀아봅시다.</p>
+            </div>
+          </div>
+          <div class="slider s2">
+            <img src="images/slider05.jpg" alt="">
+            <div class="slider__text">
+              <h3>해운대 <em>빛축제</em></h3>
+              <p>신나는 축제 같이 놀아봅시다.</p>
+            </div>
+          </div>
+          <div class="slider s3">
+            <img src="images/slider06.jpg" alt="">
+            <div class="slider__text">
+              <h3>해운대 <em>빛축제</em></h3>
+              <p>신나는 축제 같이 놀아봅시다.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div id="contents">
+        <div class="notice">
+          <h3>vallery festival</h3>
+          <ul>
+            <li><a href="#">주차장 안내 및 티켓 수령 장소</a></li>
+            <li><a href="#">Vallery Festival 날짜 및 장소 안내</a></li>
+            <li><a href="#">아티스트 라인 업 및 티켓팅</a></li>
+            <li><a href="#">주차장 안내 및 티켓 수령 장소</a></li>
+            <li><a href="#"> Vallery Festival 사이트 업데이트 안내 Vallery Festival 갤러리</a></li>
+          </ul>
+        </div>
+        <div class="gallery">
+          <h3>vallery Festival 갤러리</h3>
+          <ul class="gallery__img">
+            <li><a href="#"><img src="images/gallery04.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/gallery05.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/gallery06.jpg" alt=""></a></li>
+          </ul>
+        </div>
+        <article class="banner">
+          <h3>Vallery Festiva</h3>
+          <a href="#" class="popup_btn">티켓 구매</a>
+        </article>
+      </div>
+      <footer id="footer">
+        <div class="footer1">Vallery Festival</div>
+        <div class="footer2">주소 서울시 강남구 삼성로 100 삼성동 빌딩 100층
+          <br>COPYRIGHT(C) ALL RIGHTS RESERVED.</div>
+        <div class="footer3">
+          <select name="#" id="#">
+            <option value="패밀리 사이트">패밀리 사이트</option>
+            <option value="패밀리 사이트1">패밀리 사이트1</option>
+            <option value="패밀리 사이트2">패밀리 사이트2</option>
+            <option value="패밀리 사이트3">패밀리 사이트3</option>
+          </select>
+        </div>
+      </footer>
+    </main>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
+      .popup__view {
+        width: 250px;
+        height: 350px;
+        background-color: #bb90c9;
+        position: absolute;
+        top: 17%;
+        left: 40%;
+        z-index: 10000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid black;
       }
-      #wrap {
-        width: 1000px;
-        height: 100px;
-        background-color: black;
+
+      .popup__view h3 {
+        padding: 10px;
+      }
+
+      .popup__view p {
+        padding: 20px;
+      }
+
+      .popup__close {
+        padding: 10px 25px;
+        color: #fff;
+        background-color: #58339e;
+        border: 2px solid black;
       }
     </style>
-  </head>
-  <body>
-    <div id="wrap">
-      <div class="left">
-        <div id="section1">
-          <div class="text">미래를 이끄는 열정<br /></div>
-          <img src="img/test1.png" alt="" />
-        </div>
-        <div id="section2"></div>
-        <div id="section3"></div>
-      </div>
-      <div class="right">
-        <div id="contents1"></div>
-        <div id="contents2"></div>
-        <div id="contents3"></div>
-      </div>
-    </div>
-  </body>
+    <article class="popup__view">
+      <h3>vallery festival</h3>
+      <p>안녕하세요, Vallery Festival 운영팀입니다. 2023년 Vallery Festival 티켓 예매 일정에 변경이 있어 안내드립니다. 기존 예매 일정에 따르면 6월 1일부터 6월 30일까지
+        티켓 예매가 가능하였으나, 운영상의 문제로 인해 일정이 변경되었습니다.</p>
+      <div class="popup__close">닫기</div>
+    </article>
+  </div>
+  <script src="js/query.min.js"></script>
+  <script>
+    $(function () {
+
+      let currentIndex = 0;
+      $(".sliderWrap").append($(".slider").first().clone(true));
+
+      setInterval(() => {
+        currentIndex++;
+        $(".sliderWrap").animate({
+          marginTop: -350 * currentIndex + "px"
+        }, 600);
+
+        if (currentIndex == 3) {
+          setTimeout(() => {
+            $(".sliderWrap").animate({
+              marginTop: 0
+            }, 0);
+            currentIndex = 0;
+          }, 700);
+        }
+      }, 3000);
+
+
+      $(".nav > ul > li").mouseover(function () {
+        $(this).find(".submenu").stop().slideDown();
+      });
+      $(".nav > ul > li").mouseout(function () {
+        $(this).find(".submenu").stop().slideUp();
+      });
+
+      $(".popup_btn").click(function () {
+        $(".popup__view").show();
+      });
+      $(".popup__close").click(function () {
+        $(".popup__view").hide();
+      })
+    })
+  </script>
+
+</body>
+
+
 </html>
