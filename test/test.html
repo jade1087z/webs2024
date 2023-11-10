@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>서울구석구석</title>
+    <title>Document</title>
 
-    <!-- css -->
-    <link rel="stylesheet" href="css/style4.css">
-
-    <!-- script -->
-    <script src="js/query.min.js"></script>
-    <script src="js/script3.js"></script>
+    <script src="../layout/js/jquery.js"></script>
+    <script src="../layout/js/query.min.js"></script>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="css.css">
 </head>
 
 <body>
     <div id="wrap">
         <aside id="aside">
-            <h1 class="logo">서울구석구석</h1>
+            <h1 class="logo">서울구석구석
+            </h1>
             <nav class="nav">
                 <ul>
                     <li><a href="#">지금의 서울</a>
@@ -27,107 +26,84 @@
                             <li><a href="#">전시</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">추천</a>
+                    <li><a href="#">지금의 서울</a>
                         <ul class="submenu">
-                            <li><a href="#">에디터 추천</a></li>
-                            <li><a href="#">테마코스</a></li>
-                            <li><a href="#">도보해설관광</a></li>
-                            <li><a href="#">한류관광</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">여행지</a>
-                        <ul class="submenu">
-                            <li><a href="#">명소</a></li>
-                            <li><a href="#">엔터테인먼트</a></li>
-                            <li><a href="#">음식</a></li>
-                            <li><a href="#">게스트하우스</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">여행정보</a>
-                        <ul class="submenu">
-                            <li><a href="#">가이드북&지도</a></li>
-                            <li><a href="#">시티투어버스</a></li>
-                            <li><a href="#">날씨</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">축제&행사</a></li>
+                            <li><a href="#">전시</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </aside>
-        <!-- //aside -->
-
-        <maim id="main">
+        <main id="main">
             <div id="slider">
                 <div class="imageWrap">
                     <div class="image i1">
                         <div class="text">
                             <h2>할인 가득! 설렘 가득!</h2>
-                            <p>대한민국 숙박세일 페스타5월 30일(화),'놀이공원 할인대전'5월 31일(수)부터 실시</p>
+                            <p>대한민국 숙박세일 페스타 5월 30일 화, 놀이공원 할인 대전</p>
                         </div>
                     </div>
                     <div class="image i2">
                         <div class="text">
                             <h2>할인 가득! 설렘 가득!</h2>
-                            <p>대한민국 숙박세일 페스타5월 30일(화),'놀이공원 할인대전'5월 31일(수)부터 실시</p>
+                            <p>대한민국 숙박세일 페스타 5월 30일 화, 놀이공원 할인 대전</p>
                         </div>
                     </div>
                     <div class="image i3">
                         <div class="text">
                             <h2>할인 가득! 설렘 가득!</h2>
-                            <p>대한민국 숙박세일 페스타5월 30일(화),'놀이공원 할인대전'5월 31일(수)부터 실시</p>
+                            <p>대한민국 숙박세일 페스타 5월 30일 화, 놀이공원 할인 대전</p>
                         </div>
                     </div>
                 </div>
-                <!-- //imageWrap -->
-
-                <article class="banner">
-                    <h3>6월은 <em>여행가는달</em></h3>
+                <article id="banner">
+                    <h3>6월은 <em>여행가는 달</em></h3>
                     <a href="#">알아보기</a>
                 </article>
             </div>
-            <!-- //slider -->
-
+            <!-- 슬라이더 -->
             <div id="contents">
                 <section class="notice">
                     <h3>공지사항</h3>
                     <ul>
                         <li class="popup__btn"><a href="#">2023 관광산업 디지털혁신 오픈 세미나 개최</a><span>2023.06.05</span></li>
-                        <li><a href="#">여행 지원금 혜택 - 광주 여행 특별하게 떠나보자</a><span>2023.06.04</span></li>
-                        <li><a href="#">숙박과 놀이공원 할인쿠폰 받자!</a><span>2023.06.03</span></li>
-                        <li><a href="#">조선시대 으궤를 실감 콘텐츠로 만나다</a><span>2023.06.02</span></li>
-                        <li><a href="#">경복궁 장고에서 만나는 특별한 궁중의 장</a><span>2023.06.01</span></li>
+                        <li><a href="#">2023 관광산업 디지털혁신 오픈 세미나 개최</a><span>2023.06.05</span></li>
+                        <li><a href="#">2023 관광산업 디지털혁신 오픈 세미나 개최</a><span>2023.06.05</span></li>
+                        <li><a href="#">2023 관광산업 디지털혁신 오픈 세미나 개최</a><span>2023.06.05</span></li>
                     </ul>
                     <a href="#" class="more">더보기+</a>
                 </section>
-                <!-- //notice -->
+                <!-- notice -->
 
                 <section class="gallery">
                     <h3>갤러리</h3>
                     <ul>
                         <li>
                             <a href="#">
-                                <img src="images/gallery07.jpg" alt="가볼만한 곳">
+                                <img src="../layout/images/gallery07.jpg" alt="">
                                 <span>동대문</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="images/gallery08.jpg" alt="가볼만한 곳">
-                                <span>제주도</span>
+                                <img src="../layout/images/gallery08.jpg" alt="">
+                                <span>동대문</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="images/gallery09.jpg" alt="가볼만한 곳">
-                                <span>경동시장</span>
+                                <img src="../layout/images/gallery09.jpg" alt="">
+                                <span>동대문</span>
                             </a>
                         </li>
                     </ul>
                 </section>
-                <!-- gallery -->
             </div>
-            <!-- //contents -->
-        </maim>
-        <!-- //main -->
+
+        </main>
+        <!-- main -->
         <footer id="footer">
             <div class="footer1">
                 <h4>서울구석구석</h4>
@@ -145,22 +121,18 @@
                 </select>
             </div>
         </footer>
-        <!-- //footer -->
-
+        <!-- footer -->
         <div class="popup__view">
             <h3>서울구석구석 공지사항</h3>
             <p>안녕하세요! 서울구석구석 운영팀입니다.
                 여러분들에게 소식을 전해드릴 공지사항을 안내해드립니다.
                 서울구석구석에서는 다양한 이벤트를 진행하고 있습니다.
                 현재는 서울의 명소 중 하나를 방문하여 사진을 찍고,
-                SNS에 게시하는 이벤트가 진행 중입니다.
-                참여하신 분들 중 추첨을 통해 푸짐한 상품을 드립니다
-            </p>
+                SNS에 게시하는 이벤트가 진행 중입니다.</p>
             <a href="#" class="popup__close">닫기</a>
         </div>
-        <!-- //popup -->
+        <!-- popup -->
     </div>
-    <!-- //wrap -->
 </body>
 
 </html>
