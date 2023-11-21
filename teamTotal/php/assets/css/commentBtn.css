@@ -1,0 +1,108 @@
+.button-list>button {
+    --text: #fff;
+    --font-size: 1rem;
+    --duration: 0.44s;
+    --font-shadow: var(--font-size);
+    /* padding: 16px 32px; */
+    padding: 10px 14px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    line-height: var(--font-size);
+    border-radius: 6px;
+    display: block;
+    outline: none;
+    appearance: none;
+    border: none;
+    text-decoration: none;
+    font-size: var(--font-size);
+    letter-spacing: 0.5px;
+    background: #e0e0e0;
+    color: #5f5f5f;
+
+    /* box-shadow: var(--shadow); */
+    /* transform: translateY(var(--y)) translateZ(0); */
+    /* transition: transform var(--duration) ease, box-shadow var(--duration) ease; */
+}
+
+.button-list>button a {
+    color: #5f5f5f;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.button-list>button div {
+    display: flex;
+    overflow: hidden;
+    text-shadow: 0 var(--font-shadow) 0 var(--text);
+}
+
+.button-list>button span {
+    display: block;
+    backface-visibility: hidden;
+    font-style: normal;
+    transition: transform var(--duration) ease;
+    transform: translateY(var(--m)) translateZ(0);
+}
+
+.button-list>button:hover {
+    /* --y: var(--move-hover); */
+    /* --shadow: var(--shadow-hover); */
+}
+
+.button-list>button.reverse {
+    /* --font-shadow: calc(var(--font-size) * -1); */
+}
+
+.button-list>button.reverse:hover span {
+    --m: calc(var(--font-size));
+}
+
+/* HTML styles */
+html {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Body styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E4ECFA;
+}
+
+.button-list {
+    display: flex;
+}
+
+.button-list button {
+    margin: 0 7px;
+}
+
+.dribbble {
+    position: fixed;
+    display: block;
+    right: 20px;
+    bottom: 20px;
+}
+
+.dribbble img {
+    display: block;
+    height: 28px;
+}
+
+@media (max-width: 650px) {
+    /* 회원정보 태그 깨짐 */
+
+
+}

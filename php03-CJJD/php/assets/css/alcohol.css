@@ -1,0 +1,380 @@
+:root {
+    --goodColor : #8A3FC6;
+    --abvColor: #FF8D24;
+}
+
+/* ___________________________alcohol_search___________________________ */
+.alcohol_search {
+    position: relative;
+}
+.alcohol_search label {
+    position: absolute;
+    right: .8rem;
+    font-size: 1.6rem;
+    padding: 1rem;
+    display: inline-block;
+    color: var(--mcolor);
+    cursor: pointer;
+}
+
+/* ___________________________alcohol_select___________________________ */
+.alcohol_select {
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+.alcohol_select ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.alcohol_select li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100%/6.2);
+    height: 2.8rem;
+    line-height: 2.8rem;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.2s;
+}
+.alcohol_select li a {
+    display: block;
+    cursor: pointer;
+}
+.alcohol_select li:hover {
+    background-color: var(--black400);
+}
+.alcohol_select li.active {
+    background-color: var(--mcolor);
+    color: var(--white);
+}
+
+/* ____________________________alcohol_item____________________________ */
+.alcohol_item {
+    width: 100%;
+}
+.alcohol_item > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+.alcohol_item > ul > li {
+    width: 23.8%;
+    margin: 0.6%;
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+}
+.alcohol_item .item_img {
+    background-color: rgb(243, 243, 243);
+    width: 100%;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+.alcohol_item > ul img {
+    padding: 0.8rem;
+    transition: all 0.4s;
+}
+.alcohol_item > ul > li:hover img {
+    transform: scale(1.1);
+}
+
+.item_info {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.item_info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5;
+}
+.item_info p {
+    font-size: 0.85rem;
+    color: var(--black200);
+}
+.item_summary ul {
+    display: flex;
+}
+.item_summary ul li {
+    margin-right: .6rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+.item_summary ul li.summary_good {
+    color: var(--mcolor);
+}
+.item_summary ul li.summary_comment {
+    color: var(--goodColor);
+}
+.item_summary ul li.summary_abv {
+    color: var(--abvColor);
+}
+
+
+@media (max-width: 1150px) {
+
+    .alcohol_item > ul > li {
+        width: 31.7%;
+        margin: 0.8%;
+    }
+}
+@media (max-width: 600px) {
+    .alcohol_item > ul > li {
+        width: 47.6%;
+        margin: 1.2%;
+    }
+    .alcohol_select {
+        box-shadow: 1px 1px 4px #6d6d6d31;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 0;
+    }
+    .alcohol_select li {
+        background-color: #fff;
+        border: 1px solid #f7f7f7;
+        border-radius: 0;
+        width: 33.33%;
+        height: 3rem;
+        line-height: 3rem;
+    }
+}
+
+/* ++++++++++++++++++++++++++++alcohol page++++++++++++++++++++++++++++ */
+
+.alcohol_thumbnail {
+    width: 100%;
+    min-height: 7.5rem;
+    background-color: #eee;
+    background: url(../img/alcohol_bg.jpg) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.alcohol_desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.alcohol_img {
+    width: 45%;
+    padding: 1.2rem;
+}
+.alcohol_detail {
+    width: 55%;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.alcohol_detail h4 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+.alcohol_detail p {
+    font-size: 1rem;
+    color: var(--black200);
+    margin-bottom: 1.5rem;
+}
+.alcohol_detail em {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    height: 9rem;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: var(--white100);
+    border: 1px solid var(--gray);
+    color: var(--black100);
+    border-radius: 5px;
+}
+.good_btn {
+    cursor: pointer;
+    padding: .8rem 1rem;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 1.1rem;
+    background-color: var(--mcolor);
+    transition: all 0.2s;
+}
+.good_btn i {
+    margin-right: 0.2rem;
+}
+.good_btn:hover {
+    background-color: var(--mcolorUp);
+    color: var(--white);
+}
+/* __________________________alcohol_summary__________________________ */
+.alcohol_summary {
+    padding: 1.2rem 0;
+}
+.alcohol_summary ul {
+    padding: 0.5rem 1rem;
+}
+.alcohol_summary ul li {
+    font-size: 1.1rem;
+    width: 33.333%;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin-right: 0;
+    border-right: 1px solid #ddd;
+}
+.alcohol_summary ul li:last-child {
+    border-right: none;
+}
+
+.alcohol_summary ul li i {
+    margin-right: 0.2rem;
+}
+.alcohol_summary ul li span {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: .9rem;
+    display: block;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    background-color: #eee;
+    color: var(--black200);
+    transition: all 0.4s;
+}
+.alcohol_summary ul li:hover span {
+    color: var(--white);
+}
+.alcohol_summary .summary_good:hover span {
+    background-color: var(--mcolor);
+}
+.alcohol_summary .summary_comment:hover span {
+    background-color: var(--goodColor);
+}
+.alcohol_summary .summary_abv:hover span {
+    background-color: var(--abvColor);
+}
+
+/* ____________________________review_wrap____________________________ */
+.review_wrap {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.review_wrap li {
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+    color: var(--black);
+    transition: all 0.2s;
+}
+.review_wrap li:nth-child(odd) {
+    background-color: #eee;
+}
+.review_wrap .review_text {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+.review_wrap .review_text span {
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    color: var(--black300);
+}
+.review_wrap .review_text strong {
+    font-size: 1rem;
+    width: 15%;
+}
+.review_wrap li .review_text p {
+    text-align: left;
+    width: 75%;
+    line-height: 1.5;
+    padding: 0 1rem;
+    color: var(--black100);
+}
+.review_wrap li .review_text a{
+    color: var(--black300);
+    text-wrap: nowrap;
+    font-size: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 0 5px;
+    cursor: pointer;
+    text-align: right;
+}
+.review_wrap li .review_text a.modify {
+    margin-right: 3px;
+}
+.review_wrap li .review_text a:hover {
+    border-color: var(--mcolor);
+    color: var(--mcolor);
+}
+
+/* _____________________________review_add_____________________________ */
+
+.review_add {
+    margin-top: .5rem;
+    display: flex;
+    justify-content: space-between
+}
+.review_add textarea {
+    width: 80%;
+    height: 4rem;
+    border-radius: 5px;
+    background-color: #eee;
+    padding: .5rem;
+    font-size: 1rem;
+}
+.review_add textarea::placeholder {
+    color: var(--black300);
+}
+.review_add button {
+    width: 19%;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: var(--mcolor);
+    color: var(--white);
+    transition: all 0.2s;
+    border-radius: 5px;
+}
+.review_add button:hover {
+    background-color: var(--mcolorUp);
+}
+
+@media (max-width: 1150px) {
+
+    .alcohol_desc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .alcohol_img {
+        width: 70%;
+        padding: 1.2rem;
+    }
+    .alcohol_detail {
+        width: 100%;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media (max-width: 600px) {
+    .alcohol_detail em {
+        height: 7rem;
+    }
+    .review_wrap .review_text strong {
+        width: 25%;
+    }
+    .review_wrap li .review_text p {
+        width: 65%;
+    }
+
+    .review_add textarea {
+        width: 70%;
+    }
+    .review_add button {
+        width: 28%;
+    }
+}

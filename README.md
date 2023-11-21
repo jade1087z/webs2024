@@ -56,3 +56,40 @@ https://velog.io/@simchodi/Git-%EC%B4%88%EA%B8%B0%EC%84%B8%ED%8C%85-%EA%B8%B0%EB
    -> 3. 술 신청하기 -> private
 
 --> select option의 value 값을 받아와 전달값에 맞춰 페이지로 로드한다.
+
+## team project ver2
+
+-   디비 설계
+
+1. 멤버 테이블 (Members)
+   MemberId (Primary Key, Auto Increment)
+   userId (Unique)
+   userNick(varchar)
+   Password
+   Email (Unique)
+   ProfilePicture (이미지 URL 또는 이미지 데이터를 저장하는 방식 선택)
+   ProfileSize (이미지 URL 또는 이미지 데이터를 저장하는 방식 선택)
+   regTime (Timestamp)
+
+2. 게시글 테이블 (Posts)
+   PostID (Primary Key, Auto Increment)
+   MemberID (Foreign Key, References Members.MemberID)
+   category
+   ImageFile (이미지 URL 또는 이미지 데이터를 저장하는 방식 선택)
+   ImageSize
+   title (Text)
+   Content (Text)
+   regTime (Timestamp)
+
+3. 댓글 테이블 (Comments)
+   CommentID (Primary Key, Auto Increment)
+   MemberID (Foreign Key, References Members.MemberID)
+   PostID (Foreign Key, References Posts.PostID)
+   Content (Text)
+   regTime (Timestamp)
+
+4. 좋아요 테이블 (Likes)
+   LikeID (Primary Key, Auto Increment)
+   MemberID (Foreign Key, References Members.MemberID)
+   PostID (Foreign Key, References Posts.PostID)
+   regTime (Timestamp)
