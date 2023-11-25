@@ -51,6 +51,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+<<<<<<< HEAD
     align-items: center;
     width: 40%;
     height: 60px;
@@ -58,12 +59,20 @@ body {
 .button__style li {
     background-color: #03C75A;
     width: 100%;
+=======
+    background-color: #03C75A;
+    align-items: center;
+    font-size: 1rem;
+    border-radius: 30px;
+    width: 40%;
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
     height: 60px;
     cursor: pointer;
     border-radius: 5px;
     border: 0;
     margin: 30px 0;
 }
+<<<<<<< HEAD
 .button__style > li > a {
     text-align: center;
     font-size: 1.1rem;
@@ -71,6 +80,12 @@ body {
     color: #fff;
     width: 100%;
     line-height: 60px;
+=======
+.button__style li a {
+    color: #fff;
+    width: 100%;
+    height: inherit;
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 }
 /* footer */
 

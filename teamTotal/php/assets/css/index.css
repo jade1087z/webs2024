@@ -1,0 +1,84 @@
+/* _________________________ranking_list / slider_________________________ */
+
+/* swiper 때문에 적용 */
+.ranking_list h4 {
+    padding-bottom: 5px;
+}
+.swiper {
+    width: 100%;
+    height: auto;
+}
+.swiper-slide {
+    text-align: center;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-wrapper .swiper-slide {
+    background-color: #eee;
+    margin: 5px;
+    position: relative;
+    transition: all .3s;
+    max-height: 400px;
+}
+.swiper-wrapper .swiper-slide>span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.2rem;
+    color: var(--white);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #5e5e5e;
+    transition: all 0.3s;
+}
+.swiper-wrapper .swiper-slide>span.rankedIn {
+    background-color: var(--mcolor);
+}
+.swiper-wrapper img {
+    transition: all .3s;
+}
+
+/* hover시 생기는 가림막 */
+
+.swiper-wrapper .swiper-slide .title_hover {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    transition: all .3s;
+    opacity: 0;
+}
+.swiper-wrapper .swiper-slide .title_hover p {
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+.swiper-wrapper .swiper-slide .title_hover span {
+    font-size: 0.9rem;
+    color: var(--mcolor);
+}
+.swiper-wrapper .swiper-slide:hover .title_hover {
+    opacity: 1;
+    top: 0;
+}
+.swiper-wrapper .swiper-slide:hover img {
+    filter: blur(3px);
+}
+.swiper-wrapper .swiper-slide:hover>span {
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--mcolor);
+}

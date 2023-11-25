@@ -13,7 +13,11 @@ $categoryResult = $connect->query($categorySql);
 $categoryInfo = $categoryResult->fetch_array(MYSQLI_ASSOC);
 $categoryCount = $categoryResult->num_rows;
 
+<<<<<<< HEAD
 //술 랭킹 가져오기 (좋아요+댓글) 많은 아이템을 조회순으로 보여줌
+=======
+//술 정보 가져오기 (좋아요+댓글) 많은 아이템을 조회순으로 보여줌
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 $acTopList = "SELECT *, (acLike + acComment) AS like_comment_total
               FROM drinkList
               ORDER BY like_comment_total DESC, acView DESC
@@ -25,25 +29,75 @@ $acRank = $connect->query($acTopList);
 <html lang="ko">
 
 <head>
+<<<<<<< HEAD
     <!-- 공통 -->
     <?php include "../include/head.php" ?>
+=======
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>취중진담</title>
+
+    <!-- meta -->
+    <meta name="author" content="취중진담">
+    <meta name="description" content="프론트엔드 개발자 포트폴리오 조별과제 사이트입니다.">
+    <meta name="keywords" content="웹퍼블리셔,프론트엔드, php, 포트폴리오, 커뮤니티, 술, publisher, css3, html, markup, design">
+
+    <!-- favicon -->
+    <link rel="icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- fontasome -->
+    <script src="https://kit.fontawesome.com/2cf6c5f82a.js" crossorigin="anonymous"></script>
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 
     <!-- swiper / 술 랭킹-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
+<<<<<<< HEAD
     <!-- 개별 css -->
     <link href="../assets/css/ranking.css" rel="stylesheet" />
     <link href="../assets/css/alcohol.css" rel="stylesheet" />
+=======
+    <!-- css -->
+    <link href="../assets/css/reset.css" rel="stylesheet" />
+    <link href="../assets/css/fonts.css" rel="stylesheet" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link href="../assets/css/common.css" rel="stylesheet" />
+    <link href="../assets/css/index.css" rel="stylesheet" />
+    <link href="../assets/css/alcohol.css" rel="stylesheet" />
+
+    <!-- js -->
+    <script src="../assets/js/scrollEvent.js"></script>
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 </head>
 
 <body>
     <div id="wrapper">
+<<<<<<< HEAD
         <?php include "../include/header.php"; ?>
+=======
+        <!-- PC HEADER 840 < window -->
+        <?php include "../include/header.php"; ?>
+
+        <!-- M HEADER 840 > window -->
+        <?php include "../include/logo.php"; ?>
+
+        <?php include "../include/headerbottom.php"; ?>
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
         <!-- header end -->
 
         <main id="contents_area">
             <section id="main_contents">
+<<<<<<< HEAD
                 <?php include "../include/acRank.php"; ?>
+=======
+                <!-- <div class="alcohol_search">
+                    <input class="inputReset boxStyle roundCorner shaDow" type="text" name="alcohol_search" id="alcohol_search" placeholder="술 이름을 입력하세요.">
+                    <label for="alcohol_search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                </div> -->
+                <!-- alcohol_search -->
+
+                <?php include "./acRank.php"; ?>
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
                 <!-- ranking_list -->
 
 
@@ -99,7 +153,11 @@ $acRank = $connect->query($acTopList);
             </section>
             <!-- main_contents end -->
 
+<<<<<<< HEAD
             <?php include "../include/aside.php"; ?>
+=======
+            <?php include "../include/sidewrap.php"; ?>
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
             <!-- side_box end -->
 
         </main>

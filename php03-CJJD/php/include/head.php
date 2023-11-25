@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <title>취중진담</title>
 
 <!-- meta -->
@@ -9,10 +10,18 @@
 
 <!-- favicon -->
 <link rel="icon" href="../assets/favicon/favicon.ico" type="image/x-icon" />
+=======
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- favicon -->
+<link rel="icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 
 <!-- fontasome -->
 <script src="https://kit.fontawesome.com/2cf6c5f82a.js" crossorigin="anonymous"></script>
 
+<<<<<<< HEAD
 <!-- 모바일 헤더 스크롤 이벤트 js -->
 <script src="../assets/js/scrollEvent.js"></script>
 
@@ -21,3 +30,14 @@
 <link href="../assets/css/fonts.css" rel="stylesheet" />
 <link href="../assets/css/common.css" rel="stylesheet" />
 <link href="../assets/css/style.css" rel="stylesheet" />
+=======
+<!-- css -->
+<link href="../assets/css/reset.css" rel="stylesheet" />
+<link href="../assets/css/fonts.css" rel="stylesheet" />
+<link href="../assets/css/common.css" rel="stylesheet" />
+
+<!-- js -->
+<script src="../assets/js/scrollEvent.js"></script>
+
+
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158

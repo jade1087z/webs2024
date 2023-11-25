@@ -1,5 +1,6 @@
 /* 다소 난잡합니다. 수정은 저한테 말씀해주세요. */
 
+<<<<<<< HEAD
 p.green {
     color: green !important;
 }
@@ -7,6 +8,8 @@ p.red {
     color: red !important;
 }
 
+=======
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 .join__body {
     background-color: #ECFBEC;
     background-image: url("../img/vector_line.png");
@@ -38,7 +41,11 @@ p.red {
 .join__form {
     display: flex;
     flex-wrap: wrap;
+<<<<<<< HEAD
     height: auto;
+=======
+    height: 90%;
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 5px 5px 0px rgba(0, 53, 7, 0.3);
@@ -48,8 +55,14 @@ p.red {
     width: 80%;
 }
 .header__box {
+<<<<<<< HEAD
     text-align: center;
     margin: 50px auto;
+=======
+    margin-top: 10px;
+    text-align: center;
+    padding: 40px 60px 60px 60px ;
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 }
 .header__box a {
     font-size: 40px;
@@ -83,7 +96,10 @@ p.red {
     width: 100%;
     height: 3rem;
     padding: 10px;
+<<<<<<< HEAD
     margin-bottom: 10px;
+=======
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 }
 .join__form .check {
     display: flex;
@@ -136,12 +152,22 @@ p.red {
     width: 40%;
     border-radius: 5px;
     padding: 15px 20px;
+<<<<<<< HEAD
     border: 0;
     cursor: pointer;
     margin: 10px 5px 40px;
 }
 .check__msg {
     margin: 5px 0 10px 0;
+=======
+    margin-right: 10px;
+    border: 0;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.check__msg {
+    margin-top: 4px;
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
     font-size: 14px;
     color: var(--red);
 }
@@ -168,7 +194,13 @@ p.red {
         min-width: 400px;
     }
     .header__box {
+<<<<<<< HEAD
         text-align: center;
+=======
+        margin-top: 0;
+        text-align: center;
+        padding: 40px;
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
     }
     .header__box a {
         margin-top: 20px;

@@ -3,8 +3,11 @@
 .find__form {
     display: flex;
     flex-wrap: wrap;
+<<<<<<< HEAD
     justify-content: center;
 
+=======
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
     height: 90%;
 }
 
@@ -15,6 +18,10 @@
 
 .header__box {
     width: 100%;
+<<<<<<< HEAD
+=======
+    margin-top: 10px;
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
     text-align: center;
     padding: 40px 0px;
 }
@@ -25,12 +32,19 @@
 }
 
 .header__box h2 {
+<<<<<<< HEAD
     width: 100%;
+=======
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
     font-size: 20px;
 }
 
 .find__form div {
+<<<<<<< HEAD
     margin-bottom: 1.2rem;
+=======
+    margin-bottom: 1.5em;
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 }
 
 .find__form div label {
@@ -40,6 +54,7 @@
 }
 
 /* input */
+<<<<<<< HEAD
 .fidn__box {
     display: flex;
     flex-wrap: wrap;
@@ -58,12 +73,21 @@
 }
 
 .fidn__box div input {
+=======
+
+.find__form input {
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
     font-size: 14px;
     outline: none;
     border: 1px solid #414141a6;
     border-radius: 10px;
+<<<<<<< HEAD
     height: 3rem;
     width: 90%;
+=======
+    width: 100%;
+    height: 3rem;
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
     padding: 10px;
 }
 
@@ -92,8 +116,11 @@
 }
 
 .check__msg {
+<<<<<<< HEAD
     width: 90%;
     text-align: left;
+=======
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
     margin-top: 10px;
     color: #eb1919;
     font-size: 13px;
@@ -163,15 +190,23 @@
     border-radius: 5px;
     background-color: #03C75A;
     color: #fff;
+<<<<<<< HEAD
     width: 40%;
+=======
+    width: 30%;
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
     border: 0;
 }
 
 /* Pass modify */
 
 .modify__btn {
+<<<<<<< HEAD
     margin: 0 auto;
     width: 90%;
     display: flex;
     padding-bottom: 10px;
+=======
+    flex-wrap: wrap;
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 }

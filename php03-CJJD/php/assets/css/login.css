@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+/* 제가 처음에 코딩할 때 서툴러서 좀 난잡하게 수정했습니다. */
+/* 막 이것저것 가져다 붙였으니 수정할 때 어려우실 것 같아서, 
+    로그인, 회원가입 페이지는 저한테 수정해달라고 하는 편이 좋습니다!! 
+*/
+
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 
 .login__body {
     height: 100vh;
@@ -84,9 +92,15 @@
 .right .login_box .login_ID {
     width: 100%;
     border: 1px solid #414141a6;
+<<<<<<< HEAD
     padding: 1rem 20px;
     border-radius: 10px;
     margin-bottom: 10px;
+=======
+    padding: 1rem 50px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
     text-align: left;
     font-size: 16px;
     outline: none;
@@ -94,9 +108,15 @@
 .right .login_box .login_Pass {
     width: 100%;
     border: 1px solid #414141a6;
+<<<<<<< HEAD
     padding: 1rem 20px;
     border-radius: 10px;
     margin-bottom: 10px;
+=======
+    padding: 1rem 50px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
     font-size: 16px;
     outline: none;
 }
@@ -109,7 +129,10 @@
 
 .right .check {
     padding-left: 30px;
+<<<<<<< HEAD
     margin-bottom: 20px;
+=======
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 }
 .right .check label {
     font-size: 0.9rem;
@@ -145,11 +168,16 @@
     justify-content: center;
     font-size: 1rem;
     border-radius: 30px;
+<<<<<<< HEAD
     /* padding: 1rem; */
+=======
+    padding: 1rem;
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
     cursor: pointer;
     border-radius: 5px;
     background-color: #03C75A;
     color: #fff;
+<<<<<<< HEAD
     width: 99%;
     border: 0;
 
@@ -163,6 +191,13 @@
     width: 100%;
     line-height: 60px;
     cursor: pointer;
+=======
+    width: 90%;
+    border: 0;
+}
+.right .button__style a {
+    color: #fff;
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 }
 .login_box .login_go {
     display: flex;
@@ -205,7 +240,11 @@
         left: 15%;
         right: 15%;
         font-weight: 15;
+<<<<<<< HEAD
         /* padding: 1rem 3rem; */
+=======
+        padding: 1rem 3rem;
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
     }
 }
 @media (max-width: 700px) {

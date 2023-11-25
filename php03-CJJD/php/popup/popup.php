@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <!-- 삭제 팝업 -->
+=======
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 <div id="popupDelete" class="none">
     <div class="comment__delete">
         <h4>댓글 삭제</h4>
@@ -11,8 +14,11 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 
 <!-- 수정 팝업 -->
+=======
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 <div id="popupModify" class="none">
     <div class="comment__modify">
         <h4>댓글 수정</h4>

@@ -5,14 +5,24 @@
     <?php
     include "../include/head.php";
     ?>
+<<<<<<< HEAD
     <!-- 개별 css -->
     <link href="../assets/css/join.css" rel="stylesheet" />
+=======
+    
+    <link href="../assets/css/join.css" rel="stylesheet" />
+
+    <title>회원가입 페이지</title>
+    <style>
+    </style>
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 </head>
 
 <body class="join__body">
     <div id="join__wrap">
         <main id="main">
             <div class="join__form">
+<<<<<<< HEAD
                 <form action="joinSuccess.php" name="joinSuccess" method="post" onsubmit="return joinChecks();">
                     <legend class="blind">회원가입 영역</legend>
                     <div class="header__box">
@@ -82,6 +92,71 @@
                     </div>
                     <div class="join__btn">
                         <button class="check__btn button__style">가입하기</button>
+=======
+                <form action="joincollect.php" name="joincollect" method="post" onsubmit="return joinChecks();">
+                        <legend class="blind">회원가입 영역</legend>
+                        <div class="header__box">
+                            <a href="../index.html"><img src="../assets/img/logo.svg" alt=""></a>
+                            <p>회원이 되어 다양한 혜택을 경험해보세요.</p>
+                        </div>
+                        <!-- 아이디, 비밀번호, 비밀번호 확인, 이름, 닉네임, 이메일, 생년월일 // 아이디, 닉네임, 이메일 중복검사 -->
+                        <div>
+                            <div class="check box">
+                                <label for="youId" class="required">아이디</label>
+                                <input type="text" minlength="6" maxlength="20"  name="youId" placeholder="아이디 입력(6~20)" id="youId">
+                                <div class="check__btn button__style" onclick="idChecking()">중복 검사</div>
+                                <p class="check__msg btn_01" id="youIdComment"></p>
+                            </div>
+                            <div class="box">
+                                <label for="youPass" class="required">비밀번호</label>
+                                <input type="text" minlength="8" maxlength="20" name="youPass" placeholder="비밀번호 입력(문자, 숫자, 특수문자 포함 8~20)"
+                                    id="youPass">
+                                <p class="check__msg" id="youPassComment"></p>
+                            </div>
+                            <div class="box">
+                                <label for="youPassre" class="required">비밀번호 확인</label>
+                                <input type="text" minlength="8" maxlength="20" name="youPassre" placeholder="비밀번호 재입력" id="youPassre">
+                                <p class="check__msg" id="youPassreComment"></p>
+                            </div>
+                            <div class="box">
+                                <label for="youName" class="required">이름</label>
+                                <input type="text" minlength="2" maxlength="5"  name="youName" placeholder="이름 입력(문자 2~5)" id="youName">
+                                <p class="check__msg" id="youNameComment"></p>
+                            </div>
+                            <div class="check box">
+                                <label for="youNick" class="required">닉네임</label>
+                                <input type="text" minlength="2" maxlength="5" name="youNick" placeholder="닉네임 입력(문자 2~5)" id="youNick">
+                                <div class="check__btn button__style " onclick="NickChecking()">중복 검사</div>
+                                <p class="check__msg btn_01" id="youNickComment"></p>
+                            </div>
+                            <div class="check box">
+                                <label for="youEmail" class="required">이메일</label>
+                                <input type="email"  name="youEmail" placeholder="이메일 입력" id="youEmail">
+                                <div class="check__btn button__style" onclick="emailChecking()">중복 검사</div>
+                                <p class="check__msg btn_01" id="youEmailComment"></p>
+                            </div>
+                            <div>
+                                <label for="youAddress1" class="required">주소</label>
+                                <div class="check youAddress1">
+                                    <input type="text" id="youAddress1" name="youAddress1" placeholder="우편번호" class="input__style">
+                                    <div class="check__btn"  id="addressCheck">주소 찾기</div>
+                                </div>
+                                <label for="youAddress2" class="blind"></label>
+                                <input type="text" id="youAddress2" name="youAddress2" placeholder="주소" class="input__style">
+                                <label for="youAddress3" class=" blind youAddress3"></label>
+                                <input type="text" id="youAddress3" name="youAddress3" placeholder="상세 주소" class="input__style">
+                                <p class="msg box" id="youAddressComment"></p>
+                            </div>
+                            <div class="birthday__box box">
+                                <label for="youBirth" class="required">생년월일</label>
+                                <input type="text" maxlength="8" name="youBirth" placeholder="생년월일 8자 입력" id="youBirth">
+                                <p class="check__msg" id="youBirthComment">해당 사이트는 만 19세 미만 사용이 불가합니다.</p>
+                            </div>
+                        </div>
+                    <div class="join__btn">
+                        <button class="check__btn button__style">가입하기</button>
+                        
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
                     </div>
                 </form>
             </div>
@@ -101,6 +176,7 @@
         let isNickCheck = false;
         let isEmailCheck = false;
 
+<<<<<<< HEAD
         let isPassCheck = false;
         let isPassReCheck = false;
 
@@ -126,14 +202,26 @@
             let youId = $("#youId").val();
 
             if (youId == null || youId == '') {
+=======
+        // 아이디 체크
+        function idChecking(){
+            let youId = $("#youId").val();
+
+            if (youId == null || youId == ''){
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
                 $("#youIdComment").text("-> 아이디를 작성해주세요!");
             } else {
                 // 아이디 유효성 검사 
                 let getYouId = RegExp(/^[a-zA-Z0-9_-]{4,20}$/);
 
+<<<<<<< HEAD
                 if (!getYouId.test($("#youId").val())) {
                     $("#youIdComment").text("아이디는 영어와 숫자를 포함하여 4~20글자 이내로 작성이 가능합니다.");
                     $("#youIdComment").removeClass("green");
+=======
+                if(!getYouId.test($("#youId").val())){
+                    $("#youIdComment").text("아이디는 영어와 숫자를 포함하여 4~20글자 이내로 작성이 가능합니다.");
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
                     $("#youId").val('')
                     $("#youId").focus('');
                     return false;
@@ -145,6 +233,7 @@
                 $.ajax({
                     type: "POST",
                     url: "joinCheck.php",
+<<<<<<< HEAD
                     data: { "youId": youId, "type": "isIdCheck" },
                     dataType: "json",
                     success: function (data) {
@@ -156,6 +245,16 @@
                             $("#youIdComment").text("이미 존재하는 아이디입니다.");
                             $("#youIdComment").removeClass("green");
 
+=======
+                    data: {"youId": youId, "type": "isIdCheck"},
+                    dataType: "json",
+                    success: function (data) {
+                        if(data.result == "good"){
+                            $("#youIdComment").text("사용 가능한 아이디입니다.");
+                            isIdCheck = true;
+                        } else {
+                            $("#youIdComment").text("이미 존재하는 아이디입니다.");
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
                             isIdCheck = false;
                         }
                     }
@@ -164,30 +263,48 @@
         }
 
         // 닉네임 체크
+<<<<<<< HEAD
         function NickChecking() {
             let youNick = $("#youNick").val();
 
             if (youNick == null || youNick == '') {
                 $("#youNickComment").text("-> 닉네임을 입력해주세요.");
                 $("#youNickComment").removeClass("green");
+=======
+        function NickChecking(){
+            let youNick = $("#youNick").val();
+
+            if (youNick == null || youNick == ''){
+                $("#youNickComment").text("-> 닉네임을 입력해주세요.");
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
             } else {
                 // 닉네임 유효성 검사 
                 let getYouNick = RegExp(/^[a-zA-Z0-9가-힣_-]{2,5}$/);
 
+<<<<<<< HEAD
                 if (!getYouNick.test($("#youNick").val())) {
                     $("#youNickComment").text("닉네임은 2~5글자만 가능합니다.");
                     $("#youNickComment").removeClass("green");
+=======
+                if(!getYouNick.test($("#youNick").val())){
+                    $("#youNickComment").text("닉네임은 2~5글자만 가능합니다.");
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
                     $("#youNick").val('')
                     $("#youNick").focus('');
                     return false;
                 } else {
+<<<<<<< HEAD
                     $("#youNickComment").text("사용 가능한 닉네임입니다.");
                     $("#youNickComment").addClass("green");
+=======
+                    $("#youNickComment").text("닉네임이 입력되었습니다.");
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
                 }
 
                 $.ajax({
                     type: "POST",
                     url: "joinCheck.php",
+<<<<<<< HEAD
                     data: { "youNick": youNick, "type": "isNickCheck" },
                     dataType: "json",
                     success: function (data) {
@@ -198,6 +315,16 @@
                         } else {
                             $("#youNickComment").text("이미 존재하는 닉네임입니다.");
                             $("#youNickComment").removeClass("green");
+=======
+                    data: {"youNick": youNick, "type": "isNickCheck"},
+                    dataType: "json",
+                    success: function (data) {
+                        if(data.result == "good"){
+                            $("#youNickComment").text("사용 가능한 닉네임입니다.");
+                            isNickCheck = true;
+                        } else {
+                            $("#youNickComment").text("이미 존재하는 닉네임입니다.");
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
                             isNickCheck = false;
                         }
                     }
@@ -206,18 +333,31 @@
         }
 
         // 이메일 체크
+<<<<<<< HEAD
         function emailChecking() {
             let youEmail = $("#youEmail").val();
 
             if (youEmail == null || youEmail == '') {
+=======
+        function emailChecking(){
+            let youEmail = $("#youEmail").val();
+
+            if (youEmail == null || youEmail == ''){
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
                 $("#youEmailComment").text("-> 이메일을 작성해주세요!");
             } else {
                 // 이메일 유효성 검사
                 let getYouEmail = RegExp(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([\-.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i);
+<<<<<<< HEAD
 
                 if (!getYouEmail.test($("#youEmail").val())) {
                     $("#youEmailComment").text("올바른 이메일 주소를 사용해주세요");
                     $("#youEmailComment").removeClass("green");
+=======
+            
+                if(!getYouEmail.test($("#youEmail").val())){
+                    $("#youEmailComment").text("올바른 이메일 주소를 사용할 수 있습니다.");
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
                     $("#youEmail").val('');
                     $("#youEmail").focus();
 
@@ -230,6 +370,7 @@
                 $.ajax({
                     type: "POST",
                     url: "joinCheck.php",
+<<<<<<< HEAD
                     data: { "youEmail": youEmail, "type": "isEmailCheck" },
                     dataType: "json",
                     success: function (data) {
@@ -241,10 +382,21 @@
                         } else {
                             $("#youEmailComment").text("이미 존재하는 이메일입니다.");
                             $("#youEmailComment").removeClass("green");
+=======
+                    data: {"youEmail": youEmail, "type": "isEmailCheck"},
+                    dataType: "json",
+                    success: function (data) {
+                        if(data.result == "good"){
+                            $("#youEmailComment").text("사용 가능한 이메일입니다.");
+                            isEmailCheck = true;
+                        } else {
+                            $("#youEmailComment").text("이미 존재하는 이메일입니다.");
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
                             isEmailCheck = false;
                         }
                     }
                 })
+<<<<<<< HEAD
 
             }
         }
@@ -312,27 +464,51 @@
 
             // 중복 확인이 이루어 졌는지 검사
             if (!isIdCheck || !isNickCheck || !isEmailCheck) {
+=======
+            
+            } 
+        }
+
+        // 조인 체크
+        function joinChecks(){
+
+            // 중복 확인이 이루어 졌는지 검사
+            if(!isIdCheck || !isNickCheck || !isEmailCheck ){
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
                 alert("중복 검사를 먼저 진행해주세요!");
                 return false;
             }
 
+<<<<<<< HEAD
 
             // 이름 유효성 검사 
             if ($("#youName").val() == '') {
+=======
+            // 이름 유효성 검사 
+            if( $("#youName").val() == '' ){
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
                 $("#youNameComment").text("이름을 입력해주세요!");
                 $("#youName").focus();
                 return false;
             } else {
                 let getYouName = RegExp(/^[가-힣]{3,5}$/);
 
+<<<<<<< HEAD
                 if (!getYouName.test($("#youName").val())) {
                     $("#youNameComment").text("이름은 한글(3~5글자)만 사용할 수 있습니다.");
                     $("#youName").val('');
                     $("#youName").focus();
+=======
+                if(!getYouName.test($("#youName").val())){
+                    $("#youNameComment").text("이름은 한글(3~5글자)만 사용할 수 있습니다.");
+                    $("#youName").val(''); 
+                    $("#youName").focus(); 
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
                     return false;
                 }
             }
 
+<<<<<<< HEAD
 
             if (!isPassCheck || !isPassReCheck) {
                 pwCheck();
@@ -393,6 +569,67 @@
     </script>
 
     <script>
+=======
+            // 비밀번호 유효성 검사
+            if( $("#youPass").val() == '' ){
+                $("#youPassComment").text("비밀번호를 입력해주세요!");
+                $("#youPass").focus();
+                return false; 
+            } else {
+                let getYouPass = $("#youPass").val();
+                let getYouPassNum = getYouPass.search(/[0-9]/g);
+                let getYouPassEng = getYouPass.search(/[a-z]/ig);
+                let getYouPassSpe = getYouPass.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
+
+                if(getYouPass.length < 8 || getYouPass.length > 20){
+                    $("#youPassComment").text("➟ 8자리 ~ 20자리 이내로 입력해주세요");
+                    return false;
+                } else if (getYouPass.search(/\s/) != -1){
+                    $("#youPassComment").text("➟ 비밀번호는 공백없이 입력해주세요!");
+                    return false;
+                } else if (getYouPassNum < 0 || getYouPassEng < 0 || getYouPassSpe < 0 ){
+                    $("#youPassComment").text("➟ 영문, 숫자, 특수문자를 혼합하여 입력해주세요!");
+                    return false;
+                } 
+            }
+
+            // 비밀번호 확인 유효성 검사
+            if($("#youPassre").val() == ''){
+                $("#youPassreComment").text("➟ 확인 비밀번호를 입력해주세요!");
+                $("#youPassre").focus();
+                return false;
+            }
+
+            // 비밀번호 동일한지 체크
+            if($("#youPass").val() !== $("#youPassre").val()){
+                $("#youPassreComment").text("➟ 비밀번호가 일치하지 않습니다.");
+                $("#youPass").focus();
+                return false;
+            } 
+
+            // 이름 생일 검사 
+            if( $("#youBirth").val() == '' ){
+                $("#youBirthComment").text("생일 입력해주세요!");
+                $("#youBirth").focus();
+                return false;
+            } else {
+                let getyouBirth = RegExp(/^[0-9]{8}$/);
+
+                if(!getyouBirth.test($("#youBirth").val())){
+                    $("#youBirthComment").text("생년월일은 8개의 숫자로 입력해주세요.");
+                    $("#youBirth").val(''); 
+                    $("#youBirth").focus(); 
+                    return false;
+                }
+            }
+
+        }
+
+
+    </script>
+
+<script>
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
         // 우편번호 찾기 화면을 넣을 element
         const layer = document.querySelector("#layer");
         const searchIcon = document.querySelector("#addressCheck");

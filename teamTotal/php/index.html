@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>취중진담</title>
+
+    <!-- meta -->
+    <meta name="author" content="취중진담">
+    <meta name="description" content="프론트엔드 개발자 포트폴리오 조별과제 사이트입니다.">
+    <meta name="keywords" content="웹퍼블리셔,프론트엔드, php, 포트폴리오, 커뮤니티, 술, publisher, css3, html, markup, design">
+
+    <!-- favicon -->
+    <link rel="icon" href="assets/favicon/favicon.ico" type="image/x-icon">
+
+    <!-- swiper / 술 랭킹-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- fontasome -->
+    <script src="https://kit.fontawesome.com/2cf6c5f82a.js" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link href="assets/css/reset.css" rel="stylesheet" />
+    <link href="assets/css/fonts.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/common.css" rel="stylesheet" />
+    <link href="assets/css/index.css" rel="stylesheet" />
+
+    <!-- js -->
+    <script src="assets/js/scrollEvent.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- PC HEADER 840 < window -->
+        <header id="header" class="leftHeader shaDow">
+            <h1 class="header_logo">
+                <a href="#">
+                    <img src="assets/img/logo.svg" alt="logo">
+                </a>
+            </h1>
+            <nav class="header_nav" role="navigation" aria-label="main">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-house"></i>홈</a></li>
+                    <li><a href="#"><i class="fa-regular fa-heart"></i> 술 리뷰</a></li>
+                    <li><a href="#"><i class="fa-regular fa-comments"></i> 자유 게시판</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gift"></i> 이벤트</a></li>
+                    <li><a href="#"><i class="fa-regular fa-user"></i> 마이페이지</a></li>
+                    <li><a href="#"><i class="fa-solid fa-gear"></i> 설정</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- M HEADER 840 > window -->
+        <div class="topLogo">
+            <h1 class="header_logo">
+                <a href="#">
+                    <img src="assets/img/logo.svg" alt="logo">
+                </a>
+            </h1>
+        </div>
+        <header id="header" class="bottomHeader shaDow">
+            <nav class="header_nav" role="navigation" aria-label="main">
+                <ul>
+                    <li><a href="#" aria-label="술리뷰"><i class="fa-regular fa-heart"></i></a></li>
+                    <li><a href="#" aria-label="이벤트"><i class="fa-solid fa-gift"></i></a></li>
+                    <li class="active"><a href="#" aria-label="홈"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="#" aria-label="자유게시판"><i class="fa-regular fa-comments"></i></a></li>
+                    <li><a href="#" aria-label="마이페이지"><i class="fa-regular fa-user"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header end -->
+
+        <main id="contents_area">
+            <section id="main_contents">
+                <div class="ranking_list boxStyle roundCorner shaDow">
+                    <h4>이번주 인기 주류 <span>TOP10</span></h4>
+                    <div class="alcohol_list">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <span class="rankedIn">1</span>
+                                    <a href="#">
+                                        <img src="assets/img/card (1).gif" alt="alcohol">
+                                        <div class="title_hover">
+                                            <p>진로 이즈백</p>
+                                            <span>하이트</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="rankedIn">2</span>
+                                    <a href="#">
+                                        <img src="assets/img/card (2).gif" alt="alcohol">
+                                        <div class="title_hover">
+                                            <p>진로 이즈백</p>
+                                            <span>하이트</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span class="rankedIn">3</span>
+                                    <a href="#">
+                                        <img src="assets/img/card (3).gif" alt="alcohol">
+                                        <div class="title_hover">
+                                            <p>진로 이즈백</p>
+                                            <span>하이트</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span>4</span>
+                                    <a href="#">
+                                        <img src="assets/img/card (4).gif" alt="alcohol">
+                                        <div class="title_hover">
+                                            <p>진로 이즈백</p>
+                                            <span>하이트</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span>5</span>
+                                    <a href="#">
+                                        <img src="assets/img/card (5).gif" alt="alcohol">
+                                        <div class="title_hover">
+                                            <p>진로 이즈백</p>
+                                            <span>하이트</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span>6</span>
+                                    <a href="#">
+                                        <img src="assets/img/card (1).gif" alt="alcohol">
+                                        <div class="title_hover">
+                                            <p>진로 이즈백</p>
+                                            <span>하이트</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span>7</span>
+                                    <a href="#">
+                                        <img src="assets/img/card (2).gif" alt="alcohol">
+                                        <div class="title_hover">
+                                            <p>진로 이즈백</p>
+                                            <span>하이트</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span>8</span>
+                                    <a href="#">
+                                        <img src="assets/img/card (3).gif" alt="alcohol">
+                                        <div class="title_hover">
+                                            <p>진로 이즈백</p>
+                                            <span>하이트</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span>9</span>
+                                    <a href="#">
+                                        <img src="assets/img/card (4).gif" alt="alcohol">
+                                        <div class="title_hover">
+                                            <p>진로 이즈백</p>
+                                            <span>하이트</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <span>10</span>
+                                    <a href="#">
+                                        <img src="assets/img/card (5).gif" alt="alcohol">
+                                        <div class="title_hover">
+                                            <p>진로 이즈백</p>
+                                            <span>하이트</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- alcohol_list -->
+                </div>
+                <!-- ranking_list -->
+
+                <div class="best_list boxStyle roundCorner shaDow">
+                    <h4>인기 게시글 <span>HOT</span></h4>
+                    <ul class="board_w100">
+                        <li>
+                            <a href="#">
+                                <div class="board_title">
+                                    <p>제목이 아주 긴 경우 :: 말줄임표__ 술 땡기는 금요일~ 곱창에 소주 땡기네요.술 땡기는 금요일~ 곱창에 소주 땡기네요.술 땡기는 금요일~
+                                        곱창에 소주 땡기네요.</p>
+                                </div>
+                                <div class="board_reaction">
+                                    <p>조회수 <span>999</span></p>
+                                    <p>댓글 <span>25</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="board_title">
+                                    <p>술 땡기는 금요일~ 곱창에 소주 땡기네요.</p>
+                                </div>
+                                <div class="board_reaction">
+                                    <p>조회수 <span>999</span></p>
+                                    <p>댓글 <span>25</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="board_title">
+                                    <p>술 땡기는 금요일~ 곱창에 소주 땡기네요.</p>
+                                </div>
+                                <div class="board_reaction">
+                                    <p>조회수 <span>999</span></p>
+                                    <p>댓글 <span>25</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="board_title">
+                                    <p>술 땡기는 금요일~ 곱창에 소주 땡기네요.</p>
+                                </div>
+                                <div class="board_reaction">
+                                    <p>조회수 <span>999</span></p>
+                                    <p>댓글 <span>25</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="board_title">
+                                    <p>술 땡기는 금요일~ 곱창에 소주 땡기네요.</p>
+                                </div>
+                                <div class="board_reaction">
+                                    <p>조회수 <span>999</span></p>
+                                    <p>댓글 <span>25</span></p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="new_list boxStyle roundCorner shaDow">
+                    <h4>최근 게시글 <span>NEW</span></h4>
+                    <ul class="board_w100">
+                        <li>
+                            <a href="#">
+                                <div class="board_title">
+                                    <p>술 땡기는 금요일~ 곱창에 소주 땡기네요.</p>
+                                </div>
+                                <div class="board_reaction">
+                                    <p>조회수 <span>999</span></p>
+                                    <p>댓글 <span>25</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="board_title">
+                                    <p>술 땡기는 금요일~ 곱창에 소주 땡기네요.</p>
+                                </div>
+                                <div class="board_reaction">
+                                    <p>조회수 <span>999</span></p>
+                                    <p>댓글 <span>25</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="board_title">
+                                    <p>술 땡기는 금요일~ 곱창에 소주 땡기네요.</p>
+                                </div>
+                                <div class="board_reaction">
+                                    <p>조회수 <span>999</span></p>
+                                    <p>댓글 <span>25</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="board_title">
+                                    <p>술 땡기는 금요일~ 곱창에 소주 땡기네요.</p>
+                                </div>
+                                <div class="board_reaction">
+                                    <p>조회수 <span>999</span></p>
+                                    <p>댓글 <span>25</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="board_title">
+                                    <p>술 땡기는 금요일~ 곱창에 소주 땡기네요.</p>
+                                </div>
+                                <div class="board_reaction">
+                                    <p>조회수 <span>999</span></p>
+                                    <p>댓글 <span>25</span></p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pick_list boxStyle roundCorner shaDow">
+                    <h4>추천 게시글 <span>Pick!</span></h4>
+                    <ul class="board_w100">
+                        <li>
+                            <a href="#">
+                                <div class="board_title">
+                                    <p>술 땡기는 금요일~ 곱창에 소주 땡기네요.</p>
+                                </div>
+                                <div class="board_reaction">
+                                    <p>조회수 <span>999</span></p>
+                                    <p>댓글 <span>25</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="board_title">
+                                    <p>술 땡기는 금요일~ 곱창에 소주 땡기네요.</p>
+                                </div>
+                                <div class="board_reaction">
+                                    <p>조회수 <span>999</span></p>
+                                    <p>댓글 <span>25</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="board_title">
+                                    <p>술 땡기는 금요일~ 곱창에 소주 땡기네요.</p>
+                                </div>
+                                <div class="board_reaction">
+                                    <p>조회수 <span>999</span></p>
+                                    <p>댓글 <span>25</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="board_title">
+                                    <p>술 땡기는 금요일~ 곱창에 소주 땡기네요.</p>
+                                </div>
+                                <div class="board_reaction">
+                                    <p>조회수 <span>999</span></p>
+                                    <p>댓글 <span>25</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="board_title">
+                                    <p>술 땡기는 금요일~ 곱창에 소주 땡기네요.</p>
+                                </div>
+                                <div class="board_reaction">
+                                    <p>조회수 <span>999</span></p>
+                                    <p>댓글 <span>25</span></p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- main_contents end -->
+
+            <aside id="side_wrap">
+                <div class="search_box side_box roundCorner shaDow">
+                    <input type="text" placeholder="취중진담 통합 검색">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+
+                <!-- 로그인 함 -->
+                <!-- <div class="info_box side_box roundCorner shaDow">
+                    <div class="login_info">
+                        <img src="assets/img/img500.jpg" alt="유저 이미지">
+                        <p>홍길동님 어서오세요.</p>
+                        <ul>
+                            <li><a href="#">로그아웃</a></li>
+                            <li><a href="#">마이페이지</a></li>
+                            <li><a href="#">설정</a></li>
+                        </ul>
+                    </div>
+                    <button class="sideBtn">새 글쓰기</button>
+                </div> -->
+
+                <!-- 로그인 안함 -->
+                <div class="info_box side_box roundCorner shaDow">
+                    <div class="login_info not_login">
+                        <p><i class="fa-solid fa-icons"></i> <br> 회원가입하고 <br> 더 많은 기능을 누리세요</p>
+                        <ul>
+                            <li><a href="join/join.php">회원가입</a></li>
+                            <li><a href="#">회원정보 찾기</a></li>
+                        </ul>
+                    </div>
+                    <button class="sideBtn" onclick="location.href='bin.html'">로그인</button>
+                </div>
+            </aside>
+            <!-- side_box end -->
+
+        </main>
+        <!-- contents_area end -->
+    </div>
+    <!-- wrapper end -->
+
+    <!-- Swiper JS CDN 불러옴 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+</body>
+
+</html>

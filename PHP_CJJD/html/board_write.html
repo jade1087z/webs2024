@@ -98,16 +98,18 @@
 
                                         </div>
                                         <div class="board_title ">
-                                            <label for="boardContents"></label>
-                                            <textarea id="boardContents" name="boardContents" cols="50" rows="1"
-                                                class="board_input_title inputStyle placeholder"
+                                            <label for="board_title"></label>
+                                            <textarea id="board_title" name="board_title" cols="50" rows="1"
+                                                class="board_input_title inputStyle"
                                                 placeholder="제목을 작성해주세요"></textarea>
                                         </div>
-                                        <div class="board_content">
-                                            <label for="boardContents"></label>
-                                            <textarea id="boardContents" name="boardContents" cols="50" rows="8"
-                                                class="board_input_contents inputStyle placeholder"
-                                                placeholder="원하는 술을 신청해주세요"></textarea>
+                                        <div class="contents_wrap">
+                                            <div class="board_contents">
+                                                <label for="boardContents"></label>
+                                                <textarea type="text" id="boardContents" name="boardContents" cols="50"
+                                                    rows="1" class="board_input_contents inputStyle placeholder"
+                                                    placeholder="원하는 술을 신청해주세요"></textarea>
+                                            </div>
                                         </div>
                                         <div class="create">
                                             <button type="submit" class="sideBtn mt50">
@@ -164,5 +166,16 @@
     </div>
     <!-- wrapper end -->
 </body>
+<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/translations/ko.js"></script>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#boardContents'), {
+            language: 'ko'
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>
 
 </html>

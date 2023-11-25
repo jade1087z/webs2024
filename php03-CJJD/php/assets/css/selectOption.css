@@ -1,0 +1,106 @@
+.selectBox2 * {
+    box-sizing: border-box;
+}
+
+.selectBox2 {
+    padding: 20px 0;
+    position: relative;
+    width: 150px;
+    height: 35px;
+    border-radius: 6px;
+    border: 2px solid var(--gray);
+    /* background: url('https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png') calc(100% - 7px) center no-repeat; */
+    background-position:  right center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    cursor: pointer;
+   
+
+}
+.selectBox2 i {
+    font-size: 20px; /* 아이콘 크기 조정 */
+    color: var(--mcolor); /* 아이콘 색상 설정 */
+    position: absolute;
+    right: 6%;
+    bottom: 14%;
+}
+.selectBox2:after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 35px;
+    background: var(--gray);
+    ;
+}
+
+.selectBox2 .label {
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    border: 0 none;
+    outline: 0 none;
+    padding-left: 15px;
+    background: transparent;
+    cursor: pointer;
+    padding-bottom: 30px;
+}
+
+.selectBox2 .optionList {
+    position: absolute;
+    top: 41px;
+    left: 0;
+    width: 100%;
+    background: white;
+    color: var(--scolor);
+    border: 1px solid var(--gray);
+    outline: none;
+    border-top: none;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    max-height: 0;
+    transition: .3s ease-in;
+}
+
+.selectBox2.active .optionList {
+    max-height: 500px;
+}
+
+.selectBox2 .optionItem {
+    border-bottom: 1px dashed var(--mcolor);
+    
+    padding: 5px 15px 5px;
+    transition: .1s;
+}
+
+.selectBox2 .optionItem:hover {
+    background: var(--mcolor);
+    ;
+}
+
+.selectBox2 .optionItem:last-child {
+    border-bottom: 0 none;
+}
+
+
+.selectBox2 .optionList::-webkit-scrollbar {
+    width: 6px;
+}
+
+.selectBox2 .optionList::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.selectBox2 .optionList::-webkit-scrollbar-thumb {
+    background: #303030;
+    border-radius: 45px;
+}
+
+.selectBox2 .optionList::-webkit-scrollbar-thumb:hover {
+    background: #303030;
+}

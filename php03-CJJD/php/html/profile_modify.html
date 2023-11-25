@@ -2,6 +2,7 @@
 <html lang="ko">
 
 <head>
+<<<<<<< HEAD
     <title>취중진담</title>
 
     <!-- meta -->
@@ -13,10 +14,24 @@
 
     <!-- favicon -->
     <link rel="icon" href="../assets/favicon/favicon.ico" type="image/x-icon" />
+=======
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>취중진담</title>
+
+    <!-- meta -->
+    <meta name="author" content="취중진담">
+    <meta name="description" content="프론트엔드 개발자 포트폴리오 조별과제 사이트입니다.">
+    <meta name="keywords" content="웹퍼블리셔,프론트엔드, php, 포트폴리오, 커뮤니티, 술, publisher, css3, html, markup, design">
+
+    <!-- favicon -->
+    <link rel="icon" href="../assets/favicon/favicon.ico" type="image/x-icon">
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 
     <!-- fontasome -->
     <script src="https://kit.fontawesome.com/2cf6c5f82a.js" crossorigin="anonymous"></script>
 
+<<<<<<< HEAD
     <!-- 모바일 헤더 스크롤 이벤트 js -->
     <script src="../assets/js/scrollEvent.js"></script>
 
@@ -28,6 +43,17 @@
 
     <!-- 개별 css -->
     <link href="../assets/css/mypage.css" rel="stylesheet" />
+=======
+    <!-- css -->
+    <link href="../assets/css/reset.css" rel="stylesheet" />
+    <link href="../assets/css/fonts.css" rel="stylesheet" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link href="../assets/css/mypage.css" rel="stylesheet" />
+    <link href="../assets/css/common.css" rel="stylesheet" />
+
+    <!-- js -->
+    <script src="../assets/js/scrollEvent.js"></script>
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 </head>
 
 <body>
@@ -59,15 +85,23 @@
                 </a>
             </h1>
         </div>
+<<<<<<< HEAD
         <header id="header" class="bottomHeader shaDow">
+=======
+        <header id="header" class="bottomHeader shaDow">    
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
             <nav class="header_nav" role="navigation" aria-label="main">
                 <ul>
                     <li><a href="alcohol_list.html" aria-label="술리뷰"><i class="fa-regular fa-heart"></i></a></li>
                     <li><a href="event.html" aria-label="이벤트"><i class="fa-solid fa-gift"></i></a></li>
                     <li><a href="index.html" aria-label="홈"><i class="fa-solid fa-house"></i></a></li>
                     <li><a href="board.html" aria-label="자유게시판"><i class="fa-regular fa-comments"></i></a></li>
+<<<<<<< HEAD
                     <li class="active"><a href="mypage.html" aria-label="마이페이지"><i class="fa-regular fa-user"></i></a>
                     </li>
+=======
+                    <li class="active"><a href="mypage.html" aria-label="마이페이지"><i class="fa-regular fa-user"></i></a></li>
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
                 </ul>
             </nav>
         </header>
@@ -79,14 +113,18 @@
                 <div class="best_list boxStyle roundCorner shaDow">
                     <div class="tab-menu">
                         <button class="tab-button activity" onclick="openTab('mypage_main')">마이페이지</button>
+<<<<<<< HEAD
                         <button class="tab-button" onclick="openTab('mypage_diary')">일기</button>
                         <button class="tab-button" onclick="openTab('mypage_activity')">내 활동</button>
                         <button class="tab-button right" onclick="openTab('mypage_review')">리뷰</button>
+=======
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
                     </div>
 
                     <div id="mypage_main" class="tab-content">
                         <div class="main_box">
                             <div class="header_img"><img src="../assets/img/mypage_header.jpg" alt=""></div>
+<<<<<<< HEAD
                             <div class="profile_box">
                                 <div class="profile_img"><img src="../assets/img/profile.png" alt=""></div>
                                 <div class="profile_text">
@@ -297,6 +335,36 @@
                                         <td>10월 21일</td>
                                     </tr>
                                 </table>
+=======
+                            <div class="modify_box">
+                                <div class="profile_img"><img src="#" alt=""></div>
+                                <form action="profilemodifySave.php" name="board_writeSave" method="post" enctype="multipart/form-data" class="modify_img">
+                                    <div>    
+                                        <div class="profilemodify_img">
+                                            <label for="youImgFile"></label>
+                                            <input type="file" id="youImgFile" name="youImgFile">
+                                        </div> 
+                                        <div class="modifytext_box">
+                                            <div class="modify_text modify">
+                                                <h3>닉네임 수정하기</h3>
+                                                <input type="text" id="modifyProfile" name="modifyProfile" class="input_newnick" placeholder="새 닉네임을 입력하세요.">
+                                            </div>
+                                            <div class="modify_text">
+                                                <h3>비밀번호 입력</h3>
+                                                <input type="password" id="modifyPass" name="modifyPass" class="input_newnick" placeholder="비밀번호 입력">
+                                            </div>
+                                        </div>
+                                        <div class="profile_modify01">
+                                            <div>
+                                                <button type="submit" id="ModifyCancle">취소</button>
+                                            </div>
+                                            <div>
+                                                <button type="submit" id="ModifyButton">수정</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
                             </div>
                         </div>
                     </div>

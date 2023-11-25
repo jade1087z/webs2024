@@ -3,7 +3,11 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+<<<<<<< HEAD
     border: 1px solid var(--gray);
+=======
+    border: 1px solid #000;
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 }
 
 .tab-button {
@@ -14,7 +18,11 @@
     cursor: pointer;
     box-sizing: border-box;
     border: 0;
+<<<<<<< HEAD
     border-right: 1px solid var(--gray);
+=======
+    border-right: 1px solid #000;
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 }
 
 .right {
@@ -39,6 +47,7 @@
 }
 
 .profile_img {
+<<<<<<< HEAD
     margin: 30px;
     width: 160px;
     height: 160px;
@@ -53,6 +62,12 @@
 }
 
 
+=======
+    width: 20%;
+    margin: 40px;
+}
+
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 .profile_text {
     display: block;
 }
@@ -165,6 +180,7 @@
     }
 }
 
+<<<<<<< HEAD
 /* profile_modify */
 
 .modify_box {
@@ -223,6 +239,8 @@
     border-radius: 10px;
     margin-right: 10px;
 }
+=======
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 
 /* today_diary */
 
@@ -232,7 +250,10 @@
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
+<<<<<<< HEAD
     align-items: center;
+=======
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 }
 
 .today_diary h2 {
@@ -377,7 +398,10 @@
 .my_board_table {
     height: 50vh;
     padding: 10px;
+<<<<<<< HEAD
     overflow: hidden;
+=======
+>>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 }
 
 .my_board_table table {
