@@ -1,0 +1,830 @@
+.board_pages {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.board_pages ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.board_pages ul li a {
+    display: inline-block;
+    padding: 0px 8px;
+}
+
+.board_pages ul li a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: var(--mcolor);
+    color: var(--mcolorUp);
+    font-weight: bold;
+}
+
+.board_pages ul li.active a {
+    color: var(--mcolor);
+    font-weight: bold;
+    border: 1px solid var(--gray);
+}
+
+.search_form {
+    display: flex;
+    justify-content: center;
+}
+
+.board_search_box {
+    margin-left: 10px;
+    position: relative;
+}
+
+.board_search_box input {
+    /* border: 2px solid var(--mcolor); */
+    border: 2px solid var(--gray);
+
+    border-radius: 6px;
+    height: 35px;
+    width: 350px;
+    padding: 20px 0 20px 20px;
+}
+
+.board_search_box button {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    color: var(--mcolor);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px;
+    right: 5%;
+    top: 54%;
+    transform: translateY(-50%);
+}
+
+/* 셀렉트 박스  */
+.selectBox2 * {
+    box-sizing: border-box;
+}
+
+.selectBox2 {
+    padding: 20px 0;
+    position: relative;
+    width: 150px;
+    height: 35px;
+    border-radius: 6px;
+    border: 2px solid var(--gray);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    cursor: pointer;
+}
+.selectBox2 i {
+    font-size: 20px; /* 아이콘 크기 조정 */
+    color: var(--mcolor); /* 아이콘 색상 설정 */
+    position: absolute;
+    right: 6%;
+    bottom: 14%;
+}
+.selectBox2:after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 35px;
+    background: var(--gray);
+}
+
+.selectBox2 .label {
+    display: flex;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+    border: 0 none;
+    outline: 0 none;
+    padding-left: 15px;
+    background: transparent;
+    cursor: pointer;
+    padding-bottom: 30px;
+}
+
+.selectBox2 .optionList {
+    position: absolute;
+    top: 41px;
+    left: 0;
+    width: 100%;
+    background: white;
+    color: var(--scolor);
+    border: 1px solid var(--gray);
+    outline: none;
+    border-top: none;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.3s ease-in;
+}
+
+.selectBox2.active .optionList {
+    max-height: 500px;
+}
+
+.selectBox2 .optionItem {
+    border-bottom: 1px dashed var(--mcolor);
+    padding: 5px 15px 5px;
+    transition: 0.1s;
+}
+
+.selectBox2 .optionItem:hover {
+    background: var(--mcolor);
+}
+
+.selectBox2 .optionItem:last-child {
+    border-bottom: 0 none;
+}
+
+.selectBox2 .optionList::-webkit-scrollbar {
+    width: 6px;
+}
+
+.selectBox2 .optionList::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.selectBox2 .optionList::-webkit-scrollbar-thumb {
+    background: #303030;
+    border-radius: 45px;
+}
+
+.selectBox2 .optionList::-webkit-scrollbar-thumb:hover {
+    background: #303030;
+}
+/* 셀렉트박스2 end */
+
+/* 셀렉트박스3 st */
+.selectBox3 * {
+    box-sizing: border-box;
+}
+
+.selectBox3 {
+    padding: 20px 0;
+    position: relative;
+    width: 250px;
+    height: 45px;
+    border-radius: 6px;
+    border: 2px solid var(--gray);
+    /* background: url('https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png') calc(100% - 7px) center no-repeat; */
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    cursor: pointer;
+    background-color: var(--white);
+}
+.selectBox3 i {
+    font-size: 20px; /* 아이콘 크기 조정 */
+    color: var(--mcolor); /* 아이콘 색상 설정 */
+    position: absolute;
+    right: 4%;
+    bottom: 18%;
+}
+.selectBox3:after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 35px;
+    background: var(--gray);
+}
+
+.selectBox3 .label {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: inherit;
+    height: inherit;
+    border: 0 none;
+    outline: 0 none;
+    padding-left: 20px;
+    background: transparent;
+    cursor: pointer;
+    padding-bottom: 30px;
+}
+
+.selectBox3 .optionList {
+    position: absolute;
+    top: 41px;
+    left: 0;
+    width: 100%;
+    background: white;
+    color: var(--scolor);
+    border: 1px solid var(--gray);
+    outline: none;
+    border-top: none;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.3s ease-in;
+    z-index: 9999;
+}
+
+.selectBox3.active .optionList {
+    max-height: 500px;
+}
+
+.selectBox3 .optionItem {
+    border-bottom: 1px dashed var(--mcolor);
+    padding: 5px 15px 5px;
+    transition: 0.1s;
+}
+
+.selectBox3 .optionItem:hover {
+    background: var(--mcolor);
+}
+
+.selectBox3 .optionItem:last-child {
+    border-bottom: 0 none;
+}
+
+.selectBox3 .optionList::-webkit-scrollbar {
+    width: 6px;
+}
+
+.selectBox3 .optionList::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.selectBox3 .optionList::-webkit-scrollbar-thumb {
+    background: #303030;
+    border-radius: 45px;
+}
+
+.selectBox3 .optionList::-webkit-scrollbar-thumb:hover {
+    background: #303030;
+}
+/* select box3 end */
+
+/* board__view st */
+.view_top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.view_top h5 {
+    font-weight: 800;
+    font-size: 1.35rem;
+    white-space: nowrap;
+    /* 텍스트를 한 줄에 표시 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.view_wrap {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.view_box {
+    margin-top: 5px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user_info_box p {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.user_info {
+    width: 55%;
+}
+
+.user_info p {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.user_info p:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.info_list {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.info_list i {
+    margin-right: 5px;
+    color: #ddd;
+}
+
+.info_list div {
+    padding-right: 15px;
+}
+
+.view_info div {
+    font-weight: bold;
+    font-size: 0.9rem;
+    position: relative;
+    line-height: 2.3rem;
+}
+
+.view_info .info_list i.like {
+    color: var(--mcolor);
+}
+
+.view_num:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.view_info div em {
+    color: var(--red);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.board_desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.board_detail {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 1px dashed var(--gray);
+    border-bottom: 1px dashed var(--gray);
+}
+
+.board_detail span {
+    font-size: 1rem;
+    color: var(--black200);
+    margin-bottom: 1.5rem;
+}
+
+.board_detail em {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    height: 9rem;
+    padding: 1rem 1rem 1rem 1.5rem;
+    font-weight: 600;
+    overflow-y: auto;
+    color: var(--black100);
+}
+
+/* 추천 버튼  */
+.comment_summary {
+    padding: 20px 0 10px 0;
+    border-top: 1px dashed var(--gray);
+    text-align: right;
+}
+
+.button_list button {
+    padding: 15px 25px;
+    font-family: "Roboto";
+    font-weight: 500;
+    line-height: 1rem;
+    border-radius: 6px;
+    display: inline-block;
+    outline: none;
+    appearance: none;
+    border: none;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.button_list .good {
+    background: var(--mcolor);
+    color: var(--white);
+}
+
+.button_list .good:hover {
+    background-color: var(--mcolorUp);
+}
+
+.button_list .modify,
+.button_list .delete {
+    background: var(--gray);
+    color: var(--white);
+}
+
+.button_list .modify:hover,
+.button_list .delete:hover {
+    background-color: var(--black300);
+}
+/* board_view end */
+
+/* board_write st */
+.board_form > form {
+    width: 100%;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.form_box {
+    padding-top: 10px;
+}
+
+.board_btn {
+    margin: 20px 20px;
+    padding-top: 10px;
+    width: 260px;
+}
+.board_title h2 {
+    border-top: 1px solid var(--black100);
+    border-bottom: 1px solid var(--black100);
+    padding: 10px 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+    width: 95%;
+    margin: 30px auto;
+}
+/* 술 신청하기 end */
+.post {
+    width: 95%;
+    display: inline-flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.board_text .link {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    line-height: 0;
+    padding: 1.3rem 0.8rem 1.3rem 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 2rem;
+    color: var(--gray);
+    border: 2px solid var(--gray);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    font-size: 1.1rem;
+    /* 폰트 컬러 좀더 진하게 바꾸기  */
+}
+
+/* 포스트 종류 */
+
+.board_input_title {
+    width: 95%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 2px solid var(--gray);
+    padding: 10px 0px 10px 10px;
+}
+.board_input_title::placeholder {
+    font-size: 1.1rem;
+    line-height: 24px;
+}
+.board_input_contents {
+    width: 95%;
+    height: 400px;
+}
+
+/* 하단 버튼 */
+.create {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 20px 20px 0;
+}
+
+.create > button {
+    display: block;
+    width: 150px;
+}
+
+/* board view */
+.form_title {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid black;
+}
+
+.form_title h2 {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.form_title em {
+    font-style: normal;
+}
+
+.contents_wrap {
+    margin: 0 auto;
+    width: 95%;
+}
+
+.board_content {
+    height: 50vh;
+}
+
+.ck-editor__editable {
+    height: 30vh;
+}
+/*  board_write end */
+
+/* 반응형 */
+@media (max-width: 1150px) {
+    .board_desc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .alcohol_img {
+        width: 70%;
+        padding: 1.2rem;
+    }
+
+    .board_detail {
+        width: 100%;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 650px) {
+    .back_list {
+        margin-top: 5px;
+    }
+
+    .button-list > button {
+        margin-left: 0;
+        padding: 7px 12px;
+    }
+
+    .info_list svg {
+        bottom: 12%;
+    }
+}
+
+@media (max-width: 600px) {
+    .board_detail em {
+        height: 7rem;
+    }
+
+    .review_wrap .review_text strong {
+        width: 25%;
+    }
+
+    .review_wrap li .review_text p {
+        width: 65%;
+    }
+
+    .review_add textarea {
+        width: 70%;
+    }
+
+    .review_add button {
+        width: 28%;
+    }
+
+    .view_heart img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .search_form {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 100%;
+    }
+    .board_search_box input {
+        width: 98%;
+    }
+    .selectBox2 {
+        margin-top: 10px;
+        width: 96%;
+        margin-left: 10px;
+    }
+    .selectBox2 i {
+        right: 2%;
+    }
+    .form_box {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .board_btn {
+        align-items: center;
+        width: 95%;
+        margin: 20px 0 10px 0;
+    }
+
+    .board_text {
+        margin: 0;
+        width: 100%;
+    }
+
+    .post {
+        flex-direction: column;
+    }
+    .selectBox3 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .selectBox3 i {
+        right: 2%;
+    }
+    .board_text .link {
+        width: 100%;
+        height: 40px;
+        margin-left: 0;
+    }
+
+    .board_title {
+        margin-bottom: 5px;
+    }
+
+    .board_content {
+        margin-top: -20px;
+    }
+
+    .create {
+        margin-left: 10px;
+        margin-top: -40px;
+    }
+
+    .create button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    .view_wrap {
+        margin-top: 0;
+        padding: 5px 0 0 0;
+    }
+
+    .view_box {
+        margin-top: 0;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .view_info {
+        padding-left: 15px;
+    }
+
+    .board_detail {
+        padding: 0;
+    }
+
+    .board_detail em {
+        padding: 5px 0;
+    }
+
+    .back_list {
+        margin-top: 5px;
+    }
+
+    .button_list > button {
+        margin-left: 0;
+        padding: 10px 10px;
+    }
+}
+
+/* ____________________________review_wrap____________________________ */
+.review_wrap {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.review_wrap li {
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+    color: var(--black);
+    transition: all 0.2s;
+}
+.review_wrap li:nth-child(odd) {
+    background-color: #eee;
+}
+.review_wrap .review_text {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+.review_wrap .review_text span {
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    color: var(--black300);
+}
+.review_wrap .review_text strong {
+    font-size: 1rem;
+    width: 15%;
+}
+.review_wrap li .review_text p {
+    text-align: left;
+    width: 75%;
+    line-height: 1.5;
+    padding: 0 1rem;
+    color: var(--black100);
+}
+.review_wrap li .review_text a {
+    color: var(--black300);
+    text-wrap: nowrap;
+    font-size: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 0 5px;
+    cursor: pointer;
+    text-align: right;
+}
+.review_wrap li .review_text a.modify {
+    margin-right: 3px;
+}
+.review_wrap li .review_text a:hover {
+    border-color: var(--mcolor);
+    color: var(--mcolor);
+}
+
+/* _____________________________review_add_____________________________ */
+
+.review_add {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.review_add textarea {
+    width: 80%;
+    height: 4rem;
+    border-radius: 5px;
+    background-color: #eee;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+.review_add textarea::placeholder {
+    color: var(--black300);
+}
+.review_add button {
+    width: 19%;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: var(--mcolor);
+    color: var(--white);
+    transition: all 0.2s;
+    border-radius: 5px;
+}
+.review_add button:hover {
+    background-color: var(--mcolorUp);
+}
+
+@media (max-width: 600px) {
+    .review_wrap .review_text strong {
+        width: 25%;
+    }
+    .review_wrap li .review_text p {
+        width: 65%;
+    }
+
+    .review_add textarea {
+        width: 70%;
+    }
+    .review_add button {
+        width: 28%;
+    }
+}
+li:nth-child(odd).this,
+.this {
+    background-color: var(--black200);
+}
+
+.board_w100 li.this .board_title {
+    color: var(--white100);
+}
+.board_w100 li.this .board_author,
+.board_w100 li.this .board_date,
+.board_w100 li.this .board_view span {
+    color: var(--white200);
+}

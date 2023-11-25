@@ -1,0 +1,204 @@
+:root {
+    /* color */
+    --white: #fefefe;
+    --white100: #f1f1f1;
+
+    --black: #222;
+    --black100: #555;
+    --black200: #888;
+    --black300: #aaa;
+
+    --red: #e21717;
+    --gray: #ccc;
+    --mcolor: #03C75A;
+    --mcolorUp: #09d665;
+    --scolor: #4F4F4F;
+    --bgcolor: #f4f4f4;
+}
+
+
+/* 라운드 코너 */
+.roundCorner {
+    border-radius: 10px;
+    border: 1px solid var(--gray);
+}
+
+/* 그림자 */
+.shaDow {
+    box-shadow: 1px 1px 4px #6d6d6d31;
+}
+
+/* 메인 박스에 들어가는 박스 디자인 */
+
+.boxStyle {
+    width: 100%;
+    height: auto;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--white);
+}
+
+.boxStyle h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.boxStyle h4 span {
+    color: var(--red);
+}
+
+@media (max-width: 600px) {
+    .boxStyle {
+        padding: 1rem;
+    }
+}
+
+/* 사이드에 들어가는 초록 버튼 */
+.sideBtn {
+    width: 100%;
+    margin-top: 20px;
+    background-color: var(--mcolor);
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    color: var(--white);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.sideBtn:hover {
+    background-color: var(--mcolorUp);
+}
+
+/* 스크롤 css */
+.scrollStyle::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scrollStyle::-webkit-scrollbar-thumb {
+    background-color: #dcdcdc;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+
+.scrollStyle::-webkit-scrollbar-track {
+    background-color: rgb(232, 232, 232);
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+}
+
+/* 말줄임표 */
+.textCut {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* text align */
+.textCenter {
+    text-align: center;
+}
+
+/* margin-top */
+.mt0 {
+    margin-top: 0px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.mt50 {
+    margin-top: 50px;
+}
+
+/* margin-bottom */
+.mb0 {
+    margin-bottom: 0px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+}
+
+.mb50 {
+    margin-bottom: 50px;
+}
+
+/* 페이지 네이션 */
+
+.board_pages {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.board_pages ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.board_pages ul li a {
+    display: inline-block;
+    padding: 0px 8px;
+}
+
+.board_pages ul li a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: var(--mcolor);
+    color: var(--mcolorUp);
+    font-weight: bold;
+}
+
+.board_pages ul li.active a {
+    color: var(--mcolor);
+    font-weight: bold;
+    border: 1px solid var(--gray);
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+.mr20 {
+    margin-right: 20px;
+}
+.mr30 {
+    margin-right: 30px;
+}
+.mr40 {
+    margin-right: 40px;
+}
+.mr50 {
+    margin-right: 50px;
+}

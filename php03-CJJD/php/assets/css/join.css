@@ -1,0 +1,215 @@
+/* 다소 난잡합니다. 수정은 저한테 말씀해주세요. */
+
+p.green {
+    color: green !important;
+}
+p.red {
+    color: red !important;
+}
+
+.join__body {
+    background-color: #ECFBEC;
+    background-image: url("../img/vector_line.png");
+    background-size: cover;
+    background-position: center;
+}
+#wrap {
+    position: relative; /* 부모 요소를 상대 위치로 설정 */
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#join__wrap {
+    margin: 0 auto;
+    font-family: 'NanumSquareNeo';
+}
+#main {
+    width: 35%;
+    min-width: 500px;
+    padding: 40px 0;
+    margin: 0 auto;
+    height: 100%;
+}
+
+/* join__form */
+
+.join__form {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px rgba(0, 53, 7, 0.3);
+}
+.join__form form {
+    margin: 0 auto;
+    width: 80%;
+}
+.header__box {
+    text-align: center;
+    margin: 50px auto;
+}
+.header__box a {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.header__box p {
+    margin-top: 10px;
+}
+.header__box img {
+    margin-top: 10px;
+    width: 50%;
+}
+.join__form .box {
+    margin-bottom: 1.1rem;
+}
+.join__form div label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.join__form div label span {
+    font-size: 16px;
+}
+/* input */
+
+.join__form input {
+    font-size: 14px;
+    outline: none;
+    border: 1px solid #414141a6;
+    border-radius: 10px;
+    width: 100%;
+    height: 3rem;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.join__form .check {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.join__form .check label {
+    width: 100%;
+} 
+.join__form .check input {
+    width: 68%;
+}
+.join__form .check .check__btn {
+    border: 0;
+    background-color: #03C75A;
+    color: #fff;
+    font-size: 1rem;
+    width: 30%;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 3rem;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* youAddress */
+.youAddress1 {
+    margin-bottom: 0;
+}
+.youAddress3 {
+    font-size: 15px;
+    margin-top: 10px;
+}
+.btn_01 {
+    margin-left: 10px;
+}
+
+.join__btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+.join__btn .check__btn {
+    background-color: #03C75A;
+    color: #fff;
+    font-size: 1rem;
+    width: 40%;
+    border-radius: 5px;
+    padding: 15px 20px;
+    border: 0;
+    cursor: pointer;
+    margin: 10px 5px 40px;
+}
+.check__msg {
+    margin: 5px 0 10px 0;
+    font-size: 14px;
+    color: var(--red);
+}
+
+/* join__collect */
+
+.collect_box {
+    background-color: #fff;
+    max-width: 800px;
+    width: 60%;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 0px rgba(0, 53, 7, 0.3);
+}
+
+/* media - 원래 좀 길게 나와서 600 정도에 살짝 줄였습니다. */
+
+@media (max-width: 600px) {
+    #main {
+        width: 90%;
+        min-width: 400px;
+    }
+    .header__box {
+        text-align: center;
+    }
+    .header__box a {
+        margin-top: 20px;
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+    .header__box p {
+        font-size: 14px;
+    }
+    .join__form form {
+        width: 85%;
+    }
+    .scroll__style::-webkit-scrollbar {
+        width: 5px;
+    }
+}
+
+.blind {
+    display: none;
+}
+
+/* required */
+.required::after {
+    content: ' *';
+    color: #a82c2c;
+}
+
+/* layer */
+
+#layer {
+    position: fixed;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-overflow-scrolling: touch;
+}
+#layer img {
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    cursor: pointer;
+}

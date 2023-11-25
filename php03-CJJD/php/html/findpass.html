@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>취중진담</title>
+
+    <!-- meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="취중진담" />
+    <meta name="description" content="프론트엔드 개발자 포트폴리오 조별과제 사이트입니다." />
+    <meta name="keywords" content="웹퍼블리셔,프론트엔드, php, 포트폴리오, 커뮤니티, 술, publisher, css3, html, markup, design" />
+
+    <!-- favicon -->
+    <link rel="icon" href="../assets/favicon/favicon.ico" type="image/x-icon" />
+
+    <!-- fontasome -->
+    <script src="https://kit.fontawesome.com/2cf6c5f82a.js" crossorigin="anonymous"></script>
+
+    <!-- 공통 css -->
+    <link href="../assets/css/reset.css" rel="stylesheet" />
+    <link href="../assets/css/fonts.css" rel="stylesheet" />
+    <link href="../assets/css/common.css" rel="stylesheet" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
+
+    <!-- 개별 css -->
+    <link href="../assets/css/find.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="find_wrap">
+        <main id="main">
+            <div class="find__form">
+                <form action="#" name="#" method="post">
+                    <div>
+                        <legend class="blind">비밀번호 찾기</legend>
+                        <div class="header__box">
+                            <h1><a href="index.html">취중진담</a></h1>
+                            <h2>비밀번호 찾기</h2>
+                            <p>아래에 정보를 입력하고 아이디를 찾아보세요!</p>
+                        </div>
+                        <!-- 비밀번호는 아이디 / 이름 / 이메일이 있어야 찾을 수 있습니다. -->
+                        <div class="">
+                            <div>
+                                <label for="youID" class="required">아이디</label>
+                                <input type="text" minlength="6" maxlength="20" name="youID" placeholder="아이디를 입력하세요."
+                                    id="youID">
+                                <p class="check__msg">가입한 아이디를 입력하세요.</p>
+                            </div>
+                            <div>
+                                <label for="youPass" class="required">이름</label>
+                                <input type="text" minlength="8" maxlength="20" name="youPass" placeholder="이름을 입력하세요."
+                                    id="youPass">
+                                <p class="check__msg">가입한 이름을 입력하세요.</p>
+                            </div>
+                            <div>
+                                <label for="youPass" class="required">이메일</label>
+                                <input type="text" minlength="8" maxlength="20" name="youPass" placeholder="이메일을 입력하세요."
+                                    id="youPass">
+                                <p class="check__msg">가입한 이메일을 입력하세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="join__btn">
+                        <button class="check__btn button__style">
+                            <ul>
+                                <li><a href="findpass.html">비밀번호 찾기</a></li>
+                            </ul>
+                        </button>
+                    </div>
+                </form>
+            </div>
+    </div>
+    </main>
+    </div>
+</body>
+
+</html>

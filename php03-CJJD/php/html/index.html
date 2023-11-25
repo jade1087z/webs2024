@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>취중진담</title>
+
+  <!-- meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="취중진담" />
+  <meta name="description" content="프론트엔드 개발자 포트폴리오 조별과제 사이트입니다." />
+  <meta name="keywords" content="웹퍼블리셔,프론트엔드, php, 포트폴리오, 커뮤니티, 술, publisher, css3, html, markup, design" />
+
+  <!-- favicon -->
+  <link rel="icon" href="../assets/favicon/favicon.ico" type="image/x-icon" />
+
+  <!-- fontasome -->
+  <script src="https://kit.fontawesome.com/2cf6c5f82a.js" crossorigin="anonymous"></script>
+
+  <!-- 모바일 헤더 스크롤 이벤트 js -->
+  <script src="../assets/js/scrollEvent.js"></script>
+
+  <!-- 공통 css -->
+  <link href="../assets/css/reset.css" rel="stylesheet" />
+  <link href="../assets/css/fonts.css" rel="stylesheet" />
+  <link href="../assets/css/common.css" rel="stylesheet" />
+  <link href="../assets/css/style.css" rel="stylesheet" />
+
+  <!-- 개별 css -->
+  <link href="../assets/css/ranking.css" rel="stylesheet" />
+
+  <!-- swiper / 술 랭킹-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <!-- PC HEADER 840 < window -->
+    <header id="header" class="leftHeader shaDow">
+      <h1 class="header_logo">
+        <a href="index.html">
+          <img src="../assets/img/logo.svg" alt="logo" />
+        </a>
+      </h1>
+      <nav class="header_nav" role="navigation" aria-label="main">
+        <ul>
+          <li>
+            <a href="index.html"><i class="fa-solid fa-house"></i>홈</a>
+          </li>
+          <li>
+            <a href="alcohol_list.html"><i class="fa-regular fa-heart"></i> 술 리뷰</a>
+          </li>
+          <li>
+            <a href="board.html"><i class="fa-regular fa-comments"></i> 자유 게시판</a>
+          </li>
+          <li>
+            <a href="event.html"><i class="fa-solid fa-gift"></i> 이벤트</a>
+          </li>
+          <li>
+            <a href="mypage.html"><i class="fa-regular fa-user"></i> 마이페이지</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- M HEADER 840 > window -->
+    <div class="topLogo">
+      <h1 class="header_logo">
+        <a href="index.html">
+          <img src="../assets/img/logo.svg" alt="logo" />
+        </a>
+      </h1>
+    </div>
+    <header id="header" class="bottomHeader shaDow">
+      <nav class="header_nav" role="navigation" aria-label="main">
+        <ul>
+          <li>
+            <a href="alcohol_list.html" aria-label="술리뷰"><i class="fa-regular fa-heart"></i></a>
+          </li>
+          <li>
+            <a href="event.html" aria-label="이벤트"><i class="fa-solid fa-gift"></i></a>
+          </li>
+          <li class="active">
+            <a href="index.html" aria-label="홈"><i class="fa-solid fa-house"></i></a>
+          </li>
+          <li>
+            <a href="board.html" aria-label="자유게시판"><i class="fa-regular fa-comments"></i></a>
+          </li>
+          <li>
+            <a href="mypage.html" aria-label="마이페이지"><i class="fa-regular fa-user"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- header end -->
+
+    <main id="contents_area">
+      <section id="main_contents">
+
+        <!-- 랭킹 슬라이드 -->
+        <div class="ranking_list boxStyle roundCorner shaDow">
+          <h4>이번주 인기 주류 <span>TOP10</span></h4>
+          <div class="alcohol_list">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <span class="rankedIn">1</span>
+                  <a href="alcohol_page.html">
+                    <img src="../assets/img/card (1).gif" alt="alcohol">
+                    <div class="title_hover">
+                      <p>진로 이즈백</p>
+                      <span>하이트</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <span class="rankedIn">2</span>
+                  <a href="alcohol_page.html">
+                    <img src="../assets/img/card (2).gif" alt="alcohol">
+                    <div class="title_hover">
+                      <p>진로 이즈백</p>
+                      <span>하이트</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <span class="rankedIn">3</span>
+                  <a href="alcohol_page.html">
+                    <img src="../assets/img/card (3).gif" alt="alcohol">
+                    <div class="title_hover">
+                      <p>진로 이즈백</p>
+                      <span>하이트</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <span>4</span>
+                  <a href="alcohol_page.html">
+                    <img src="../assets/img/card (4).gif" alt="alcohol">
+                    <div class="title_hover">
+                      <p>진로 이즈백</p>
+                      <span>하이트</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <span>5</span>
+                  <a href="alcohol_page.html">
+                    <img src="../assets/img/card (5).gif" alt="alcohol">
+                    <div class="title_hover">
+                      <p>진로 이즈백</p>
+                      <span>하이트</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <span>6</span>
+                  <a href="alcohol_page.html">
+                    <img src="../assets/img/card (1).gif" alt="alcohol">
+                    <div class="title_hover">
+                      <p>진로 이즈백</p>
+                      <span>하이트</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <span>7</span>
+                  <a href="alcohol_page.html">
+                    <img src="../assets/img/card (2).gif" alt="alcohol">
+                    <div class="title_hover">
+                      <p>진로 이즈백</p>
+                      <span>하이트</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <span>8</span>
+                  <a href="alcohol_page.html">
+                    <img src="../assets/img/card (3).gif" alt="alcohol">
+                    <div class="title_hover">
+                      <p>진로 이즈백</p>
+                      <span>하이트</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <span>9</span>
+                  <a href="alcohol_page.html">
+                    <img src="../assets/img/card (4).gif" alt="alcohol">
+                    <div class="title_hover">
+                      <p>진로 이즈백</p>
+                      <span>하이트</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <span>10</span>
+                  <a href="alcohol_page.html">
+                    <img src="../assets/img/card (5).gif" alt="alcohol">
+                    <div class="title_hover">
+                      <p>진로 이즈백</p>
+                      <span>하이트</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ranking_list -->
+
+        <div class="best_list boxStyle roundCorner shaDow">
+          <h4>인기 게시글 <span>HOT</span></h4>
+          <ul class="board_w100">
+            <li>
+              <a href="board_view.html">
+                <div class="board_info">
+                  <div class="board_title textCut">
+                    술 땡기는 금요일~ 곱창에 소주 땡기네요.
+                  </div>
+                  <div class="board_author textCut">안주킬러</div>
+                  <div class="board_date">11.01</div>
+                  <div class="board_view"><span>999</span></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="board_view.html">
+                <div class="board_info">
+                  <div class="board_title textCut">
+                    오늘 오전에 음주운전 교통사고 보셨나요? 다들
+                    조심하세요ㅠㅠ!
+                  </div>
+                  <div class="board_author textCut">헤롱이</div>
+                  <div class="board_date">10.31</div>
+                  <div class="board_view"><span>29</span></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="board_view.html">
+                <div class="board_info">
+                  <div class="board_title textCut">김과장 개열받네ㅋㅋ</div>
+                  <div class="board_author textCut">하하루</div>
+                  <div class="board_date">11.01</div>
+                  <div class="board_view"><span>999</span></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="board_view.html">
+                <div class="board_info">
+                  <div class="board_title textCut">
+                    다들 주사 뭐임? 나는 했던 말 계속하는거임. 다들 주사 뭐임?
+                  </div>
+                  <div class="board_author textCut">혼술의 묘미</div>
+                  <div class="board_date">11.01</div>
+                  <div class="board_view"><span>19</span></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="board_view.html">
+                <div class="board_info">
+                  <div class="board_title textCut">
+                    소주 가격 오른거 실화임?
+                  </div>
+                  <div class="board_author textCut">술부심</div>
+                  <div class="board_date">11.01</div>
+                  <div class="board_view"><span>999</span></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="best_list boxStyle roundCorner shaDow">
+          <h4>최신 게시글 <span>NEW</span></h4>
+          <ul class="board_w100">
+            <li>
+              <a href="board_view.html">
+                <div class="board_info">
+                  <div class="board_title textCut">
+                    술 땡기는 금요일~ 곱창에 소주 땡기네요.
+                  </div>
+                  <div class="board_author textCut">안주킬러</div>
+                  <div class="board_date">11.01</div>
+                  <div class="board_view"><span>999</span></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="board_view.html">
+                <div class="board_info">
+                  <div class="board_title textCut">
+                    오늘 오전에 음주운전 교통사고 보셨나요? 다들
+                    조심하세요ㅠㅠ!
+                  </div>
+                  <div class="board_author textCut">헤롱이</div>
+                  <div class="board_date">10.31</div>
+                  <div class="board_view"><span>29</span></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="board_view.html">
+                <div class="board_info">
+                  <div class="board_title textCut">김과장 개열받네ㅋㅋ</div>
+                  <div class="board_author textCut">하하루</div>
+                  <div class="board_date">11.01</div>
+                  <div class="board_view"><span>999</span></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="board_view.html">
+                <div class="board_info">
+                  <div class="board_title textCut">
+                    다들 주사 뭐임? 나는 했던 말 계속하는거임. 다들 주사 뭐임?
+                  </div>
+                  <div class="board_author textCut">혼술의 묘미</div>
+                  <div class="board_date">11.01</div>
+                  <div class="board_view"><span>19</span></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="board_view.html">
+                <div class="board_info">
+                  <div class="board_title textCut">
+                    소주 가격 오른거 실화임?
+                  </div>
+                  <div class="board_author textCut">술부심</div>
+                  <div class="board_date">11.01</div>
+                  <div class="board_view"><span>999</span></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="best_list boxStyle roundCorner shaDow">
+          <h4>추천 게시글 <span>Pick!</span></h4>
+          <ul class="board_w100">
+            <li>
+              <a href="board_view.html">
+                <div class="board_info">
+                  <div class="board_title textCut">
+                    술 땡기는 금요일~ 곱창에 소주 땡기네요.
+                  </div>
+                  <div class="board_author textCut">안주킬러</div>
+                  <div class="board_date">11.01</div>
+                  <div class="board_view"><span>999</span></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="board_view.html">
+                <div class="board_info">
+                  <div class="board_title textCut">
+                    오늘 오전에 음주운전 교통사고 보셨나요? 다들
+                    조심하세요ㅠㅠ!
+                  </div>
+                  <div class="board_author textCut">헤롱이</div>
+                  <div class="board_date">10.31</div>
+                  <div class="board_view"><span>29</span></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="board_view.html">
+                <div class="board_info">
+                  <div class="board_title textCut">김과장 개열받네ㅋㅋ</div>
+                  <div class="board_author textCut">하하루</div>
+                  <div class="board_date">11.01</div>
+                  <div class="board_view"><span>999</span></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="board_view.html">
+                <div class="board_info">
+                  <div class="board_title textCut">
+                    다들 주사 뭐임? 나는 했던 말 계속하는거임. 다들 주사 뭐임?
+                  </div>
+                  <div class="board_author textCut">혼술의 묘미</div>
+                  <div class="board_date">11.01</div>
+                  <div class="board_view"><span>19</span></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="board_view.html">
+                <div class="board_info">
+                  <div class="board_title textCut">
+                    소주 가격 오른거 실화임?
+                  </div>
+                  <div class="board_author textCut">술부심</div>
+                  <div class="board_date">11.01</div>
+                  <div class="board_view"><span>999</span></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- main_contents end -->
+
+      <aside id="side_wrap">
+        <div class="search_box side_box roundCorner shaDow">
+          <input type="text" placeholder="취중진담 통합 검색" />
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <!-- 로그인 함 -->
+        <!-- <div class="info_box side_box roundCorner shaDow">
+                    <div class="login_info">
+                        <img src="../assets/img/img500.jpg" alt="유저 이미지">
+                        <p>홍길동님 어서오세요.</p>
+                        <ul>
+                            <li><a href="index.html">로그아웃</a></li>
+                            <li><a href="mypage.html">마이페이지</a></li>
+                            <li><a href="setting.html">설정</a></li>
+                        </ul>
+                    </div>
+                    <button class="sideBtn" onclick="location.href='boardWrite.html'">새 글쓰기</button>
+                </div> -->
+
+        <!-- 로그인 안함 -->
+        <div class="info_box side_box roundCorner shaDow">
+          <div class="login_info not_login">
+            <p>
+              <i class="fa-solid fa-icons"></i> <br />
+              회원가입하고 <br />
+              더 많은 기능을 누리세요
+            </p>
+            <ul>
+              <li><a href="join.html">회원가입</a></li>
+              <li><a href="findpass.html">회원정보 찾기</a></li>
+            </ul>
+          </div>
+          <button class="sideBtn" onclick="location.href='login.html'">
+            로그인
+          </button>
+        </div>
+      </aside>
+      <!-- side_box end -->
+
+    </main>
+    <!-- contents_area end -->
+
+  </div>
+  <!-- wrapper end -->
+
+  <!-- Swiper 술 랭킹 불러옴 -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="../assets/js/swiper.js"></script>
+</body>
+
+</html>

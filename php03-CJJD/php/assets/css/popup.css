@@ -1,0 +1,111 @@
+#popupDelete {
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.comment__delete {
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--gray);
+    box-shadow: 1px 1px 4px #6d6d6d31;
+}
+.comment__delete h4 {
+    margin-bottom: 20px;
+}
+.comment__delete input {
+    border: 1px solid var(--black300);
+    padding: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.comment__delete p {
+    margin-top: 10px;
+    color: var(--black300);
+    font-size: 1rem;
+}
+.comment__delete .btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.comment__delete .btn button {
+    background-color: var(--mcolor);
+    color: var(--white);
+    padding: 5px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+#popupModify {
+
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.comment__modify {
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--gray);
+    box-shadow: 1px 1px 4px #6d6d6d31;
+}
+.comment__modify h4 {
+    margin-bottom: 20px;
+}
+.comment__modify textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 1rem;
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid var(--black300);
+}
+.comment__modify input {
+    border: 1px solid var(--black300);
+    padding: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.comment__modify p {
+    margin-top: 10px;
+    color: var(--black300);
+    font-size: 1rem;
+}
+.comment__modify .btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.comment__modify .btn button {
+    background-color: var(--mcolor);
+    color: var(--white);
+    padding: 5px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+
+}

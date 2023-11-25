@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>취중진담</title>
+
+    <!-- meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="취중진담" />
+    <meta name="description" content="프론트엔드 개발자 포트폴리오 조별과제 사이트입니다." />
+    <meta name="keywords" content="웹퍼블리셔,프론트엔드, php, 포트폴리오, 커뮤니티, 술, publisher, css3, html, markup, design" />
+
+    <!-- favicon -->
+    <link rel="icon" href="../assets/favicon/favicon.ico" type="image/x-icon" />
+
+    <!-- fontasome -->
+    <script src="https://kit.fontawesome.com/2cf6c5f82a.js" crossorigin="anonymous"></script>
+
+    <!-- 모바일 헤더 스크롤 이벤트 js -->
+    <script src="../assets/js/scrollEvent.js"></script>
+
+    <!-- 공통 css -->
+    <link href="../assets/css/reset.css" rel="stylesheet" />
+    <link href="../assets/css/fonts.css" rel="stylesheet" />
+    <link href="../assets/css/common.css" rel="stylesheet" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
+
+    <!-- 개별 css -->
+    <link href="../assets/css/mypage.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- PC HEADER 840 < window -->
+        <header id="header" class="leftHeader shaDow">
+            <h1 class="header_logo">
+                <a href="index.html">
+                    <img src="../assets/img/logo.svg" alt="logo">
+                </a>
+            </h1>
+            <nav class="header_nav" role="navigation" aria-label="main">
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i>홈</a></li>
+                    <li><a href="alcohol_list.html"><i class="fa-regular fa-heart"></i> 술 리뷰</a></li>
+                    <li><a href="board.html"><i class="fa-regular fa-comments"></i> 자유 게시판</a></li>
+                    <li><a href="event.html"><i class="fa-solid fa-gift"></i> 이벤트</a></li>
+                    <li><a href="mypage.html"><i class="fa-regular fa-user"></i> 마이페이지</a></li>
+                    <li><a href="setting.html"><i class="fa-solid fa-gear"></i> 설정</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- M HEADER 840 > window -->
+        <div class="topLogo">
+            <h1 class="header_logo">
+                <a href="index.html">
+                    <img src="../assets/img/logo.svg" alt="logo">
+                </a>
+            </h1>
+        </div>
+        <header id="header" class="bottomHeader shaDow">
+            <nav class="header_nav" role="navigation" aria-label="main">
+                <ul>
+                    <li><a href="alcohol_list.html" aria-label="술리뷰"><i class="fa-regular fa-heart"></i></a></li>
+                    <li><a href="event.html" aria-label="이벤트"><i class="fa-solid fa-gift"></i></a></li>
+                    <li><a href="index.html" aria-label="홈"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="board.html" aria-label="자유게시판"><i class="fa-regular fa-comments"></i></a></li>
+                    <li class="active"><a href="mypage.html" aria-label="마이페이지"><i class="fa-regular fa-user"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header end -->
+
+        <main id="contents_area">
+            <section id="main_contents">
+
+                <div class="best_list boxStyle roundCorner shaDow">
+                    <div class="tab-menu">
+                        <button class="tab-button activity" onclick="openTab('mypage_main')">마이페이지</button>
+                        <button class="tab-button" onclick="openTab('mypage_diary')">일기</button>
+                        <button class="tab-button" onclick="openTab('mypage_activity')">내 활동</button>
+                        <button class="tab-button right" onclick="openTab('mypage_review')">리뷰</button>
+                    </div>
+
+                    <div id="mypage_main" class="tab-content">
+                        <div class="main_box">
+                            <div class="header_img"><img src="../assets/img/mypage_header.jpg" alt=""></div>
+                            <div class="profile_box">
+                                <div class="profile_img"><img src="../assets/img/profile.png" alt=""></div>
+                                <div class="profile_text">
+                                    <input type="text" id="youNick" class="input_newnick" placeholder="새 닉네임을 입력하세요.">
+                                </div>
+                                <div class="profile_modify">
+                                    <ul>
+                                        <li><a href="mypage.html">프로필 수정완료</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="mypage_diary" class="tab-content">
+                        <div class="today_diary">
+                            <h2>12월 32일</h2>
+                            <div class="today_photo"><img src="../assets/img/diary.jpg" alt=""></div>
+                            <div class="today_write">
+                                <span>
+                                    대충 내용이 들어가는 자리대충 내용이 들어가는 자리대충 내용이 들어가는
+                                    대충 내용이 들어가는 자리대충 내용이 들어가는 자리대충 내용이 들어가는
+                                    대충 내용이 들어가는 자리대충 내용이 들어가는 자리대충 내용이 들어가는
+                                    대충 내용이 들어가는 자리대충 내용이 들어가는 자리대충 내용이 들어가는
+                                    대충 내용이 들어가는 자리대충 내용이 들어가는 자리대충 내용이 들어가는
+                                </span>
+                            </div>
+                            <div class="today_drink">
+                                <h3>오늘 마신 양</h3>
+                                <div>
+                                    <div class="drink_soju">
+                                        <h4>소주</h4>
+                                        <p>1병</p>
+                                    </div>
+                                    <div class="drink_beer">
+                                        <h4>맥주</h4>
+                                        <p>1병</p>
+                                    </div>
+                                    <div class="drink_etc">
+                                        <h4>기타</h4>
+                                        <p>1병</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="diary_write.html" class="wirte_button"><span>글쓰기</span></a>
+                        <div class="pagenation">페이지 넘김 부분</div>
+                    </div>
+
+                    <div id="mypage_activity" class="tab-content mypage_activity">
+                        <div>
+                            <div class="my_board">
+                                <h2>내 게시글</h2>
+                                <div class="my_board_table">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width: 20%;">
+                                            <col>
+                                        </colgroup>
+                                        <tr>
+                                            <th>제목</th>
+                                            <th>내용</th>
+                                        </tr>
+                                        <tr>
+                                            <td>제목 1</td>
+                                            <td>이것은 첫 번째 내용입니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제목 2</td>
+                                            <td>이것은 두 번째 내용입니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제목 1</td>
+                                            <td>이것은 첫 번째 내용입니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제목 2</td>
+                                            <td>이것은 두 번째 내용입니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제목 1</td>
+                                            <td>이것은 첫 번째 내용입니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제목 2</td>
+                                            <td>이것은 두 번째 내용입니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제목 1</td>
+                                            <td>이것은 첫 번째 내용입니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제목 2</td>
+                                            <td>이것은 두 번째 내용입니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제목 1</td>
+                                            <td>이것은 첫 번째 내용입니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제목 2</td>
+                                            <td>이것은 두 번째 내용입니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제목 1</td>
+                                            <td>이것은 첫 번째 내용입니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제목 2</td>
+                                            <td>이것은 두 번째 내용입니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제목 1</td>
+                                            <td>이것은 첫 번째 내용입니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제목 2</td>
+                                            <td>이것은 두 번째 내용입니다.</td>
+                                        </tr>
+
+                                    </table>
+                                </div>
+                                <div class="pagenation">페이지 넘김 부분</div>
+                            </div>
+                            <div class="my_comment">
+                                <h2>
+                                    내 댓글
+                                </h2>
+                                <div class="my_comment_table">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width: 20%;">
+                                            <col>
+                                        </colgroup>
+                                        <tr>
+                                            <th>제목</th>
+                                            <th>내용</th>
+                                        </tr>
+                                        <tr>
+                                            <td>제목 1</td>
+                                            <td>이것은 첫 번째 내용입니다.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제목 2</td>
+                                            <td>이것은 두 번째 내용입니다.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="pagenation">페이지 넘김 부분</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="mypage_review" class="tab-content">
+                        <div class="my_review">
+                            <div class="my_review_table">
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 20%;">
+                                        <col style="width: 20%;">
+                                        <col style="width: 50%;">
+                                        <col style="width: 10%;">
+                                    </colgroup>
+                                    <tr>
+                                        <th>Photo</th>
+                                        <th>Name</th>
+                                        <th>review</th>
+                                        <th>Date</th>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="../assets/img/Rectangle.jpg" alt=""></td>
+                                        <td>정말로 맛있는 술</td>
+                                        <td class="text">
+                                            적당한 리뷰 내용 적당한 리뷰 내용
+                                            적당한 리뷰 내용적당한 리뷰 내용
+                                            적당한 리뷰 내용적당한 리뷰 내용
+                                        </td>
+                                        <td>10월 21일</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="../assets/img/Rectangle.jpg" alt=""></td>
+                                        <td>술 1</td>
+                                        <td class="text">이것은 첫 번째 내용입니다.</td>
+                                        <td>10월 21일</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="../assets/img/Rectangle.jpg" alt=""></td>
+                                        <td>술 1</td>
+                                        <td class="text">이것은 첫 번째 내용입니다.</td>
+                                        <td>10월 21일</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="../assets/img/Rectangle.jpg" alt=""></td>
+                                        <td>술 1</td>
+                                        <td class="text">이것은 첫 번째 내용입니다.</td>
+                                        <td>10월 21일</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="../assets/img/Rectangle.jpg" alt=""></td>
+                                        <td>술 1</td>
+                                        <td class="text">이것은 첫 번째 내용입니다.</td>
+                                        <td>10월 21일</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="../assets/img/Rectangle.jpg" alt=""></td>
+                                        <td>술 1</td>
+                                        <td class="text">이것은 첫 번째 내용입니다.</td>
+                                        <td>10월 21일</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+            <!-- main_contents end -->
+
+            <aside id="side_wrap">
+                <div class="search_box side_box roundCorner shaDow">
+                    <input type="text" placeholder="취중진담 통합 검색">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+
+                <!-- 로그인 함 -->
+                <div class="info_box side_box roundCorner shaDow">
+                    <div class="login_info">
+                        <img src="../assets/img/img500.jpg" alt="유저 이미지">
+                        <p>홍길동님 어서오세요.</p>
+                        <ul>
+                            <li><a href="index.html">로그아웃</a></li>
+                            <li><a href="mypage.html">마이페이지</a></li>
+                            <li><a href="setting.html">설정</a></li>
+                        </ul>
+                    </div>
+                    <button class="sideBtn" onclick="location.href='board_write.html'">새 글쓰기</button>
+                </div>
+
+                <!-- 로그인 안함 -->
+                <!-- <div class="info_box side_box roundCorner shaDow">
+                    <div class="login_info not_login">
+                        <p><i class="fa-solid fa-icons"></i> <br> 회원가입하고 <br> 더 많은 기능을 누리세요</p>
+                        <ul>
+                            <li><a href="join.html">회원가입</a></li>
+                            <li><a href="findpass.html">회원정보 찾기</a></li>
+                        </ul>
+                    </div>
+                    <button class="sideBtn" onclick="location.href='login.html'">로그인</button>
+                </div> -->
+            </aside>
+            <!-- side_box end -->
+
+        </main>
+        <!-- contents_area end -->
+    </div>
+    <!-- wrapper end -->
+
+    <script>
+        function openTab(tabId) {
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].style.display = "none";
+            }
+
+            document.getElementById(tabId).style.display = "block";
+        }
+        openTab('mypage_main');
+    </script>
+</body>
+
+</html>

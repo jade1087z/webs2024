@@ -1,0 +1,247 @@
+
+.login__body {
+    height: 100vh;
+    background-color: #ECFBEC;
+    background-image: url("../img/vector_line.png");
+    background-size: cover;
+    background-position: center;
+}
+#wrap {
+    position: relative; /* 부모 요소를 상대 위치로 설정 */
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#login {
+    margin-top: 100px;
+    width: 100%;
+}
+.login__box {
+    background-color: #fff;
+    max-width: 800px;
+    width: 60%;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 0px rgba(0, 53, 7, 0.3);
+}
+
+/* left */
+
+
+.left {
+    width: 50%;
+    background-color: #DEF7D9;
+    overflow: hidden;
+    border-radius: 20px 0 0 20px;
+    position: relative; 
+}
+.cocktail {
+    position: absolute;
+    width: 470px;
+    top: -90px;
+    left: -20px;
+}
+.coconut {
+    transform: rotate(-45deg);
+    width: 300px;
+    position: absolute;
+    bottom: -45px;
+    left: -100px;
+}
+
+/* right */
+
+.right {
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 0 20px 20px 0;
+    position: relative;
+}
+
+.right .logo {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.right .login_box {
+    width: 85%;
+    margin: 45% auto;
+}
+.input {
+    border-style: hidden;
+    border: none;
+    outline: none;
+}
+.right .login_box .login_ID {
+    width: 100%;
+    border: 1px solid #414141a6;
+    padding: 1rem 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 16px;
+    outline: none;
+}
+.right .login_box .login_Pass {
+    width: 100%;
+    border: 1px solid #414141a6;
+    padding: 1rem 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    outline: none;
+}
+.right .login_box p {
+    padding: 20px 20px;
+    font-size: 18px;
+}
+
+/* right */
+
+.right .check {
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+.right .check label {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    position: relative;
+}
+.check input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+.check .indicator {
+    position: absolute;
+    top: 3px;
+    left: -22px;
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.check input[type="checkbox"]:checked+.indicator {
+    background-color: #03C75A;
+}
+
+/* button */
+
+.right button {
+    position: relative;
+}
+.right .button__style {
+    margin: 15px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1rem;
+    border-radius: 30px;
+    /* padding: 1rem; */
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #03C75A;
+    color: #fff;
+    width: 99%;
+    border: 0;
+
+    height: 60px;
+}
+.right .button__style li {
+    width: 100%;
+}
+.right .button__style button {
+    color: var(--white);
+    width: 100%;
+    line-height: 60px;
+    cursor: pointer;
+}
+.login_box .login_go {
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+}
+.login_box .login_go li {
+    margin: 0px 10px ;
+}
+
+/* footer */
+
+#footer {
+    width: 100%;
+}
+#footer p {
+    text-align: center;
+    font-size: 14px;
+    color: #024b23;
+}
+
+/* join collect 부분 */
+
+/* media
+    1200, 700(애매해서 하나만 추가), 600으로 나누었습니다. 
+    600에서는 이미지가 완전히 사라져요
+*/
+
+@media (max-width: 1200px){
+    .login__box {
+        width: 90%;
+    }
+    .right .logo {
+        width: 100%;
+    }
+    .right .login_box {
+        margin: 45% auto;
+    }
+    .right .button__style {
+        left: 15%;
+        right: 15%;
+        font-weight: 15;
+        /* padding: 1rem 3rem; */
+    }
+}
+@media (max-width: 700px) {
+    .right .login_box .login_ID {
+        margin-top: 10px;   
+    }
+}
+@media (max-width: 600px) {
+    .login__box {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    .right .logo {
+        left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .left {
+        width: 100%;
+    }
+    .right {
+        width: 100%;
+        height: 100%;
+    }
+    #footer p {
+        font-size: 13px;
+    }
+}
+@keyframes overlayAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+

@@ -1,0 +1,536 @@
+/* 탭 메뉴 */
+.tab-menu {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 1px solid var(--gray);
+}
+
+.tab-button {
+    background-color: var(--white);
+    flex: 1;
+    max-width: 25%;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 0;
+    border-right: 1px solid var(--gray);
+}
+
+.right {
+    border-right: 0;
+}
+
+.tab-button:hover {
+    background-color: #e6e6e6;
+}
+
+.tab-button.activity {
+    flex: 2;
+    max-width: 40%;
+}
+
+/* mypage_main */
+
+.profile_box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.profile_img {
+    margin: 30px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile_img img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+.profile_text {
+    display: block;
+}
+
+.profile_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.youID,
+.youemail {
+    text-align: left;
+}
+
+.profile_text div {
+    margin-bottom: 3px;
+}
+
+.profile_text h2 {
+    font-size: 20px;
+}
+
+/* profile_modify */
+
+.profile_modify {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.profile_modify ul {
+    padding: 0;
+    margin: 0;
+    margin-right: 10px;
+    transition: all 0.3s;
+    border: 1px solid var(--black100);
+    border-radius: 10px;
+}
+
+.profile_modify ul:hover {
+    background-color: var(--bgcolor);
+}
+
+.profile_modify ul li {
+    border-radius: 30px;
+    text-align: center;
+    width: 10rem;
+    height: 3rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.profile_modify ul li img {
+    padding-top: 2px;
+    margin-right: 5px;
+    width: 20px;
+}
+
+.input_newnick {
+    border: 1px solid var(--black100);
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+    .profile_text h2 {
+        font-size: 18px;
+    }
+
+    .profile_modify ul,
+    .profile_text {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 800px) {
+    .profile_text h2 {
+        font-size: 17px;
+    }
+
+    .profile_modify ul,
+    .profile_text {
+        font-size: 14px;
+    }
+
+    .profile_modify ul li img {
+        width: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile_text h2 {
+        font-size: 16px;
+    }
+
+    .profile_modify ul,
+    .profile_text {
+        font-size: 13px;
+    }
+
+    .profile_modify ul li img {
+        width: 15px;
+    }
+}
+
+/* profile_modify */
+
+.modify_box {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.profilemodify_img {
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+}
+
+.modify_img {
+    width: 70%;
+}
+
+.modifytext_box {
+    height: 70%;
+}
+
+.modify_text {
+    width: 100%;
+    padding: 20px 20px 0px 20px;
+}
+
+.modify_text h3 {
+    margin-bottom: 3px;
+}
+
+.modify_text input {
+    border: 1px solid var(--black300);
+    border-radius: 10px;
+    width: 70%;
+}
+
+.profile_modify01 {
+    padding-top: 20px;
+    display: flex;
+    justify-content: end;
+}
+
+.profile_modify01>div button {
+    cursor: pointer;
+    padding: 10px 40px;
+    border: 1px solid var(--black200);
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.profile_modify01>div>div {
+    cursor: pointer;
+    padding: 10px 40px;
+    border: 1px solid var(--black200);
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+/* today_diary */
+
+.today_diary {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.today_diary h2 {
+    width: 100%;
+    font-size: 30px;
+    padding: 30px;
+}
+
+.today_photo img {
+    width: 90%;
+    height: 100%;
+    background-color: #ccc;
+}
+
+.diary_text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 50vh;
+}
+
+.today_write {
+    width: 90%;
+    height: 100%;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.center {
+    margin: 0 auto;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.wirte_button {
+    margin-top: 10px;
+    width: 100%;
+    margin-right: 7%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+.wirte_button span {
+    position: absolute;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px 3rem;
+    transition: all 0.3s;
+}
+
+.wirte_button span:hover {
+    background-color: var(--bgcolor);
+}
+
+.pagenation {
+    margin: 20px 0 10px 0;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .today_diary h2 {
+        font-size: 24px;
+    }
+
+    .my_review_table td {
+        font-size: 15px;
+    }
+
+    .today_write,
+    .today_drink,
+    .today_drink div div h4,
+    .wirte_button {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 800px) {
+    .today_diary h2 {
+        font-size: 22px;
+    }
+
+    .my_review_table td {
+        font-size: 14px;
+    }
+
+    .today_drink h3 {
+        font-size: 18px;
+    }
+
+    .today_write,
+    .today_drink,
+    .today_drink div div h4,
+    .wirte_button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .today_diary h2 {
+        font-size: 20px;
+    }
+
+    .my_review_table td {
+        font-size: 13px;
+    }
+
+    .today_write,
+    .today_drink,
+    .today_drink div div h4,
+    .wirte_button {
+        font-size: 13px;
+    }
+}
+
+/* mypage_activity */
+
+.mypage_activity>div {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.my_board {
+    width: 50%;
+    border-right: 1px solid var(--gray);
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.my_board h2 {
+    font-size: 20PX;
+    margin: 10px;
+    padding: 10px;
+    background: var(--bgcolor);
+    border-radius: 10px;
+}
+
+.my_board_table {
+    height: 50vh;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.my_board_table table {
+    width: 100%;
+}
+
+.my_board_table table tr th {
+    padding: 10px;
+    border-bottom: 1px solid #000;
+    text-align: center;
+    background-color: var(--bgcolor);
+}
+
+.my_board_table table tr td {
+    text-align: left;
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--black300);
+
+}
+
+.my_board_table table tr:hover {
+    background-color: var(--bgcolor);
+}
+
+.my_comment {
+    margin-top: 5px;
+    width: 50%;
+    padding: 5px;
+}
+
+.my_comment h2 {
+    font-size: 20PX;
+    margin: 10px;
+    background: var(--bgcolor);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.my_comment_table {
+    text-align: left;
+    height: 50vh;
+    padding: 10px;
+}
+
+.my_comment_table table {
+    width: 100%;
+}
+
+.my_comment_table table tr th {
+    padding: 10px;
+    border-bottom: 1px solid #000;
+    text-align: center;
+    background-color: var(--bgcolor);
+}
+
+.my_comment_table table tr td {
+    text-align: left;
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--black300);
+}
+
+.my_comment_table table tr:hover {
+    background-color: var(--bgcolor);
+}
+
+@media (max-width: 1200px) {
+
+    .my_board h2,
+    .my_comment h2 {
+        font-size: 18px;
+    }
+
+    .my_board_table td,
+    .my_comment_table td {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .my_board,
+    .my_comment {
+        width: 100%;
+    }
+
+    .my_board h2,
+    .my_comment h2 {
+        font-size: 17px;
+    }
+
+    .my_board_table td,
+    .my_comment_table td {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .my_board h2,
+    .my_comment h2 {
+        font-size: 16px;
+    }
+
+    .my_board_table td,
+    .my_comment_table td {
+        font-size: 13px;
+    }
+}
+
+/* mypage_review */
+.my_review {
+    padding: 10px;
+}
+
+.my_review_table td {
+    border-bottom: 1px solid var(--gray);
+}
+
+.my_review_table table tr th {
+    padding: 10px 10px 20px 10px;
+    border-bottom: 1px solid #000;
+    text-align: center;
+}
+
+.my_review_table table tr td img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.my_review_table table tr td {
+    padding: 5px 0;
+    text-align: center;
+}
+
+.my_review_table table tr td.text {
+    text-align: left;
+}
+
+@media (max-width: 1200px) {
+    .my_review_table td {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 800px) {
+    .my_review_table td {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .my_review_table td {
+        font-size: 13px;
+    }
+}
