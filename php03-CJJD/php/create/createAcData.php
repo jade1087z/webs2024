@@ -13,17 +13,10 @@ foreach ($data as $item) {
     $name = $item["name"];
     $company = $item["company"];
     $desc = $item["desc"];
-<<<<<<< HEAD
     $view = $item["view"];
     $like = $item["like"];
     $comment = $item["comment"];
     $abv = $item["abv"];
-=======
-    $abv = $item["abv"];
-    $view = $item["view"];
-    $like = $item["like"];
-    $comment = $item["comment"];
->>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 
     $sql = "INSERT INTO drinkList (acCategory, acImgPath, acName, acCompany, acDesc, acView, acLike, acComment, acAbv, acDelete) 
         VALUES ('$type', '$img', '$name', '$company', '$desc', $view, $like, $comment, $abv, 1)";

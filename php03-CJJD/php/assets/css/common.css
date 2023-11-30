@@ -10,7 +10,6 @@
 
     --red: #e21717;
     --gray: #ccc;
-<<<<<<< HEAD
     --mcolor: #03C75A;
     --mcolorUp: #09d665;
     --scolor: #4F4F4F;
@@ -18,14 +17,6 @@
 }
 
 
-=======
-    --mcolor: #03c75a;
-    --mcolorUp: #09d665;
-    --scolor: #4f4f4f;
-    --bgcolor: #f4f4f4;
-}
-
->>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 /* 라운드 코너 */
 .roundCorner {
     border-radius: 10px;
@@ -107,14 +98,11 @@
     text-overflow: ellipsis;
 }
 
-<<<<<<< HEAD
 /* text align */
 .textCenter {
     text-align: center;
 }
 
-=======
->>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 /* margin-top */
 .mt0 {
     margin-top: 0px;
@@ -165,12 +153,6 @@
     margin-bottom: 50px;
 }
 
-<<<<<<< HEAD
-=======
-.mr20 {
-    margin-right: 20px;
-}
->>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 /* 페이지 네이션 */
 
 .board_pages {
@@ -204,7 +186,6 @@
     font-weight: bold;
     border: 1px solid var(--gray);
 }
-<<<<<<< HEAD
 
 .mr10 {
     margin-right: 10px;
@@ -221,5 +202,3 @@
 .mr50 {
     margin-right: 50px;
 }
-=======
->>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158

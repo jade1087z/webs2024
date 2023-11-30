@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="ko">
 
 <head>
@@ -7,40 +6,12 @@
     <!-- 개별 css -->
     <link href="../assets/css/login.css" rel="stylesheet" />
 </head>
-=======
-<html lang="en">
-
-<head>
-    <?php include "../include/head.php" ?>
-    <link href="../assets/css/login.css" rel="stylesheet" />
-
-    <title>로그인 페이지</title>
-</head>
-<style>
-    .right .button__style {
-        margin: 15px auto;
-        display: block;
-        font-size: 1rem;
-        padding: 0;
-        width: 100%;
-    }
-    .button__style button {
-        border-radius: 5px;
-        color: var(--white);
-        cursor: pointer;
-        width: 100%;
-        padding: 1rem;
-        background-color: var(--mcolor);
-    }
-</style>
->>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
 
 <body class="login__body">
     <div id="wrap">
         <main id="login">
             <div class="login__box">
                 <div class="left">
-<<<<<<< HEAD
                     <img class="cocktail" src="../assets/img/cocktail.png" alt="cocktail" aria-hidden="true">
                     <img class="coconut" src="../assets/img/coconut.png" alt="coconut" aria-hidden="true">
                 </div>
@@ -50,17 +21,6 @@
                         <form action="loginSave.php" name="loginSave" method="post">
                             <input type="text" name="youId" placeholder="아이디를 입력하세요." class="login_ID" id="youId">
                             <input type="password" name="youPass" placeholder="비밀번호를 입력하세요." class="login_Pass"
-=======
-                    <img class="cocktail" src="../assets/img/cocktail.png" alt="">
-                    <img class="coconut" src="../assets/img/coconut.png" alt="">
-                </div>
-                <div class="right">
-                    <div class="logo"><a href="">취중진담</a></div>
-                    <div class="login_box">
-                        <form action="loginSave.php" name="loginSave" method="post">
-                            <input type="text" name="youId" placeholder="아이디를 입력하세요." class="login_ID" id="youId">
-                            <input type="text" name="youPass" placeholder="비밀번호를 입력하세요." class="login_Pass"
->>>>>>> 9358853574a1fb2827ff7b922f7241d93f738158
                                 id="youPass">
                             <div class="check">
                                 <label for="agreeCheck1">
