@@ -1,0 +1,238 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+#wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+}
+#aside {
+    width: 250px;
+    height: 650px;    
+}
+#aside .logo {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#aside .logo a {
+    display: block;
+    font-size: 26px;
+    margin-top: 5px;
+}
+.nav {
+    height: 550px;
+}
+#aside .nav > ul {
+    margin: 5px;
+}
+#aside .nav > ul li {
+    margin-bottom: 5px;
+} 
+#aside .nav > ul > li > a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffd139;
+    text-align: center;
+    color: white;
+    border: 2px solid #dead0c;
+}
+#aside .nav > ul > li > ul {
+    display: none;
+}
+#aside .nav > ul > li > ul > li a {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    border-bottom: 2px solid #dead0c;
+    background-color: #ffebab;
+}
+#aside .nav > ul > li > ul > li a:hover {
+    background-color: #ffdc68;
+}
+
+
+
+
+#main {
+    width: calc( 100% - 250px);
+}
+#slider {
+    display: flex;
+    background-color: #ccc;
+    overflow: hidden;
+}
+#slider .imageWrap {
+    width: calc(100% - 230px);
+    height: 400px;
+}
+#slider .imageWrap .image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+}
+
+#slider .imageWrap .image .text {
+    background-color: #dead0c8f;
+    width: 100%;
+    padding: 20px;
+}
+#slider .imageWrap .image .text h3 {
+    color: white;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+#slider .imageWrap .image .text span {
+    color: #fff;
+    font-size: 16px;
+}
+
+#slider .imageWrap .image.i1 {
+    background-image: url(../images/slider01.jpg);
+}
+#slider .imageWrap .image.i2 {
+    background-image: url(../images/slider02.jpg);
+}
+#slider .imageWrap .image.i3 {
+    background-image: url(../images/slider03.jpg);
+}
+
+#slider .banner {
+    width: 230px;
+    height: 400px;
+    background-image: url(../images//banner2.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid #ffd139;
+    transition: all 0.4s;
+}
+
+#slider .banner h3 {
+    color: white;
+    font-size: 20px;
+}
+#slider .banner a {
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 15px 20px;
+}
+
+.contents {
+    display: flex;
+    
+}
+
+.contents .notice {
+    width: 50%;
+    padding: 30px;
+    background-color: #fff6d6;
+    position: relative;
+}
+
+.contents .notice h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+.contents .notice li {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.7;
+    position: relative;
+    padding-left: 16px;
+}
+.contents .notice li::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: 0%;
+    top: 39%;
+    background-color: black;
+    border-radius: 50%;
+}
+.contents .notice li a {
+    width: 75%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.contents .notice li a:hover {
+    text-decoration: underline;
+}
+
+.contents .gallery {
+    width: 50%;
+    padding: 30px;
+}
+.contents .gallery h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+.contents .gallery ul {
+    display: flex;
+
+}
+.contents .gallery ul li {
+    width: 120px;
+    margin-right: 10px;
+}
+.contents .gallery ul li a {
+    display: block;
+}
+.contents .gallery ul li a span {
+    display: inline-block;
+    padding: 10px 0;
+}
+.contents .gallery ul li a span:hover {
+    text-decoration: underline;
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    background-color: #ccc;
+}
+#footer .footer1 {
+    width: 250px;
+    padding: 30px;
+    text-align: center;
+    
+}
+.footer1 h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+#footer .footer2 {
+    line-height: 1.7;
+    width:  calc(100% - 430px);
+}
+#footer .footer3 {
+    width: 150px;
+}

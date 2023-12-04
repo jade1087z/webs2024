@@ -1,4 +1,6 @@
 $(function () {
+
+
     let currentIndex = 0;
     $(".sliderWrap").append($(".slider").first().clone(true));
 
@@ -30,4 +32,5 @@ $(function () {
     $(".popup__close").click(function () {
         $(".popup__view").hide();
     });
+
 });

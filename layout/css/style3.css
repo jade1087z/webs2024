@@ -45,23 +45,22 @@ img {
     height: 550px;
     
 }
+
 #aside .nav > ul > li {
     position: relative;
     z-index: 1000;
 }
-#aside .nav > ul > li > a {
+#aside .nav > ul > li > a{
     display: inline-block;
-    background-color: #58339e;
-    color: #fff;
     width: 100%;
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
+    color: #fff;
 }
 #aside .nav > ul > li > a:hover {
     background-color: #653ead;
 }
-
 #aside .nav > ul > li > ul {
     background-color: #fff;
     text-align: center;
@@ -69,17 +68,13 @@ img {
     right: -200px;
     top: 0;
     width: 200px;
-    display: none;
+display: none;
 }
-#aside .nav > ul > li > ul > li > a {
+#aside .nav > ul > li > ul >li a {
     padding: 10px;
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
-}
-#aside .nav > ul > li > ul > li > a:hover {
-    background-color: #8354da;
-    color: #fff;
 }
 
 /* main */
@@ -89,36 +84,15 @@ img {
 }
 
 /* slider */
+
 #slider {
-    width: 800px;
+    width: 100%;
     height: 350px;
     overflow: hidden;
 }
-#slider .sliderWrap {}
-#slider .sliderWrap .slider {
-    position: relative;
+#slider .slider {
     height: 350px;
-}
-#slider .sliderWrap .slider a {
-    display: block;
-}
-#slider .sliderWrap .slider .text {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.4);
-    padding: 20px 40px;
-}
-#slider .sliderWrap .slider .text h2 {
-    color: #fff;
-    font-size: 40px;
-}
-#slider .sliderWrap .slider .text h2 em {
-    color: #58339e;
-    font-style: normal;
-}
-#slider .sliderWrap .slider .text p {
-    color: #fff;
+    position: relative;
 }
 
 /* contents */

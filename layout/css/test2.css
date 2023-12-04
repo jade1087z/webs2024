@@ -1,0 +1,233 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+#wrap {
+    width: 100%;
+}
+
+#main {
+    display: flex;
+    height: calc(100vh - 120px);
+}
+
+#aside {
+    width: 200px;
+    text-align: center;
+    background-color: #ffefef;
+}
+
+.logo {
+    width: 100%;
+    display: inline-block;
+    padding: 30px;
+}
+
+.nav {
+    width: 100%;
+    height: 90%;
+}
+.nav > ul > li {
+    position: relative;
+    z-index: 10000;
+}
+.nav > ul > li > a {
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    background-color: #ff6d6d;
+    color: white;
+}
+
+.nav > ul > li > a:hover {
+    background-color: #9b4545;
+}
+
+.nav > ul > li > ul {
+    display: none;
+    position: absolute;
+    right: -200px;
+    top: 0;
+    width: 200px;
+}
+
+.nav > ul > li > ul > li {
+}
+
+.nav > ul > li > ul > li > a {
+    padding: 10px;
+    width: 100%;
+    display: inline-block;
+    color: white;
+    background-color: #fc4f4f;
+}
+
+.nav > ul > li > ul > li > a:hover {
+    background-color: #ffc5c5;
+    color: #fff;
+}
+
+#contents {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.banner {
+    width: 100%;
+    height: 18%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../images/banner3.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner h3 {
+    color: white;
+    font-size: 24px;
+    display: block;
+}
+.banner a {
+    color: white;
+    display: block;
+    padding: 10px;
+    background-color: #bd6a6ad8;
+    border-radius: 50px;
+    margin-left: 20px;
+}
+.notice {
+    width: 100%;
+    height: 35%;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.notice h3 {
+    background-color: #612626;
+    color: white;
+    padding: 4px 13px;
+    margin-bottom: 10px;
+}
+
+.notice ul li {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    line-height: 1.7;
+    position: relative;
+    padding-left: 15px;
+}
+.notice ul li::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 3px;
+    top: 12px;
+    background-color: black;
+    border-radius: 50%;
+}
+.notice .more:hover,
+.notice ul li a:hover {
+    text-decoration: underline;
+}
+.notice > .more{
+    position: absolute;
+    top: 10%;
+    left: 79%;
+    color: white;
+}
+
+
+
+.gallery {
+    height: 35%;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffebc1;;
+    position: relative;
+}
+.gallery h3 {
+    background-color: #612626;
+    padding: 4px 13px;
+    margin-bottom: 15px;
+    color: white;
+}
+.gallery ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.gallery ul li {
+    width: 100px;
+    height: 120px;
+    background-size: cover;
+}
+.gallery ul li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    transition: all 0.3s;
+}
+.gallery ul li > a:hover{
+    background-color: rgba(0,0,0,0.1);}
+
+.gallery ul li:nth-child(1) {
+    background-image: url(../images/gallery01.jpg);
+} 
+.gallery ul li:nth-child(2) {
+    background-image: url(../images/gallery02.jpg);
+}
+.gallery ul li:nth-child(3) {
+    background-image: url(../images/gallery03.jpg);
+}
+.gallery > .more {
+    position: absolute;
+    color: white;
+    left: 79%;
+    top: 9.4%;
+}
+
+
+.link {
+    width: 100%;
+    height: 15%;
+}
+.link > ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.link ul > li {
+    width: 25%;
+    text-align: center;
+    padding: 3%;
+    box-sizing: border-box;
+}
+.link ul > li span {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-left: 5px;
+}
+.link>ul>li img {
+    width: 50px;
+    margin-left: 5px;
+}

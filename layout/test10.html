@@ -164,41 +164,29 @@
     <script>
         {
             $(function () {
-
-                let currentIndex = 0;
                 $(".sliderWrap").append($(".slider").first().clone(true));
+                let index = 0;
 
                 setInterval(() => {
-                    currentIndex++;
-                    $(".sliderWrap").animate({ marginLeft: -1200 * currentIndex }, 600);
-
-                    if (currentIndex == 3) {
+                    index++;
+                    $(".sliderWrap").animate({ marginLeft: -1200 * index }, 700)
+                    if (index == 3) {
                         setTimeout(() => {
-                            $(".sliderWrap").animate({ marginLeft: 0 }, 0);
-                            currentIndex = 0;
-                        }, 700)
+                            $(".sliderWrap").animate({ marginLeft: 0 }, 30000)
+                            index = 0
+                        }, 600)
                     }
-                }, 3000)
-
-               
-
+                }, 2000)
 
                 $(".nav > ul > li").mouseover(function () {
-                    $(this).stop().fadeIn(400);
-                    $("#header .container").addClass("on");
-                    $(this).find(".menu").stop().slideDown();
+                    $(this).find(".menu").stop().slideDown(300)
+                    console.log("33")
                 })
-                $(".nav > ul > li").mouseout(function () {
-                    $(".nav > ul > li > ul").stop().fadeOut(100);
-                    $("#header .container").removeClass("on");
-                    $(this).find(".menu").stop().slideUp();
-                });
-
+                $(".nav > ul > li").mouseout(function(){
+                    $(this).find(".menu").stop().slideUp(100);
+                })
                 $(".popup__btn").click(function(){
                     $(".popup__view").show();
-                })
-                $(".popup__close").click(function(){
-                    $(".popup__view").hide();
                 })
             })
 
